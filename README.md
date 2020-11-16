@@ -31,7 +31,7 @@
 
 ## Contributing
 
-- Thanks to [Wecode]("https://wecode.co.kr/")
+- Thanks to [Wecode](https://wecode.co.kr/)
 
 ## Reference
 
@@ -41,17 +41,12 @@
 
 ## Links
 
-_(사람이 읽기 쉽게 요약된 링크 정보를 추가합니다. 현재 리포지토리의 정보를 적습니다)_
-
-- Project homepage
+- Project homepage : 주소 나오면 주소까지 올리겠습니다
 - Repository: https://github.com/wecode-bootcamp-korea/14-1st-StyleCode-frontend/
 - 관련 프로젝트
   - 프로젝트 이름 : (예시) https://github.com/ohahohah/readme-template
-  - 프로젝트 이름: (예시) https://github.com/someones/awesome-project/
+  - 프로젝트 이름 : (예시) https://github.com/someones/awesome-project/
 
 ## License
 
-장호철 – [daaan0415@gmail.com](mailto:daaan0415@gmail.com)
-
-XYZ license를 준수합니다. `LICENSE`에서 자세한 정보를 확인할 수 있습니다.  
-(예시) [https://github.com/yourname/github-link/LICENSE.md](https://github.com/ohahohah/)
+XYZ license를 준수합니다. `LICENSE`에서 자세한 정보를 확인할 수 있습니다.
