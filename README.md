@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# StyleCode Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://i.ibb.co/h2xWRXL/2020-11-16-6-27-04.png" height="100"/>
 
-## Available Scripts
+## 개요
 
-In the project directory, you can run:
+#### 목적 : [스타일쉐어](https://www.styleshare.kr/) 를 클론하면서 리액트와 장고의 기본기를 향상한다
 
-### `yarn start`
+#### 일정 : 2020년 11월 16일 (월) ~ 11월 27일 (금), 12일간 진행
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### 참여자 :
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Frontend : 장호철(PM), 엄문주, 박현재
+- Backend : 백승찬, 정현석, 김민구
 
-### `yarn test`
+> 스타일쉐어 페이지의 다양한 기능을 구현한다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 핵심 기능 Key Feature
 
-### `yarn build`
+- 메인화면
+- 회원가입 / 로그인 (토큰)
+- 상품 상세페이지
+- 장바구니 기능
+- 소셜 기능(#OOTD)
+- 검색 기능(상품명, 브랜드)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 사용 How To Use
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 메인화면에서 블라블라~
+- 상세페이지에서
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `yarn eject`
+_(프로젝트 기여자가 있을 경우 적습니다)_
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Thanks to [SpartaCodingClub]("https://spartacodingclub.kr/")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Reference
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_(참고 리소스, code snippet, 라이센스 정보를 표기합니다)_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- (예시) [네이버 지도 API](링크url) : 장소카드 지도화면에 사용
+- (예시) [Teachable Machine](https://teachablemachine.withgoogle.com/) : 절하는 pose MachineLearning Model
 
-## Learn More
+## Links
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_(사람이 읽기 쉽게 요약된 링크 정보를 추가합니다. 현재 리포지토리의 정보를 적습니다)_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Project homepage: (예시) https://hocheoljang.github.io/USStock/
+- Repository: (예시) https://github.com/ohahohah/github-tutorial
+- 관련 프로젝트
+  - 프로젝트 이름 : (예시) https://github.com/ohahohah/readme-template
+  - 프로젝트 이름: (예시) https://github.com/someones/awesome-project/
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+장호철 – [daaan0415@gmail.com](mailto:daaan0415@gmail.com)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+XYZ license를 준수합니다. `LICENSE`에서 자세한 정보를 확인할 수 있습니다.  
+(예시) [https://github.com/yourname/github-link/LICENSE.md](https://github.com/ohahohah/)
