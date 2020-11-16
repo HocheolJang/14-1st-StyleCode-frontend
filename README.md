@@ -19,8 +19,8 @@
 
 - 메인화면
 - 회원가입 / 로그인 (토큰)
-- 상품 상세페이지
-- 장바구니 기능
+- 상품 상세 페이지 / 재고별 수량 표기
+- 장바구니 페이지 / 기능
 - 소셜 기능(#OOTD)
 - 검색 기능(상품명, 브랜드)
 
@@ -31,23 +31,20 @@
 
 ## Contributing
 
-_(프로젝트 기여자가 있을 경우 적습니다)_
-
-- Thanks to [SpartaCodingClub]("https://spartacodingclub.kr/")
+- Thanks to [Wecode]("https://wecode.co.kr/")
 
 ## Reference
 
-_(참고 리소스, code snippet, 라이센스 정보를 표기합니다)_
-
-- (예시) [네이버 지도 API](링크url) : 장소카드 지도화면에 사용
-- (예시) [Teachable Machine](https://teachablemachine.withgoogle.com/) : 절하는 pose MachineLearning Model
+- [스타일쉐어](https://www.styleshare.kr/)
+- [unsplash.com](https://unsplash.com/)
+- [API 사용처](http://google.com)
 
 ## Links
 
 _(사람이 읽기 쉽게 요약된 링크 정보를 추가합니다. 현재 리포지토리의 정보를 적습니다)_
 
-- Project homepage: (예시) https://hocheoljang.github.io/USStock/
-- Repository: (예시) https://github.com/ohahohah/github-tutorial
+- Project homepage
+- Repository: https://github.com/wecode-bootcamp-korea/14-1st-StyleCode-frontend/
 - 관련 프로젝트
   - 프로젝트 이름 : (예시) https://github.com/ohahohah/readme-template
   - 프로젝트 이름: (예시) https://github.com/someones/awesome-project/
