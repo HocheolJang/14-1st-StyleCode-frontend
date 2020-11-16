@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./stylecode-project/src/Pages/Store/Home";
-import Login from "./stylecode-project/src/Common/Login/Login";
-import SignUp from "./stylecode-project/src/Common/SignUp/SignUp";
-import Ootd from "./stylecode-project/src/Pages/Ootd/Ootd";
-import Cart from "./stylecode-project/src/Common/Cart/Cart";
-import ProductDetail from "./stylecode-project/src/Common/ProductDetail/ProductDetail";
-import SearchPage from "./stylecode-project/src/Common/SearchPage/SearchPage";
-import Unisex from "./stylecode-project/src/Pages/Store/Unisex/Unisex";
+import Home from "./Pages/Store/Home/Home";
+import Login from "./Common/Login/Login";
+import SignUp from "./Common/SignUp/SignUp";
+import Ootd from "./Pages/Ootd/Ootd";
+import Cart from "./Common/Cart/Cart";
+import ProductDetail from "./Common/ProductDetail/ProductDetail";
+import SearchPage from "./Common/SearchPage/SearchPage";
+import Unisex from "./Pages/Store/Unisex/Unisex";
 
 class Routes extends React.Component {
   render() {
