@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
+
+.trendContainer {
+  width: 1240px;
+  //   height: auto; 나중에 이렇게 할 예정
+  height: 2480px;
+  margin: 0 auto;
+  border: 2px solid red;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-size: 46px;
+      font-weight: 700;
+    }
+  }
+  .trendContainer {
+    display: flex;
+    border: 2px solid red;
+    .leftContainer {
+      display: flex;
+      //   justify-content: flex-start;
+      border: 2px solid red;
+      width: 50%;
+      .trendImgLeft {
+        border: 2px solid red;
+        width: 50%;
+        height: 30px;
+        overflow: hidden;
+      }
+      .trendImgRight {
+        border: 2px solid red;
+        width: 50%;
+        height: 30px;
+        overflow: hidden;
+      }
+    }
+    .rightContainer {
+      border: 2px solid red;
+      width: 50%;
+      margin-top: 100px;
+    }
+  }
+}

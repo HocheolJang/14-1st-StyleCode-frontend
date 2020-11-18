@@ -9,15 +9,13 @@
   header {
     display: flex;
     justify-content: center;
-    // width: 1712px;
     height: 55px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 
     .title {
       h2 {
         font-size: 46px;
         font-weight: 700;
-        // margin-right: 30px;
       }
     }
     .carouselBtn {
@@ -33,30 +31,35 @@
     }
   }
   .carousel {
+    // width: 856px;
+    height: 300px;
     .brandItem {
-      width: 856px;
-      height: 300px;
       .brandImgBox {
-        width: 435px;
-        height: 250px;
-        position: relative;
-        object-fit: cover;
-        // .brandItemImg {
-        //   &:hover {
-        //     transform: scale(1.1);
-        //     transition: transform 0.5s ease;
-        //   }
-        // }
+        display: flex;
+        justify-content: center;
+        width: 856px;
+        height: 300px;
+        overflow: hidden;
+        .brandItemImg {
+          // width: 98%;
+          // height: 100%;
+          object-fit: contain;
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s ease;
+            cursor: pointer;
+          }
+        }
       }
       .brandItemDescBox {
         display: flex;
         justify-content: center;
+
         .brandItemDesc {
           position: absolute;
           bottom: 30px;
-          // left: 30px;
+          // margin-left: 350px;
           color: white;
-          z-index: 2;
           .brandName {
             font-size: 24px;
             font-weight: 700;
@@ -79,11 +82,11 @@
       height: 70px;
       border-radius: 60px;
       border: none;
-      //   &:hover {
-      //     // background-color: white;
-      //     opacity: 0.5;
-      //     cursor: pointer;
-      //   }
+      &:hover {
+        // background-color: white;
+        opacity: 0.5;
+        cursor: pointer;
+      }
       span {
         font-size: 22px;
         font-weight: 700;

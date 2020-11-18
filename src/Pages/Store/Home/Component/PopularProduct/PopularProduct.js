@@ -50,7 +50,7 @@ class PopularProduct extends Component {
 
   render() {
     const { categoriesList, popularProductList } = this.state;
-    // console.log(PopularProductList);
+
     return (
       <div className="popularContainer">
         <div className="title">
@@ -111,7 +111,7 @@ class PopularProduct extends Component {
         </div>
         <div className="popularFooter">
           <button>
-            <span>전체 더 보기 ></span>
+            <span>전체 더 보기 `{">"}`</span>
           </button>
         </div>
       </div>

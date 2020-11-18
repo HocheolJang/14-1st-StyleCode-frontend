@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import "./Jumbotron.scss";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
 class Jumbotron extends Component {
   constructor() {
@@ -74,13 +72,13 @@ class Jumbotron extends Component {
                     src="images/icon/prev0.png"
                     alt="prev"
                     onClick={this.previous}
-                  ></img>
+                  />
                   <img
                     className="slideBtnRight"
                     src="images/icon/next0.png"
                     alt="next"
                     onClick={this.next}
-                  ></img>
+                  />
                 </div>
               );
             })}
