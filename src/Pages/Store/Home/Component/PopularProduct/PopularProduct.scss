@@ -2,10 +2,12 @@
 @import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
 
 .popularContainer {
+  // display: flex;
+  // justify-content: center;
   font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
   width: 1280px;
   height: 600px;
-  margin: 30px;
+  margin: 100px auto;
 
   // border: 3px solid red;
   .title {
@@ -15,7 +17,7 @@
     height: 50px;
     // border: 1px solid red;
     h2 {
-      font-size: 44px;
+      font-size: 46px;
       margin-top: 0px;
       font-weight: 700;
     }

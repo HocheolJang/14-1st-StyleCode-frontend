@@ -27,7 +27,7 @@ class PopularProduct extends Component {
               <img
                 className="productImg"
                 alt="제품사진"
-                src="images/popularProduct0.jpg"
+                src="images/product/popularProduct0.jpg"
               ></img>
             </div>
             <div className="productDescBox">
@@ -52,7 +52,7 @@ class PopularProduct extends Component {
               <img
                 className="productImg"
                 alt="제품사진"
-                src="images/popularProduct1.jpg"
+                src="images/product/popularProduct1.jpg"
               ></img>
             </div>
             <div className="productDescBox">
@@ -77,7 +77,7 @@ class PopularProduct extends Component {
               <img
                 className="productImg"
                 alt="제품사진"
-                src="images/popularProduct2.jpg"
+                src="images/product/popularProduct2.jpg"
               ></img>
             </div>
             <div className="productDescBox">
@@ -102,7 +102,7 @@ class PopularProduct extends Component {
               <img
                 className="productImg"
                 alt="제품사진"
-                src="images/popularProduct3.jpg"
+                src="images/product/popularProduct3.jpg"
               ></img>
             </div>
             <div className="productDescBox">

@@ -10,7 +10,7 @@ class PopularBrand extends Component {
       dots: false,
       infinite: true,
       slidesToShow: 3,
-      slidesToScroll: 1.5,
+      slidesToScroll: 1,
       initialSlide: 2.5,
       responsive: [
         {
@@ -45,9 +45,9 @@ class PopularBrand extends Component {
         <div className="popularBrandContainer">
           <header>
             <div className="title">
-              <h2>인기 브랜드</h2>
+              <h2>인기 상품</h2>
             </div>
-            <div className="carouselBtn">
+            {/* <div className="carouselBtn">
               <img
                 className="prevBtn"
                 src="images/icon/prev1.png"
@@ -58,7 +58,7 @@ class PopularBrand extends Component {
                 src="images/icon/next1.png"
                 alt="우측으로 넘기는 버튼"
               ></img>
-            </div>
+            </div> */}
           </header>
           <div className="carousel">
             <Slider {...settings}>
