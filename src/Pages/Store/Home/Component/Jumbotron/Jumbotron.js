@@ -10,17 +10,14 @@ class Jumbotron extends Component {
     this.state = {
       jumbotronItem: [],
     };
+    this.slider = React.createRef();
   }
-  // next() {
-  //   this.slider.slickNext();
-  // }
-  // previous() {
-  //   this.slider.slickPrev();
-  // }
 
-  previous = () => {};
+  previous = () => {
+    this.slider.current.slickPrev();
+  };
   next = () => {
-    this.slickNext();
+    this.slider.current.slickNext();
   };
 
   getJumbotronData = () => {
@@ -29,7 +26,6 @@ class Jumbotron extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
-        // console.log(res);
         this.setState({
           jumbotronItem: res.item,
         });
@@ -42,9 +38,8 @@ class Jumbotron extends Component {
 
   render() {
     const { jumbotronItem } = this.state;
-    // console.log(jumbotronItem);
     const setting = {
-      // arrows: true,
+      arrows: false,
       dots: true,
       infinite: true,
       slidesToShow: 1,
@@ -56,7 +51,7 @@ class Jumbotron extends Component {
     return (
       <div>
         <div className="jumbotronContainer">
-          <Slider {...setting}>
+          <Slider ref={this.slider} {...setting}>
             {jumbotronItem.map((item, idx) => {
               return (
                 <div className="item" key={idx}>
