@@ -1,0 +1,27 @@
+.contents {
+  width: 218px;
+  margin: 0 auto;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  color: #26282b;
+  font-family: "Helvetica", "Arial", "Apple SD Gothic Neo", "Nanum Gothic",
+    "Malgun Gothic", "DotumChe", "Dotum", sans-serif;
+  line-height: 1.3;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  img {
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+
+  .contentText {
+    padding: 10px 10px 12px;
+  }
+}
