@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
+
+.popularBrandContainer {
+  //   display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 635px;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+  header {
+    display: flex;
+    justify-content: center;
+    width: 1712px;
+    height: 55px;
+    margin: 10px auto;
+    .title {
+      h2 {
+        font-size: 46px;
+        font-weight: 700;
+        margin-right: 30px;
+      }
+    }
+    .carouselBtn {
+      display: flex;
+      justify-content: flex-end;
+      .prevBtn {
+        width: 30px;
+      }
+      .nextBtn {
+        width: 30px;
+        margin-left: 40px;
+      }
+    }
+  }
+  .carousel {
+    .brandItem {
+      width: 856px;
+      height: 300px;
+      .brandImgBox {
+        width: 435px;
+        height: 250px;
+        position: relative;
+        object-fit: cover;
+        // .brandItemImg {
+        //   &:hover {
+        //     transform: scale(1.1);
+        //     transition: transform 0.5s ease;
+        //   }
+        // }
+      }
+      .brandItemDescBox {
+        display: flex;
+        justify-content: center;
+        .brandItemDesc {
+          position: absolute;
+          bottom: 30px;
+          // left: 30px;
+          color: white;
+          z-index: 2;
+          .brandName {
+            font-size: 24px;
+            font-weight: 700;
+          }
+          .brandProductCnt {
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    button {
+      width: 230px;
+      height: 70px;
+      border-radius: 60px;
+      border: none;
+      //   &:hover {
+      //     // background-color: white;
+      //     opacity: 0.5;
+      //     cursor: pointer;
+      //   }
+      span {
+        font-size: 22px;
+        font-weight: 700;
+      }
+    }
+  }
+}
