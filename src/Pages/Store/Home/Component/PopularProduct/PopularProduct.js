@@ -3,7 +3,54 @@ import "./PopularProduct.scss";
 // import Unisex from
 
 class PopularProduct extends Component {
+  constructor() {
+    super();
+    this.state = {
+      categoriesList: [],
+      popularProductList: [],
+      currentCategory: 0,
+    };
+  }
+
+  getcategoriesList = () => {
+    fetch("http://localhost:3000/data/popularProduct.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          categoriesList: res.categories,
+        });
+      });
+  };
+  getPopularProductList = () => {
+    fetch("http://localhost:3000/data/popularProduct.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          popularProductList: res.product,
+        });
+      });
+  };
+
+  componentDidMount() {
+    this.getcategoriesList();
+    this.getPopularProductList();
+  }
+
+  handleMenuTab = (e) => {
+    console.log(e);
+  };
+
+  numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   render() {
+    const { categoriesList, popularProductList } = this.state;
+    // console.log(PopularProductList);
     return (
       <div className="popularContainer">
         <div className="title">
@@ -11,117 +58,56 @@ class PopularProduct extends Component {
         </div>
         <div className="catergories">
           <ul className="categoryList">
-            <li className="active">전체</li>
-            <li className="inactive">유니섹스</li>
-            <li className="inactive">여성</li>
-            <li className="inactive">뷰티</li>
-            <li className="inactive">가방잡화</li>
-            <li className="inactive">슈즈</li>
-            <li className="inactive">라이프</li>
-            <li className="inactive">테크</li>
+            {categoriesList.map((category) => {
+              return (
+                <li
+                  className="inactive"
+                  key={category.id}
+                  onClick={this.handleMenuTab}
+                >
+                  {category.categoryName}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="cardList">
-          <div className="card">
-            <div className="productImgBox">
-              <img
-                className="productImg"
-                alt="제품사진"
-                src="images/product/popularProduct0.jpg"
-              ></img>
-            </div>
-            <div className="productDescBox">
-              <div>
-                <span className="brandName">지프</span>
+          {popularProductList.map((product) => {
+            return (
+              <div className="card">
+                <div className="productImgBox">
+                  <img
+                    className="productImg"
+                    alt="제품사진"
+                    src={product.src}
+                  ></img>
+                </div>
+                <div className="productDescBox">
+                  <div>
+                    <span className="brandName">{product.brandName}</span>
+                  </div>
+                  <div className="productName">
+                    <span>{product.productName}</span>
+                  </div>
+                  <div className="discountPriceBox">
+                    <span className="discount">{product.discount}</span>
+                    <span className="productPrice">
+                      {product.productPrice}원
+                    </span>
+                  </div>
+                  <div className="likeReviewBox">
+                    <span className="productLike">
+                      좋아요<span>{product.productLike}</span>
+                    </span>
+                    <span className="productReview">
+                      후기
+                      <span>{product.productReview}</span>
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div className="productName">
-                <span>[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)</span>
-              </div>
-              <div className="discountPriceBox">
-                <span className="discount">25%</span>
-                <span className="productPrice">59,900원</span>
-              </div>
-              <div className="likeReviewBox">
-                <span className="productLike">좋아요 26,170</span>
-                <span className="productReview">후기 274</span>
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className="productImgBox">
-              <img
-                className="productImg"
-                alt="제품사진"
-                src="images/product/popularProduct1.jpg"
-              ></img>
-            </div>
-            <div className="productDescBox">
-              <div>
-                <span className="brandName">지프</span>
-              </div>
-              <div className="productName">
-                <span>[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)</span>
-              </div>
-              <div className="discountPriceBox">
-                <span className="discount">25%</span>
-                <span className="productPrice">59,900원</span>
-              </div>
-              <div className="likeReviewBox">
-                <span className="productLike">좋아요 26,170</span>
-                <span className="productReview">후기 274</span>
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className="productImgBox">
-              <img
-                className="productImg"
-                alt="제품사진"
-                src="images/product/popularProduct2.jpg"
-              ></img>
-            </div>
-            <div className="productDescBox">
-              <div>
-                <span className="brandName">지프</span>
-              </div>
-              <div className="productName">
-                <span>[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)</span>
-              </div>
-              <div className="discountPriceBox">
-                <span className="discount">25%</span>
-                <span className="productPrice">59,900원</span>
-              </div>
-              <div className="likeReviewBox">
-                <span className="productLike">좋아요 26,170</span>
-                <span className="productReview">후기 274</span>
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className="productImgBox">
-              <img
-                className="productImg"
-                alt="제품사진"
-                src="images/product/popularProduct3.jpg"
-              ></img>
-            </div>
-            <div className="productDescBox">
-              <div>
-                <span className="brandName">지프</span>
-              </div>
-              <div className="productName">
-                <span>[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)</span>
-              </div>
-              <div className="discountPriceBox">
-                <span className="discount">25%</span>
-                <span className="productPrice">59,900원</span>
-              </div>
-              <div className="likeReviewBox">
-                <span className="productLike">좋아요 26,170</span>
-                <span className="productReview">후기 274</span>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
         <div className="popularFooter">
           <button>

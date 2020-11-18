@@ -22,7 +22,6 @@ $storeBorderColor: #f0f1f4;
 .navBarWrapper {
   position: fixed;
   width: 100%;
-  // height: px;
   z-index: 1;
   top: 0;
   transition-property: box-shadow;
@@ -35,6 +34,7 @@ $storeBorderColor: #f0f1f4;
     "Malgun Gothic", "DotumChe", "Dotum", sans-serif;
   line-height: 1.3;
   background-color: white;
+
   .topNavBar {
     display: flex;
     align-items: center;
@@ -52,9 +52,9 @@ $storeBorderColor: #f0f1f4;
         cursor: pointer;
         text-decoration: underline;
 
-        image {
-          width: 1em;
-          height: 1em;
+        img {
+          width: 44px;
+          height: 44px;
         }
       }
 
@@ -82,28 +82,91 @@ $storeBorderColor: #f0f1f4;
         font-weight: 400;
         letter-spacing: -0.4px;
         line-height: 1.43;
+      }
 
-        a {
-          display: block;
-          text-decoration: none;
-          font-weight: 700;
-          color: rgb(27, 29, 31);
-          cursor: pointer;
-          border: 0px;
-          background: transparent;
-          padding: 10px 12px;
-          outline: none;
-          transition: color 0.2s ease-in-out 0s;
-          font-size: 14px;
-          line-height: 1.43;
-          cursor: pointer;
-        }
-
-        span {
-          color: rgb(27, 29, 31);
+      .leftMenuOotd {
+        display: block;
+        text-decoration: none;
+        font-weight: 700;
+        color: rgb(27, 29, 31);
+        cursor: pointer;
+        border: 0px;
+        background: transparent;
+        padding: 10px 12px;
+        outline: none;
+        font-size: 14px;
+        line-height: 1.43;
+        cursor: pointer;
+        transform: translateZ(0);
+        transition: transform 0.25s ease-out;
+        &:hover {
+          transform: scale(1.05);
         }
       }
+
+      .leftMenuOotdAct {
+        display: block;
+        text-decoration: none;
+        font-weight: 700;
+        color: rgb(27, 29, 31);
+        cursor: pointer;
+        border-bottom: 1px solid black;
+        background: transparent;
+        padding: 10px 12px;
+        outline: none;
+        font-size: 14px;
+        line-height: 1.43;
+        cursor: pointer;
+        transform: translateZ(0);
+        transition: transform 0.25s ease-out;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      .leftMenuStoreAct {
+        display: block;
+        text-decoration: none;
+        font-weight: 700;
+        color: rgb(27, 29, 31);
+        cursor: pointer;
+        border-bottom: 1px solid black;
+        background: transparent;
+        padding: 10px 12px;
+        outline: none;
+        font-size: 14px;
+        line-height: 1.43;
+        cursor: pointer;
+        transform: translateZ(0);
+        transition: transform 0.25s ease-out;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      .leftMenuStore {
+        display: block;
+        text-decoration: none;
+        font-weight: 700;
+        color: rgb(27, 29, 31);
+        cursor: pointer;
+        background: transparent;
+        padding: 10px 12px;
+        outline: none;
+        font-size: 14px;
+        line-height: 1.43;
+        cursor: pointer;
+        transform: translateZ(0);
+        transition: transform 0.25s ease-out;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      span {
+        color: rgb(27, 29, 31);
+      }
     }
+
     .rightNavBar {
       display: flex;
       position: absolute;
@@ -153,15 +216,10 @@ $storeBorderColor: #f0f1f4;
     }
 
     .searchBar {
-      // position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 0 auto;
+      transform: translateX(-20%);
       width: 734.797px;
       height: 40px;
-      margin-left: 270px;
-      text-align: center;
-      -webkit-box-align: center;
       z-index: 102;
       font-size: 14px;
       font-weight: 400;
@@ -177,17 +235,13 @@ $storeBorderColor: #f0f1f4;
       transition: background-color 0.25s ease-in-out 0s, color 0.25s 0s;
 
       input {
-        // position: relative;
-        // label {
-        //   position: relative;
-        //   right: 200px;
-
-        //   svg {
-        //     margin-right: 12px;
-        //     width: 20px;
-        //     height: 20px;
-        //   }
-        // }
+        label {
+          svg {
+            margin-right: 12px;
+            width: 20px;
+            height: 20px;
+          }
+        }
         appearance: none;
         width: 100%;
         height: 100%;
@@ -202,12 +256,13 @@ $storeBorderColor: #f0f1f4;
         font-weight: 400;
         letter-spacing: -0.4px;
         line-height: 1.43;
-        color: black;
+        color: #26282b;
         font-family: "Helvetica", "Arial", "Apple SD Gothic Neo", "Nanum Gothic",
           "Malgun Gothic", "DotumChe", "Dotum", sans-serif;
       }
     }
   }
+
   .bottomNavBar {
     display: flex;
     height: 64px;
@@ -229,6 +284,11 @@ $storeBorderColor: #f0f1f4;
       vertical-align: middle;
       padding: 10px 12px;
       cursor: pointer;
+      transform: translateZ(0);
+      transition: transform 0.25s ease-out;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }

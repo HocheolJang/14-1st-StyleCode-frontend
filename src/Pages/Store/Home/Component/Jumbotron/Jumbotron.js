@@ -40,7 +40,7 @@ class Jumbotron extends Component {
     const { jumbotronItem } = this.state;
     const setting = {
       arrows: false,
-      dots: true,
+      dots: false,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
