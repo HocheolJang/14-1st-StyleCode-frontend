@@ -9,8 +9,8 @@ import Cart from "./Common/Cart/Cart";
 import ProductDetail from "./Common/ProductDetail/ProductDetail";
 import SearchPage from "./Common/SearchPage/SearchPage";
 import Unisex from "./Pages/Store/Unisex/Unisex";
-import NavbarOotd from "./Common/Navbar/NavbarOotd";
-import NavbarStore from "./Common/Navbar/NavbarStore";
+import NavbarOotd from "./Common/Navbar/NavbarOotd/NavbarOotd";
+import NavbarStore from "./Common/Navbar/NavbarStore/NavbarStore";
 import Main from "./Pages/Ootd/Main/Main";
 
 class Routes extends React.Component {
