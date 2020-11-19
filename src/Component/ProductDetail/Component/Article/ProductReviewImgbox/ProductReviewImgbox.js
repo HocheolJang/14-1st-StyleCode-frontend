@@ -6,7 +6,7 @@ import "../../../../../Styles/reset.scss";
 class ProductReviewImgbox extends Component {
   render() {
     console.log(this.props.productdetail);
-    console.log(this.props.productdetail[0].productImg);
+    // console.log(this.props.productdetail[0].productImg);
     const { productdetail } = this.props;
     return (
       <div className="article-product-review-imgbox" key={productdetail.id}>

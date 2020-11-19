@@ -60,14 +60,18 @@ class SignUp extends Component {
   //     });
   // }
 
-  handleIDChange = (e) => {
-    this.setState({ id: e.target.value });
-  };
-  handlePWChange = (e) => {
-    this.setState({ password: e.target.value });
-  };
-  handleCheckPw = (e) => {
-    this.setState({ checkpassword: e.target.value });
+  // handleIDChange = (e) => {
+  //   this.setState({ id: e.target.value });
+  // };
+  // handlePWChange = (e) => {
+  //   this.setState({ password: e.target.value });
+  // };
+  // handleCheckPw = (e) => {
+  //   this.setState({ checkpassword: e.target.value });
+  // };
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   checkValidation = (e) => {
@@ -109,22 +113,25 @@ class SignUp extends Component {
                 className="id"
                 placeholder="ID"
                 type="text"
-                value={this.state.id}
-                onChange={this.handleIDChange}
+                // value={this.state.id}
+                onChange={this.handleChange}
+                name="id"
               ></input>
               <input
                 className="password"
                 placeholder="비밀번호(최소6자)"
                 type="password"
-                value={this.state.password}
-                onChange={this.handlePWChange}
+                // value={this.state.password}
+                onChange={this.handleChange}
+                name="password"
               ></input>
               <input
                 className="password-check"
                 placeholder="비밀번호 확인"
                 type="password"
-                value={this.state.checkpassword}
-                onChange={this.handleCheckPw}
+                // value={this.state.checkpassword}
+                onChange={this.handleChange}
+                name="checkpassword"
               ></input>
               <button
                 className="signin"
