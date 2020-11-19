@@ -1,22 +1,65 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./SignUp.scss";
 import "../../Styles/reset.scss";
 import "../../Styles/common.scss";
-import facebook from "../Login/images/facebook.png";
-import google from "../Login/images/google.png";
-import kakao from "../Login/images/kakao.png";
-import twitter from "../Login/images/twitter.png";
 
 class SignUp extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       id: "",
       password: "",
       checkpassword: "",
+      login: [],
     };
   }
+
+  handleClick = (e) => {
+    fetch("http://10.58.0.206:8000/user/signup", {
+      method: "POST",
+      body: JSON.stringify({
+        login_id: this.state.id,
+        password: this.state.password,
+        // nickname : "nick1" ,
+        // email : "wecode22@we".com,
+        // gender_id : "1" ,
+        // birth_date : “2000-02-22”
+        // email: this.state.id,
+        // password: this.state.password,
+        // name: "jj",
+        // phone_number: "0000000001",
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => console.log("결과", result));
+  };
+
+  //   // if (result.Authorization) {
+  //   //   localStorage.getItem("token");
+  //   //   console.log("토큰 왔음");
+  //   //   localStorage.setItem("token", result.Authorization);
+  //   // }
+  //   // if (result.Message === "SUCCESS") {
+  //   //   this.props.history.push("/login-moonjoo");
+  //   // } else {
+  //   //   alert("정보가 일치하지 않습니다.");
+  //   // }
+  // };
+
+  // componentDidMount() {
+  //   fetch("http://localhost:3000/data/birthday.json", {
+  //     method: "GET",
+  //   })
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       this.setState({
+  //         loginMethod: res.login
+  //       });
+  //     });
+  // }
+
   handleIDChange = (e) => {
     this.setState({ id: e.target.value });
   };
@@ -28,7 +71,7 @@ class SignUp extends Component {
   };
 
   checkValidation = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const { id, password, checkpassword } = this.state;
     const checkId = id.includes("@");
     const checkPw = password.length >= 6;
@@ -47,7 +90,12 @@ class SignUp extends Component {
     }
   };
 
+  goToMain = () => {
+    this.props.history.push("/SignUpDetail");
+  };
+
   render() {
+    console.log(this.state.id, this.state.password, this.state.checkpassword);
     return (
       <div className="SignUp">
         <div className="main">
@@ -60,6 +108,7 @@ class SignUp extends Component {
               <input
                 className="id"
                 placeholder="ID"
+                type="text"
                 value={this.state.id}
                 onChange={this.handleIDChange}
               ></input>
@@ -79,7 +128,11 @@ class SignUp extends Component {
               ></input>
               <button
                 className="signin"
-                onClick={this.checkValidation}
+                onClick={() => {
+                  this.checkValidation();
+                  // this.goToMain();
+                  this.handleClick();
+                }} /*{this.checkValidation}*/
                 onKeyup={this.checkValidation}
               >
                 가입
@@ -88,22 +141,38 @@ class SignUp extends Component {
             <article className="social-login">
               <div className="facebook-signin">
                 <a href="www.facebook.com">
-                  <img src={facebook} className="facebook-signin" />
+                  <img
+                    className="facebook-signin"
+                    alt="facebook"
+                    src="images/facebook.png"
+                  />
                 </a>
               </div>
               <div className="twitter-signin">
                 <a href="www.twitter.com">
-                  <img src={twitter} className="twitter-signin" />
+                  <img
+                    className="twitter-signin"
+                    alt="twitter"
+                    src="images/twitter.png"
+                  />
                 </a>
               </div>
               <div className="google-signin">
                 <a href="www.google.com">
-                  <img src={google} className="google-signin" />
+                  <img
+                    className="google-signin"
+                    alt="google"
+                    src="images/google.png"
+                  />
                 </a>
               </div>
               <div className="kakao-signin">
                 <a href="www.kakao.com">
-                  <img src={kakao} className="kakao-signin" />
+                  <img
+                    className="kakao-signin"
+                    alt="kakao"
+                    src="images/kakao.png"
+                  />
                 </a>
               </div>
             </article>
