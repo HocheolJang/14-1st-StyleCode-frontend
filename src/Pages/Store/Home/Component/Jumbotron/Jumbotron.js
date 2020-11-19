@@ -36,31 +36,22 @@ class Jumbotron extends Component {
 
   render() {
     const { jumbotronItem } = this.state;
-    const setting = {
-      arrows: false,
-      dots: false,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 100000,
-      pauseOnHover: true,
-    };
+
     return (
       <div>
         <div className="jumbotronContainer">
-          <Slider ref={this.slider} {...setting}>
+          <Slider ref={this.slider} {...SETTING}>
             {jumbotronItem.map((item, idx) => {
               return (
                 <div className="item" key={idx}>
                   <img className="jumboImg" src={item.src} alt={item.alt}></img>
                   <div className="adsText">
-                    <div className={item.mainTitleClassName}>
+                    <div className= {`mainTitle ${item.mainTitleClassName}`}>
                       <span>{item.mainTitle0}</span>
                       <br />
                       <span>{item.mainTitle1}</span>
                     </div>
-                    <div className={item.subTitleClassName}>
+                    <div className={`subTitle ${item.mainTitleClassName}`}>
                       <span>{item.subTitle0}</span>
                       <br />
                       <span>{item.subTitle1}</span>
@@ -88,5 +79,16 @@ class Jumbotron extends Component {
     );
   }
 }
+
+const SETTING = {
+  arrows: false,
+  dots: false,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 100000,
+  pauseOnHover: true,
+};
 
 export default Jumbotron;

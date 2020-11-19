@@ -111,7 +111,7 @@ class PopularProduct extends Component {
         </div>
         <div className="popularFooter">
           <button>
-            <span>전체 더 보기 `{">"}`</span>
+            <span>전체 더 보기 {">"}</span>
           </button>
         </div>
       </div>

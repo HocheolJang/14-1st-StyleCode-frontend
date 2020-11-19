@@ -1,33 +1,111 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Trend.scss";
 
 class Trend extends Component {
+  constructor() {
+    super();
+    this.state = {
+      trendList: [],
+    };
+  }
+
+  getTrendList = () => {
+    fetch("http://localhost:3000/data/trendItem.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          trendList: res.item,
+        });
+      });
+  };
+  componentDidMount() {
+    this.getTrendList();
+  }
+
   render() {
+    const { trendList } = this.state;
+    if (trendList.length) {
+      console.log(trendList[1].id);
+    }
     return (
-      <div className="trendContainer">
+      <div className="trendAllContainer">
         <div className="title">
           <h2>트렌드 기획전</h2>
         </div>
         <div className="trendContainer">
           <div className="leftContainer">
-            <div className="item">
-              <div className="imgContainer">
-                <div className="trendImgLeft">
-                  {/* <img src="images/trend/trend0.jpg" alt="trend0"></img> */}
+            {trendList.map((trend) => {
+              return (
+                <div className="item" key={trendList.id}>
+                  <div className="imgContainer">
+                    <div className="trendImgLeft">
+                      <img src={trend.src0} alt={trend.alt0} />
+                    </div>
+                    <div className="trendImgRight">
+                      <img src={trend.src1} alt={trend.alt0} />
+                    </div>
+                    <div className="circle">
+                      <img
+                        src="images/icon/onlystylecode.png"
+                        alt="오직스코에서만"
+                      />
+                    </div>
+                  </div>
+                  <div className="descContainer">
+                    <div className="mainTitle">
+                      <span>{trend.mainTitle0}</span>
+                    </div>
+                    <div className="mainTitle">
+                      <span>{trend.mainTitle1}</span>
+                    </div>
+                    <div className="showAll">
+                      <Link to="#">
+                        <span>{trend.productCnt}개 더 보기</span>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                <div className="trendImgRight">
-                  {/* <img src="images/trend/trend1.jpg" alt="trend1"></img> */}
-                </div>
-                <div className="circle"></div>
-              </div>
-              <div className="descContainer">
-                <div className="mainTitleUp"></div>
-                <div className="mainTitleDown"></div>
-                <div className="showAll"></div>
-              </div>
-            </div>
+              );
+            })}
           </div>
-          <div className="rightContainer"></div>
+          <div className="rightContainer">
+            {trendList.map((trend) => {
+              return (
+                <div className="item" key={trendList.id}>
+                  <div className="imgContainer">
+                    <div className="trendImgLeft">
+                      <img src={trend.src0} alt={trend.alt0} />
+                    </div>
+                    <div className="trendImgRight">
+                      <img src={trend.src1} alt={trend.alt0} />
+                    </div>
+                    <div className="circle">
+                      <img
+                        src="images/icon/onlystylecode.png"
+                        alt="오직스코에서만"
+                      />
+                    </div>
+                  </div>
+                  <div className="descContainer">
+                    <div className="mainTitle">
+                      <span>{trend.mainTitle0}</span>
+                    </div>
+                    <div className="mainTitle">
+                      <span>{trend.mainTitle1}</span>
+                    </div>
+                    <div className="showAll">
+                      <Link to="#">
+                        <span>{trend.productCnt}개 더 보기</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

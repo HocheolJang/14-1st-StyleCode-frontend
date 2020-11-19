@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./PopularBrand.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick-theme.css";
 
 class PopularBrand extends Component {
   constructor() {
@@ -30,37 +30,6 @@ class PopularBrand extends Component {
   render() {
     const { brandList } = this.state;
 
-    const settings = {
-      dots: false,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      initialSlide: 2.5,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          },
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          },
-        },
-      ],
-    };
-
     return (
       <div>
         <div className="popularBrandContainer">
@@ -82,7 +51,7 @@ class PopularBrand extends Component {
             </div>
           </header>
           <div className="carousel">
-            <Slider {...settings}>
+            <Slider {...SETTING}>
               {brandList.map((brand) => {
                 return (
                   <div className="brandItem">
@@ -108,7 +77,7 @@ class PopularBrand extends Component {
           </div>
           <footer>
             <button>
-              <span>브랜드 더 보기 `{'>'}`</span>
+              <span>브랜드 더 보기 {">"}</span>
             </button>
           </footer>
         </div>
@@ -116,5 +85,36 @@ class PopularBrand extends Component {
     );
   }
 }
+
+const SETTING = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  initialSlide: 2.5,
+  // responsive: [
+  //   {
+  //     breakpoint: 1024,
+  //     settings: {
+  //       slidesToShow: 3,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  //   {
+  //     breakpoint: 600,
+  //     settings: {
+  //       slidesToShow: 3,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  //   {
+  //     breakpoint: 480,
+  //     settings: {
+  //       slidesToShow: 3,
+  //       slidesToScroll: 1,
+  //     },
+  //   },
+  // ],
+};
 
 export default PopularBrand;
