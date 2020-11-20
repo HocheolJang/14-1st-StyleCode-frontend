@@ -56,31 +56,13 @@ class SignUp extends Component {
       .then((res) => res.json())
       .then((res) => console.log("결과", res));
   };
-  //       {if (res.Authorization) {
-  //         localStorage.getItem("token");
-  //         console.log("토큰 왔음");
-  //         localStorage.setItem("token", res.Authorization);
-  //       }
-  //       if (res.Message === "SUCCESS") {
-  //         this.props.history.push("/Login");
-  //       } else {
-  //         alert("정보가 일치하지 않습니다.");
-  //       }
-  //     };
-  // };
-  // .then((result) => console.log("결과", result));
+
   componentDidMount() {
     this.getBirthdayDate();
     this.handleClick();
   }
 
   render() {
-    // console.log(this.state.monthlist);
-    // console.log(this.state.year);
-    console.log(this.state.year.value);
-    console.log(this.state.month.value);
-    console.log(this.state.day.value);
-    console.log(this.state.birth_date.value);
     const { birthdaylist, monthlist, daylist } = this.state;
     return (
       <div className="SignUp">
@@ -188,12 +170,7 @@ class SignUp extends Component {
                 <div>
                   <p>생일</p>
                 </div>
-                <select
-                  className="year"
-                  onChange={this.handleChange}
-                  // name="year"
-                  // value={this.state.year}
-                >
+                <select className="year" onChange={this.handleChange}>
                   {birthdaylist.map((item) => (
                     <option key={item.key} value={item.key}>
                       {item.value}
@@ -219,44 +196,23 @@ class SignUp extends Component {
             <article className="rightMain-agree-form">
               <div className="agree-form">
                 <div className="agree-form-one">
-                  <input
-                    type="checkbox"
-                    value="all-one-agree"
-                    // checked={this.state.allChecked}
-                    // onChange={this.handleAllChecked}
-                  />
+                  <input type="checkbox" value="all-one-agree" />
                   <p>전체동의</p>
                 </div>
                 <div className="agree-form-two">
-                  <input
-                    type="checkbox"
-                    value="two-agree"
-                    // checked={this.state.checked1}
-                  />
+                  <input type="checkbox" value="two-agree" />
                   <p>(필수) 이용약관 동의</p>
                 </div>
                 <div className="agree-form-three">
-                  <input
-                    type="checkbox"
-                    value="three-agree"
-                    // checked={this.state.checked2}
-                  />
+                  <input type="checkbox" value="three-agree" />
                   <p>(필수) 개인정보 처리방침 동의</p>
                 </div>
                 <div className="agree-form-four">
-                  <input
-                    type="checkbox"
-                    value="four-agree"
-                    // checked={this.state.checked3}
-                  />
+                  <input type="checkbox" value="four-agree" />
                   <p>(필수) 만 14세 이상 입니다.</p>
                 </div>
                 <div className="agree-form-five">
-                  <input
-                    type="checkbox"
-                    value="five-agree"
-                    // checked={this.state.checked4}
-                  />
+                  <input type="checkbox" value="five-agree" />
                   <p>(선택) 마케팅 정보 수신 동의</p>
                 </div>
               </div>
