@@ -3,10 +3,18 @@ import "../../../../ProductDetail/ProductDetail.scss";
 import "../../../../../Styles/common.scss";
 import "../../../../../Styles/reset.scss";
 import ProductReviewImgbox from "../ProductReviewImgbox/ProductReviewImgbox";
+import Slider from "react-slick";
 
 class ProductReview extends Component {
   render() {
     const { productdetail } = this.props;
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+    };
     return (
       <article className="article-product-review">
         <div className="article-product-review-title">
@@ -14,7 +22,18 @@ class ProductReview extends Component {
           <span className="product-review-number">285</span>
         </div>
         <div className="article-product-review-totalimgbox">
-          <ProductReviewImgbox productdetail={this.props.productdetail} />
+          <Slider {...settings}>
+            {productdetail.map((product) => (
+              <ProductReviewImgbox
+                key={product.id}
+                id={product.id}
+                contentImg={product.productImg}
+                authorImg={product.authorImg}
+                author={product.author}
+                comment={product.comment}
+              />
+            ))}
+          </Slider>
           {/* <div className="article-product-review-imgbox">
             <img className="article-product-review-img"></img>
             <div className="article-product-review-img-wrapper">

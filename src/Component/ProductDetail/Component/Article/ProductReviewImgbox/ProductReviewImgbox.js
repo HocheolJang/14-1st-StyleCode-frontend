@@ -7,30 +7,36 @@ class ProductReviewImgbox extends Component {
   render() {
     console.log(this.props.productdetail);
     // console.log(this.props.productdetail[0].productImg);
-    const { productdetail } = this.props;
+    const {
+      productdetail,
+      contentImg,
+      authorImg,
+      author,
+      comment,
+    } = this.props;
     return (
-      <div className="article-product-review-imgbox" key={productdetail.id}>
+      <div className="article-product-review-imgbox">
         <img
           className="article-product-review-img"
-          src={productdetail.productImg}
+          src={contentImg}
           alt=""
         ></img>
         <div className="article-product-review-img-wrapper">
           <img
             className="article-product-review-img-logo"
-            src={productdetail.authorImg}
+            src={authorImg}
             alt=""
           ></img>
           <div className="article-product-review-img-id">
             <div>
-              <span>{productdetail.author}</span>
-              <span>{productdetail.comment}</span>
+              <span>{author}</span>
+              {/* <span>{comment}</span> */}
             </div>
             <div className="article-product-review-img-like">
-              <span>좋아요</span>
-              <span>1,347</span>
+              <span>{comment}</span>
+              {/* <span>1,347</span>
               <span>댓글</span>
-              <span>165</span>
+              <span>165</span> */}
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import "./SignUp.scss";
 import "../../Styles/reset.scss";
 import "../../Styles/common.scss";
+import "../SignUpDetail/SignUpDetail";
 
 class SignUp extends Component {
   constructor() {
@@ -94,12 +95,20 @@ class SignUp extends Component {
     }
   };
 
-  goToMain = () => {
-    this.props.history.push("/SignUpDetail");
+  // goToMain = () => {
+  //   this.props.history.push("/SignUpDetail");
+  // };
+
+  doSignUp = () => {
+    const { id, password } = this.state;
+    localStorage.setItem("id", id);
+    localStorage.setItem("password", password);
+    // this.props.history.push("/SignUpDetail");
   };
 
   render() {
-    console.log(this.state.id, this.state.password, this.state.checkpassword);
+    // console.log(this.state.id, this.state.password, this.state.checkpassword);
+    console.log(this.doSignUp());
     return (
       <div className="SignUp">
         <div className="main">
@@ -136,11 +145,12 @@ class SignUp extends Component {
               <button
                 className="signin"
                 onClick={() => {
+                  this.doSignUp();
                   this.checkValidation();
                   // this.goToMain();
                   this.handleClick();
                 }} /*{this.checkValidation}*/
-                onKeyup={this.checkValidation}
+                onKeyUp={this.checkValidation}
               >
                 가입
               </button>

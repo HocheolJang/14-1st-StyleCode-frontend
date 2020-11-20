@@ -3,7 +3,6 @@ import { withRouter, Link } from "react-router-dom";
 import "./Login.scss";
 import "../../Styles/reset.scss";
 import "../../Styles/common.scss";
-// import "../../../public/images/loginbackground.jpg";
 
 class Login extends Component {
   constructor() {
@@ -20,26 +19,26 @@ class Login extends Component {
   renderSignUpdata = () => {
     console.log(this.state);
   };
-  // handleClick = (e) => {
-  //   fetch("http://10.58.0.206:8000/user/signup", {
-  //     method: "POST",
-  //     body: JSON.stringify({
-  //       login_id: this.state.id,
-  //       password: this.state.password,
-  //       // nickname : "nick1" ,
-  //       // email : "wecode22@we".com,
-  //       // gender_id : "1" ,
-  //       // birth_date : “2000-02-22”
-  //       // email: this.state.id,
-  //       // password: this.state.password,
-  //       // name: "jj",
-  //       // phone_number: "0000000001",
-  //     }),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((result) => console.log("결과", result));
+  handleClick = (e) => {
+    fetch("http://10.58.4.87:8000/user/login", {
+      method: "POST",
+      body: JSON.stringify({
+        login_id: this.state.id,
+        password: this.state.password,
+        // nickname : "nick1" ,
+        // email : "wecode22@we".com,
+        // gender_id : "1" ,
+        // birth_date : “2000-02-22”
+        // email: this.state.id,
+        // password: this.state.password,
+        // name: "jj",
+        // phone_number: "0000000001",
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => console.log("결과", result));
+  };
 
-  // };
   handleIDChange = (e) => {
     this.setState({ id: e.target.value });
   };
@@ -66,9 +65,9 @@ class Login extends Component {
     }
   };
 
-  goToMain = () => {
-    this.props.history.push("/SignUpDetail");
-  };
+  // goToMain = () => {
+  //   this.props.history.push("/SignUpDetail");
+  // };
 
   render() {
     console.log(this.state.id, this.state.password);
@@ -109,8 +108,8 @@ class Login extends Component {
                 className="login-button"
                 onClick={() => {
                   this.checkValidation();
-                  this.goToMain();
-                  // this.handleclick();
+                  // this.goToMain();
+                  this.handleClick();
                 }} /*{this.checkValidation}*/
                 onKeyup={this.checkValidation}
               >

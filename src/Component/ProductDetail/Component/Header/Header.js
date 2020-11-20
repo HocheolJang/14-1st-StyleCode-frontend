@@ -34,7 +34,7 @@ class Header extends Component {
         <div className="header-top">
           <div className="header-top-title">
             <p>단독상품</p>
-            <p>슈펜 베이직 스니커즈 AFHC20A02[블프특가](~11/29일까지)</p>
+            <p>{productdetail[0]?.description}</p>
           </div>
         </div>
         <div className="header-middle">
@@ -42,7 +42,7 @@ class Header extends Component {
             <img
               className="header-middle-img"
               // src="https://images.unsplash.com/photo-1495385794356-15371f348c31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-              src={productdetail[0]?.contentImg}
+              src={productdetail[0]?.productImg}
               alt="productImg"
             ></img>
           </div>
@@ -50,10 +50,14 @@ class Header extends Component {
             <p>최대 쿠폰 적용 가격</p>
             <div className="header-middle-info-pricebox">
               <div className="header-middle-info-pricebox-price">
-                <span className="discount">32%</span>
-                <span className="discount-price">53,910</span>
+                <span className="discount">
+                  {productdetail[0]?.sale * 100}%
+                </span>
+                <span className="discount-price">
+                  {productdetail[0]?.price}
+                </span>
                 <span className="price-unit">원</span>
-                <span className="origin-price">79,000</span>
+                <span className="origin-price">{productdetail[0]?.price}</span>
               </div>
               <button className="header-middle-info-pricebox-coupon">
                 <span>쿠폰다운</span>
@@ -86,7 +90,7 @@ class Header extends Component {
         <div className="header-bottom">
           <img
             className="header-bottom-img"
-            src={productdetail[0]?.contentImg}
+            src={productdetail[0]?.productImg}
             alt="header-bottom-img"
           ></img>
           <div className="header-bottom-link"></div>

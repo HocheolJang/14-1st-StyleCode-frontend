@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "./SignUpDetail.scss";
 import "../../Styles/reset.scss";
 import "../../Styles/common.scss";
-import mainlogo from "./images/mainlogo.png";
-import facebookinformation from "./images/facebookinformation.png";
 
 class SignUpDetail extends Component {
   constructor() {
@@ -12,10 +10,19 @@ class SignUpDetail extends Component {
       birthdaylist: [],
       monthlist: [],
       daylist: [],
+      nickname: "",
+      email: "",
+      gender_id: "",
+      birth_date: "",
+      id: "",
+      password: "",
+      year: "1990",
+      month: "4",
+      day: "15",
     };
   }
 
-  componentDidMount() {
+  getBirthdayDate = () => {
     fetch("http://localhost:3000/data/birthday.json", {
       method: "GET",
     })
@@ -27,13 +34,53 @@ class SignUpDetail extends Component {
           daylist: res.day,
         });
       });
-  }
+  };
 
   handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
     this.setState({ selectOption: e.target.value });
   };
 
+  handleClick = () => {
+    fetch("http://10.58.4.87:8000/user/signup", {
+      method: "POST",
+      body: JSON.stringify({
+        login_id: this.state.id,
+        password: this.state.password,
+        nickname: this.state.nickname,
+        email: this.state.email,
+        birth_date: `${this.state.year}-${this.state.month}-${this.state.day}`,
+        gender_id: "1",
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log("결과", res));
+  };
+  //       {if (res.Authorization) {
+  //         localStorage.getItem("token");
+  //         console.log("토큰 왔음");
+  //         localStorage.setItem("token", res.Authorization);
+  //       }
+  //       if (res.Message === "SUCCESS") {
+  //         this.props.history.push("/Login");
+  //       } else {
+  //         alert("정보가 일치하지 않습니다.");
+  //       }
+  //     };
+  // };
+  // .then((result) => console.log("결과", result));
+  componentDidMount() {
+    this.getBirthdayDate();
+    this.handleClick();
+  }
+
   render() {
+    // console.log(this.state.monthlist);
+    // console.log(this.state.year);
+    console.log(this.state.year.value);
+    console.log(this.state.month.value);
+    console.log(this.state.day.value);
+    console.log(this.state.birth_date.value);
     const { birthdaylist, monthlist, daylist } = this.state;
     return (
       <div className="SignUpDetail">
@@ -41,9 +88,9 @@ class SignUpDetail extends Component {
           <section className="leftMain">
             <div className="nav">
               <img
-                src={mainlogo}
                 className="nav-my-picture"
-                alt="nav-my-picture"
+                src="images/mainlogo.png"
+                alt="mainlogo"
               />
               <button className="nav-choice-picture">사진선택</button>
             </div>
@@ -53,11 +100,37 @@ class SignUpDetail extends Component {
               <div className="facebook-information">
                 <a href="www.facebook.com" alt="facebook-information">
                   <img
-                    src={facebookinformation}
+                    src="images/facebookinformation.png"
                     className="facebook-information"
-                    alt="facebook-information"
+                    alt="facebook"
                   />
                 </a>
+              </div>
+              <div className="id">
+                <div>
+                  <p>아이디</p>
+                </div>
+                <input
+                  className="id-input"
+                  placeholder="ID"
+                  value={this.state.id}
+                  name="id"
+                  onChange={this.handleChange}
+                  type="text"
+                ></input>
+              </div>
+              <div className="pw">
+                <div>
+                  <p>비밀번호</p>
+                </div>
+                <input
+                  className="pw-input"
+                  placeholder="PASSWORD"
+                  value={this.state.password}
+                  name="password"
+                  onChange={this.handleChange}
+                  type="password"
+                ></input>
               </div>
               <div className="nick-name">
                 <div>
@@ -66,8 +139,9 @@ class SignUpDetail extends Component {
                 <input
                   className="nick-name-input"
                   placeholder="닉네임을 입력하세요"
-                  required={true}
-                  label="Email address"
+                  value={this.state.nickname}
+                  name="nickname"
+                  onChange={this.handleChange}
                 ></input>
               </div>
               <div className="email">
@@ -77,6 +151,9 @@ class SignUpDetail extends Component {
                 <input
                   className="email-input"
                   placeholder="이메일을 입력하세요."
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  name="email"
                 ></input>
               </div>
               <div className="radio">
@@ -86,9 +163,10 @@ class SignUpDetail extends Component {
                 <div className="radio-male">
                   <label>
                     <input
+                      name="1"
                       type="radio"
-                      value="Male"
-                      checked={this.state.selectOption === "Male"}
+                      value="1"
+                      checked={this.state.selectOption === "1"}
                       onChange={this.handleChange}
                     />
                     남자
@@ -98,8 +176,8 @@ class SignUpDetail extends Component {
                   <label>
                     <input
                       type="radio"
-                      value="Female"
-                      checked={this.state.selectOption === "Female"}
+                      value="2"
+                      checked={this.state.selectOption === "2"}
                       onChange={this.handleChange}
                     />
                     여자
@@ -110,7 +188,12 @@ class SignUpDetail extends Component {
                 <div>
                   <p>생일</p>
                 </div>
-                <select className="year">
+                <select
+                  className="year"
+                  onChange={this.handleChange}
+                  // name="year"
+                  // value={this.state.year}
+                >
                   {birthdaylist.map((item) => (
                     <option key={item.key} value={item.key}>
                       {item.value}
@@ -179,7 +262,9 @@ class SignUpDetail extends Component {
               </div>
             </article>
             <article className="alldone">
-              <button className="alldone-button">다 했어요</button>
+              <button className="alldone-button" onClick={this.handleClick}>
+                다 했어요
+              </button>
             </article>
           </section>
         </div>
