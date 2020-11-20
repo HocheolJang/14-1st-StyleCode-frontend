@@ -6,6 +6,7 @@
 import React, { Component } from 'react';
 import NavbarOotd from '../../../Common/Navbar/NavbarOotd/NavbarOotd';
 import CardList from './CardList';
+import Modal from './Modal';
 import './Main.scss';
 
 const API = "http://localhost:3000/data/data.json";
@@ -17,7 +18,7 @@ class Main extends Component {
     likeBtn: false,
     cards: [],
     follower: "",
-
+    isPopUpModal: false,
   }
 
   handleClickLike = () => {
@@ -60,6 +61,7 @@ class Main extends Component {
       </>
     );
   }
+
 }
 
 export default Main;

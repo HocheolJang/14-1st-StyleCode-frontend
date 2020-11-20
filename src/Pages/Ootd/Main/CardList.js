@@ -4,7 +4,6 @@ import './CardList.scss';
 class CardList extends Component {
   render() {
     const { cardsData, handleClickLike } = this.props;
-
     return (
       <div className="cardListWrapper">
         <p className="heading">지금의 트렌드</p>
