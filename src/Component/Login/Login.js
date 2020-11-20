@@ -16,23 +16,12 @@ class Login extends Component {
     };
   }
 
-  renderSignUpdata = () => {
-    console.log(this.state);
-  };
   handleClick = (e) => {
     fetch("http://10.58.4.87:8000/user/login", {
       method: "POST",
       body: JSON.stringify({
         login_id: this.state.id,
         password: this.state.password,
-        // nickname : "nick1" ,
-        // email : "wecode22@we".com,
-        // gender_id : "1" ,
-        // birth_date : “2000-02-22”
-        // email: this.state.id,
-        // password: this.state.password,
-        // name: "jj",
-        // phone_number: "0000000001",
       }),
     })
       .then((response) => response.json())
@@ -50,7 +39,6 @@ class Login extends Component {
   };
 
   checkValidation = (e) => {
-    // e.preventDefault();
     const { id, password } = this.state;
     const checkId = id.includes("");
     const checkPw = password.length >= 6;
@@ -64,10 +52,6 @@ class Login extends Component {
       alert("비밀번호는 6자리 이상입니다.");
     }
   };
-
-  // goToMain = () => {
-  //   this.props.history.push("/SignUpDetail");
-  // };
 
   render() {
     console.log(this.state.id, this.state.password);
@@ -108,9 +92,8 @@ class Login extends Component {
                 className="login-button"
                 onClick={() => {
                   this.checkValidation();
-                  // this.goToMain();
                   this.handleClick();
-                }} /*{this.checkValidation}*/
+                }}
                 onKeyup={this.checkValidation}
               >
                 로그인
