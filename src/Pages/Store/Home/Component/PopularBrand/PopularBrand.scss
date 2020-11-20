@@ -8,13 +8,11 @@
   font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
 
   header {
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     height: 55px;
     margin-bottom: 25px;
     .title {
-      border: 1px solid red;
       position: relative;
       width: 800px;
       text-align: center;
@@ -24,7 +22,6 @@
       }
       .carouselBtn {
         top: 0px;
-        border: 1px solid red;
         position: absolute;
         right: 0px;
         &:hover {

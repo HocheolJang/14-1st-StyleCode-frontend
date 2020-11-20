@@ -52,7 +52,7 @@
           height: 30%;
           span {
             font-size: 18px;
-            font-weight: 700;
+            font-weight: 900;
           }
         }
         .bottom {
@@ -66,24 +66,86 @@
         }
       }
       .topBoxRight {
-        .box20 {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        .iconContainer {
+          span {
+            display: inline;
+            margin-left: 10px;
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
         }
       }
     }
     .middleBox0 {
       height: 10%;
+      display: flex;
+      justify-content: flex-end;
+      span {
+        margin-left: 10px;
+        font-size: 13px;
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
     }
     .middleBox1 {
       display: flex;
       height: 20%;
       .buttonContainer {
+        display: flex;
         width: 30%;
+
+        .Btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 128px;
+          height: 42px;
+          background-color: #21242a;
+          border: 1px soild #50585f;
+          margin-right: 10px;
+          border-radius: 15px;
+          &:hover {
+            cursor: pointer;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            img {
+              width: 14px;
+              height: 14px;
+              margin-right: 5px;
+            }
+            span {
+              font-size: 14px;
+              font-weight: 700;
+              color: #f0f1f4;
+            }
+          }
+        }
       }
       .descContainer {
+        width: 70%;
+        p {
+          text-align: right;
+          font-size: 13px;
+        }
       }
     }
     .footerBox {
       height: 20%;
+      display: flex;
+      justify-content: flex-end;
+      img {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 }

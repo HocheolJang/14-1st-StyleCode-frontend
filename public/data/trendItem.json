@@ -6,7 +6,7 @@
       "alt0": "trend0",
       "src1": "images/trend/trend1.jpg",
       "alt1": "trend1",
-      "bullet": "winter",
+      "bullet": "onlyStyleCode",
       "mainTitle0": "Only StyleCode",
       "mainTitle1": "스타일코드 단독 상품",
       "productCnt": 164
@@ -28,7 +28,7 @@
       "alt0": "trend0",
       "src1": "images/trend/trend5.jpg",
       "alt1": "trend1",
-      "bullet": "onlyStyleCode",
+      "bullet": "",
       "mainTitle0": "어디든 잘 어울리는 핸드백 기획전",
       "mainTitle1": "에코백부터 명품백까지",
       "productCnt": 372
@@ -50,7 +50,7 @@
       "alt0": "trend0",
       "src1": "images/trend/trend9.jpg",
       "alt1": "trend1",
-      "bullet": "",
+      "bullet": "winter",
       "mainTitle0": "부츠의 계절이 돌아왔다",
       "mainTitle1": "겨울에는 부츠만큼 든든한건 없다",
       "productCnt": 213
@@ -125,6 +125,6 @@
   "event": {
     "onlyStyleCode": "images/icon/onlystylecode.png",
     "untact": "images/icon/untact.png",
-    "winter": "images/icon/winter100.png"
+    "winter": "images/icon/winter.png"
   }
 }

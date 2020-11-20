@@ -30,22 +30,57 @@ class Footer extends Component {
               </div>
             </div>
             <div className="topBoxRight">
-              <div className="box20">
-                <span>페이스북 이미지</span>
-                <span>인스타 이미지</span>
-                <span>트위터 이미지</span>
-                <span>유튜브 이미지</span>
+              <div className="iconContainer">
+                <span>
+                  <Link to="https://www.facebook.com/">
+                    <img
+                      src="images/icon/facebookLogo.png"
+                      alt="페이스북로고"
+                    />
+                  </Link>
+                </span>
+                <span>
+                  <Link to="https://www.instagram.com/">
+                    <img
+                      src="images/icon/instagramLogo.png"
+                      alt="인스타그램로고"
+                    />
+                  </Link>
+                </span>
+                <span>
+                  <Link to="https://twitter.com/">
+                    <img src="images/icon/twitterLogo.png" alt="트위터로고" />
+                  </Link>
+                </span>
+                <span>
+                  <Link to="https://www.youtube.com/">
+                    <img src="images/icon/youtubeLogo.png" alt="유튜브로고" />
+                  </Link>
+                </span>
               </div>
             </div>
           </div>
           <div className="middleBox0">
-            <span>개인정보 처리방침</span>
-            <span>이용 약관</span>
+            <Link to="#">
+              <span>개인정보 처리방침</span>
+            </Link>
+            <Link to="#">
+              <span>이용약관</span>
+            </Link>
           </div>
           <div className="middleBox1">
             <div className="buttonContainer">
-              <button>자주 묻는 질문</button>
-              <button>카톡 문의</button>
+              <div className="Btn">
+                <Link>
+                  <span>자주 묻는 질문</span>
+                </Link>
+              </div>
+              <div className="Btn">
+                <Link>
+                  <img src="images/icon/kakaotalkLogo.png" alt="카카오톡" />
+                  <span>카톡 문의</span>
+                </Link>
+              </div>
             </div>
             <div className="descContainer">
               <p>
@@ -60,7 +95,7 @@ class Footer extends Component {
             </div>
           </div>
           <div className="footerBox">
-            <span>KB에스크로 이체 이미지</span>
+            <Link><img src="images/icon/escroIcon.png" alt="에스크로이미지"/></Link>
           </div>
         </div>
       </div>
