@@ -40,7 +40,7 @@ class PopularBrand extends Component {
 
     return (
       <div>
-        <div className="popularBrandContainer">
+        <div className="popularBrand">
           <header>
             <div className="title">
               <h2>인기 브랜드</h2>

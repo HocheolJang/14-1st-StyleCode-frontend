@@ -52,7 +52,7 @@ class PopularProduct extends Component {
     const { categoriesList, popularProductList } = this.state;
 
     return (
-      <div className="popularContainer">
+      <div className="popularProduct">
         <div className="title">
           <h2>인기 상품</h2>
         </div>

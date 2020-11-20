@@ -32,7 +32,7 @@ class Trend extends Component {
     // console.log(bulletList);
 
     return (
-      <div className="trendAllContainer">
+      <div className="trend">
         <div className="title">
           <h2>트렌드 기획전</h2>
         </div>

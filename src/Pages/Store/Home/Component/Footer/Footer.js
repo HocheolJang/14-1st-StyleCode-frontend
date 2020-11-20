@@ -5,7 +5,7 @@ import "./Footer.scss";
 class Footer extends Component {
   render() {
     return (
-      <div className="background">
+      <div className="footer">
         <div className="container">
           <div className="headerBox">
             <div className="headerBoxLeft">

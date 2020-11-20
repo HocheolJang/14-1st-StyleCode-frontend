@@ -39,7 +39,7 @@ class Jumbotron extends Component {
 
     return (
       <div>
-        <div className="jumbotronContainer">
+        <div className="jumbotron">
           <Slider ref={this.slider} {...SETTING}>
             {jumbotronItem.map((item, idx) => {
               return (
