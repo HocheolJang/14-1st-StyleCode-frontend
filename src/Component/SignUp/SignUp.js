@@ -7,18 +7,15 @@ class SignUp extends Component {
   constructor() {
     super();
     this.state = {
-      birthdaylist: [],
-      monthlist: [],
-      daylist: [],
+      year: [],
+      month: [],
+      day: [],
       nickname: "",
       email: "",
       gender_id: "",
       birth_date: "",
       id: "",
       password: "",
-      year: "1990",
-      month: "4",
-      day: "15",
     };
   }
 
@@ -29,16 +26,39 @@ class SignUp extends Component {
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          birthdaylist: res.year,
-          monthlist: res.month,
-          daylist: res.day,
+          year: res.year,
+          month: res.month,
+          day: res.day,
         });
       });
   };
 
   handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-    this.setState({ selectOption: e.target.value });
+    // this.setState({ [e.target.name]: e.target.value });
+    // this.setState({ value: e.target.value });
+    this.setState({ value: e.target.value });
+    // this.setState({ password: e.target.value });
+    // this.setState({ email: e.target.email });
+  };
+
+  handleIdChange = (e) => {
+    this.setState({ id: e.target.value });
+  };
+
+  handlePwChange = (e) => {
+    this.setState({ password: e.target.value });
+  };
+
+  handleNickChnage = (e) => {
+    this.setState({ nickname: e.target.value });
+  };
+
+  handleEmailChange = (e) => {
+    this.setState({ email: e.target.value });
+  };
+
+  handleGenderChange = (e) => {
+    this.setState({ gender: e.target.value });
   };
 
   handleClick = () => {
@@ -50,7 +70,7 @@ class SignUp extends Component {
         nickname: this.state.nickname,
         email: this.state.email,
         birth_date: `${this.state.year}-${this.state.month}-${this.state.day}`,
-        gender_id: "1",
+        gender_id: this.state.selectOption,
       }),
     })
       .then((res) => res.json())
@@ -63,7 +83,8 @@ class SignUp extends Component {
   }
 
   render() {
-    const { birthdaylist, monthlist, daylist } = this.state;
+    console.log(this.state.value);
+    const { year, month, day } = this.state;
     return (
       <div className="SignUp">
         <div className="main">
@@ -97,7 +118,7 @@ class SignUp extends Component {
                   placeholder="ID"
                   value={this.state.id}
                   name="id"
-                  onChange={this.handleChange}
+                  onChange={this.handleIdChange}
                   type="text"
                 ></input>
               </div>
@@ -110,7 +131,7 @@ class SignUp extends Component {
                   placeholder="PASSWORD"
                   value={this.state.password}
                   name="password"
-                  onChange={this.handleChange}
+                  onChange={this.handlePwChange}
                   type="password"
                 ></input>
               </div>
@@ -123,7 +144,7 @@ class SignUp extends Component {
                   placeholder="닉네임을 입력하세요"
                   value={this.state.nickname}
                   name="nickname"
-                  onChange={this.handleChange}
+                  onChange={this.handleNickChnage}
                 ></input>
               </div>
               <div className="email">
@@ -134,7 +155,7 @@ class SignUp extends Component {
                   className="email-input"
                   placeholder="이메일을 입력하세요."
                   value={this.state.email}
-                  onChange={this.handleChange}
+                  onChange={this.handleEmailChange}
                   name="email"
                 ></input>
               </div>
@@ -145,11 +166,11 @@ class SignUp extends Component {
                 <div className="radio-male">
                   <label>
                     <input
-                      name="1"
+                      name="Male"
                       type="radio"
-                      value="1"
-                      checked={this.state.selectOption === "1"}
-                      onChange={this.handleChange}
+                      value="Male"
+                      checked={this.state.gender === "Male"}
+                      onChange={this.handleGenderChange}
                     />
                     남자
                   </label>
@@ -158,9 +179,10 @@ class SignUp extends Component {
                   <label>
                     <input
                       type="radio"
-                      value="2"
-                      checked={this.state.selectOption === "2"}
-                      onChange={this.handleChange}
+                      value="Female"
+                      checked={this.state.gender === "Female"}
+                      onChange={this.handleGenderChange}
+                      name={this.state.name}
                     />
                     여자
                   </label>
@@ -170,23 +192,36 @@ class SignUp extends Component {
                 <div>
                   <p>생일</p>
                 </div>
-                <select className="year" onChange={this.handleChange}>
-                  {birthdaylist.map((item) => (
-                    <option key={item.key} value={item.key}>
+                <select
+                  className="year"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  name="year"
+                >
+                  {year.map((item) => (
+                    <option key={item.key} value={item.value}>
                       {item.value}
                     </option>
                   ))}
                 </select>
-                <select className="month">
-                  {monthlist.map((item) => (
-                    <option key={item.key} value={item.key}>
+                <select
+                  className="month"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                >
+                  {month.map((item) => (
+                    <option key={item.key} value={item.value}>
                       {item.value}
                     </option>
                   ))}
                 </select>
-                <select className="day">
-                  {daylist.map((item) => (
-                    <option key={item.key} value={item.key}>
+                <select
+                  className="day"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                >
+                  {day.map((item) => (
+                    <option key={item.key} value={item.value}>
                       {item.value}
                     </option>
                   ))}
