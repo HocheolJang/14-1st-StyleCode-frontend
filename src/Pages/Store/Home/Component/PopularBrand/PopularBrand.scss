@@ -6,27 +6,37 @@
   height: 635px;
   margin: 0 auto;
   font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+
   header {
+    border: 1px solid red;
     display: flex;
     justify-content: center;
     height: 55px;
     margin-bottom: 25px;
-
     .title {
+      border: 1px solid red;
+      position: relative;
+      width: 800px;
+      text-align: center;
       h2 {
         font-size: 46px;
         font-weight: 700;
       }
-    }
-    .carouselBtn {
-      display: flex;
-      justify-content: flex-end;
-      .prevBtn {
-        width: 30px;
-      }
-      .nextBtn {
-        width: 30px;
-        margin-left: 40px;
+      .carouselBtn {
+        top: 0px;
+        border: 1px solid red;
+        position: absolute;
+        right: 0px;
+        &:hover {
+          cursor: pointer;
+        }
+        .prevBtn {
+          width: 28px;
+        }
+        .nextBtn {
+          width: 28px;
+          margin-left: 40px;
+        }
       }
     }
   }

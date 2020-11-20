@@ -4,6 +4,7 @@ import Jumbotron from "./Component/Jumbotron/Jumbotron";
 import PopularProduct from "./Component/PopularProduct/PopularProduct";
 import PopularBrand from "./Component/PopularBrand/PopularBrand";
 import Trend from "./Component/Trend/Trend";
+import Footer from "./Component/Footer/Footer";
 
 class Home extends Component {
   render() {
@@ -14,6 +15,7 @@ class Home extends Component {
         <PopularProduct />
         <PopularBrand />
         <Trend />
+        <Footer />
       </>
     );
   }

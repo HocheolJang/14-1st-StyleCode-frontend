@@ -10,7 +10,15 @@ class PopularBrand extends Component {
     this.state = {
       brandList: [],
     };
+    this.slider = React.createRef();
   }
+
+  previous = () => {
+    this.slider.current.slickPrev();
+  };
+  next = () => {
+    this.slider.current.slickNext();
+  };
 
   getBrandList = () => {
     fetch("http://localhost:3000/data/brandItem.json", {
@@ -36,22 +44,24 @@ class PopularBrand extends Component {
           <header>
             <div className="title">
               <h2>인기 브랜드</h2>
-            </div>
-            <div className="carouselBtn">
-              <img
-                className="prevBtn"
-                src="images/icon/prev1.png"
-                alt="좌측으로 넘기는 버튼"
-              ></img>
-              <img
-                className="nextBtn"
-                src="images/icon/next1.png"
-                alt="우측으로 넘기는 버튼"
-              ></img>
+              <div className="carouselBtn">
+                <img
+                  className="prevBtn"
+                  src="images/icon/prev1.png"
+                  alt="좌측으로 넘기는 버튼"
+                  onClick={this.previous}
+                ></img>
+                <img
+                  className="nextBtn"
+                  src="images/icon/next1.png"
+                  alt="우측으로 넘기는 버튼"
+                  onClick={this.next}
+                ></img>
+              </div>
             </div>
           </header>
           <div className="carousel">
-            <Slider {...SETTING}>
+            <Slider ref={this.slider} {...SETTING}>
               {brandList.map((brand) => {
                 return (
                   <div className="brandItem">
@@ -92,29 +102,29 @@ const SETTING = {
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 2.5,
-  // responsive: [
-  //   {
-  //     breakpoint: 1024,
-  //     settings: {
-  //       slidesToShow: 3,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  //   {
-  //     breakpoint: 600,
-  //     settings: {
-  //       slidesToShow: 3,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  //   {
-  //     breakpoint: 480,
-  //     settings: {
-  //       slidesToShow: 3,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  // ],
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
 export default PopularBrand;

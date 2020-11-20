@@ -7,6 +7,7 @@ class Trend extends Component {
     super();
     this.state = {
       trendList: [],
+      bulletList: [],
     };
   }
 
@@ -18,6 +19,7 @@ class Trend extends Component {
       .then((res) => {
         this.setState({
           trendList: res.item,
+          bulletList: res.event,
         });
       });
   };
@@ -26,10 +28,9 @@ class Trend extends Component {
   }
 
   render() {
-    const { trendList } = this.state;
-    if (trendList.length) {
-      console.log(trendList[1].id);
-    }
+    const { trendList, bulletList } = this.state;
+    // console.log(bulletList);
+
     return (
       <div className="trendAllContainer">
         <div className="title">
@@ -37,73 +38,72 @@ class Trend extends Component {
         </div>
         <div className="trendContainer">
           <div className="leftContainer">
-            {trendList.map((trend) => {
-              return (
-                <div className="item" key={trendList.id}>
-                  <div className="imgContainer">
-                    <div className="trendImgLeft">
-                      <img src={trend.src0} alt={trend.alt0} />
+            {trendList.map((trend, idx) => {
+              // console.log(trend.bullet);
+              if (idx % 2 === 0) {
+                return (
+                  <div className="item" key={idx}>
+                    <div className="imgContainer">
+                      <div className="trendImgLeft">
+                        <img src={trend.src0} alt={trend.alt0} />
+                      </div>
+                      <div className="trendImgRight">
+                        <img src={trend.src1} alt={trend.alt0} />
+                      </div>
+                      <div className="circle">
+                        <img src={bulletList[trend.bullet]} alt="" />
+                      </div>
                     </div>
-                    <div className="trendImgRight">
-                      <img src={trend.src1} alt={trend.alt0} />
-                    </div>
-                    <div className="circle">
-                      <img
-                        src="images/icon/onlystylecode.png"
-                        alt="오직스코에서만"
-                      />
+                    <div className="descContainer">
+                      <div className="mainTitle">
+                        <span>{trend.mainTitle0}</span>
+                      </div>
+                      <div className="mainTitle">
+                        <span>{trend.mainTitle1}</span>
+                      </div>
+                      <div className="showAll">
+                        <Link to="#">
+                          <span>{trend.productCnt}개 더 보기</span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <div className="descContainer">
-                    <div className="mainTitle">
-                      <span>{trend.mainTitle0}</span>
-                    </div>
-                    <div className="mainTitle">
-                      <span>{trend.mainTitle1}</span>
-                    </div>
-                    <div className="showAll">
-                      <Link to="#">
-                        <span>{trend.productCnt}개 더 보기</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              );
+                );
+              }
             })}
           </div>
           <div className="rightContainer">
-            {trendList.map((trend) => {
-              return (
-                <div className="item" key={trendList.id}>
-                  <div className="imgContainer">
-                    <div className="trendImgLeft">
-                      <img src={trend.src0} alt={trend.alt0} />
+            {trendList.map((trend, idx) => {
+              if (idx % 2 === 1) {
+                return (
+                  <div className="item" key={idx}>
+                    <div className="imgContainer">
+                      <div className="trendImgLeft">
+                        <img src={trend.src0} alt={trend.alt0} />
+                      </div>
+                      <div className="trendImgRight">
+                        <img src={trend.src1} alt={trend.alt0} />
+                      </div>
+                      <div className="circle">
+                        <img src={bulletList[trend.bullet]} alt="" />
+                      </div>
                     </div>
-                    <div className="trendImgRight">
-                      <img src={trend.src1} alt={trend.alt0} />
-                    </div>
-                    <div className="circle">
-                      <img
-                        src="images/icon/onlystylecode.png"
-                        alt="오직스코에서만"
-                      />
+                    <div className="descContainer">
+                      <div className="mainTitle">
+                        <span>{trend.mainTitle0}</span>
+                      </div>
+                      <div className="mainTitle">
+                        <span>{trend.mainTitle1}</span>
+                      </div>
+                      <div className="showAll">
+                        <Link to="#">
+                          <span>{trend.productCnt}개 더 보기</span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <div className="descContainer">
-                    <div className="mainTitle">
-                      <span>{trend.mainTitle0}</span>
-                    </div>
-                    <div className="mainTitle">
-                      <span>{trend.mainTitle1}</span>
-                    </div>
-                    <div className="showAll">
-                      <Link to="#">
-                        <span>{trend.productCnt}개 더 보기</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              );
+                );
+              }
             })}
           </div>
         </div>
