@@ -4,30 +4,7 @@ import "../../../../Styles/common.scss";
 import "../../../../Styles/reset.scss";
 
 class Header extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     productdetail: [],
-  //   };
-  // }
-  // componentDidMount() {
-  //   fetch("http://localhost:3000/data/productdetail.json", {
-  //     method: "GET",
-  //   })
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       this.setState(
-  //         { productdetail: res.productlist },
-  //         console.log(this.state.productdetail)
-  //       );
-  //     });
-  // }
-
   render() {
-    // const { productdetail } = this.state;
-    // if (productdetail.length) {
-    //   console.log(productdetail[0]?.contentImg);
-    // }
     const { productdetail } = this.props;
     return (
       <header>
@@ -41,7 +18,6 @@ class Header extends Component {
           <div className="header-middle-imgbox">
             <img
               className="header-middle-img"
-              // src="https://images.unsplash.com/photo-1495385794356-15371f348c31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
               src={productdetail[0]?.productImg}
               alt="productImg"
             ></img>

@@ -5,8 +5,6 @@ import "../../../../../Styles/reset.scss";
 
 class ProductReviewImgbox extends Component {
   render() {
-    console.log(this.props.productdetail);
-    // console.log(this.props.productdetail[0].productImg);
     const {
       productdetail,
       contentImg,
@@ -30,13 +28,9 @@ class ProductReviewImgbox extends Component {
           <div className="article-product-review-img-id">
             <div>
               <span>{author}</span>
-              {/* <span>{comment}</span> */}
             </div>
             <div className="article-product-review-img-like">
               <span>{comment}</span>
-              {/* <span>1,347</span>
-              <span>댓글</span>
-              <span>165</span> */}
             </div>
           </div>
         </div>

@@ -1,11 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 main {
-  // font-size: 62.5%; //10px = 1rem
   width: 1240px;
   margin: 0 auto;
   height: auto;
@@ -260,7 +253,6 @@ main {
       width: 1240px;
       height: auto;
       border: 0px solid black;
-      // padding: 0 300px 0 300px;
       display: flex;
       flex-direction: column;
       justify-content: center;

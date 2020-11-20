@@ -28,7 +28,6 @@ class ProductDetail extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="ProductDetail">
         <nav></nav>
