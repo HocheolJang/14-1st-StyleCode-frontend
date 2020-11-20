@@ -1,23 +1,15 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-const-assign */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 import NavbarOotd from '../../../Common/Navbar/NavbarOotd/NavbarOotd';
 import CardList from './CardList';
 import './Main.scss';
 
 const API = "http://localhost:3000/data/data.json";
-  // API = "http://10.58.7.41:8000/ootd/list";
-
 
 class Main extends Component {
   state = {
     likeBtn: false,
     cards: [],
     follower: "",
-
   }
 
   handleClickLike = () => {
@@ -36,11 +28,9 @@ class Main extends Component {
   componentDidMount() {
     fetch(API).then((res) => res.json()).then((res) => this.setState({
       cards: res,
-      // follower: res[0].follower,
   }))}
 
   render() {
-    // console.log(this.state.cards);
 
     const { cards } = this.state;
     return (
@@ -63,7 +53,6 @@ class Main extends Component {
 }
 
 export default Main;
-
 
   // // handleClick = () => {
   //   componentDidMount() {

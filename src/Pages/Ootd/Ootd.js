@@ -6,10 +6,8 @@ class Ootd extends Component {
     return (
       <>
         <NavbarOotd />
-        
       </>
     );
   }
 }
-
 export default Ootd;

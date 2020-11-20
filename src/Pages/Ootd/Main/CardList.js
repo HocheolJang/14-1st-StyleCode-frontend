@@ -9,7 +9,7 @@ class CardList extends Component {
       <div className="cardListWrapper">
         <p className="heading">지금의 트렌드</p>
         <div className="cardList">
-          {cardsData && cardsData.map(contents => {
+          {cardsData?.map(contents => {
             return (
                 <Card
                 key={contents.id}

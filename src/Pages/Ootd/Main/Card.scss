@@ -1,12 +1,10 @@
 .contents {
-  // position: relative;
   width: 100%;
   height: fit-content;
   margin: 0 auto;
   border: 1px solid #e8ebed;
   border-radius: 6px;
   opacity: 1;
-  // cursor: pointer;
   color: #26282b;
   font-family: "Helvetica", "Arial", "Apple SD Gothic Neo", "Nanum Gothic",
     "Malgun Gothic", "DotumChe", "Dotum", sans-serif;
@@ -35,7 +33,6 @@
 
       li {
         width: 55px;
-        // height: 55px;
         padding: 10px;
       }
 
@@ -84,14 +81,10 @@
 
   .contentTextWrapper {
     width: 100%;
-    // height: 100%;
     height: auto;
 
     .contentText {
       padding: 10px 10px 12px;
-      // height: 100%;
-
-      // height: 87px;
 
       .productWrapper {
         position: relative;
@@ -116,17 +109,10 @@
           border-radius: 6px;
         }
 
-        // .productInfoWrapper {
-        //   // display: flex;
-
-        //   align-items: center;
-
         .productInfo {
-          // height: 56px;
           padding-left: 8px;
           align-items: center;
           .productName {
-            // height: 36px;
             line-height: 1.3;
             font-size: 14px;
             font-weight: bold;
@@ -149,13 +135,11 @@
             }
           }
         }
-        // }
       }
     }
 
     .authorWrapper {
       display: inline-flex;
-      // padding: 3px;
       font-size: 12px;
       line-height: 1.3;
       .authorImgWrapper {
@@ -200,7 +184,6 @@
         }
 
         .authorPopularity {
-          // display: inline-flex;
           padding-right: 8px;
           font-size: 12px;
           padding-right: 10px;
