@@ -8,6 +8,8 @@ import Cart from "./Common/Cart/Cart";
 import ProductDetail from "./Common/ProductDetail/ProductDetail";
 import SearchPage from "./Common/SearchPage/SearchPage";
 import Unisex from "./Pages/Store/Unisex/Unisex";
+import NavbarOotd from "./Common/Navbar/NavbarOotd/NavbarOotd";
+import NavbarStore from "./Common/Navbar/NavbarStore/NavbarStore";
 
 class Routes extends React.Component {
   render() {
@@ -15,6 +17,8 @@ class Routes extends React.Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/NavbarOotd" component={NavbarOotd} />
+          <Route exact path="/NavbarStore" component={NavbarStore} />
           <Route exact path="/Ootd" component={Ootd} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/SignUp" component={SignUp} />
