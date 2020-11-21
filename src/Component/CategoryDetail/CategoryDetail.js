@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "./Component/Jumbotron/Jumbotron";
 import Card from "./Component/Card/Card";
+import "./CategoryDetail.scss";
 
 class CategoryDetail extends Component {
   render() {

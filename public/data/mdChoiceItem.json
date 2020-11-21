@@ -1,0 +1,78 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "categoryName": "전체"
+    },
+    {
+      "id": 1,
+      "categoryName": "유니섹스"
+    },
+    {
+      "id": 2,
+      "categoryName": "여성"
+    },
+    {
+      "id": 3,
+      "categoryName": "뷰티"
+    },
+    {
+      "id": 4,
+      "categoryName": "가방잡화"
+    },
+    {
+      "id": 5,
+      "categoryName": "슈즈"
+    },
+    {
+      "id": 6,
+      "categoryName": "라이프"
+    },
+    {
+      "id": 7,
+      "categoryName": "테크"
+    }
+  ],
+  "product": [
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    }
+  ]
+}

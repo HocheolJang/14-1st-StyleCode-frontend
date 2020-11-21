@@ -6,73 +6,45 @@ class Card extends Component {
   constructor() {
     super();
     this.state = {
-      categoriesList: [],
-      popularProductList: [],
+      MdChoiceList: [],
       currentCategory: 0,
     };
   }
 
-  // getcategoriesList = () => {
-  //   fetch("http://localhost:3000/data/popularProduct.json", {
-  //     method: "GET",
-  //   })
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       this.setState({
-  //         categoriesList: res.categories,
-  //       });
-  //     });
-  // };
-  // getPopularProductList = () => {
-  //   fetch("http://localhost:3000/data/popularProduct.json", {
-  //     method: "GET",
-  //   })
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       this.setState({
-  //         popularProductList: res.product,
-  //       });
-  //     });
-  // };
+  getMdChoiceList = () => {
+    fetch("http://localhost:3000/data/mdChoiceItem.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          MdChoiceList: res.product,
+        });
+      });
+  };
 
-  // componentDidMount() {
-  //   this.getcategoriesList();
-  //   this.getPopularProductList();
-  // }
+  componentDidMount() {
+    this.getMdChoiceList();
+  }
 
-  // handleMenuTab = (e) => {
-  //   console.log(e);
-  // };
+  handleMenuTab = (e) => {
+    console.log(e);
+  };
 
-  // numberWithCommas = (x) => {
-  //   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  // };
+  numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
 
   render() {
-    const { categoriesList, popularProductList } = this.state;
+    const { MdChoiceList } = this.state;
 
     return (
       <div className="Card">
         <div className="title">
-          <h2>인기 상품</h2>
-        </div>
-        <div className="catergories">
-          <ul className="categoryList">
-            {categoriesList.map((category) => {
-              return (
-                <li
-                  className="inactive"
-                  key={category.id}
-                  onClick={this.handleMenuTab}
-                >
-                  {category.categoryName}
-                </li>
-              );
-            })}
-          </ul>
+          <h2>MD의 선택</h2>
         </div>
         <div className="cardList">
-          {popularProductList.map((product) => {
+          {MdChoiceList.map((product) => {
             return (
               <div className="card">
                 <div className="productImgBox">

@@ -2,17 +2,18 @@
 @import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
 
 .jumbotron {
-  width: 1240px;
-  height: 675px;
-  margin: 138px auto 100px auto;
+  width: 940px;
+  height: 530px;
+  // margin: 138px auto 100px auto;
   font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
   .item {
+    position: relative;
     .jumboImg {
-      width: 1240px;
-      height: 675px;
+      position: relative;
+      width: 940px;
+      height: 530px;
       object-fit: fill;
     }
-    position: relative;
     .adsText {
       position: absolute;
       top: 100px;
@@ -32,29 +33,41 @@
         color: #ffffff;
       }
     }
-    .slideBtnLeft {
+    .sliderBox {
       position: absolute;
-      object-fit: cover;
-      z-index: 1000;
-      top: 45%;
-      width: 50px;
-      height: 50px;
-      left: 0px;
-      &:hover {
-        cursor: pointer;
-        color: red;
-      }
-    }
-    .slideBtnRight {
-      position: absolute;
-      object-fit: cover;
-      z-index: 1000;
-      top: 45%;
-      width: 50px;
-      height: 50px;
+      bottom: 0px;
       right: 0px;
-      &:hover {
-        cursor: pointer;
+      z-index: 3;
+      width: 160px;
+      height: 60px;
+      background-color: #26282b;
+      display: flex;
+      .slideBtnLeft {
+        // position: absolute;
+        object-fit: cover;
+        z-index: 1000;
+        top: 45%;
+        width: 52px;
+        height: 50px;
+        left: 0px;
+        &:hover {
+          cursor: pointer;
+          color: red;
+        }
+      }
+      .paging {
+        width: 56px;
+      }
+      .slideBtnRight {
+        object-fit: cover;
+        z-index: 1000;
+        top: 45%;
+        width: 52px;
+        height: 50px;
+        right: 0px;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

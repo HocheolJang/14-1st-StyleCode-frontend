@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import "./Jumbotron.scss";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 class Jumbotron extends Component {
   constructor() {
@@ -11,28 +13,28 @@ class Jumbotron extends Component {
     this.slider = React.createRef();
   }
 
-  // previous = () => {
-  //   this.slider.current.slickPrev();
-  // };
-  // next = () => {
-  //   this.slider.current.slickNext();
-  // };
+  previous = () => {
+    this.slider.current.slickPrev();
+  };
+  next = () => {
+    this.slider.current.slickNext();
+  };
 
-  // getJumbotronData = () => {
-  //   fetch("http://localhost:3000/data/jumbotronItem.json", {
-  //     method: "GET",
-  //   })
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       this.setState({
-  //         jumbotronItem: res.item,
-  //       });
-  //     });
-  // };
+  getJumbotronData = () => {
+    fetch("http://localhost:3000/data/categoryDetailjumbotron.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          jumbotronItem: res.item,
+        });
+      });
+  };
 
-  // componentDidMount() {
-  //   this.getJumbotronData();
-  // }
+  componentDidMount() {
+    this.getJumbotronData();
+  }
 
   render() {
     const { jumbotronItem } = this.state;
@@ -58,18 +60,29 @@ class Jumbotron extends Component {
                     </div>
                     <span className="carouselBar"></span>
                   </div>
-                  <img
-                    className="slideBtnLeft"
-                    src="images/icon/prev0.png"
-                    alt="prev"
-                    onClick={this.previous}
-                  />
-                  <img
-                    className="slideBtnRight"
-                    src="images/icon/next0.png"
-                    alt="next"
-                    onClick={this.next}
-                  />
+                  <div className="sliderBox">
+                    <div>
+                      <img
+                        className="slideBtnLeft"
+                        src="images/icon/prev0.png"
+                        alt="prev"
+                        onClick={this.previous}
+                      />
+                    </div>
+                    <div className="paging">
+                      <span>1</span>
+                      <span>of</span>
+                      <span>3</span>
+                    </div>
+                    <div>
+                      <img
+                        className="slideBtnRight"
+                        src="images/icon/next0.png"
+                        alt="next"
+                        onClick={this.next}
+                      />
+                    </div>
+                  </div>
                 </div>
               );
             })}
