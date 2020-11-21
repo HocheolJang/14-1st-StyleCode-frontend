@@ -9,14 +9,49 @@
   height: auto;
   margin: 100px auto;
 
-  .title {
-    width: 100%;
-    height: 23px;
-    margin-bottom: 20px;
-    p {
-      font-size: 18px;
-      font-weight: 700;
-      color: #26282b;
+  .header {
+    display: flex;
+    .title {
+      width: 100%;
+      height: 23px;
+      margin-bottom: 20px;
+      span {
+        font-size: 18px;
+        font-weight: 700;
+        color: #26282b;
+      }
+    }
+    .filter {
+      display: flex;
+      width: 100px;
+      height: 23px;
+      border-left: 1px solid #e8ebed;
+      border-right: 1px solid #e8ebed;
+
+      &:hover {
+        cursor: pointer;
+      }
+      button {
+        background-color: white;
+        border: none;
+        padding: 0 20px 0 18px;
+        align-items: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      span {
+        font-size: 14px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      img {
+        width: 10px;
+        transform: rotate(270deg);
+        margin-left: 5px;
+      }
     }
   }
   .cardList {

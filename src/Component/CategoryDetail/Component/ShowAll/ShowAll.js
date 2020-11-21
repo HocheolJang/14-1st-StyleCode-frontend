@@ -6,25 +6,25 @@ class ShowAll extends Component {
   constructor() {
     super();
     this.state = {
-      MdChoiceList: [],
+      showAllList: [],
       currentCategory: 0,
     };
   }
 
-  getMdChoiceList = () => {
-    fetch("http://localhost:3000/data/mdChoiceItem.json", {
+  getShowAllList = () => {
+    fetch("http://localhost:3000/data/showAllItem.json", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          MdChoiceList: res.product,
+          showAllList: res.product,
         });
       });
   };
 
   componentDidMount() {
-    this.getMdChoiceList();
+    this.getShowAllList();
   }
 
   handleMenuTab = (e) => {
@@ -36,15 +36,25 @@ class ShowAll extends Component {
   };
 
   render() {
-    const { MdChoiceList } = this.state;
+    const { showAllList } = this.state;
 
     return (
       <div className="ShowAll">
-        <div className="title">
-          <p>전체보기</p>
+        <div className="header">
+          <div className="title">
+            <span>전체보기</span>
+          </div>
+          <div className="filter">
+            <button>
+              <span>최신순</span>
+              <span>
+                <img src="images/icon/filterArrow.png" alt="상품정렬버튼" />
+              </span>
+            </button>
+          </div>
         </div>
         <div className="cardList">
-          {MdChoiceList.map((product) => {
+          {showAllList.map((product) => {
             return (
               <div className="eachCard">
                 <div className="productImgBox">

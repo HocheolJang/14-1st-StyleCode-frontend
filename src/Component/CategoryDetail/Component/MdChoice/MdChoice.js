@@ -6,7 +6,7 @@ class MdChoice extends Component {
   constructor() {
     super();
     this.state = {
-      MdChoiceList: [],
+      mdChoiceList: [],
       currentCategory: 0,
     };
   }
@@ -18,7 +18,7 @@ class MdChoice extends Component {
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          MdChoiceList: res.product,
+          mdChoiceList: res.product,
         });
       });
   };
@@ -36,7 +36,7 @@ class MdChoice extends Component {
   };
 
   render() {
-    const { MdChoiceList } = this.state;
+    const { mdChoiceList } = this.state;
 
     return (
       <div className="MdChoice">
@@ -44,7 +44,7 @@ class MdChoice extends Component {
           <p>MD's 추천</p>
         </div>
         <div className="cardList">
-          {MdChoiceList.map((product) => {
+          {mdChoiceList.map((product) => {
             return (
               <div className="rankingCardList">
                 <div className="eachCard">
@@ -74,7 +74,7 @@ class MdChoice extends Component {
                   </div>
                 </div>
                 <div className="ranking">
-                  <span>1</span>
+                  <span>{product.id + 1} </span>
                 </div>
               </div>
             );

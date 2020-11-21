@@ -1,0 +1,22 @@
+.asideContainer {
+  width: 220px;
+  height: 390px;
+  .categoriesList {
+    width: 220px;
+    height: 350px;
+    margin-top: 40px;
+    ul {
+      list-style: none;
+      padding-left: 0px;
+    }
+
+    li {
+      font-size: 16px;
+      color: #26282b;
+      text-align: left;
+      margin: 2px auto;
+      padding-left: 12px;
+      height: 28px;
+    }
+  }
+}

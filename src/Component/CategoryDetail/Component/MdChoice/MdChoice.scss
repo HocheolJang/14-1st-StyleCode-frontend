@@ -6,7 +6,7 @@
     "Malgun Gothic", "DotumChe", "Dotum", "Spoqa Han Sans", "Spoqa Han Sans JP",
     "Sans-serif";
   width: 940px;
-  height: 1000px;
+  height: 750px;
   margin: 100px auto;
 
   .title {
@@ -24,7 +24,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
     width: 100%;
-    height: 750px;
+    height: 709px;
     margin: 0 auto;
     .rankingCardList {
       position: relative;
@@ -120,6 +120,7 @@
     justify-content: center;
     width: 100%;
     height: 23px;
+    margin-top: 20px;
     button {
       width: 32px;
       height: 32px;

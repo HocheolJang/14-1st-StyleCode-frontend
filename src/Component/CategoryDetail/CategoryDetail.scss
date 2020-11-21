@@ -3,36 +3,10 @@
   // justify-content: center;
   width: 1180px;
   margin: 154px auto 0 auto;
-
   font-family: Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic,
     Malgun Gothic, DotumChe, Dotum, sans-serif;
-  .asideContainer {
-    width: 220px;
-    height: 1000px;
-    .categoriesList {
-      width: 220px;
-      height: 350px;
-      margin-top: 40px;
-      ul {
-        list-style: none;
-        padding-left: 0px;
-      }
 
-      li {
-        font-size: 16px;
-        color: #26282b;
-        text-align: left;
-        margin: 2px auto;
-        padding-left: 12px;
-        height: 28px;
-      }
-    }
-  }
   .mainContainer {
-    width: 941px;
     margin-left: 20px;
-    .jumbotron {
-      margin-top: 30px;
-    }
   }
 }

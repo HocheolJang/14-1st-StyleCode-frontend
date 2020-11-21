@@ -4,7 +4,7 @@
 .jumbotron {
   width: 940px;
   height: 530px;
-  // margin: 138px auto 100px auto;
+  margin-top: 30px;
   font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
   position: relative;
   .item {
@@ -40,40 +40,50 @@
     display: flex;
     bottom: 0px;
     right: 0px;
-    z-index: 3;
+    z-index: 2;
     width: 160px;
     height: 60px;
     background-color: #26282b;
     .sliderLeft {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 52px;
-      height: 50px;
-
+      height: 60px;
+      &:hover {
+        cursor: pointer;
+      }
       .slideBtnLeft {
         object-fit: cover;
         width: 20px;
         transform: rotate(180deg);
-        // margin-top: 10px;
-        &:hover {
-          cursor: pointer;
-        }
       }
     }
     .paging {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 56px;
       vertical-align: middle;
       span {
         color: white;
+        margin: 0 auto;
       }
     }
-    .slideBtnRight {
-      object-fit: cover;
-      z-index: 1000;
-      top: 45%;
+    .sliderRight {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 52px;
-      height: 50px;
-      right: 0px;
+      height: 60px;
       &:hover {
         cursor: pointer;
+      }
+      .slideBtnRight {
+        object-fit: cover;
+        z-index: 2;
+        width: 20px;
+        right: 0px;
       }
     }
   }

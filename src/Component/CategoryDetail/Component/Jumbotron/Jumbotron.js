@@ -67,27 +67,24 @@ class Jumbotron extends Component {
               );
             })}
           </Slider>
-          <div className="sliderBox">
+          <div className="sliderBox" onClick={this.previous}>
             <div className="sliderLeft">
               <img
                 className="slideBtnLeft"
                 src="images/icon/arrow.png"
                 alt="prev"
-                onClick={this.previous}
               />
             </div>
             <div className="paging">
-              {/* <span>1</span> */}
-              <span></span>
+              <span>1</span>
               <span>of</span>
               <span>{jumbotronItem.length}</span>
             </div>
-            <div className="sliderRight">
+            <div className="sliderRight" onClick={this.next}>
               <img
                 className="slideBtnRight"
                 src="images/icon/arrow.png"
                 alt="next"
-                onClick={this.next}
               />
             </div>
           </div>
