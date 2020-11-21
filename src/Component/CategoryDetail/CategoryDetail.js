@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Jumbotron from "./Component/Jumbotron/Jumbotron";
+import Card from "./Component/Card/Card";
 
 class CategoryDetail extends Component {
   render() {
@@ -22,8 +24,12 @@ class CategoryDetail extends Component {
             </div>
           </div>
           <div className="mainContainer">
-            <div className="jumbotron"></div>
-            <div className="mdChoice"></div>
+            <div className="jumbotron">
+              <Jumbotron />
+            </div>
+            <div className="mdChoice">
+              <Card />
+            </div>
             <div className="showAll"></div>
           </div>
         </div>
