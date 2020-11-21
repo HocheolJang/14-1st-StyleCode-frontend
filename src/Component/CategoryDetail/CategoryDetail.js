@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "./Component/Jumbotron/Jumbotron";
-import Card from "./Component/Card/Card";
+import MdChoice from "./Component/MdChoice/MdChoice";
+import ShowAll from "./Component/ShowAll/ShowAll";
 import "./CategoryDetail.scss";
 
 class CategoryDetail extends Component {
@@ -29,9 +30,11 @@ class CategoryDetail extends Component {
               <Jumbotron />
             </div>
             <div className="mdChoice">
-              <Card />
+              <MdChoice />
             </div>
-            <div className="showAll"></div>
+            <div className="showAll">
+              <ShowAll />
+            </div>
           </div>
         </div>
       </>

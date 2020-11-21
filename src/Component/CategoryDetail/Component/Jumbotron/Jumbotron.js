@@ -38,6 +38,9 @@ class Jumbotron extends Component {
 
   render() {
     const { jumbotronItem } = this.state;
+    if (jumbotronItem.length) {
+      console.log(jumbotronItem[0].id);
+    }
 
     return (
       <div>
@@ -60,33 +63,34 @@ class Jumbotron extends Component {
                     </div>
                     <span className="carouselBar"></span>
                   </div>
-                  <div className="sliderBox">
-                    <div>
-                      <img
-                        className="slideBtnLeft"
-                        src="images/icon/prev0.png"
-                        alt="prev"
-                        onClick={this.previous}
-                      />
-                    </div>
-                    <div className="paging">
-                      <span>1</span>
-                      <span>of</span>
-                      <span>3</span>
-                    </div>
-                    <div>
-                      <img
-                        className="slideBtnRight"
-                        src="images/icon/next0.png"
-                        alt="next"
-                        onClick={this.next}
-                      />
-                    </div>
-                  </div>
                 </div>
               );
             })}
           </Slider>
+          <div className="sliderBox">
+            <div className="sliderLeft">
+              <img
+                className="slideBtnLeft"
+                src="images/icon/arrow.png"
+                alt="prev"
+                onClick={this.previous}
+              />
+            </div>
+            <div className="paging">
+              {/* <span>1</span> */}
+              <span></span>
+              <span>of</span>
+              <span>{jumbotronItem.length}</span>
+            </div>
+            <div className="sliderRight">
+              <img
+                className="slideBtnRight"
+                src="images/icon/arrow.png"
+                alt="next"
+                onClick={this.next}
+              />
+            </div>
+          </div>
         </div>
       </div>
     );

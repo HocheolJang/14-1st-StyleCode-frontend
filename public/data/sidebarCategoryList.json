@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "categoryName": "전체"
+    },
+    {
+      "id": 1,
+      "categoryName": "티셔츠"
+    },
+    {
+      "id": 2,
+      "categoryName": "후드/집업/맨투맨"
+    },
+    {
+      "id": 3,
+      "categoryName": "셔츠"
+    },
+    {
+      "id": 4,
+      "categoryName": "니트/가디건"
+    },
+    {
+      "id": 5,
+      "categoryName": "아우터"
+    },
+    {
+      "id": 6,
+      "categoryName": "팬츠"
+    },
+    {
+      "id": 7,
+      "categoryName": "스포츠"
+    },
+    {
+      "id": 8,
+      "categoryName": "언더웨어"
+    },
+    {
+      "id": 9,
+      "categoryName": "프리미엄 브랜드"
+    }
+  ]
+}

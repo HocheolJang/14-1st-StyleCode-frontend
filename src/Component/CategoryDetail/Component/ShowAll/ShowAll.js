@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./Card.scss";
+import "./ShowAll.scss";
 // import Unisex from
 
-class Card extends Component {
+class ShowAll extends Component {
   constructor() {
     super();
     this.state = {
@@ -39,14 +39,14 @@ class Card extends Component {
     const { MdChoiceList } = this.state;
 
     return (
-      <div className="Card">
+      <div className="ShowAll">
         <div className="title">
-          <h2>MD의 선택</h2>
+          <p>전체보기</p>
         </div>
         <div className="cardList">
           {MdChoiceList.map((product) => {
             return (
-              <div className="card">
+              <div className="eachCard">
                 <div className="productImgBox">
                   <img
                     className="productImg"
@@ -62,33 +62,22 @@ class Card extends Component {
                     <span>{product.productName}</span>
                   </div>
                   <div className="discountPriceBox">
-                    <span className="discount">{product.discount}</span>
+                    <span className="discount">[{product.discount}]</span>
                     <span className="productPrice">
                       {product.productPrice}원
                     </span>
                   </div>
-                  <div className="likeReviewBox">
-                    <span className="productLike">
-                      좋아요<span>{product.productLike}</span>
-                    </span>
-                    <span className="productReview">
-                      후기
-                      <span>{product.productReview}</span>
-                    </span>
+                  <div className="orignalPriceBox">
+                    <span>{product.productPrice}원</span>
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-        <div className="popularFooter">
-          <button>
-            <span>전체 더 보기 {">"}</span>
-          </button>
-        </div>
       </div>
     );
   }
 }
 
-export default Card;
+export default ShowAll;
