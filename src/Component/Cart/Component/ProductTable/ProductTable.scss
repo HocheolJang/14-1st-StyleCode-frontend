@@ -1,0 +1,67 @@
+table {
+  .bold {
+    font-weight: 700;
+  }
+  width: 98%;
+  height: 90%;
+  border: 1px solid #e8ebed;
+  border-collapse: collapse;
+  th,
+  th {
+    height: 30px;
+    align-self: center;
+    vertical-align: middle;
+    background-color: #f7f8f9;
+    color: #454c53;
+    font-size: 12px;
+    border: 1px solid #e8ebed;
+  }
+  .tableOrderProduct {
+    width: 438px;
+  }
+  .width96 {
+    width: 96px;
+  }
+  td {
+    border: 1px solid #e8ebed;
+    // height: 147px;
+    display: table-cell;
+    // vertical-align: middle;
+    // text-align: center;
+    font-size: 14px;
+    .checkbox {
+      width: 20px;
+    }
+    input {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #c9cdd2;
+      color: #26282b;
+      cursor: pointer;
+    }
+    button {
+      // width: 20px;
+    }
+  }
+  .product {
+    height: 140px;
+    vertical-align: middle;
+    // margin: auto 0;
+    .orderedProduct {
+      display: flex;
+      height: 70%;
+      border: 1px solid red;
+      margin: 30px auto;
+    }
+  }
+  .totalPrice {
+    background-color: #f7f8f9;
+    height: 71px;
+    text-align: right;
+    vertical-align: bottom;
+    span {
+      margin: auto 0;
+      color: #26282b;
+    }
+  }
+}
