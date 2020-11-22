@@ -22,15 +22,17 @@ table {
   .width96 {
     width: 96px;
   }
+
+  .orderedProductBox {
+    border: 1px solid red;
+  }
   td {
     border: 1px solid #e8ebed;
-    // height: 147px;
     display: table-cell;
-    // vertical-align: middle;
-    // text-align: center;
     font-size: 14px;
     .checkbox {
       width: 20px;
+      border-right: none;
     }
     input {
       width: 20px;
@@ -44,14 +46,58 @@ table {
     }
   }
   .product {
-    height: 140px;
+    height: 100px;
     vertical-align: middle;
-    // margin: auto 0;
-    .orderedProduct {
-      display: flex;
-      height: 70%;
-      border: 1px solid red;
-      margin: 30px auto;
+    .checkbox {
+    }
+    .orderedProductBox {
+      .orderedProduct {
+        display: flex;
+        height: 70%;
+        border: 1px solid red;
+        margin: 30px auto;
+        .orderedProductLeft {
+          border: 1px solid red;
+          img {
+            width: 58px;
+            height: 58px;
+          }
+        }
+      }
+    }
+    .controlOrderBtnBox {
+      .orderNowBtn {
+        width: 68px;
+        height: 26px;
+        border: 1px solid #00d0b1;
+        border-radius: 3px;
+        margin: 4px;
+        padding: 0 7px;
+        background-color: #00d0b1;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .deleteItemBtn {
+        width: 68px;
+        height: 26px;
+        border: 1px solid #00d0b1;
+        border-radius: 3px;
+        margin: 4px;
+        padding: 0 7px;
+        background-color: #ffffff;
+        color: #00d0b1;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
   .totalPrice {

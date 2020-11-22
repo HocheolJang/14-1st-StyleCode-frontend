@@ -22,9 +22,11 @@ class ProductTable extends Component {
               <td className="checkbox">
                 <input type="checkbox" />
               </td>
-              <td>
+              <td className="orderedProductBox">
                 <div className="orderedProduct">
-                  <div className="orderedProductLeft">이미지</div>
+                  <div className="orderedProductLeft">
+                    <img src="images/cart/cart1.jpg" alt="상품명" />
+                  </div>
                   <div>
                     <div className="orderedProductRight">
                       <span>
@@ -45,9 +47,9 @@ class ProductTable extends Component {
               <td>4,800원</td>
               <td>2,900원</td>
               <td>2,500원</td>
-              <td>
-                <button>바로주문</button>
-                <button>삭제</button>
+              <td className="controlOrderBtnBox">
+                <button className="orderNowBtn">바로주문</button>
+                <button className="deleteItemBtn">삭제</button>
               </td>
             </tr>
             <tr className="totalPrice">
