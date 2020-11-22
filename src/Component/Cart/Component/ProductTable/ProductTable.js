@@ -44,9 +44,9 @@ class ProductTable extends Component {
                   </div>
                 </div>
               </td>
-              <td>4,800원</td>
-              <td>2,900원</td>
-              <td>2,500원</td>
+              <td>4800원</td>
+              <td>2900원</td>
+              <td>2500원</td>
               <td className="controlOrderBtnBox">
                 <button className="orderNowBtn">바로주문</button>
                 <button className="deleteItemBtn">삭제</button>
