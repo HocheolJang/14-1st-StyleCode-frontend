@@ -46,7 +46,7 @@ class Jumbotron extends Component {
                 <div className="item" key={idx}>
                   <img className="jumboImg" src={item.src} alt={item.alt}></img>
                   <div className="adsText">
-                    <div className= {`mainTitle ${item.mainTitleClassName}`}>
+                    <div className={`mainTitle ${item.mainTitleClassName}`}>
                       <span>{item.mainTitle0}</span>
                       <br />
                       <span>{item.mainTitle1}</span>
@@ -83,11 +83,12 @@ class Jumbotron extends Component {
 const SETTING = {
   arrows: false,
   dots: false,
+  fade: true,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 100000,
+  autoplaySpeed: 3000,
   pauseOnHover: true,
 };
 
