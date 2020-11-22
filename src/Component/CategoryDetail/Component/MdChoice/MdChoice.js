@@ -31,10 +31,6 @@ class MdChoice extends Component {
     console.log(e);
   };
 
-  numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
   render() {
     const { mdChoiceList } = this.state;
 
@@ -65,11 +61,19 @@ class MdChoice extends Component {
                     <div className="discountPriceBox">
                       <span className="discount">[{product.discount}]</span>
                       <span className="productPrice">
-                        {product.productPrice}원
+                        {product.productPrice
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        원
                       </span>
                     </div>
                     <div className="orignalPriceBox">
-                      <span>{product.productPrice}원</span>
+                      <span>
+                        {product.productPrice
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                        원
+                      </span>
                     </div>
                   </div>
                 </div>

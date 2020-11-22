@@ -8,6 +8,7 @@ class ShowAll extends Component {
     this.state = {
       showAllList: [],
       currentCategory: 0,
+      showDropdown: false,
     };
   }
 
@@ -31,6 +32,18 @@ class ShowAll extends Component {
     console.log(e);
   };
 
+  filterDropdown = (e) => {
+    e.preventDefault();
+    // console.log(e);
+    this.setState({
+      showDropdown: !this.state.showDropdown,
+    });
+  };
+
+  handleFilter = (e) => {
+    console.log(e);
+  };
+
   numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
@@ -45,12 +58,42 @@ class ShowAll extends Component {
             <span>전체보기</span>
           </div>
           <div className="filter">
-            <button>
+            <button onClick={this.filterDropdown}>
               <span>최신순</span>
               <span>
                 <img src="images/icon/filterArrow.png" alt="상품정렬버튼" />
               </span>
             </button>
+            {this.state.showDropdown ? (
+              <div className="fliterDropDown">
+                {/* {this.state.filterDropdown && } */}
+                <ul className="dropdownContent">
+                  <li>최신순(최근등록순)</li>
+                  <li>인기순(인기많은순)</li>
+                  <li>할인율(할인율높은순)</li>
+                  <li>
+                    가격
+                    <span>
+                      <img
+                        src="images/icon/filterDropDownArrow.png"
+                        alt="arrow"
+                      />
+                    </span>
+                    (가격낮은순)
+                  </li>
+                  <li>
+                    가격
+                    <span>
+                      <img
+                        src="images/icon/filterDropDownArrow.png"
+                        alt="arrow"
+                      />
+                    </span>
+                    (가격높은순)
+                  </li>
+                </ul>
+              </div>
+            ) : null}
           </div>
         </div>
         <div className="cardList">
@@ -74,11 +117,17 @@ class ShowAll extends Component {
                   <div className="discountPriceBox">
                     <span className="discount">[{product.discount}]</span>
                     <span className="productPrice">
-                      {product.productPrice}원
+                      {product.productPrice
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                     </span>
                   </div>
                   <div className="orignalPriceBox">
-                    <span>{product.productPrice}원</span>
+                    <span>
+                      {product.productPrice
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                    </span>
                   </div>
                 </div>
               </div>
