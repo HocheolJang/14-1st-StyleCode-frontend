@@ -76,7 +76,11 @@ class PopularBrand extends Component {
                       <div className="brandItemDesc">
                         <span className="brandName">{brand.brandName}</span>
                         <span className="brandProductCnt">
-                          ({brand.brandProductCnt})
+                          (
+                          {brand.brandProductCnt
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                          )
                         </span>
                       </div>
                     </div>

@@ -97,7 +97,12 @@ class Trend extends Component {
                       </div>
                       <div className="showAll">
                         <Link to="#">
-                          <span>{trend.productCnt}개 더 보기</span>
+                          <span>
+                            {trend.productCnt
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                            개 더 보기
+                          </span>
                         </Link>
                       </div>
                     </div>

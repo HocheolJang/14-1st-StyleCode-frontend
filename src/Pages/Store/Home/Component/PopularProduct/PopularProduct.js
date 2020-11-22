@@ -92,16 +92,28 @@ class PopularProduct extends Component {
                   <div className="discountPriceBox">
                     <span className="discount">{product.discount}</span>
                     <span className="productPrice">
-                      {product.productPrice}원
+                      {product.productPrice
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                      원
                     </span>
                   </div>
                   <div className="likeReviewBox">
                     <span className="productLike">
-                      좋아요<span>{product.productLike}</span>
+                      좋아요
+                      <span>
+                        {product.productLike
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                      </span>
                     </span>
                     <span className="productReview">
                       후기
-                      <span>{product.productReview}</span>
+                      <span>
+                        {product.productReview
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                      </span>
                     </span>
                   </div>
                 </div>
