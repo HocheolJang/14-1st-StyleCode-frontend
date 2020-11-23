@@ -3,7 +3,7 @@
     {
       "id": 0,
       "src": "images/categoryDetail/jumbotron/jumbotron4.jpg",
-      "alt": "점보트론이미지",
+      "alt": "1",
       "mainTitleClassName": "white",
       "mainTitle0": "자유로운 나의 인생",
       "mainTitle1": "누구도 뭐라하지 마세요~",
@@ -14,7 +14,7 @@
     {
       "id": 1,
       "src": "images/categoryDetail/jumbotron/jumbotron5.jpg",
-      "alt": "점보트론이미지",
+      "alt": "2",
       "mainTitleClassName": "white",
       "mainTitle0": "MD's PICK",
       "mainTitle1": "뷰티 베스트 리뷰",
@@ -25,7 +25,7 @@
     {
       "id": 2,
       "src": "images/categoryDetail/jumbotron/jumbotron3.jpg",
-      "alt": "점보트론이미지",
+      "alt": "3",
       "mainTitleClassName": "white",
       "mainTitle0": "이렇게 좋은 날",
       "mainTitle1": "저랑 같이 떠날래요?",
@@ -36,7 +36,7 @@
     {
       "id": 3,
       "src": "images/categoryDetail/jumbotron/jumbotron7.jpg",
-      "alt": "점보트론이미지",
+      "alt": "4",
       "mainTitleClassName": "white",
       "mainTitle0": "매력이 가득한 도시",
       "mainTitle1": "딱 한 달만 런던 살고싶다",
@@ -47,7 +47,7 @@
     {
       "id": 4,
       "src": "images/categoryDetail/jumbotron/jumbotron8.jpg",
-      "alt": "점보트론이미지",
+      "alt": "5",
       "mainTitleClassName": "white",
       "mainTitle0": "나 자신을",
       "mainTitle1": "비참하게 만들지마",

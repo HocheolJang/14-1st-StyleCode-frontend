@@ -9,6 +9,7 @@ class ShowAll extends Component {
       showAllList: [],
       currentCategory: 0,
       showDropdown: false,
+      isArrowDown: true,
     };
   }
 
@@ -37,6 +38,7 @@ class ShowAll extends Component {
     // console.log(e);
     this.setState({
       showDropdown: !this.state.showDropdown,
+      isArrowDown: !this.state.isArrowDown,
     });
   };
 
@@ -49,7 +51,8 @@ class ShowAll extends Component {
   };
 
   render() {
-    const { showAllList } = this.state;
+    const { showAllList, showDropdown } = this.state;
+    const { filterDropdown } = this;
 
     return (
       <div className="ShowAll">
@@ -58,37 +61,46 @@ class ShowAll extends Component {
             <span>전체보기</span>
           </div>
           <div className="filter">
-            <button onClick={this.filterDropdown}>
+            <button onClick={filterDropdown}>
               <span>최신순</span>
               <span>
-                <img src="images/icon/filterArrow.png" alt="상품정렬버튼" />
+                {!showDropdown ? (
+                  <img
+                    src="images/icon/filterArrow.png"
+                    className="descBtn"
+                    alt="상품정렬버튼"
+                  />
+                ) : (
+                  <img
+                    src="images/icon/filterArrow.png"
+                    className="ascBtn"
+                    alt="상품정렬버튼"
+                  />
+                )}
               </span>
             </button>
-            {this.state.showDropdown ? (
+            {showDropdown ? (
               <div className="fliterDropDown">
-                {/* {this.state.filterDropdown && } */}
                 <ul className="dropdownContent">
-                  <li>최신순(최근등록순)</li>
-                  <li>인기순(인기많은순)</li>
-                  <li>할인율(할인율높은순)</li>
+                  <li>최신순 (최근등록순)</li>
+                  <li>인기순 (인기많은순)</li>
+                  <li>할인율 (할인율높은순)</li>
                   <li>
-                    가격
-                    <span>
-                      <img
-                        src="images/icon/filterDropDownArrow.png"
-                        alt="arrow"
-                      />
-                    </span>
+                    가격&nbsp;
+                    <img
+                      src="images/icon/filterDropDownArrow.png"
+                      alt="arrow"
+                      className="descArrow"
+                    />
                     (가격낮은순)
                   </li>
                   <li>
                     가격
-                    <span>
-                      <img
-                        src="images/icon/filterDropDownArrow.png"
-                        alt="arrow"
-                      />
-                    </span>
+                    <img
+                      src="images/icon/filterDropDownArrow.png"
+                      alt="arrow"
+                      className="ascArrow"
+                    />
                     (가격높은순)
                   </li>
                 </ul>
@@ -97,9 +109,9 @@ class ShowAll extends Component {
           </div>
         </div>
         <div className="cardList">
-          {showAllList.map((product) => {
+          {showAllList.map((product, idx) => {
             return (
-              <div className="eachCard">
+              <div className="eachCard" key={idx}>
                 <div className="productImgBox">
                   <img
                     className="productImg"

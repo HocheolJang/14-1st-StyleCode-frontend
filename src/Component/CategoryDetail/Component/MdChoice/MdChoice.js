@@ -40,9 +40,9 @@ class MdChoice extends Component {
           <p>MD's 추천</p>
         </div>
         <div className="cardList">
-          {mdChoiceList.map((product) => {
+          {mdChoiceList.map((product, idx) => {
             return (
-              <div className="rankingCardList">
+              <div className="rankingCardList" key={idx}>
                 <div className="eachCard">
                   <div className="productImgBox">
                     <img

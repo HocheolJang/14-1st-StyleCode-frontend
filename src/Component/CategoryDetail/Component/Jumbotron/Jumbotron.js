@@ -9,6 +9,7 @@ class Jumbotron extends Component {
     super();
     this.state = {
       jumbotronItem: [],
+      jumbotronCurrentPage: 1,
     };
     this.slider = React.createRef();
   }
@@ -36,11 +37,19 @@ class Jumbotron extends Component {
     this.getJumbotronData();
   }
 
+  handleCurrentPage = (e) => {
+    console.log(e);
+    this.setState({
+      jumbotronCurrentPage: this.state.jumbotronCurrentPage + 1,
+    });
+  };
+
   render() {
-    const { jumbotronItem } = this.state;
-    if (jumbotronItem.length) {
-      console.log(jumbotronItem[0].id);
-    }
+    const { jumbotronItem, jumbotronCurrentPage } = this.state;
+    // if (jumbotronItem.length) {
+    //   console.log(jumbotronItem[0].alt);
+    // }
+    console.log(jumbotronItem.alt);
 
     return (
       <div>
@@ -49,7 +58,12 @@ class Jumbotron extends Component {
             {jumbotronItem.map((item, idx) => {
               return (
                 <div className="item" key={idx}>
-                  <img className="jumboImg" src={item.src} alt={item.alt}></img>
+                  <img
+                    className="jumboImg"
+                    src={item.src}
+                    alt={item.alt}
+                    onChange={this.handleCurrentPage}
+                  />
                   <div className="adsText">
                     <div className={`mainTitle ${item.mainTitleClassName}`}>
                       <span>{item.mainTitle0}</span>
@@ -76,7 +90,7 @@ class Jumbotron extends Component {
               />
             </div>
             <div className="paging">
-              <span>1</span>
+              <span>{jumbotronCurrentPage}</span>
               <span>of</span>
               <span>{jumbotronItem.length}</span>
             </div>
@@ -101,7 +115,7 @@ const SETTING = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 100000,
+  autoplaySpeed: 3000,
   pauseOnHover: true,
 };
 
