@@ -11,7 +11,7 @@ class Trend extends Component {
     };
   }
 
-  getTrendList = () => {
+  componentDidMount() {
     fetch("http://localhost:3000/data/trendItem.json", {
       method: "GET",
     })
@@ -22,14 +22,10 @@ class Trend extends Component {
           bulletList: res.event,
         });
       });
-  };
-  componentDidMount() {
-    this.getTrendList();
   }
 
   render() {
     const { trendList, bulletList } = this.state;
-    // console.log(bulletList);
 
     return (
       <div className="trend">
@@ -39,7 +35,6 @@ class Trend extends Component {
         <div className="trendContainer">
           <div className="leftContainer">
             {trendList.map((trend, idx) => {
-              // console.log(trend.bullet);
               if (idx % 2 === 0) {
                 return (
                   <div className="item" key={idx}>

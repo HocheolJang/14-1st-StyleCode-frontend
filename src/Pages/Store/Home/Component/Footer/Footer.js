@@ -84,18 +84,20 @@ class Footer extends Component {
             </div>
             <div className="descContainer">
               <p>
-                상호명:주식회사 스타일쉐어 | 사용자 등록번호: 110-81-95574 |
+                상호명:주식회사 스타일코드 | 사용자 등록번호: 110-81-12345 |
                 사용자등록정보 확인
               </p>
               <p>
-                통신판매업신고: 제 2015-서울강남-02962호 | 주소: 서울특별시
-                강남구 선릉로93길 35 나라키움 역삼B빌딩 3층 | 대표자: 윤자영 |
-                개인정보책임자: 오형내
+                통신판매업신고: 제 2020-서울강남-77777호 | 주소: 서울특별시
+                강남구 테헤란로 427 위워크타워 10층 | 대표자: 장호철 |
+                개인정보책임자: 김민구
               </p>
             </div>
           </div>
           <div className="footerBox">
-            <Link><img src="images/icon/escroIcon.png" alt="에스크로이미지"/></Link>
+            <Link>
+              <img src="images/icon/escroIcon.png" alt="에스크로이미지" />
+            </Link>
           </div>
         </div>
       </div>

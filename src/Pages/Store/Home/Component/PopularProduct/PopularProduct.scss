@@ -2,10 +2,11 @@
 @import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
 
 .popularProduct {
-  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
   width: 1240px;
   height: 600px;
   margin: 100px auto;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+
   .title {
     display: flex;
     justify-content: center;
@@ -13,8 +14,8 @@
     height: 50px;
 
     h2 {
-      font-size: 46px;
       margin-top: 0px;
+      font-size: 46px;
       font-weight: 700;
     }
   }
@@ -25,23 +26,28 @@
     align-items: center;
     width: 100%;
     height: 50px;
+
     .categoryList {
       display: flex;
       font-size: 24px;
       font-weight: 700;
+
       &:hover {
         cursor: pointer;
       }
     }
+
     .active {
       margin: 0 10px;
       color: black;
     }
+
     .inactive {
       margin: 0 10px;
       color: #9ea4aa;
     }
   }
+
   .cardList {
     display: flex;
     width: 100%;
@@ -57,11 +63,12 @@
         width: 310px;
         height: 310px;
         overflow: hidden;
+
         .productImg {
           width: 98%;
           height: 100%;
-          // padding: 0 5px;
           border-radius: 15px;
+
           &:hover {
             transform: scale(1.1);
             transition: transform 0.5s ease;
@@ -71,9 +78,10 @@
       .productDescBox {
         margin-left: 10px;
         margin-top: 5px;
+
         .brandName {
-          font-weight: 700;
           font-size: 18px;
+          font-weight: 700;
         }
         .productName {
           width: 280px;
@@ -87,17 +95,20 @@
         }
         .discountPriceBox {
           margin-top: 10px;
+
           .discount {
             color: red;
             font-size: 18px;
             font-weight: 700;
           }
+
           .productPrice {
+            margin-left: 5px;
             font-size: 18px;
             font-weight: 700;
-            margin-left: 5px;
           }
         }
+
         .likeReviewBox {
           margin-top: 10px;
           color: grey;
@@ -106,20 +117,24 @@
       }
     }
   }
+
   .popularFooter {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+
     button {
       width: 230px;
       height: 70px;
       border-radius: 60px;
       border: none;
+
       &:hover {
         opacity: 0.5;
         cursor: pointer;
       }
+
       span {
         font-size: 22px;
         font-weight: 700;

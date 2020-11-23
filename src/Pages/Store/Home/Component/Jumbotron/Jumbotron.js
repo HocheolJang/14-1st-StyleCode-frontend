@@ -18,7 +18,7 @@ class Jumbotron extends Component {
     this.slider.current.slickNext();
   };
 
-  getJumbotronData = () => {
+  componentDidMount() {
     fetch("http://localhost:3000/data/jumbotronItem.json", {
       method: "GET",
     })
@@ -28,10 +28,6 @@ class Jumbotron extends Component {
           jumbotronItem: res.item,
         });
       });
-  };
-
-  componentDidMount() {
-    this.getJumbotronData();
   }
 
   render() {
@@ -44,7 +40,7 @@ class Jumbotron extends Component {
             {jumbotronItem.map((item, idx) => {
               return (
                 <div className="item" key={idx}>
-                  <img className="jumboImg" src={item.src} alt={item.alt}></img>
+                  <img className="jumboImg" src={item.src} alt={item.alt} />
                   <div className="adsText">
                     <div className={`mainTitle ${item.mainTitleClassName}`}>
                       <span>{item.mainTitle0}</span>

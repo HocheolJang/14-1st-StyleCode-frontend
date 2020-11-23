@@ -20,7 +20,7 @@ class PopularBrand extends Component {
     this.slider.current.slickNext();
   };
 
-  getBrandList = () => {
+  componentDidMount() {
     fetch("http://localhost:3000/data/brandItem.json", {
       method: "GET",
     })
@@ -30,9 +30,6 @@ class PopularBrand extends Component {
           brandList: res.item,
         });
       });
-  };
-  componentDidMount() {
-    this.getBrandList();
   }
 
   render() {
@@ -50,13 +47,13 @@ class PopularBrand extends Component {
                   src="images/icon/prev1.png"
                   alt="좌측으로 넘기는 버튼"
                   onClick={this.previous}
-                ></img>
+                />
                 <img
                   className="nextBtn"
                   src="images/icon/next1.png"
                   alt="우측으로 넘기는 버튼"
                   onClick={this.next}
-                ></img>
+                />
               </div>
             </div>
           </header>

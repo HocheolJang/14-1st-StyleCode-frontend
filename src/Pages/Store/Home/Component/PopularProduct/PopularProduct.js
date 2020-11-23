@@ -40,14 +40,6 @@ class PopularProduct extends Component {
     this.getPopularProductList();
   }
 
-  handleMenuTab = (e) => {
-    console.log(e);
-  };
-
-  numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
   render() {
     const { categoriesList, popularProductList } = this.state;
 
@@ -80,7 +72,7 @@ class PopularProduct extends Component {
                     className="productImg"
                     alt="제품사진"
                     src={product.src}
-                  ></img>
+                  />
                 </div>
                 <div className="productDescBox">
                   <div>
