@@ -1,0 +1,60 @@
+{
+  "item": [
+    {
+      "id": 0,
+      "src": "images/brand/brand0.jpg",
+      "alt": "점보트론이미지",
+      "brandName": "모르모트",
+      "brandProductCnt": 329
+    },
+    {
+      "id": 1,
+      "src": "images/brand/brand1.jpg",
+      "alt": "점보트론이미지",
+      "brandName": "모르모트",
+      "brandProductCnt": 329
+    },
+    {
+      "id": 2,
+      "src": "images/brand/brand2.jpg",
+      "alt": "점보트론이미지",
+      "brandName": "모르모트",
+      "brandProductCnt": 329
+    },
+    {
+      "id": 3,
+      "src": "images/brand/brand3.jpg",
+      "alt": "점보트론이미지",
+      "brandName": "모르모트",
+      "brandProductCnt": 329
+    },
+    {
+      "id": 4,
+      "src": "images/brand/brand4.jpg",
+      "alt": "점보트론이미지",
+      "brandName": "모르모트",
+      "brandProductCnt": 329
+    },
+    {
+      "id": 5,
+      "src": "images/brand/brand5.jpg",
+      "alt": "점보트론이미지",
+      "brandName": "모르모트",
+      "brandProductCnt": 329
+    },
+    {
+      "id": 6,
+      "src": "images/brand/brand6.jpg",
+      "alt": "점보트론이미지",
+      "brandName": "모르모트",
+      "brandProductCnt": 329
+    },
+    {
+      "id": 7,
+      "src": "images/brand/brand7.jpg",
+      "alt": "점보트론이미지",
+      "brandName": "모르모트",
+      "brandProductCnt": 329
+    }
+  ]
+}
