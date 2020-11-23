@@ -34,12 +34,7 @@ class SignUp extends Component {
   };
 
   handleChange = (e) => {
-    // this.setState({ [e.target.name]: e.target.value });
-    // this.setState({ value: e.target.value });
     this.setState({ value: e.target.value });
-
-    // this.setState({ password: e.target.value });
-    // this.setState({ email: e.target.email });
   };
 
   handleIdChange = (e) => {
