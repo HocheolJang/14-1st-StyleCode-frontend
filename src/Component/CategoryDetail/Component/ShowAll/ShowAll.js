@@ -13,20 +13,17 @@ class ShowAll extends Component {
     };
   }
 
-  getShowAllList = () => {
-    fetch("http://localhost:3000/data/showAllItem.json", {
+  componentDidMount() {
+    fetch("http://10.58.4.1:8000/product/category?sort=0&second=1", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          showAllList: res.product,
+          showAllList: res.second_category_list,
+          src: res.second_category_list.main_image_url,
         });
       });
-  };
-
-  componentDidMount() {
-    this.getShowAllList();
   }
 
   handleMenuTab = (e) => {
@@ -35,7 +32,6 @@ class ShowAll extends Component {
 
   filterDropdown = (e) => {
     e.preventDefault();
-    // console.log(e);
     this.setState({
       showDropdown: !this.state.showDropdown,
       isArrowDown: !this.state.isArrowDown,
@@ -49,6 +45,7 @@ class ShowAll extends Component {
   render() {
     const { showAllList, showDropdown } = this.state;
     const { filterDropdown } = this;
+    console.log(showAllList[0]?.main_image_url);
 
     return (
       <div className="ShowAll">
@@ -112,29 +109,33 @@ class ShowAll extends Component {
                   <img
                     className="productImg"
                     alt="제품사진"
-                    src={product.src}
+                    src={product?.main_image_url}
                   ></img>
                 </div>
                 <div className="productDescBox">
                   <div>
-                    <span className="brandName">{product.brandName}</span>
+                    <span className="brandName">{product?.brand}</span>
                   </div>
                   <div className="productName">
-                    <span>{product.productName}</span>
+                    <span>{product?.title}</span>
                   </div>
                   <div className="discountPriceBox">
-                    <span className="discount">[{product.discount}]</span>
+                    <span className="discount">
+                      [{parseInt(product?.discount_rate * 100)}%]
+                    </span>
                     <span className="productPrice">
-                      {product.productPrice
+                      {(product?.discount_price * 1)
                         .toString()
                         .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                      원
                     </span>
                   </div>
                   <div className="orignalPriceBox">
                     <span>
-                      {product.productPrice
+                      {(product?.price * 1)
                         .toString()
                         .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                      원
                     </span>
                   </div>
                 </div>

@@ -2,22 +2,97 @@ import React, { Component } from "react";
 import "./Asidebar.scss";
 
 class Asidedbar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      sidebarCategoryList: [],
+      hiddenDropdown: true,
+    };
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:3000/data/sidebarCategoryList.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          sidebarCategoryList: res.categories,
+        });
+      });
+  }
+
+  // showFilterDropdown = (e) => {
+  //   e.preventDefault();
+  //   this.setState({
+  //     showDropdown: true,
+  //   });
+  // };
+
+  showDropdown = (e) => {
+    e.preventDefault();
+    this.setState({ hiddenDropdown: !this.state.hiddenDropdown });
+  };
+
   render() {
+    const { sidebarCategoryList, hiddenDropdown } = this.state;
+    const { showDropdown } = this;
+
+    // console.log(sidebarCategoryList[1]?.subCategories[1].name);
     return (
       <div className="asideContainer">
         <div className="categoriesList">
           <ul>
-            <li>전체</li>
-            <li>티셔츠</li>
-            <li>후드/집업/맨투맨</li>
-            <li>셔츠</li>
-            <li>니트/가디건</li>
-            <li>아우터</li>
-            <li>팬츠</li>
-            <li>스포츠</li>
-            <li>언더웨어</li>
-            <li>프리미엄 브랜드</li>
+            {sidebarCategoryList.map((category, idx) => {
+              return (
+                <li
+                  key={idx}
+                  onClick={showDropdown}
+                  id={category.id}
+                  // onMouseOver={filterDropdown}
+                  // onMouseOut={!filterDropdown}
+                >
+                  {category.categoryName}
+
+                  {/* <div className="filter">
+                    {showDropdown ? (
+                      <div className="showFilterDropDown">
+                        <ul className="dropdownContent">
+                          {sidebarCategoryList.map((category, idx) => {
+                            const subCategoriesList = [
+                              ...this.state.sidebarCategoryList,
+                            ];
+                            console.log(subCategoriesList);
+                            return (
+                              <li
+                                key={idx}
+                                onClick={showFilterDropdown}
+                                // onMouseOver={filterDropdown}
+                                // onMouseOut={!filterDropdown}
+                              >
+                                {category.categoryName}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    ) : null}
+                  </div> */}
+                </li>
+              );
+            })}
           </ul>
+          {showDropdown ? (
+            <div className={hiddenDropdown ? "active" : ""}>
+              <ul>
+                <li>반팔 티셔츠</li>
+                <li>긴팔 티셔츠</li>
+                <li>슬리브리스</li>
+                <li>피케 티셔츠</li>
+                <li>터틀넥 티셔츠</li>
+              </ul>
+            </div>
+          ) : null}
         </div>
       </div>
     );
