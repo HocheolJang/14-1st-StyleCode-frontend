@@ -64,7 +64,7 @@ class Select extends Component {
         <select
           className="header-middle-info-size"
           // value={this.state.value}
-          onChange={this.handleChange}
+          // onChange={this.handleChange}
           defaultValue={SIZE[0].label}
           onChange={this.handleSizeChange}
         >
