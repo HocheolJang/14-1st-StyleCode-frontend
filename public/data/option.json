@@ -1,5 +1,5 @@
 {
-"year":[
+"option1":[
     { "key": 1, "value": "1976" },
     { "key": 2, "value": "1977" },
     { "key": 3, "value": "1978" },
@@ -32,7 +32,7 @@
     { "key": 30, "value": "2005" },
     { "key": 31, "value": "2006" }
   ],  
-"month": [
+"option2": [
     { "key": 1, "value": "1" },
     { "key": 2, "value": "2" },
     { "key": 3, "value": "3" },
@@ -46,7 +46,7 @@
     { "key": 11, "value": "11" },
     { "key": 12, "value": "12" }
   ],
-"day": [
+"option3": [
   { "key": 1, "value": "1" },
     { "key": 2, "value": "2" },
     { "key": 3, "value": "3" },

@@ -15,7 +15,7 @@ class ProductReview extends Component {
       slidesToShow: 4,
       slidesToScroll: 1,
     };
-    console.log(productdetail);
+    // console.log(productdetail);
     return (
       <article className="article-product-review">
         <div className="article-product-review-title">

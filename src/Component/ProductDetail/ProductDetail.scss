@@ -8,7 +8,7 @@ main {
       width: 100%;
       .header-top-title {
         width: 720px;
-        height: 92px;
+        height: 120px;
         border: 0px solid black;
         display: flex;
         flex-direction: column;
@@ -40,7 +40,7 @@ main {
       }
       .header-middle-info {
         width: 462px;
-        height: 532px;
+        height: auto;
         padding: 32px 24px 32px 24px;
         border: 1px solid gray;
         border-radius: 10px;
@@ -59,17 +59,20 @@ main {
               font-weight: 700;
               letter-spacing: -0.4px;
               line-height: 42.88px;
+              margin-right: 10px;
             }
             .discount-price {
               font-size: 32px;
             }
             .price-unit {
               font-size: 14px;
+              margin-right: 5px;
             }
             .origin-price {
               font-size: 14px;
               letter-spacing: -0.4px;
               line-height: 20.02px;
+              text-decoration: line-through;
             }
           }
           .header-middle-info-pricebox-coupon {
@@ -85,13 +88,16 @@ main {
           height: 21.6px;
           .like {
             font-size: 14px;
+            margin-right: 3px;
           }
           .like-number {
             font-size: 14px;
             font-weight: 700;
+            margin-right: 3px;
           }
           .review {
             font-size: 14px;
+            margin-right: 3px;
           }
           .review-number {
             font-size: 14px;
@@ -128,6 +134,8 @@ main {
           height: 46px;
           border-radius: 5px;
           text-indent: 10px;
+          font-size: 14px;
+          font-weight: 700;
         }
         .header-middle-info-size {
           margin-bottom: 20px;
@@ -135,17 +143,23 @@ main {
           height: 46px;
           border-radius: 5px;
           text-indent: 10px;
+          font-size: 14px;
+          font-weight: 700;
         }
         .header-middle-info-buy {
           margin-bottom: 10px;
           width: 412px;
           height: 56px;
           border-radius: 20px;
+          border-color: #3cdfbf;
+          font-weight: 700;
         }
         .header-middle-info-cart {
           width: 412px;
           height: 56px;
           border-radius: 20px;
+          border-color: #3cdfbf;
+          font-weight: 700;
         }
       }
     }
@@ -155,12 +169,12 @@ main {
       height: 122px;
       border: 0px solid black;
       margin-top: 20px;
-      .header-bottom-img {
+      .header-bottom-brand-img {
         width: 215px;
         height: 122px;
         border: 0px solid black;
       }
-      .header-bottom-link {
+      .header-bottom-brand {
         width: 505px;
         height: 122px;
         border: 1px solid gray;
@@ -271,15 +285,20 @@ main {
         width: 740px;
         height: 102px;
         border-bottom: 1px solid black;
+        margin-top: 20px;
         .text1 {
           font-size: 14px;
           font-weight: 700;
         }
         .text2 {
           font-size: 14px;
+          margin-top: 5px;
         }
         .text3 {
           font-size: 14px;
+          margin-top: 5px;
+          color: #3cdfbf;
+          font-weight: 700;
         }
       }
       .article-product-detail-img-box {
@@ -288,6 +307,7 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+
         .article-product-detail-img {
           width: 740px;
         }

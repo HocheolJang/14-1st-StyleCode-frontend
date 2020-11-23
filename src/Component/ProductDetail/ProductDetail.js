@@ -21,8 +21,8 @@ class ProductDetail extends Component {
       .then((res) => res.json())
       .then((res) => {
         this.setState(
-          { productdetail: res.productlist },
-          console.log(this.state.productdetail)
+          { productdetail: res.productlist }
+          // console.log(this.state.productdetail)
         );
       });
   }

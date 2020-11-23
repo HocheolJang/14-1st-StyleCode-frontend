@@ -2,23 +2,31 @@ import React, { Component } from "react";
 import "../../ProductDetail.scss";
 import "../../../../Styles/common.scss";
 import "../../../../Styles/reset.scss";
+import Select from "./Select/Select";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     const { productdetail } = this.props;
+
+    console.log(this.state.option1);
     return (
       <header>
         <div className="header-top">
           <div className="header-top-title">
             <p>단독상품</p>
-            <p>{productdetail[0]?.description}</p>
+            <p>{productdetail[1]?.description}</p>
           </div>
         </div>
         <div className="header-middle">
           <div className="header-middle-imgbox">
             <img
               className="header-middle-img"
-              src={productdetail[0]?.productImg}
+              src={productdetail[1]?.productImg}
               alt="productImg"
             ></img>
           </div>
@@ -27,13 +35,13 @@ class Header extends Component {
             <div className="header-middle-info-pricebox">
               <div className="header-middle-info-pricebox-price">
                 <span className="discount">
-                  {productdetail[0]?.sale * 100}%
+                  {productdetail[1]?.sale * 100}%
                 </span>
                 <span className="discount-price">
-                  {productdetail[0]?.price}
+                  {productdetail[1]?.price}
                 </span>
                 <span className="price-unit">원</span>
-                <span className="origin-price">{productdetail[0]?.price}</span>
+                <span className="origin-price">{productdetail[1]?.price}</span>
               </div>
               <button className="header-middle-info-pricebox-coupon">
                 <span>쿠폰다운</span>
@@ -53,23 +61,19 @@ class Header extends Component {
               <span className="delivery">무료배송</span>
               <span className="delivery-date">11/23월요일 출고 예정</span>
             </div>
-            <select className="header-middle-info-style">
-              <option>색상</option>
-            </select>
-            <select className="header-middle-info-size">
-              <option>사이즈</option>
-            </select>
+            <Select />
+
             <button className="header-middle-info-buy">바로구매</button>
             <button className="header-middle-info-cart">장바구니담기</button>
           </div>
         </div>
         <div className="header-bottom">
           <img
-            className="header-bottom-img"
-            src={productdetail[0]?.productImg}
+            className="header-bottom-brand-img"
+            src={productdetail[1]?.productImg}
             alt="header-bottom-img"
           ></img>
-          <div className="header-bottom-link"></div>
+          <div className="header-bottom-brand"></div>
         </div>
       </header>
     );
