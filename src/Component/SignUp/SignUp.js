@@ -62,6 +62,18 @@ class SignUp extends Component {
     this.setState({ gender: e.target.value });
   };
 
+  handleYearChange = (e) => {
+    this.setState({ YEAR: e.target.value });
+  };
+
+  handleMonthChange = (e) => {
+    this.setState({ MONTH: e.target.value });
+  };
+
+  handleDayChange = (e) => {
+    this.setState({ DAY: e.target.value });
+  };
+
   handleClick = () => {
     fetch("http://10.58.4.87:8000/user/signup", {
       method: "POST",
@@ -86,8 +98,11 @@ class SignUp extends Component {
   render() {
     // console.log(this.state.value);
     // console.log(this.state.selectOption);
-    console.log(this.state.value);
-    console.log(this.state.gender);
+    // console.log(this.state.YEAR);
+    // console.log(this.state.MONTH);
+    // console.log(this.state.gender);
+    // console.log(this.state.DAY);
+    // console.log(this.state.value);
     const { year, month, day } = this.state;
     return (
       <div className="SignUp">
@@ -198,35 +213,35 @@ class SignUp extends Component {
                 </div>
                 <select
                   className="year"
-                  value={this.state.value}
-                  onChange={this.handleChange}
-                  name="year"
+                  // value={this.state.value}
+                  onChange={this.handleYearChange}
+                  // name="year"
                 >
-                  {year.map((item) => (
-                    <option key={item.key} value={item.value}>
-                      {item.value}
+                  {year.map((YEAR) => (
+                    <option key={YEAR.key} value={YEAR.value}>
+                      {YEAR.value}
                     </option>
                   ))}
                 </select>
                 <select
                   className="month"
                   value={this.state.value}
-                  onChange={this.handleChange}
+                  onChange={this.handleMonthChange}
                 >
-                  {month.map((item) => (
-                    <option key={item.key} value={item.value}>
-                      {item.value}
+                  {month.map((MONTH) => (
+                    <option key={MONTH.key} value={MONTH.value}>
+                      {MONTH.value}
                     </option>
                   ))}
                 </select>
                 <select
                   className="day"
                   value={this.state.value}
-                  onChange={this.handleChange}
+                  onChange={this.handleDayChange}
                 >
-                  {day.map((item) => (
-                    <option key={item.key} value={item.value}>
-                      {item.value}
+                  {day.map((DAY) => (
+                    <option key={DAY.key} value={DAY.value}>
+                      {DAY.value}
                     </option>
                   ))}
                 </select>
