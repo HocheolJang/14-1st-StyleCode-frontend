@@ -28,6 +28,10 @@
       cursor: pointer;
     }
 
+    .isDisplayNone {
+      display: none;
+    }
+
     .optionContainer {
       position: absolute;
       bottom: 1%;
@@ -208,10 +212,10 @@
             width: 12px;
             height: 12px;
           }
-          .like {
-            color: #9ea4aa;
-            padding-right: 20px;
-          }
+          // .likes {
+          //   color: #9ea4aa;
+          //   padding-right: 20px;
+          // }
 
           .likeNum {
             padding-right: 5px;
