@@ -1,44 +1,66 @@
 {
-  "categories": [
+  "mainCategories": [
     {
-      "id": 0,
+      "Id": 0,
       "categoryName": "전체"
     },
     {
-      "id": 1,
+      "Id": 1,
       "categoryName": "티셔츠"
     },
     {
-      "id": 2,
+      "Id": 2,
       "categoryName": "후드/집업/맨투맨"
     },
     {
-      "id": 3,
+      "Id": 3,
       "categoryName": "셔츠"
     },
     {
-      "id": 4,
+      "Id": 4,
       "categoryName": "니트/가디건"
     },
     {
-      "id": 5,
+      "Id": 5,
       "categoryName": "아우터"
     },
     {
-      "id": 6,
+      "Id": 6,
       "categoryName": "팬츠"
     },
     {
-      "id": 7,
+      "Id": 7,
       "categoryName": "스포츠"
     },
     {
-      "id": 8,
+      "Id": 8,
       "categoryName": "언더웨어"
     },
     {
-      "id": 9,
+      "Id": 9,
       "categoryName": "프리미엄 브랜드"
+    }
+  ],
+  "subCategories": [
+    {
+      "mainCategoryID": 1,
+      "categoryName": "반팔 티셔츠"
+    },
+    {
+      "id": 2,
+      "categoryName": "긴팔 티셔츠"
+    },
+    {
+      "id": 3,
+      "categoryName": "슬리브리스"
+    },
+    {
+      "id": 4,
+      "categoryName": "피케 티셔츠"
+    },
+    {
+      "id": 5,
+      "categoryName": "터틀넥 티셔츠"
     }
   ]
 }

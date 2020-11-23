@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Asidebar from "./Component/Asidebar/Asidedbar";
+import Asidebar from "./Component/Asidebar/Asidebar";
 import Jumbotron from "./Component/Jumbotron/Jumbotron";
 import MdChoice from "./Component/MdChoice/MdChoice";
 import ShowAll from "./Component/ShowAll/ShowAll";

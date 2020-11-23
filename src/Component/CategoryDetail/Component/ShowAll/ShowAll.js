@@ -46,10 +46,6 @@ class ShowAll extends Component {
     console.log(e);
   };
 
-  numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
   render() {
     const { showAllList, showDropdown } = this.state;
     const { filterDropdown } = this;
