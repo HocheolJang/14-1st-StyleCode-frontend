@@ -37,6 +37,7 @@ class SignUp extends Component {
     // this.setState({ [e.target.name]: e.target.value });
     // this.setState({ value: e.target.value });
     this.setState({ value: e.target.value });
+
     // this.setState({ password: e.target.value });
     // this.setState({ email: e.target.email });
   };
@@ -70,7 +71,7 @@ class SignUp extends Component {
         nickname: this.state.nickname,
         email: this.state.email,
         birth_date: `${this.state.year}-${this.state.month}-${this.state.day}`,
-        gender_id: this.state.selectOption,
+        gender_id: this.state.gender,
       }),
     })
       .then((res) => res.json())
@@ -83,7 +84,10 @@ class SignUp extends Component {
   }
 
   render() {
+    // console.log(this.state.value);
+    // console.log(this.state.selectOption);
     console.log(this.state.value);
+    console.log(this.state.gender);
     const { year, month, day } = this.state;
     return (
       <div className="SignUp">
@@ -168,8 +172,8 @@ class SignUp extends Component {
                     <input
                       name="Male"
                       type="radio"
-                      value="Male"
-                      checked={this.state.gender === "Male"}
+                      value="남자"
+                      checked={this.state.gender === "남자"}
                       onChange={this.handleGenderChange}
                     />
                     남자
@@ -179,8 +183,8 @@ class SignUp extends Component {
                   <label>
                     <input
                       type="radio"
-                      value="Female"
-                      checked={this.state.gender === "Female"}
+                      value="여자"
+                      checked={this.state.gender === "여자"}
                       onChange={this.handleGenderChange}
                       name={this.state.name}
                     />
