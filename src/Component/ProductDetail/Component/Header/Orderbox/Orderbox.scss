@@ -2,11 +2,21 @@
   .header-middle-info-pricebox-new {
     margin-bottom: 20px;
     width: 412px;
-    height: 120px;
+    height: 30px;
     border-radius: 5px;
     text-indent: 10px;
     font-size: 14px;
     font-weight: 700;
     border: 1px solid black;
+  }
+  .header-middle-info-pricebox-new-minusbutton {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .header-middle-info-pricebox-new-plusbutton {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
   }
 }

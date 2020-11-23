@@ -61,7 +61,7 @@ class Header extends Component {
               <span className="delivery">무료배송</span>
               <span className="delivery-date">11/23월요일 출고 예정</span>
             </div>
-            <Select />
+            <Select productdetail={productdetail} />
 
             <button className="header-middle-info-buy">바로구매</button>
             <button className="header-middle-info-cart">장바구니담기</button>

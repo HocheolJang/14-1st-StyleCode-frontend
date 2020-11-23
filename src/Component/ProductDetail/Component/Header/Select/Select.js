@@ -5,8 +5,7 @@ import "../../../../../Styles/reset.scss";
 import Orderbox from "../Orderbox/Orderbox";
 import Orderbox2 from "../Orderbox/Orderbox2";
 import "../Orderbox/Orderbox.scss";
-import "../Orderbox/Orderbox2.scss";
-// import Select from "react-select";
+// import "../Orderbox/Orderbox2.scss";
 
 class Select extends Component {
   constructor(props) {
@@ -14,9 +13,9 @@ class Select extends Component {
     this.state = {
       COLOR: [
         { id: 0, value: "default", label: "[컬러]를 선택하세요." },
-        { id: 1, value: "Black", label: "블랙" },
-        { id: 2, value: "Yellow", label: "옐로우" },
-        { id: 3, value: "Gray", label: "그레이" },
+        { id: 1, value: "블랙", label: "블랙" },
+        { id: 2, value: "옐로우", label: "옐로우" },
+        { id: 3, value: "그레이", label: "그레이" },
       ],
       SIZE: [
         { id: 0, value: "default", label: "[사이즈]를 선택하세요." },
@@ -26,23 +25,49 @@ class Select extends Component {
       ],
       orderBox: [],
       item: [],
-      priceBox: 0,
+      number: 0,
     };
   }
 
   handleColorChange = (e) => {
-    this.setState({ color: e.target.value }, console.log(this.state.color));
+    this.setState({ color: e.target.value });
   };
 
   handleSizeChange = (e) => {
-    console.log("handleSizeChange");
-    // const { orderBox, item, value } = this.state;
-    this.setState({ size: e.target.value }, console.log(this.state.size));
-    // let orderBox2 = [...orderBox];
+    // console.log("handleSizeChange");
+    const { orderBox, item, value, number } = this.state;
+
+    this.setState({ size: e.target.value });
+    // let orderBox2 = [...orderBox, this.props.productdetail[1].price];
+    this.setState({
+      orderBox: /*orderBox2*/ this.props.productdetail[1].price * (number + 1),
+    });
+    this.setState({ number: number + 1 });
+
+    console.log(orderBox);
+  };
+
+  handleRemoveChange = (e) => {
+    const { orderBox, number } = this.state;
+    this.setState({
+      orderBox: this.props.productdetail[1].price * (number - 1),
+    });
+    this.setState({ number: number - 1 });
+  };
+
+  handlePlusChange = (e) => {
+    const { orderBox, number } = this.state;
+    this.setState({
+      orderBox: this.props.productdetail[1].price * (number + 1),
+    });
+    this.setState({ number: number + 1 });
   };
 
   render() {
-    const { SIZE, COLOR } = this.state;
+    // const { productdetail } = this.props;
+    const { SIZE, COLOR, number } = this.state;
+
+    // console.log(productdetail);
 
     return (
       <div>
@@ -80,6 +105,20 @@ class Select extends Component {
           <div className="header-middle-info-pricebox-new">
             {this.state.color && this.state.color}
             {this.state.size && this.state.size}
+          </div>
+          <div className="header-middle-info-pricebox-new">
+            {this.state.orderBox && this.state.orderBox}
+          </div>
+          <div className="header-middle-info-pricebox-new">
+            <button
+              className="header-middle-info-pricebox-new-minusbutton"
+              onClick={this.handleRemoveChange}
+            ></button>
+            {this.state.number}
+            <button
+              className="header-middle-info-pricebox-new-plusbutton"
+              onClick={this.handlePlusChange}
+            ></button>
           </div>
         </div>
         {/* {COLOR.map((color) => (

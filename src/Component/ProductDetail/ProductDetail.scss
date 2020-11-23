@@ -322,6 +322,18 @@ main {
       .article-product-detail-ask-write {
         width: 740px;
       }
+      .article-product-detail-delivery {
+        width: 740px;
+        span {
+          font-size: 24px;
+          font-weight: 700;
+        }
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-top: 10px;
+        }
+      }
     }
   }
 }
