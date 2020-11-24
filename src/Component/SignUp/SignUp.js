@@ -73,15 +73,15 @@ class SignUp extends Component {
   };
 
   handleClick = () => {
-    fetch("http://10.58.4.87:8000/user/signup", {
+    fetch("http://10.58.0.175:8000/users/signup", {
       method: "POST",
       body: JSON.stringify({
         login_id: this.state.id,
         password: this.state.password,
         nickname: this.state.nickname,
         email: this.state.email,
-        birth_date: `${this.state.year}-${this.state.month}-${this.state.day}`,
-        gender_id: this.state.gender,
+        birth_date: `${this.state.YEAR}-${this.state.MONTH}-${this.state.DAY}`,
+        gender: this.state.gender,
       }),
     })
       .then((res) => res.json())
@@ -94,7 +94,10 @@ class SignUp extends Component {
   }
 
   render() {
-    const { year, month, day, agree } = this.state;
+    // console.log(this.state.birth_date);
+    // console.log(this.state.gender_id);
+    const { year, month, day } = this.state;
+    console.log(this.state.password);
     return (
       <div className="SignUp">
         <div className="main">
@@ -102,7 +105,11 @@ class SignUp extends Component {
             <div className="nav">
               <img
                 className="nav-my-picture"
-                src="images/mainlogo.png"
+                src={
+                  this.state.gender === "남자"
+                    ? "images/maleicon.png"
+                    : "images/femaleicon.png"
+                }
                 alt="mainlogo"
               />
               <button className="nav-choice-picture">사진선택</button>
