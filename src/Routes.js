@@ -20,10 +20,10 @@ class Routes extends React.Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Ootd" component={Ootd} />
-          <Route exact path="/Ootd/Main" component={Main} />
-          <Route exact path="/Ootd/Modal" component={Modal} />
-          <Route exact path="/Ootd/Comment" component={Comment} />
+          <Route exact path="/Ootds" component={Ootd} />
+          <Route exact path="/Ootds/Main" component={Main} />
+          <Route exact path="/Ootds/Modal/:id" component={Modal} />
+          <Route exact path="/Ootds/Comment" component={Comment} />
           <Route exact path="/NavbarOotd" component={NavbarOotd} />
           <Route exact path="/NavbarStore" component={NavbarStore} />
           <Route exact path="/Login" component={Login} />

@@ -18,13 +18,16 @@ class CardList extends Component {
   }
 
   handleModalData = (data) => {
-    console.log(data);
+    // console.log(data);
     this.props.modalData({
       modalData: data,
     })
   }
 
   render() {
+    console.log('ootdList',this.props.cardsData?.ootd_list);
+    // console.log(this.props.cardsData?.ootd_list?.index);
+    // console.log(this.props.cardsData.ootd_list?.price);
     // console.log(this.state.modalData?.ootdDetail);
     const { cardsData, handleClickLike, commentData, getData } = this.props;
     return (
@@ -53,9 +56,7 @@ class CardList extends Component {
                 follower={contents.follower}
                 commentNum={contents.commentNum}
                 share={contents.share}
-                // commentAuthorImg={contents.comments.commentAuthorImg}
-                // commentAuthor={contents.comments.commentAuthor}
-                // comment={contents.comments}
+                comments={contents.comments}
                 cardsData={cardsData}
                 handleClickLike={handleClickLike}
                 />
