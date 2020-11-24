@@ -3,6 +3,9 @@ import "./SignUp.scss";
 import "../../Styles/reset.scss";
 import "../../Styles/common.scss";
 
+// import Checkbox from "../SignUp/Component/Checkbox";
+// import { getRoles } from "@testing-library/react";
+
 class SignUp extends Component {
   constructor() {
     super();
@@ -33,9 +36,9 @@ class SignUp extends Component {
       });
   };
 
-  handleChange = (e) => {
-    this.setState({ value: e.target.value });
-  };
+  // handleChange = (e) => {
+  //   this.setState({ value: e.target.value });
+  // };
 
   handleIdChange = (e) => {
     this.setState({ id: e.target.value });
@@ -91,14 +94,7 @@ class SignUp extends Component {
   }
 
   render() {
-    // console.log(this.state.value);
-    // console.log(this.state.selectOption);
-    // console.log(this.state.YEAR);
-    // console.log(this.state.MONTH);
-    // console.log(this.state.gender);
-    // console.log(this.state.DAY);
-    // console.log(this.state.value);
-    const { year, month, day } = this.state;
+    const { year, month, day, agree } = this.state;
     return (
       <div className="SignUp">
         <div className="main">

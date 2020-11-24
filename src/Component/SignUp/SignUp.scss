@@ -1,10 +1,11 @@
 .SignUp {
-  // background-image: url(../Login/images/loginbackground.jpg);
+  // background-image: url(../../../../14-1st-StyleCode-frontend/public/images/loginbackground.jpg);
   display: flex;
   justify-content: center;
   background-size: cover;
   align-items: center;
   height: 100%;
+
   .main {
     display: flex;
     font-size: 62.5%; //10px = 1rem
@@ -18,6 +19,7 @@
     border: 0.1rem solid black;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 1rem;
+
     .leftMain {
       .nav {
         width: 21.2rem;
@@ -30,6 +32,7 @@
           width: 14rem;
           height: 14rem;
         }
+
         .nav-choice-picture {
           width: 11rem;
           height: 3.6;
@@ -41,14 +44,17 @@
         }
       }
     }
+
     .rightMain {
       & {
         margin: 0 0 0 2rem;
       }
+
       .rightMain-info {
         & {
           margin: 0 0 2rem 0;
         }
+
         .facebook-information {
           width: 100%;
           height: 3.5rem;
