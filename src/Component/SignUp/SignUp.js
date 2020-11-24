@@ -19,6 +19,7 @@ class SignUp extends Component {
       birth_date: "",
       id: "",
       password: "",
+      passwordCh: "",
     };
   }
 
@@ -70,6 +71,10 @@ class SignUp extends Component {
 
   handleDayChange = (e) => {
     this.setState({ DAY: e.target.value });
+  };
+
+  handlePwChChange = (e) => {
+    this.setState({ passwordCh: e.target.value });
   };
 
   handleClick = () => {
@@ -149,6 +154,19 @@ class SignUp extends Component {
                   value={this.state.password}
                   name="password"
                   onChange={this.handlePwChange}
+                  type="password"
+                ></input>
+              </div>
+              <div className="pwCh">
+                <div>
+                  <p>비밀번호 확인</p>
+                </div>
+                <input
+                  className="pwCh-input"
+                  placeholder="PASSWORD"
+                  value={this.state.passwordCh}
+                  name="password"
+                  onChange={this.handlePwChChange}
                   type="password"
                 ></input>
               </div>
