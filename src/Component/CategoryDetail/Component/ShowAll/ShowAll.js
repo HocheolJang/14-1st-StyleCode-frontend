@@ -14,7 +14,7 @@ class ShowAll extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.0.175:8000/products/products?sort=1&second=1", {
+    fetch("http://10.58.0.175:8000/products?sort=1&second=1", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -26,8 +26,20 @@ class ShowAll extends Component {
       });
   }
 
+  sortProduct = (e) => {
+    const sort = e.target.dataset.idx;
+
+    fetch(`http://10.58.0.175:8000/products?sort=${sort}&second=1`)
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          showAllList: res.second_category_list,
+        });
+      });
+  };
+
   handleMenuTab = (e) => {
-    console.log(e);
+    // console.log(e);
   };
 
   filterDropdown = (e) => {
@@ -39,13 +51,13 @@ class ShowAll extends Component {
   };
 
   handleFilter = (e) => {
-    console.log(e);
+    // console.log(e);
   };
 
   render() {
     const { showAllList, showDropdown } = this.state;
-    const { filterDropdown } = this;
-    console.log(showAllList[0]?.main_image_url);
+    const { filterDropdown, sortProduct } = this;
+    // console.log(showAllList[0]?.main_image_url);
 
     return (
       <div className="ShowAll">
@@ -75,10 +87,16 @@ class ShowAll extends Component {
             {showDropdown ? (
               <div className="fliterDropDown">
                 <ul className="dropdownContent">
-                  <li>최신순 (최근등록순)</li>
-                  <li>인기순 (인기많은순)</li>
-                  <li>할인율 (할인율높은순)</li>
-                  <li>
+                  <li data-idx="0" onClick={sortProduct}>
+                    최신순 (최근등록순)
+                  </li>
+                  <li data-idx="1" onClick={sortProduct}>
+                    인기순 (인기많은순)
+                  </li>
+                  <li data-idx="2" onClick={sortProduct}>
+                    할인율 (할인율높은순)
+                  </li>
+                  <li data-idx="3" onClick={sortProduct}>
                     가격&nbsp;
                     <img
                       src="images/icon/filterDropDownArrow.png"
@@ -87,7 +105,7 @@ class ShowAll extends Component {
                     />
                     (가격낮은순)
                   </li>
-                  <li>
+                  <li data-idx="4" onClick={sortProduct}>
                     가격
                     <img
                       src="images/icon/filterDropDownArrow.png"
@@ -121,7 +139,6 @@ class ShowAll extends Component {
                   </div>
                   <div className="discountPriceBox">
                     <span className="discount">
-                      
                       [{parseInt(product?.discount_rate * 100)}%]
                     </span>
                     <span className="productPrice">

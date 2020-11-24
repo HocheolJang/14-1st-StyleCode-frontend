@@ -14,12 +14,11 @@ class MdChoice extends Component {
   }
 
   getAllData = () => {
-    fetch("http://10.58.0.175:8000/products/mdchoice", {
+    fetch("http://10.58.0.175:8000/products/mdchoice/0", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log("cdm ->", res);
         this.setState({
           mdChoiceList: res.mdchoice_list,
         });
@@ -31,15 +30,11 @@ class MdChoice extends Component {
   }
 
   fetchProduct = (e) => {
-    const LIMIT = 8;
-    const offset = e.target.dataset.idx * LIMIT;
+    const offset = e.target.dataset.idx;
 
-    fetch(
-      `http://10.58.0.175:8000/products/mdchoice?limit=${LIMIT}&offset=${offset}`
-    )
+    fetch(`http://10.58.0.175:8000/products/mdchoice/${offset}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log("function", res);
         this.setState({
           mdChoiceList: res.mdchoice_list,
         });
@@ -47,7 +42,7 @@ class MdChoice extends Component {
   };
 
   handleMenuTab = (e) => {
-    console.log(e);
+    // console.log(e);
   };
 
   render() {
