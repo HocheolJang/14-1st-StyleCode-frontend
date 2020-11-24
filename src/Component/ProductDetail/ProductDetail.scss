@@ -40,8 +40,8 @@ main {
       }
       .header-middle-info {
         width: 462px;
-        height: auto;
-        padding: 32px 24px 32px 24px;
+
+        padding: 48px 24px 12px 24px;
         border: 1px solid gray;
         border-radius: 10px;
         & :nth-child(1) {
@@ -80,6 +80,8 @@ main {
             height: 36px;
             padding: 0 20px 0 20px;
             border-radius: 10px;
+            background-color: white;
+            font-weight: 700;
           }
         }
         .header-middle-info-like {
@@ -217,13 +219,15 @@ main {
             display: flex;
           }
           .header-middle-info-orderbox-new-realnumber {
-            border: 1px solid black;
+            border: 1px solid gray;
             width: 62px;
             height: 80px;
             text-align: center;
             padding-top: 25px;
             font-size: 20px;
             font-weight: 700;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
           }
           .header-middle-info-orderbox-new {
             display: flex;
