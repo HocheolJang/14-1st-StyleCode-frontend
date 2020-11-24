@@ -25,7 +25,10 @@ class Login extends Component {
       }),
     })
       .then((response) => response.json())
-      .then((result) => console.log("결과", result));
+      .then((result) => console.log("결과", result))
+      .then((res) => {
+        localStorage.setItem("access-token", res.access_token);
+      });
   };
 
   handleIDChange = (e) => {
