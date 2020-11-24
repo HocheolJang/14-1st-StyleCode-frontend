@@ -9,20 +9,20 @@ class Product extends Component {
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     fetch("http://localhost:3000/data/searchProductItem.json”, {
-      method: "GET"
+      method: “GET”,
     })
-    .then((res) => res.json())
-    .then((res) => {
-      this.setState({
-        showAllList: res.product
-      })
-    }
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          productList: res.product
+        });
+      });
   }
 
   render() {
-    const { showAllList} = this.state;
+    const { productList} = this.state;
 
     return (
       <div className="product">
@@ -32,7 +32,7 @@ class Product extends Component {
           </div>
         </div>
         <div className="cardList">
-          {showAllList.map((product, idx) => {
+          {productList.map((product, idx) => {
             return (
               <div className="eachCard" key={idx}>
                 <div className="productImgBox">
