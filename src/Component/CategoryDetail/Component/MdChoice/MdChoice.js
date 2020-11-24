@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./MdChoice.scss";
+import Pagination from "./Pagination";
 // import Unisex from
 
 class MdChoice extends Component {
@@ -8,24 +9,42 @@ class MdChoice extends Component {
     this.state = {
       mdChoiceList: [],
       currentCategory: 0,
+      offset: 1,
     };
   }
 
-  getMdChoiceList = () => {
-    fetch("http://localhost:3000/data/mdChoiceItem.json", {
+  getAllData = () => {
+    fetch("http://10.58.0.175:8000/products/mdchoice", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((res) => {
+        console.log("cdm ->", res);
         this.setState({
-          mdChoiceList: res.product,
+          mdChoiceList: res.mdchoice_list,
         });
       });
   };
 
   componentDidMount() {
-    this.getMdChoiceList();
+    this.getAllData();
   }
+
+  fetchProduct = (e) => {
+    const LIMIT = 8;
+    const offset = e.target.dataset.idx * LIMIT;
+
+    fetch(
+      `http://10.58.0.175:8000/products/mdchoice?limit=${LIMIT}&offset=${offset}`
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("function", res);
+        this.setState({
+          mdChoiceList: res.mdchoice_list,
+        });
+      });
+  };
 
   handleMenuTab = (e) => {
     console.log(e);
@@ -33,6 +52,7 @@ class MdChoice extends Component {
 
   render() {
     const { mdChoiceList } = this.state;
+    const { fetchProduct } = this;
 
     return (
       <div className="MdChoice">
@@ -48,20 +68,22 @@ class MdChoice extends Component {
                     <img
                       className="productImg"
                       alt="제품사진"
-                      src={product.src}
+                      src={product.main_image_url}
                     ></img>
                   </div>
                   <div className="productDescBox">
                     <div>
-                      <span className="brandName">{product.brandName}</span>
+                      <span className="brandName">{product.brand}</span>
                     </div>
                     <div className="productName">
-                      <span>{product.productName}</span>
+                      <span>{product.title}</span>
                     </div>
                     <div className="discountPriceBox">
-                      <span className="discount">[{product.discount}]</span>
+                      <span className="discount">
+                        [{parseInt(product.discount_rate * 100)}%]
+                      </span>
                       <span className="productPrice">
-                        {product.productPrice
+                        {(product.discount_price * 1)
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         원
@@ -69,7 +91,7 @@ class MdChoice extends Component {
                     </div>
                     <div className="orignalPriceBox">
                       <span>
-                        {product.productPrice
+                        {(product.price * 1)
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         원
@@ -78,17 +100,13 @@ class MdChoice extends Component {
                   </div>
                 </div>
                 <div className="ranking">
-                  <span>{product.id + 1} </span>
+                  <span>{product.id} </span>
                 </div>
               </div>
             );
           })}
         </div>
-        <div className="Footer">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-        </div>
+        <Pagination fetchProduct={fetchProduct} />
       </div>
     );
   }

@@ -14,7 +14,7 @@ class ShowAll extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.4.1:8000/product/category?sort=0&second=1", {
+    fetch("http://10.58.0.175:8000/products/products?sort=1&second=1", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -121,6 +121,7 @@ class ShowAll extends Component {
                   </div>
                   <div className="discountPriceBox">
                     <span className="discount">
+                      
                       [{parseInt(product?.discount_rate * 100)}%]
                     </span>
                     <span className="productPrice">
