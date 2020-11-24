@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Search.scss";
+import Product from "./Component/Product/Product";
 // import Navbar from ""
 // import Footer from ""
 
@@ -56,7 +57,9 @@ class Search extends Component {
           <div className="product">
             <span className="subtitle">상품</span>
             <span className="count">7054</span>
-            <div>{/* 상품 컴포넌트 받아서 map으로 처리 */}</div>
+            <div className="productListContainer">
+              <Product />
+            </div>
             <footer>
               <buttonContainer>모두보기</buttonContainer>
             </footer>

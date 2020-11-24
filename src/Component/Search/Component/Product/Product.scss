@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
+
+.product {
+  width: 1240px;
+  height: 600px;
+  margin: 100px auto;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+
+  .title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+
+    h2 {
+      margin-top: 0px;
+      font-size: 46px;
+      font-weight: 700;
+    }
+  }
+  .catergories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+
+    .categoryList {
+      display: flex;
+      font-size: 24px;
+      font-weight: 700;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .active {
+      margin: 0 10px;
+      color: black;
+    }
+
+    .inactive {
+      margin: 0 10px;
+      color: #9ea4aa;
+    }
+  }
+
+  .cardList {
+    display: flex;
+    width: 100%;
+    height: 450px;
+
+    .card {
+      width: 310px;
+      height: 400px;
+
+      .productImgBox {
+        display: flex;
+        justify-content: center;
+        width: 310px;
+        height: 310px;
+        overflow: hidden;
+
+        .productImg {
+          width: 98%;
+          height: 100%;
+          border-radius: 15px;
+
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s ease;
+          }
+        }
+      }
+      .productDescBox {
+        margin-left: 10px;
+        margin-top: 5px;
+
+        .brandName {
+          font-size: 18px;
+          font-weight: 700;
+        }
+        .productName {
+          width: 280px;
+          height: 16px;
+          margin-top: 10px;
+          font-size: 16px;
+          text-align: left;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .discountPriceBox {
+          margin-top: 10px;
+
+          .discount {
+            color: red;
+            font-size: 18px;
+            font-weight: 700;
+          }
+
+          .productPrice {
+            margin-left: 5px;
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
+
+        .likeReviewBox {
+          margin-top: 10px;
+          color: grey;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .popularFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    button {
+      width: 230px;
+      height: 70px;
+      border-radius: 60px;
+      border: none;
+
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+
+      span {
+        font-size: 22px;
+        font-weight: 700;
+      }
+    }
+  }
+}

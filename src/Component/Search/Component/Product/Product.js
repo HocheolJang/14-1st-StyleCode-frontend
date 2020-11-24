@@ -5,99 +5,30 @@ class Product extends Component {
   constructor() {
     super();
     this.state = {
-      showAllList: [],
-      currentCategory: 0,
-      showDropdown: false,
-      isArrowDown: true,
+      productList: [],
     };
   }
 
-  componentDidMount() {
-    fetch("http://10.58.4.1:8000/product/category?sort=0&second=1", {
-      method: "GET",
+  componentDidMount(){
+    fetch("http://localhost:3000/data/searchProductItem.json”, {
+      method: "GET"
     })
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({
-          showAllList: res.second_category_list,
-          src: res.second_category_list.main_image_url,
-        });
-      });
+    .then((res) => res.json())
+    .then((res) => {
+      this.setState({
+        showAllList: res.product
+      })
+    }
   }
 
-  handleMenuTab = (e) => {
-    console.log(e);
-  };
-
-  filterDropdown = (e) => {
-    e.preventDefault();
-    this.setState({
-      showDropdown: !this.state.showDropdown,
-      isArrowDown: !this.state.isArrowDown,
-    });
-  };
-
-  handleFilter = (e) => {
-    console.log(e);
-  };
-
   render() {
-    const { showAllList, showDropdown } = this.state;
-    const { filterDropdown } = this;
-    console.log(showAllList[0]?.main_image_url);
+    const { showAllList} = this.state;
 
     return (
-      <div className="ShowAll">
+      <div className="product">
         <div className="header">
           <div className="title">
             <span>전체보기</span>
-          </div>
-          <div className="filter">
-            <button onClick={filterDropdown}>
-              <span>최신순</span>
-              <span>
-                {!showDropdown ? (
-                  <img
-                    src="images/icon/filterArrow.png"
-                    className="descBtn"
-                    alt="상품정렬버튼"
-                  />
-                ) : (
-                  <img
-                    src="images/icon/filterArrow.png"
-                    className="ascBtn"
-                    alt="상품정렬버튼"
-                  />
-                )}
-              </span>
-            </button>
-            {showDropdown ? (
-              <div className="fliterDropDown">
-                <ul className="dropdownContent">
-                  <li>최신순 (최근등록순)</li>
-                  <li>인기순 (인기많은순)</li>
-                  <li>할인율 (할인율높은순)</li>
-                  <li>
-                    가격&nbsp;
-                    <img
-                      src="images/icon/filterDropDownArrow.png"
-                      alt="arrow"
-                      className="descArrow"
-                    />
-                    (가격낮은순)
-                  </li>
-                  <li>
-                    가격
-                    <img
-                      src="images/icon/filterDropDownArrow.png"
-                      alt="arrow"
-                      className="ascArrow"
-                    />
-                    (가격높은순)
-                  </li>
-                </ul>
-              </div>
-            ) : null}
           </div>
         </div>
         <div className="cardList">
