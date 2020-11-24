@@ -20,6 +20,11 @@ class SignUp extends Component {
       id: "",
       password: "",
       passwordCh: "",
+      agreeA: false,
+      agree1: false,
+      agree2: false,
+      agree3: false,
+      agree4: false,
     };
   }
 
@@ -91,6 +96,21 @@ class SignUp extends Component {
     })
       .then((res) => res.json())
       .then((res) => console.log("결과", res));
+  };
+
+  handleOnkeyUp = () => {
+    const { password, passwordCh } = this.state;
+    const checkPw = passwordCh.length >= 6;
+    const checkPw2 = password === passwordCh;
+    if (checkPw && checkPw2) {
+      alert("비밀번호가 일치합니다.");
+    }
+    if (!checkPw) {
+      alert("비밀번호는 6자리 이상입니다.");
+    }
+    if (!(checkPw && checkPw2)) {
+      alert("비밀번호가 일치하지 않습니다.");
+    }
   };
 
   componentDidMount() {
@@ -288,7 +308,11 @@ class SignUp extends Component {
               </div>
             </article>
             <article className="alldone">
-              <button className="alldone-button" onClick={this.handleClick}>
+              <button
+                className="alldone-button"
+                onClick={this.handleClick}
+                // onKeyUp={this.handleOnkeyUp}
+              >
                 다 했어요
               </button>
             </article>
