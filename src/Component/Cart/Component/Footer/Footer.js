@@ -10,7 +10,7 @@ class Footer extends Component {
           <div className="top">
             <div className="topLeft">
               <p>고객센터 안내</p>
-              <p>1833-8879</p>
+              <p>1544-7848</p>
               <span>평일</span>
               <span>&nbsp;10:00 ~ 19:00 (점심시간 12:00 ~ 14:00)</span>
             </div>

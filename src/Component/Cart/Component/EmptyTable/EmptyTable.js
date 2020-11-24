@@ -3,10 +3,9 @@ import "./EmptyTable.scss";
 
 class EmptyTable extends Component {
   render() {
-    console.log(this.props.list);
     return (
       <>
-        <table>
+        <table className="emptyTable">
           <thead>
             <tr>
               <th className="orderProduct">주문상품</th>

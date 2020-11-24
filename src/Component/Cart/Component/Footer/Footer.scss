@@ -1,7 +1,10 @@
 .footer {
+  display: block;
   width: 1160px;
-  height: 760px;
-  margin: 0 auto;
+  height: 400px;
+  margin: 10px auto;
+  border-top: 1px solid #e8ebed;
+  padding-top: 30px;
   .footerContainer {
     .top {
       display: flex;
