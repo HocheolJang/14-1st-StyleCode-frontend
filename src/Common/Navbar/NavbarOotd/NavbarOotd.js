@@ -13,24 +13,17 @@ class NavbarOotd extends Component {
     }
   }
   handleClickOotd = (e) => {
-    e.defaultProps;
-    return (
       this.setState({
         isOotdBorder: true,
         isStoreBorder: false,
       })
-    )
   }
 
   handleClickStore = (e) => {
-    e.defaultProps;
-
-    return (
       this.setState({
         isOotdBorder: false,
         isStoreBorder: true,
       })
-    )
   }
 
   render() {
@@ -47,11 +40,11 @@ class NavbarOotd extends Component {
               <ul className="leftMenuList">
                 <li value="feed"
                     className="leftMenu">
-                  <span  className={isOotdBorder === true? "leftMenuOotdAct":"leftMenuOotd"} onClick={this.handleClickOotd}>#OOTD</span>
+                  <span  className={isOotdBorder ? "leftMenuOotdAct":"leftMenuOotd"} onClick={this.handleClickOotd}>#OOTD</span>
                 </li>
                 <li value="feed"
                     className="leftMenu">
-                  <span className={isStoreBorder === true? "leftMenuStoreAct":"leftMenuStore"} onClick={this.handleClickStore}>STORE</span>
+                  <span className={isStoreBorder ? "leftMenuStoreAct":"leftMenuStore"} onClick={this.handleClickStore}>STORE</span>
                 </li>
               </ul>
             </div>
@@ -62,10 +55,8 @@ class NavbarOotd extends Component {
             id="search-keyword"
             name="keyword"
             type="search"
-            // onClick={this.handleSearch}
             placeholder="스타일과 상품을 검색해보세요"
              />
-            {/* <label><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"></path></svg>Search for styles and items</label> */}
           </form>
 
           <div className="rightNavBar">
