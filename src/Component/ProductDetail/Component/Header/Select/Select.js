@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import "../../../../ProductDetail/ProductDetail.scss";
 import "../../../../../Styles/common.scss";
 import "../../../../../Styles/reset.scss";
-import Orderbox from "../Orderbox/Orderbox";
-import Orderbox2 from "../Orderbox/Orderbox2";
-import "../Orderbox/Orderbox.scss";
+// import Orderbox from "../Orderbox/Orderbox";
+// import Orderbox2 from "../Orderbox/Orderbox2";
+// import "../Orderbox/Orderbox.scss";
 // import "../Orderbox/Orderbox2.scss";
+import { BiCaretUp } from "react-icons/bi";
+import { BiCaretDown } from "react-icons/bi";
 
 class Select extends Component {
   constructor(props) {
@@ -25,7 +27,8 @@ class Select extends Component {
       ],
       orderBox: [],
       item: [],
-      number: 0,
+      number: 1,
+      show: true,
     };
   }
 
@@ -40,9 +43,9 @@ class Select extends Component {
     this.setState({ size: e.target.value });
     // let orderBox2 = [...orderBox, this.props.productdetail[1].price];
     this.setState({
-      orderBox: /*orderBox2*/ this.props.productdetail[1].price * (number + 1),
+      orderBox: /*orderBox2*/ this.props.productdetail[1].price * number,
     });
-    this.setState({ number: number + 1 });
+    this.setState({ number: number });
 
     console.log(orderBox);
   };
@@ -101,25 +104,50 @@ class Select extends Component {
             ></option>
           ))}
         </select>
-        <div className="Orderbox">
-          <div className="header-middle-info-pricebox-new">
-            {this.state.color && this.state.color}
-            {this.state.size && this.state.size}
+        <div className="header-middle-info-orderbox-colorsize">
+          옵션
+          <span>{this.state.color && this.state.color}</span>
+          <span>{this.state.size && this.state.size}</span>
+        </div>
+        <div className="header-middle-info-orderbox-price">
+          총 금액
+          <span>
+            {(this.state.orderBox && this.state.orderBox).toLocaleString(2)}
+          </span>
+        </div>
+
+        <div className="header-middle-info-orderbox">
+          {/* <div className="header-middle-info-orderbox-new"> */}
+          <div className="header-middle-info-orderbox-new-box"></div>
+          {/* </div> */}
+          {/* <div className={false ? "header-middle-info-orderbox-new" : ""}></div> */}
+          <div className="header-middle-info-orderbox-new-number">
+            <div className="header-middle-info-orderbox-new-realnumber">
+              {this.state.number}
+            </div>
+            <div className="header-middle-info-orderbox-new">
+              <button
+                className="header-middle-info-orderbox-new-minusbutton"
+                onClick={this.handleRemoveChange}
+              >
+                <span>
+                  <BiCaretDown />
+                </span>
+              </button>
+
+              <button
+                className="header-middle-info-orderbox-new-plusbutton"
+                onClick={this.handlePlusChange}
+              >
+                <span>
+                  <BiCaretUp />
+                </span>
+              </button>
+              <span className="header-middle-info-orderbox-new-letter"></span>
+            </div>
           </div>
-          <div className="header-middle-info-pricebox-new">
-            {this.state.orderBox && this.state.orderBox}
-          </div>
-          <div className="header-middle-info-pricebox-new">
-            <button
-              className="header-middle-info-pricebox-new-minusbutton"
-              onClick={this.handleRemoveChange}
-            ></button>
-            {this.state.number}
-            <button
-              className="header-middle-info-pricebox-new-plusbutton"
-              onClick={this.handlePlusChange}
-            ></button>
-          </div>
+          <button className="header-middle-info-buy">바로구매</button>
+          <button className="header-middle-info-cart">장바구니담기</button>
         </div>
         {/* {COLOR.map((color) => (
           <Orderbox id={color.id} value={color.value} label={color.label} />

@@ -30,7 +30,7 @@ main {
         width: 720px;
         height: 720px;
         padding: 4px;
-        border: 1px solid gray;
+        border: 0px solid gray;
         border-radius: 10px;
         margin-right: 58px;
         .header-middle-img {
@@ -146,20 +146,131 @@ main {
           font-size: 14px;
           font-weight: 700;
         }
+        .header-middle-info-orderbox-colorsize {
+          width: 412px;
+          height: 50px;
+          border: 1px solid gray;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          padding-top: 8px;
+          padding-left: 20px;
+          font-size: 20px;
+          font-weight: 700;
+          color: gray;
+          span {
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 10px;
+            color: black;
+          }
+        }
+        .header-middle-info-orderbox-price {
+          width: 412px;
+          height: 50px;
+          border: 1px solid gray;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          padding-top: 8px;
+          padding-left: 20px;
+          font-size: 20px;
+          font-weight: 700;
+          color: gray;
+
+          span {
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 10px;
+            color: black;
+          }
+        }
+        .header-middle-info-orderbox {
+          display: flex;
+          .header-middle-info-orderbox-new {
+            // margin-bottom: 20px;
+            // width: 412px;
+            // height: 60px;
+            // border-radius: 5px;
+            // text-indent: 10px;
+            // font-size: 14px;
+            // font-weight: 700;
+            // border: 0px solid black;
+            flex: display;
+            flex-direction: column-reverse;
+          }
+
+          .header-middle-info-orderbox-new-minusbutton {
+            width: 35px;
+            height: 40px;
+
+            // margin-right: 10px;
+            // border-radius: 20px;
+            background-color: white;
+
+            span {
+              size: 10px;
+            }
+          }
+          .header-middle-info-orderbox-new-number {
+            width: 100px;
+            border: 0px solid black;
+            height: 80px;
+            display: flex;
+          }
+          .header-middle-info-orderbox-new-realnumber {
+            border: 1px solid black;
+            width: 62px;
+            height: 80px;
+            text-align: center;
+            padding-top: 25px;
+            font-size: 20px;
+            font-weight: 700;
+          }
+          .header-middle-info-orderbox-new {
+            display: flex;
+            align-self: flex-start;
+          }
+          .header-middle-info-orderbox-new-plusbutton {
+            width: 35px;
+            height: 40px;
+
+            // margin-right: 10px;
+            // border-radius: 20px;
+            background-color: white;
+            // margin-left: 10px;
+            span {
+              font-size: 20px;
+            }
+          }
+        }
         .header-middle-info-buy {
           margin-bottom: 10px;
-          width: 412px;
-          height: 56px;
-          border-radius: 20px;
+          width: 160px;
+          height: 80px;
+          border-radius: 5px;
           border-color: #3cdfbf;
           font-weight: 700;
+          background-color: white;
+          color: #3cdfbf;
+        }
+
+        .header-middle-info-buy:hover {
+          margin-bottom: 10px;
+          width: 160px;
+          height: 80px;
+          border-radius: 5px;
+          border-color: #3cdfbf;
+          font-weight: 700;
+          background-color: #3cdfbf;
+          color: white;
         }
         .header-middle-info-cart {
-          width: 412px;
-          height: 56px;
-          border-radius: 20px;
+          width: 160px;
+          height: 80px;
+          border-radius: 5px;
           border-color: #3cdfbf;
           font-weight: 700;
+          background-color: #3cdfbf;
+          color: white;
         }
       }
     }
