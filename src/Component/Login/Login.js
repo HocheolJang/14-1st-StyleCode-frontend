@@ -17,17 +17,20 @@ class Login extends Component {
   }
 
   handleClick = (e) => {
-    fetch("http://10.58.4.87:8000/user/login", {
+    fetch("http://10.58.0.175:8000/users/login", {
       method: "POST",
       body: JSON.stringify({
         login_id: this.state.id,
         password: this.state.password,
       }),
     })
-      .then((response) => response.json())
-      .then((result) => console.log("결과", result))
-      .then((res) => {
-        localStorage.setItem("access-token", res.access_token);
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("결과", result.token);
+        if (result.token) {
+          localStorage.setItem("token", result.token);
+          this.props.history.push("/");
+        }
       });
   };
 
