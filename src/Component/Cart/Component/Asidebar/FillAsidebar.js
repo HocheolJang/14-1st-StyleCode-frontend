@@ -6,7 +6,7 @@ class FillAsidebar extends Component {
     const { cartList } = this.props;
     let result = 0;
     for (let i = 0; i < cartList.length; i++) {
-      result += cartList[i].productPrice * cartList[i].quantity;
+      result += cartList[i].product_price * cartList[i].quantity;
     }
     return result;
   };
@@ -15,7 +15,7 @@ class FillAsidebar extends Component {
     const { cartList } = this.props;
     let result = 0;
     for (let i = 0; i < cartList.length; i++) {
-      result += cartList[i].deliveryFee;
+      result += cartList[i].shipping_fee;
     }
     return result;
   };
@@ -25,7 +25,7 @@ class FillAsidebar extends Component {
     let result = 0;
     for (let i = 0; i < cartList.length; i++) {
       result +=
-        (cartList[i].productPrice - cartList[i].orderPrice) *
+        (cartList[i].product_price - cartList[i].discount_price) *
         cartList[i].quantity;
     }
     return result;
@@ -36,9 +36,9 @@ class FillAsidebar extends Component {
     let result = 0;
     for (let i = 0; i < cartList.length; i++) {
       result +=
-        cartList[i].productPrice * cartList[i].quantity +
-        cartList[i].deliveryFee -
-        (cartList[i].productPrice - cartList[i].orderPrice) *
+        cartList[i].product_price * cartList[i].quantity +
+        cartList[i].shipping_fee -
+        (cartList[i].product_price - cartList[i].discount_price) *
           cartList[i].quantity;
     }
     return result;

@@ -3,7 +3,7 @@ import "./ProductTable.scss";
 
 class ProductTable extends Component {
   render() {
-    const { cartList } = this.props;
+    const { cartList, handleMinusBtn, handlePlusBtn } = this.props;
     return (
       <>
         <div className="productTableContainer">
@@ -29,26 +29,26 @@ class ProductTable extends Component {
                             <label for={idx} />
                           </div>
                           <div className="productImgContainer">
-                            <img src={item.src} alt={item.alt} />
+                            <img
+                              src={item.product_image}
+                              alt={item.product_title}
+                            />
                           </div>
                         </div>
                         <div className="orderedProductRight">
                           <div className="productDescContainer">
-                            <p>{item.productName}</p>
+                            <p>{item.product_title}</p>
                           </div>
                           <div className="productOptionContainer">
-                            <p>{item.option}</p>
+                            <span className="color">{item.color}</span>
+                            <span className="size">({item.size})</span>
                           </div>
                           <div className="controlQuantityContainer">
-                            <button
-                              onClick={() => this.props.handleMinusBtn(item)}
-                            >
+                            <button onClick={() => handleMinusBtn(item)}>
                               -
                             </button>
                             <span>{item.quantity}</span>
-                            <button
-                              onClick={() => this.props.handlePlusBtn(item)}
-                            >
+                            <button onClick={() => handlePlusBtn(item)}>
                               +
                             </button>
                           </div>
@@ -57,7 +57,7 @@ class ProductTable extends Component {
                     </td>
                     <td>
                       <p className="originPrice">
-                        {(item.productPrice * item.quantity)
+                        {(item.product_price * item.quantity)
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         원
@@ -65,7 +65,7 @@ class ProductTable extends Component {
                     </td>
                     <td>
                       <p className="settlePrice">
-                        {(item.orderPrice * item.quantity)
+                        {(item.discount_price * item.quantity)
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         원
@@ -73,7 +73,7 @@ class ProductTable extends Component {
                     </td>
                     <td>
                       <p className="shippingPrice">
-                        {item.deliveryFee
+                        {item.shipping_fee
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         원
@@ -88,19 +88,22 @@ class ProductTable extends Component {
                     <td colSpan="6" className="amountTextBox">
                       <span>상품 </span>
                       <span className="bold">
-                        {(item.orderPrice * item.quantity)
+                        {(item.discount_price * item.quantity)
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                       </span>
                       <span>원 + 배송 </span>
                       <span className="bold">
-                        {item.deliveryFee
+                        {item.shipping_fee
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                       </span>
                       <span>원 = </span>
                       <span className="bold">
-                        {(item.orderPrice * item.quantity + item.deliveryFee)
+                        {(
+                          item.discount_price * item.quantity +
+                          item.shipping_fee
+                        )
                           .toString()
                           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                       </span>

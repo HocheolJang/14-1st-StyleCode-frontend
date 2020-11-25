@@ -18,10 +18,10 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    fetch("data/cartItem.json")
+    fetch("http://10.58.1.162:8000/carts/1")
       .then((res) => res.json())
       .then((res) => {
-        const cartList = res.item.map((item) => {
+        const cartList = res.product.map((item) => {
           item["isChecked"] = true;
           return item;
         });
@@ -37,6 +37,14 @@ class Cart extends Component {
     if (cartList[idx].quantity < 20) {
       cartList[idx].quantity++;
       this.setState({ cartList });
+      fetch("http://10.58.1.162:8000/carts/1", {
+        method: "PATCH",
+
+        body: JSON.stringify({
+          user_id: 1,
+          quantity: cartList.quantity,
+        }),
+      }).then((res) => console.log(res));
     } else {
       alert("최대 주문 수량은 20개입니다");
     }
@@ -82,20 +90,20 @@ class Cart extends Component {
                   </div>
                 </div>
                 {cartList.length ? (
-                  <EmptyTable />
-                ) : (
                   <ProductTable
                     handlePlusBtn={handlePlusBtn}
                     handleMinusBtn={handleMinusBtn}
                     cartList={cartList}
                     isChecked={isChecked}
                   />
+                ) : (
+                  <EmptyTable />
                 )}
               </div>
               {cartList.length ? (
-                <EmptyAsidebar />
-              ) : (
                 <FillAsidebar cartList={cartList} />
+              ) : (
+                <EmptyAsidebar />
               )}
             </div>
           </div>
@@ -107,4 +115,3 @@ class Cart extends Component {
 }
 
 export default Cart;
-
