@@ -4,6 +4,7 @@
 .cart {
   margin-top: 158px;
   font-family: "Helvetica", "Arial", "Spoqa Han Sans JP", "Sans-serif";
+
   .allContainer {
     margin: 0 auto;
     width: 1160px;
@@ -16,15 +17,18 @@
       height: 80px;
       border-bottom: 2px solid #e8ebed;
       margin-bottom: 30px;
+
       .title {
         display: flex;
         width: 75%;
         margin-top: 10px;
+
         h2 {
           font-size: 40px;
           font-weight: 700;
         }
       }
+
       .process {
         display: flex;
         justify-content: flex-end;
@@ -40,6 +44,7 @@
         }
       }
     }
+
     .mainContainer {
       display: flex;
       height: auto;
@@ -67,6 +72,7 @@
               margin: 0 15px;
               cursor: pointer;
             }
+
             span {
               font-size: 16px;
               color: #26282b;
@@ -74,11 +80,13 @@
               cursor: pointer;
             }
           }
+
           .headerRight {
             width: 80%;
             display: flex;
             justify-content: flex-end;
             margin-right: 32px;
+
             button {
               width: 68px;
               height: 26px;

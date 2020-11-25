@@ -18,9 +18,7 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/cartItem.json", {
-      method: "GET",
-    })
+    fetch("data/cartItem.json")
       .then((res) => res.json())
       .then((res) => {
         const cartList = res.item.map((item) => {
@@ -83,7 +81,7 @@ class Cart extends Component {
                     <button>삭제</button>
                   </div>
                 </div>
-                {cartList.length < 1 ? (
+                {cartList.length ? (
                   <EmptyTable />
                 ) : (
                   <ProductTable
@@ -94,7 +92,7 @@ class Cart extends Component {
                   />
                 )}
               </div>
-              {cartList.length < 1 ? (
+              {cartList.length ? (
                 <EmptyAsidebar />
               ) : (
                 <FillAsidebar cartList={cartList} />
@@ -110,11 +108,3 @@ class Cart extends Component {
 
 export default Cart;
 
-// 받아야하는 것
-// 로그인된 상태, cartId(상품코드), 상품이미지, 상품명, 칼라, 사이즈, 수량, 상품가격, 주문가격(할인가격), 배송비
-
-// 수량 업데이트
-// 로그인된 상태, cartId(pathParameter - 상품코드), cartQuantity
-
-// 카트(상품) 삭제
-// 로그인된 상태, cartId(pathParameter - 상품코드)

@@ -46,7 +46,12 @@ class FillAsidebar extends Component {
 
   render() {
     const { cartList } = this.props;
-    console.log(cartList);
+    const {
+      sumOrderPrice,
+      sumDeliveryPrice,
+      sumDiscountPrice,
+      sumTotalPrice,
+    } = this;
     return (
       <div className="FillAsideContainer">
         <div className="priceContainer">
@@ -54,7 +59,7 @@ class FillAsidebar extends Component {
             <span>총 상품금액</span>
 
             <span>
-              {this.sumOrderPrice()
+              {sumOrderPrice()
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               원
@@ -64,7 +69,7 @@ class FillAsidebar extends Component {
             <span>총 배송비</span>
             <span>
               (+)&nbsp;
-              {this.sumDeliveryPrice()
+              {sumDeliveryPrice()
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               원
@@ -74,7 +79,7 @@ class FillAsidebar extends Component {
             <span>할인금액</span>
             <span>
               (-)&nbsp;
-              {this.sumDiscountPrice()
+              {sumDiscountPrice()
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               원
@@ -83,7 +88,7 @@ class FillAsidebar extends Component {
           <div className="totalPayPrice">
             <span>총 결제금액</span>
             <span>
-              {this.sumTotalPrice()
+              {sumTotalPrice()
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               원
@@ -91,7 +96,7 @@ class FillAsidebar extends Component {
           </div>
         </div>
         <button className="orderBtn">
-          총 {this.props.cartList.length}개 상품 주문하기
+          총 {cartList.length}개 상품 주문하기
         </button>
         <button className="shoppingMore">쇼핑 계속하기</button>
       </div>

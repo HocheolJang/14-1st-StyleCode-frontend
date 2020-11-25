@@ -2,6 +2,7 @@
   width: 98%;
   border: 1px solid #e8ebed;
   border-collapse: collapse;
+
   thead {
     th {
       height: 30px;
@@ -12,13 +13,16 @@
       color: #454c53;
       font-size: 12px;
     }
+
     .orderProduct {
       width: 500px;
     }
+
     .width96 {
       width: 96px;
     }
   }
+
   tbody {
     td {
       border: 1px solid #e8ebed;

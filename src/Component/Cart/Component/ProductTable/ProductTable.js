@@ -4,12 +4,10 @@ import "./ProductTable.scss";
 class ProductTable extends Component {
   render() {
     const { cartList } = this.props;
-
     return (
       <>
         <div className="productTableContainer">
           {cartList.map((item, idx) => {
-            
             return (
               <table className="productTable">
                 <thead>
