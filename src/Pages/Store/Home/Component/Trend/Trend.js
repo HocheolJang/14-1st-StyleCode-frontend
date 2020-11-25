@@ -12,9 +12,7 @@ class Trend extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/trendItem.json", {
-      method: "GET",
-    })
+    fetch("/data/trendItem.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({

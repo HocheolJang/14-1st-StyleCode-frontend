@@ -21,9 +21,7 @@ class PopularBrand extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/brandItem.json", {
-      method: "GET",
-    })
+    fetch("/data/brandItem.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({

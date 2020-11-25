@@ -13,9 +13,7 @@ class PopularProduct extends Component {
   }
 
   getcategoriesList = () => {
-    fetch("http://localhost:3000/data/popularProduct.json", {
-      method: "GET",
-    })
+    fetch("/data/popularProduct.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -24,9 +22,7 @@ class PopularProduct extends Component {
       });
   };
   getPopularProductList = () => {
-    fetch("http://localhost:3000/data/popularProduct.json", {
-      method: "GET",
-    })
+    fetch("/data/popularProduct.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
