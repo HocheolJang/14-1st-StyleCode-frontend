@@ -459,6 +459,10 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+        .article-product-detail-img-box {
+          font-size: 24px;
+          font-weight: 700;
+        }
 
         .article-product-detail-img {
           width: 740px;

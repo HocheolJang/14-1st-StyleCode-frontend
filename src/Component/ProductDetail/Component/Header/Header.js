@@ -16,13 +16,14 @@ class Header extends Component {
   openModal = () => {
     this.setState({ setIsOpen: true });
   };
+  cloesModal = () => {
+    this.setState({ setIsOpen: false });
+  };
 
   render() {
     const { productdetail } = this.props;
     const { modalIsOpen, setModalIsOpen } = this.state;
-    // console.log(productdetail);
 
-    // console.log(this.state.option1);
     return (
       <header>
         <div className="header-top">
@@ -60,9 +61,38 @@ class Header extends Component {
               >
                 <span>쿠폰다운</span>
               </button>
-              <Modal isOpen={this.state.setIsOpen}>
-                <h2>Modal title</h2>
-                <p>Modal body</p>
+              <Modal
+                isOpen={this.state.setIsOpen}
+                style={{
+                  overlay: {
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: "rgba(255, 255, 255, 0.75)",
+                  },
+                  content: {
+                    position: "absolute",
+                    top: "200px",
+                    left: "700px",
+                    right: "700px",
+                    bottom: "200px",
+                    border: "1px solid #ccc",
+                    background: "#fff",
+                    overflow: "auto",
+                    WebkitOverflowScrolling: "touch",
+                    borderRadius: "4px",
+                    outline: "none",
+                    padding: "20px",
+                  },
+                }}
+              >
+                <h2>쿠폰 다운받기</h2>
+                <p>아우터 스타일쇼 10%쿠폰</p>
+                <div>
+                  <button onClick={this.cloesModal}>close</button>
+                </div>
               </Modal>
             </div>
             <div className="header-middle-info-like">
@@ -83,7 +113,6 @@ class Header extends Component {
             </div>
             <Select
               productdetail={productdetail}
-              // id={productdetail.id}
               colors={productdetail.colors}
               sizes={productdetail.sizes}
               stocks={productdetail.stocks}

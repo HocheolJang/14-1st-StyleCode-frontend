@@ -1,11 +1,5 @@
 import React, { Component } from "react";
 import "../../../../ProductDetail/ProductDetail.scss";
-import "../../../../../Styles/common.scss";
-import "../../../../../Styles/reset.scss";
-// import Orderbox from "../Orderbox/Orderbox";
-// import Orderbox2 from "../Orderbox/Orderbox2";
-// import "../Orderbox/Orderbox.scss";
-// import "../Orderbox/Orderbox2.scss";
 import { BsFillCaretUpFill } from "react-icons/bs";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { withRouter } from "react-router-dom";
@@ -15,18 +9,6 @@ class Select extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // COLOR: [
-      //   { id: 0, value: "default", label: "[컬러]를 선택하세요." },
-      //   { id: 1, value: "블랙", label: "블랙" },
-      //   { id: 2, value: "옐로우", label: "옐로우" },
-      //   { id: 3, value: "그레이", label: "그레이" },
-      // ],
-      // SIZE: [
-      //   { id: 0, value: "default", label: "[사이즈]를 선택하세요." },
-      //   { id: 1, value: "Small", label: "Small" },
-      //   { id: 2, value: "Medium", label: "Medium" },
-      //   { id: 3, value: "Large", label: "Large" },
-      // ],
       orderBox: [],
       item: [],
       number: 1,
@@ -39,13 +21,11 @@ class Select extends Component {
   };
 
   handleSizeChange = (e) => {
-    // console.log("handleSizeChange");
     const { orderBox, item, value, number } = this.state;
 
     this.setState({ size: e.target.value });
-    // let orderBox2 = [...orderBox, this.props.productdetail[1].price];
     this.setState({
-      orderBox: /*orderBox2*/ this.props.productdetail?.discountPrice * number,
+      orderBox: this.props.productdetail?.discountPrice * number,
     });
     this.setState({ number: number });
 
@@ -81,9 +61,9 @@ class Select extends Component {
         Authorization: localStorage.getItem("token"),
       },
       body: JSON.stringify({
-        //product_id: id
-        //product_size: size
-        //product_color: color
+        //product_id: id (필요한 부분이라, 삭제하지 않았습니다.)
+        //product_size: size (필요한 부분이라, 삭제하지 않았습니다.)
+        //product_color: color (필요한 부분이라, 삭제하지 않았습니다.)
       }),
     })
       .then((res) => res.json())
@@ -92,60 +72,27 @@ class Select extends Component {
       });
   };
 
-  //필요한 정보를 카트에 넣어주어야 한다.
-  // id, 개수, 날짜 정보,
-
   render() {
-    // console.log(this.state.orderBox);
-    // console.log(this.state.color);
-    // console.log(this.state.size);
-    // console.log(this.state.number);
-
     const { productdetail } = this.props;
     const { SIZE, COLOR, number } = this.state;
-    // console.log(this.props.productdetail[0].id);
-
-    // console.log(productdetail);
-    // console.log(this.state.COLOR[1].value);
-    // console.log(this.props.productdetail[0].price);
-    console.log("칼라", productdetail.colors);
-    console.log("사이즈", productdetail.sizes);
     return (
       <div>
         <select
           className="header-middle-info-style"
-          // value={this.state.value}
           onChange={this.handleColorChange}
-          // defaultValue={productdetail[0]?.colors}
-          // options={COLOR}
         >
           {productdetail.colors &&
             productdetail.colors.map((color, id) => (
-              <option
-                key={id}
-                // value={color.value}
-                // label="컬러"
-              >
-                {color}
-              </option>
+              <option key={id}>{color}</option>
             ))}
         </select>
         <select
           className="header-middle-info-size"
-          // value={this.state.value}
-          // onChange={this.handleChange}
-          // defaultValue={SIZE[0].label}
           onChange={this.handleSizeChange}
         >
           {productdetail.sizes &&
             productdetail.sizes.map((size, id) => (
-              <option
-                key={id}
-                // value={size.value}
-                // label="사이즈"
-              >
-                {size}
-              </option>
+              <option key={id}>{size}</option>
             ))}
         </select>
         <div className="header-middle-info-orderbox-colorsize">
@@ -162,10 +109,7 @@ class Select extends Component {
         </div>
 
         <div className="header-middle-info-orderbox">
-          {/* <div className="header-middle-info-orderbox-new"> */}
           <div className="header-middle-info-orderbox-new-box"></div>
-          {/* </div> */}
-          {/* <div className={false ? "header-middle-info-orderbox-new" : ""}></div> */}
           <div className="header-middle-info-orderbox-new-number">
             <div className="header-middle-info-orderbox-new-realnumber">
               {this.state.number}
@@ -179,7 +123,6 @@ class Select extends Component {
                   <BsFillCaretDownFill size="15px" color="gray" />
                 </span>
               </button>
-
               <button
                 className="header-middle-info-orderbox-new-plusbutton"
                 onClick={this.handlePlusChange}
@@ -196,11 +139,6 @@ class Select extends Component {
             장바구니담기
           </button>
         </div>
-        {/* {COLOR.map((color) => (
-          <Orderbox id={color.id} value={color.value} label={color.label} />
-        ))}
-          
-        <Orderbox2 /> */}
       </div>
     );
   }

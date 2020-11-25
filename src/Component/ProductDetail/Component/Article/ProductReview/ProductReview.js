@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import "../../../../ProductDetail/ProductDetail.scss";
-import "../../../../../Styles/common.scss";
-import "../../../../../Styles/reset.scss";
-import ProductReviewImgbox from "../ProductReviewImgbox/ProductReviewImgbox";
 import Slider from "react-slick";
+import ProductReviewImgbox from "../ProductReviewImgbox/ProductReviewImgbox";
+import "../../../../ProductDetail/ProductDetail.scss";
 
 class ProductReview extends Component {
   render() {
@@ -18,7 +16,6 @@ class ProductReview extends Component {
       slidesToScroll: 1,
       arrows: true,
     };
-    // console.log(productdetail.ootd);
 
     console.log("productdetail", ootd);
     return (
@@ -28,7 +25,6 @@ class ProductReview extends Component {
           <span className="product-review-number">285</span>
         </div>
         <div className="article-product-review-totalimgbox">
-          {/* <ProductReviewImgbox productdetail={productdetail} /> */}
           <Slider {...settings}>
             {ootd &&
               ootd.map((product, idx) => (

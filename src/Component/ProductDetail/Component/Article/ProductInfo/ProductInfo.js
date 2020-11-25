@@ -24,7 +24,9 @@ class ProductInfo extends Component {
             <p className="text2">상담문의: 카카오톡 플러스친구 '스타일쉐어'</p>
             <p className="text3">자세히 보기</p>
           </div>
-          <div className="article-product-detail-img-title"></div>
+          <div className="article-product-detail-img-title">
+            <span>{productdetail?.articleProductDetailImgTitle}</span>
+          </div>
           <div className="article-product-detail-img-box">
             <img
               className="article-product-detail-img"

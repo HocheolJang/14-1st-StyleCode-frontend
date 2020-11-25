@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import "./ProductDetail.scss";
-import "../../Styles/reset.scss";
-import "../../Styles/common.scss";
 import Header from "./Component/Header/Header";
 import ProductReview from "./Component/Article/ProductReview/ProductReview";
 import ProductInfo from "./Component/Article/ProductInfo/ProductInfo";
@@ -21,16 +19,11 @@ class ProductDetail extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
-        // console.log(res);
-        this.setState(
-          { productdetail: res.product }
-          // console.log(this.state.productdetail)
-        );
+        this.setState({ productdetail: res.product });
       });
   }
 
   render() {
-    // console.log(this.state.productdetail);
     return (
       <div className="ProductDetail">
         <nav></nav>
