@@ -9,6 +9,7 @@ import "../../../../../Styles/reset.scss";
 import { BsFillCaretUpFill } from "react-icons/bs";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Select extends Component {
   constructor(props) {
@@ -70,12 +71,20 @@ class Select extends Component {
   goToDetail = () => {
     this.props.history.push("/");
   };
+
+  clickHandler = () => {};
+
+  //필요한 정보를 카트에 넣어주어야 한다.
+  // id, 개수, 날짜 정보,
+
   render() {
     const { productdetail } = this.props;
     const { SIZE, COLOR, number } = this.state;
     // console.log(this.props.productdetail[0].id);
 
     // console.log(productdetail);
+    console.log(this.state.COLOR[1].value);
+    console.log(this.props.productdetail[0].price);
 
     return (
       <div>
