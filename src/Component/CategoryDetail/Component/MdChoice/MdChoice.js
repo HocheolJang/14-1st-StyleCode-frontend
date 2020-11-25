@@ -8,13 +8,13 @@ class MdChoice extends Component {
     super();
     this.state = {
       mdChoiceList: [],
-      currentCategory: 0,
+      activePage: 0,
       offset: 1,
     };
   }
 
   getAllData = () => {
-    fetch("http://10.58.0.175:8000/products/mdchoice/0", {
+    fetch("http://10.58.4.75:8000/products/mdchoice/0", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -31,12 +31,13 @@ class MdChoice extends Component {
 
   fetchProduct = (e) => {
     const offset = e.target.dataset.idx;
-
-    fetch(`http://10.58.0.175:8000/products/mdchoice/${offset}`)
+    // console.log(e.target.dataset.idx);
+    fetch(`http://10.58.4.75:8000/products/mdchoice/${offset}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
           mdChoiceList: res.mdchoice_list,
+          activePage: e.target.dataset.idx,
         });
       });
   };
@@ -46,7 +47,7 @@ class MdChoice extends Component {
   };
 
   render() {
-    const { mdChoiceList } = this.state;
+    const { mdChoiceList, activePage } = this.state;
     const { fetchProduct } = this;
 
     return (
@@ -101,7 +102,7 @@ class MdChoice extends Component {
             );
           })}
         </div>
-        <Pagination fetchProduct={fetchProduct} />
+        <Pagination fetchProduct={fetchProduct} activePage={activePage} />
       </div>
     );
   }

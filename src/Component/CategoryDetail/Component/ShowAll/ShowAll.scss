@@ -23,20 +23,24 @@
     }
     .filter {
       position: relative;
-      // display: flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100px;
       height: 23px;
       border-left: 1px solid #e8ebed;
       border-right: 1px solid #e8ebed;
+      // padding: 0 15px;
       &:hover {
         cursor: pointer;
       }
       button {
         align-items: center;
-        padding: 0 20px 0 18px;
+        padding: 0 10px;
         background-color: white;
         border: none;
         outline: 0;
+        width: 100px;
         &:hover {
           cursor: pointer;
         }
@@ -126,6 +130,7 @@
         .productImg {
           width: 100%;
           height: 100%;
+          object-fit: cover;
 
           &:hover {
             cursor: pointer;

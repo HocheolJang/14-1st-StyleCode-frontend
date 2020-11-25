@@ -13,20 +13,20 @@
     vertical-align: middle;
     text-align: center;
     margin: 0 2px;
-    // &:hover {
-    //   cursor: pointer;
-    //   background-color: #e8ebed;
-    //   opacity: 0.7;
-    // }
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover:not(.active) {
+      background-color: #f7f8f9;
+      color: #26282b;
+      border: 1px solid #e8ebed;
+    }
   }
   .active {
     background-color: #4adaaf;
     color: #ffffff;
     border: 1px solid #ffffff;
   }
-  // &:not(.active) {
-  // background-color: #f7f8f9;
-  // color: #26282b;
-  // border: 1px solid #e8ebed;
-  // }
 }

@@ -10,30 +10,33 @@ class ShowAll extends Component {
       currentCategory: 0,
       showDropdown: false,
       isArrowDown: true,
+      sortMethod: "최신순",
     };
   }
 
   componentDidMount() {
-    fetch("http://10.58.0.175:8000/products?sort=1&second=1", {
+    fetch("http://10.58.4.75:8000/products?sort=1&second=1", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          showAllList: res.second_category_list,
-          src: res.second_category_list.main_image_url,
+          showAllList: res.category_list,
+          src: res.category_list.main_image_url,
         });
       });
   }
 
   sortProduct = (e) => {
     const sort = e.target.dataset.idx;
-
-    fetch(`http://10.58.0.175:8000/products?sort=${sort}&second=1`)
+    console.log(e.target.id);
+    fetch(`http://10.58.4.75:8000/products?sort=${sort}&second=1`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          showAllList: res.second_category_list,
+          showAllList: res.category_list,
+          showDropdown: !this.state.showDropdown,
+          sortMethod: e.target.id,
         });
       });
   };
@@ -44,6 +47,7 @@ class ShowAll extends Component {
 
   filterDropdown = (e) => {
     e.preventDefault();
+
     this.setState({
       showDropdown: !this.state.showDropdown,
       isArrowDown: !this.state.isArrowDown,
@@ -55,9 +59,9 @@ class ShowAll extends Component {
   };
 
   render() {
-    const { showAllList, showDropdown } = this.state;
+    const { showAllList, showDropdown, sortMethod } = this.state;
     const { filterDropdown, sortProduct } = this;
-    // console.log(showAllList[0]?.main_image_url);
+    // console.log(sortMethod);
 
     return (
       <div className="ShowAll">
@@ -67,7 +71,7 @@ class ShowAll extends Component {
           </div>
           <div className="filter">
             <button onClick={filterDropdown}>
-              <span>최신순</span>
+              <span>{sortMethod}</span>
               <span>
                 {!showDropdown ? (
                   <img
@@ -87,16 +91,16 @@ class ShowAll extends Component {
             {showDropdown ? (
               <div className="fliterDropDown">
                 <ul className="dropdownContent">
-                  <li data-idx="0" onClick={sortProduct}>
+                  <li data-idx="0" onClick={sortProduct} id="최신순">
                     최신순 (최근등록순)
                   </li>
-                  <li data-idx="1" onClick={sortProduct}>
+                  <li data-idx="1" onClick={sortProduct} id="인기순">
                     인기순 (인기많은순)
                   </li>
-                  <li data-idx="2" onClick={sortProduct}>
+                  <li data-idx="2" onClick={sortProduct} id="할인율">
                     할인율 (할인율높은순)
                   </li>
-                  <li data-idx="3" onClick={sortProduct}>
+                  <li data-idx="3" onClick={sortProduct} id="가격낮은순">
                     가격&nbsp;
                     <img
                       src="images/icon/filterDropDownArrow.png"
@@ -105,7 +109,7 @@ class ShowAll extends Component {
                     />
                     (가격낮은순)
                   </li>
-                  <li data-idx="4" onClick={sortProduct}>
+                  <li data-idx="4" onClick={sortProduct} id="가격높은순">
                     가격
                     <img
                       src="images/icon/filterDropDownArrow.png"
@@ -120,7 +124,7 @@ class ShowAll extends Component {
           </div>
         </div>
         <div className="cardList">
-          {showAllList.map((product, idx) => {
+          {showAllList?.map((product, idx) => {
             return (
               <div className="eachCard" key={idx}>
                 <div className="productImgBox">
