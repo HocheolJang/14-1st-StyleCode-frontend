@@ -4,6 +4,14 @@ import "../../../../../Styles/common.scss";
 import "../../../../../Styles/reset.scss";
 
 class ProductInfo extends Component {
+  constructor() {
+    super();
+    this.state = {
+      comment: "",
+      comments: [],
+    };
+  }
+
   render() {
     const { productdetail } = this.props;
     return (
@@ -32,7 +40,9 @@ class ProductInfo extends Component {
             <details>
               <summary>더보기</summary>
               <div className="article-product-detail-ask-write">
-                <button>문의 작성하기</button>
+                <button className="article-product-detail-ask-write-button">
+                  문의 작성하기
+                </button>
               </div>
               <div>
                 <span>오늘시키면 언제와욘</span>

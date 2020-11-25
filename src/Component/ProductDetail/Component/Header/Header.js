@@ -61,7 +61,12 @@ class Header extends Component {
               <span className="delivery">무료배송</span>
               <span className="delivery-date">11/23월요일 출고 예정</span>
             </div>
-            <Select productdetail={productdetail} />
+            <Select
+              productdetail={productdetail}
+              id={productdetail.id}
+              price={productdetail.price}
+              sale={productdetail.sale}
+            />
           </div>
         </div>
         <div className="header-bottom">
@@ -70,7 +75,14 @@ class Header extends Component {
             src={productdetail[1]?.productImg}
             alt="header-bottom-img"
           ></img>
-          <div className="header-bottom-brand"></div>
+          <div className="header-bottom-brand">
+            <p className="header-bottom-brand-title">
+              {productdetail[1]?.productName}
+            </p>
+            <p className="header-bottom-brand-number">
+              {productdetail[1]?.follower}
+            </p>
+          </div>
         </div>
       </header>
     );

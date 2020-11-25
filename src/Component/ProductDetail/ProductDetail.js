@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./ProductDetail.scss";
 import "../../Styles/reset.scss";
 import "../../Styles/common.scss";

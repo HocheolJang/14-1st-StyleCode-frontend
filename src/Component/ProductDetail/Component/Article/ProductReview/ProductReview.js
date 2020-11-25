@@ -10,10 +10,13 @@ class ProductReview extends Component {
     const { productdetail } = this.props;
     const settings = {
       dots: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
       infinite: true,
-      speed: 500,
+      speed: 1000,
       slidesToShow: 4,
       slidesToScroll: 1,
+      arrows: true,
     };
     // console.log(productdetail);
     return (

@@ -6,8 +6,9 @@ import "../../../../../Styles/reset.scss";
 // import Orderbox2 from "../Orderbox/Orderbox2";
 // import "../Orderbox/Orderbox.scss";
 // import "../Orderbox/Orderbox2.scss";
-import { BiCaretUp } from "react-icons/bi";
-import { BiCaretDown } from "react-icons/bi";
+import { BsFillCaretUpFill } from "react-icons/bs";
+import { BsFillCaretDownFill } from "react-icons/bs";
+import { withRouter } from "react-router-dom";
 
 class Select extends Component {
   constructor(props) {
@@ -66,9 +67,13 @@ class Select extends Component {
     this.setState({ number: number + 1 });
   };
 
+  goToDetail = () => {
+    this.props.history.push("/");
+  };
   render() {
-    // const { productdetail } = this.props;
+    const { productdetail } = this.props;
     const { SIZE, COLOR, number } = this.state;
+    // console.log(this.props.productdetail[0].id);
 
     // console.log(productdetail);
 
@@ -109,6 +114,7 @@ class Select extends Component {
           <span>{this.state.color && this.state.color}</span>
           <span>{this.state.size && this.state.size}</span>
         </div>
+        <div className="header-middle-info-"></div>
         <div className="header-middle-info-orderbox-price">
           총 금액
           <span>
@@ -131,7 +137,7 @@ class Select extends Component {
                 onClick={this.handleRemoveChange}
               >
                 <span>
-                  <BiCaretDown />
+                  <BsFillCaretDownFill size="15px" color="gray" />
                 </span>
               </button>
 
@@ -140,14 +146,16 @@ class Select extends Component {
                 onClick={this.handlePlusChange}
               >
                 <span>
-                  <BiCaretUp />
+                  <BsFillCaretUpFill size="15px" color="gray" />
                 </span>
               </button>
               <span className="header-middle-info-orderbox-new-letter"></span>
             </div>
           </div>
           <button className="header-middle-info-buy">바로구매</button>
-          <button className="header-middle-info-cart">장바구니담기</button>
+          <button className="header-middle-info-cart" onClick={this.goToDetail}>
+            장바구니담기
+          </button>
         </div>
         {/* {COLOR.map((color) => (
           <Orderbox id={color.id} value={color.value} label={color.label} />
@@ -159,4 +167,4 @@ class Select extends Component {
   }
 }
 
-export default Select;
+export default withRouter(Select);
