@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 23px;
+  //grid
+  height: 400px;
+  overflow: hidden;
   .container {
     display: flex;
     width: 620px;
@@ -17,18 +20,41 @@
       img {
         width: 80px;
         height: 80px;
+        object-fit: cover;
+        border-radius: 40px;
       }
     }
     .profileNameBox {
-      display: flex;
-      align-items: center;
       width: 60%;
+      margin: auto 0;
+      .nickname {
+        font-size: 18px;
+        font-weight: 700;
+        color: #131518;
+      }
+      .desc {
+        margin-top: 5px;
+        font-size: 13px;
+        color: #757d86;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
     }
     .followBtnBox {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 20%;
+      button {
+        background-color: #ffffff;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: #4d00eb;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }

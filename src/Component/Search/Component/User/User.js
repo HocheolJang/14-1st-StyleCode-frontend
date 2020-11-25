@@ -15,8 +15,8 @@ class User extends Component {
                 <img src={user?.user_image} alt="프로필 사진" />
               </div>
               <div className="profileNameBox">
-                <p>{user?.user_nickname}</p>
-                <p>{user?.description}</p>
+                <p className="nickname">{user?.user_nickname}</p>
+                <p className="desc">{user?.description}</p>
               </div>
               <div className="followBtnBox">
                 <button>팔로우</button>
