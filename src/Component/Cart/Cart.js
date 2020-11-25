@@ -24,8 +24,12 @@ class Cart extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
+        const cartList = res.item.map((item) => {
+          item["isChecked"] = true;
+          return item;
+        });
         this.setState({
-          cartList: res.item,
+          cartList,
         });
       });
   }
@@ -33,11 +37,11 @@ class Cart extends Component {
   handlePlusBtn = (item) => {
     const cartList = [...this.state.cartList];
     let idx = cartList.indexOf(item);
-    if (cartList[idx].quantity < 10) {
+    if (cartList[idx].quantity < 20) {
       cartList[idx].quantity++;
       this.setState({ cartList });
     } else {
-      alert("최대 주문 수량은 10개입니다");
+      alert("최대 주문 수량은 20개입니다");
     }
   };
 

@@ -2,18 +2,47 @@ import React, { Component } from "react";
 import "./FillAsidebar.scss";
 
 class FillAsidebar extends Component {
-  // constructor(){
-  //   this.props(){
+  sumOrderPrice = () => {
+    const { cartList } = this.props;
+    let result = 0;
+    for (let i = 0; i < cartList.length; i++) {
+      result += cartList[i].productPrice * cartList[i].quantity;
+    }
+    return result;
+  };
 
-  //   }
-  // }
+  sumDeliveryPrice = () => {
+    const { cartList } = this.props;
+    let result = 0;
+    for (let i = 0; i < cartList.length; i++) {
+      result += cartList[i].deliveryFee;
+    }
+    return result;
+  };
 
-  // sumOrderPrice = (this.props.cartList) => {
-  //   const {cartList} = this.props
-  //   for(let i = 0; i< cartList.length; i++{
-  //     (cartList[i].orderPrice * cartList[i].quantity)
-  //   })
-  // }
+  sumDiscountPrice = () => {
+    const { cartList } = this.props;
+    let result = 0;
+    for (let i = 0; i < cartList.length; i++) {
+      result +=
+        (cartList[i].productPrice - cartList[i].orderPrice) *
+        cartList[i].quantity;
+    }
+    return result;
+  };
+
+  sumTotalPrice = () => {
+    const { cartList } = this.props;
+    let result = 0;
+    for (let i = 0; i < cartList.length; i++) {
+      result +=
+        cartList[i].productPrice * cartList[i].quantity +
+        cartList[i].deliveryFee -
+        (cartList[i].productPrice - cartList[i].orderPrice) *
+          cartList[i].quantity;
+    }
+    return result;
+  };
 
   render() {
     const { cartList } = this.props;
@@ -23,24 +52,42 @@ class FillAsidebar extends Component {
         <div className="priceContainer">
           <div className="totalPrice">
             <span>총 상품금액</span>
-            {/* <span>
-              {cartList.map((item, idx) => {
-                return sum(item[idx].orderPrice * item[idx].quantity);
-              })}
-            </span> */}
-            <span>원</span>
+
+            <span>
+              {this.sumOrderPrice()
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              원
+            </span>
           </div>
           <div className="deliveryFee">
             <span>총 배송비</span>
-            <span>(+)0원</span>
+            <span>
+              (+)&nbsp;
+              {this.sumDeliveryPrice()
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              원
+            </span>
           </div>
           <div className="discountPrice">
             <span>할인금액</span>
-            <span>(-)원</span>
+            <span>
+              (-)&nbsp;
+              {this.sumDiscountPrice()
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              원
+            </span>
           </div>
           <div className="totalPayPrice">
             <span>총 결제금액</span>
-            <span>0원</span>
+            <span>
+              {this.sumTotalPrice()
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              원
+            </span>
           </div>
         </div>
         <button className="orderBtn">
