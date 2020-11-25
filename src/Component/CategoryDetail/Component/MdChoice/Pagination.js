@@ -7,7 +7,7 @@ class Pagination extends Component {
     // console.log(fetchProduct);
     return (
       <div className="Pagination">
-        <button data-idx="0" onClick={fetchProduct} className="">
+        <button data-idx="0" onClick={fetchProduct} className="active">
           1
         </button>
         <button data-idx="1" onClick={fetchProduct}>
