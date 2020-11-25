@@ -10,19 +10,18 @@ class Product extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/searchProductItem.json”, {
-      method: “GET”,
-    })
+    fetch("10.58.1.162:8000/search?keyword=%EB%82%98%EC%9D%B4%ED%82%A4")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          productList: res.product
+          productList: res,
         });
       });
   }
 
   render() {
-    const { productList} = this.state;
+    const { productList } = this.state;
+    console.log(productList);
 
     return (
       <div className="product">
@@ -39,30 +38,20 @@ class Product extends Component {
                   <img
                     className="productImg"
                     alt="제품사진"
-                    src={product?.main_image_url}
+                    src={product?.product_image}
                   ></img>
                 </div>
                 <div className="productDescBox">
                   <div>
-                    <span className="brandName">{product?.brand}</span>
+                    <span className="brandName">{product?.product_brand}</span>
                   </div>
                   <div className="productName">
-                    <span>{product?.title}</span>
+                    <span>{product.product_title}</span>
                   </div>
                   <div className="discountPriceBox">
-                    <span className="discount">
-                      [{parseInt(product?.discount_rate * 100)}%]
-                    </span>
+                    <span className="discount">{product?.discount_rate}</span>
                     <span className="productPrice">
-                      {(product?.discount_price * 1)
-                        .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                      원
-                    </span>
-                  </div>
-                  <div className="orignalPriceBox">
-                    <span>
-                      {(product?.price * 1)
+                      {product?.discount_price
                         .toString()
                         .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                       원

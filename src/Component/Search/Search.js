@@ -17,13 +17,13 @@ class Search extends Component {
                 <li>맨투맨</li>
                 <li>후드티</li>
                 <li>숏패딩</li>
-                <li>나이키 후드티</li>
-                <li>나이키 신발</li>
-                <li>아디다스</li>
-                <li>나이키 맨투맨</li>
+                <li>페이크 후드티</li>
+                <li>페이크 신발</li>
+                <li>아디더스</li>
+                <li>페이크 맨투맨</li>
                 <li>후리스</li>
                 <li>바지</li>
-                <li>나이키 바지</li>
+                <li>페이크 바지</li>
               </ul>
             </div>
           </header>
@@ -33,7 +33,7 @@ class Search extends Component {
               <span>
                 <img src="images/search/fakeLogo.png" alt="페이크 로고" />
               </span>
-              <span className="brandName">나이키</span>
+              <span className="brandName">페이크</span>
             </div>
           </div>
           <div className="trend">
@@ -50,7 +50,7 @@ class Search extends Component {
                 <p>
                   <span className="fontRed">[독점]</span> 지금 놓치면 품절 !
                 </p>
-                <p>나이키 신발 재입고 완료</p>
+                <p>페이크 신발 재입고 완료</p>
               </div>
             </div>
           </div>

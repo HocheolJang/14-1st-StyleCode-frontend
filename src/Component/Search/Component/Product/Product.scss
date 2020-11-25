@@ -2,9 +2,8 @@
 @import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
 
 .product {
-  width: 1240px;
+  width: 1260px;
   height: 600px;
-  margin: 100px auto;
   font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
 
   .title {
@@ -76,7 +75,7 @@
         }
       }
       .productDescBox {
-        margin-left: 10px;
+        // margin-left: 10px;
         margin-top: 5px;
 
         .brandName {

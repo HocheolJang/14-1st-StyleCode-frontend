@@ -20,9 +20,17 @@
       font-size: 24px;
       margin-bottom: 23px;
       margin-left: 12px;
-      
     }
     .showAll {
+      width: 340px;
+      height: 44px;
+      margin: 0 auto;
+      max-width: 340px;
+      border: 1px solid #dadde0;
+      border-radius: 4px;
+      color: #131518;
+      font-size: 16px;
+      cursor: pointer;
     }
     .fontRed {
       color: red;
