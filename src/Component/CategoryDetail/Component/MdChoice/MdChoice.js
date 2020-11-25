@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./MdChoice.scss";
 import Pagination from "./Pagination";
-// import Unisex from
 
 class MdChoice extends Component {
   constructor() {
@@ -19,6 +18,7 @@ class MdChoice extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
+        console.log(res);
         this.setState({
           mdChoiceList: res.mdchoice_list,
         });
@@ -31,7 +31,6 @@ class MdChoice extends Component {
 
   fetchProduct = (e) => {
     const offset = e.target.dataset.idx;
-    // console.log(e.target.dataset.idx);
     fetch(`http://10.58.4.75:8000/products/mdchoice/${offset}`)
       .then((res) => res.json())
       .then((res) => {
@@ -42,9 +41,7 @@ class MdChoice extends Component {
       });
   };
 
-  handleMenuTab = (e) => {
-    // console.log(e);
-  };
+  handleMenuTab = (e) => {};
 
   render() {
     const { mdChoiceList, activePage } = this.state;
