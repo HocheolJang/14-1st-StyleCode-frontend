@@ -3,7 +3,15 @@ import "./ProductTable.scss";
 
 class ProductTable extends Component {
   render() {
-    const { cartList, handleMinusBtn, handlePlusBtn } = this.props;
+    const {
+      cartList,
+      handleMinusBtn,
+      handlePlusBtn,
+      handleDeleteItemBtn,
+      handleCheckBox,
+    } = this.props;
+    // console.log(cartList.isChecked);
+
     return (
       <>
         <div className="productTableContainer">
@@ -25,7 +33,11 @@ class ProductTable extends Component {
                       <div className="orderedProduct">
                         <div className="orderedProductLeft">
                           <div className="checkboxContainer">
-                            <input type="checkbox" id={idx} />
+                            <input
+                              type="checkbox"
+                              checked={item.isChecked}
+                              onChange={() => handleCheckBox(item)}
+                            />
                             <label for={idx} />
                           </div>
                           <div className="productImgContainer">
@@ -40,8 +52,8 @@ class ProductTable extends Component {
                             <p>{item.product_title}</p>
                           </div>
                           <div className="productOptionContainer">
-                            <span className="color">{item.color}</span>
-                            <span className="size">({item.size})</span>
+                            <span>{item.color}</span>
+                            <span>({item.size})</span>
                           </div>
                           <div className="controlQuantityContainer">
                             <button onClick={() => handleMinusBtn(item)}>
@@ -81,7 +93,12 @@ class ProductTable extends Component {
                     </td>
                     <td className="controlOrderBtnBox">
                       <button className="orderNowBtn">바로주문</button>
-                      <button className="deleteItemBtn">삭제</button>
+                      <button
+                        className="deleteItemBtn"
+                        onClick={() => handleDeleteItemBtn(item)}
+                      >
+                        삭제
+                      </button>
                     </td>
                   </tr>
                   <tr className="totalPrice">

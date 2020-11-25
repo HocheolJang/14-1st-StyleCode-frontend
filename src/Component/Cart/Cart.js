@@ -14,11 +14,13 @@ class Cart extends Component {
     this.state = {
       cartList: [],
       isChecked: true,
+      isAllChecked: true,
     };
   }
 
   componentDidMount() {
-    fetch("http://10.58.1.162:8000/carts/1")
+    // fetch("http://10.58.1.162:8000/carts/1")
+    fetch("/data/cartItem.json")
       .then((res) => res.json())
       .then((res) => {
         const cartList = res.product.map((item) => {
@@ -37,14 +39,14 @@ class Cart extends Component {
     if (cartList[idx].quantity < 20) {
       cartList[idx].quantity++;
       this.setState({ cartList });
-      fetch("http://10.58.1.162:8000/carts/1", {
-        method: "PATCH",
+      // fetch("http://10.58.1.162:8000/carts/1", {
+      //   method: "POST",
 
-        body: JSON.stringify({
-          user_id: 1,
-          quantity: cartList.quantity,
-        }),
-      }).then((res) => console.log(res));
+      //   body: JSON.stringify({
+      //     user_id: 1,
+      //     quantity: cartList[idx].quantity,
+      //   }),
+      // });
     } else {
       alert("최대 주문 수량은 20개입니다");
     }
@@ -56,14 +58,52 @@ class Cart extends Component {
     if (cartList[idx].quantity > 1) {
       cartList[idx].quantity--;
       this.setState({ cartList });
+      // fetch("http://10.58.1.162:8000/carts/1", {
+      //   method: "POST",
+
+      //   body: JSON.stringify({
+      //     user_id: 1,
+      //     quantity: cartList[idx].quantity,
+      //   }),
+      // });
     } else {
       return;
     }
   };
 
+  handleDeleteItemBtn = (item) => {
+    // console.log(item.id);
+    // fetch("http://10.58.1.162:8000/carts/1", {
+    //   method: "DELETE",
+    //   body: JSON.stringify({
+    //     user_id: 1,
+    //     quantity: cartList[idx].quantity,
+    //   }),
+    // });
+  };
+
+  handleCheckAllBox = () => {
+    const { isAllChecked } = this.state;
+    this.setState({
+      isAllChecked: !isAllChecked,
+      // isChecked: !item.Checked,
+    });
+    console.log(isAllChecked);
+  };
+
+  handleCheckBox = (item) => {
+    // console.log(item);
+    this.setState({ isChecked: !item.Checked });
+  };
+
   render() {
-    const { cartList, isChecked } = this.state;
-    const { handlePlusBtn, handleMinusBtn } = this;
+    const { cartList, isChecked, allCheck } = this.state;
+    const {
+      handlePlusBtn,
+      handleMinusBtn,
+      handleDeleteItemBtn,
+      handleCheckBox,
+    } = this;
 
     return (
       <>
@@ -82,7 +122,11 @@ class Cart extends Component {
               <div className="cartContainer">
                 <div className="header">
                   <div className="headerLeft">
-                    <input type="checkbox" onClick="CheckAll" />
+                    <input
+                      type="checkbox"
+                      onChange="handleCheckAllBox"
+                      checked={allCheck}
+                    />
                     <span onClick="checkAll">전체선택</span>
                   </div>
                   <div className="headerRight">
@@ -95,6 +139,8 @@ class Cart extends Component {
                     handleMinusBtn={handleMinusBtn}
                     cartList={cartList}
                     isChecked={isChecked}
+                    handleDeleteItemBtn={handleDeleteItemBtn}
+                    handleCheckBox={handleCheckBox}
                   />
                 ) : (
                   <EmptyTable />
