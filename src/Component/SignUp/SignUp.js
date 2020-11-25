@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import "./SignUp.scss";
-import "../../Styles/reset.scss";
-import "../../Styles/common.scss";
-
-// import Checkbox from "../SignUp/Component/Checkbox";
-// import { getRoles } from "@testing-library/react";
 
 class SignUp extends Component {
   constructor() {
@@ -41,10 +36,6 @@ class SignUp extends Component {
         });
       });
   };
-
-  // handleChange = (e) => {
-  //   this.setState({ value: e.target.value });
-  // };
 
   handleIdChange = (e) => {
     this.setState({ id: e.target.value });
@@ -119,10 +110,7 @@ class SignUp extends Component {
   }
 
   render() {
-    // console.log(this.state.birth_date);
-    // console.log(this.state.gender_id);
-    const { year, month, day } = this.state;
-    console.log(this.state.password);
+    const { year, month, day, id, password } = this.state;
     return (
       <div className="SignUp">
         <div className="main">
@@ -247,12 +235,7 @@ class SignUp extends Component {
                 <div>
                   <p>생일</p>
                 </div>
-                <select
-                  className="year"
-                  // value={this.state.value}
-                  onChange={this.handleYearChange}
-                  // name="year"
-                >
+                <select className="year" onChange={this.handleYearChange}>
                   {year.map((YEAR) => (
                     <option key={YEAR.key} value={YEAR.value}>
                       {YEAR.value}
@@ -311,7 +294,7 @@ class SignUp extends Component {
               <button
                 className="alldone-button"
                 onClick={this.handleClick}
-                // onKeyUp={this.handleOnkeyUp}
+                // onKeyUp={this.handleOnkeyUp} (필요한 부분이라 삭제하지 않고 나두었습니다.)
               >
                 다 했어요
               </button>
