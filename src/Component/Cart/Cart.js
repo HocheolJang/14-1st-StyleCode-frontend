@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Cart.scss";
+
 import EmptyTable from "./Component//EmptyTable/EmptyTable";
 import ProductTable from "./Component/ProductTable/ProductTable";
 import FillAsidebar from "./Component/Asidebar/FillAsidebar";
 import EmptyAsidebar from "./Component/Asidebar/EmptyAsidebar";
-// import Navbar from "../../Component/Navbar/NavbarStore/"
 import Footer from "./Component/Footer/Footer";
+import "./Cart.scss";
 
-// const API =
 class Cart extends Component {
   constructor() {
     super();
@@ -62,7 +61,6 @@ class Cart extends Component {
 
     return (
       <>
-        {/* <Navbar /> */}
         <div className="cart">
           <div className="allContainer">
             <div className="headContainer">
