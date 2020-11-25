@@ -3,15 +3,23 @@ import "../../ProductDetail.scss";
 import "../../../../Styles/common.scss";
 import "../../../../Styles/reset.scss";
 import Select from "./Select/Select";
+import Modal from "react-modal";
 
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      modalIsOpen: false,
+      setIsOpen: false,
+    };
   }
+  openModal = () => {
+    this.setState({ setIsOpen: true });
+  };
 
   render() {
     const { productdetail } = this.props;
+    const { modalIsOpen, setModalIsOpen } = this.state;
 
     console.log(this.state.option1);
     return (
@@ -38,14 +46,23 @@ class Header extends Component {
                   {productdetail[1]?.sale * 100}%
                 </span>
                 <span className="discount-price">
-                  {productdetail[1]?.price}
+                  {productdetail[1]?.price?.toLocaleString()}
                 </span>
                 <span className="price-unit">원</span>
-                <span className="origin-price">{productdetail[1]?.price}</span>
+                <span className="origin-price">
+                  {productdetail[1]?.price?.toLocaleString()}
+                </span>
               </div>
-              <button className="header-middle-info-pricebox-coupon">
+              <button
+                className="header-middle-info-pricebox-coupon"
+                onClick={this.openModal}
+              >
                 <span>쿠폰다운</span>
               </button>
+              <Modal isOpen={this.state.setIsOpen}>
+                <h2>Modal title</h2>
+                <p>Modal body</p>
+              </Modal>
             </div>
             <div className="header-middle-info-like">
               <span className="like">좋아요</span>

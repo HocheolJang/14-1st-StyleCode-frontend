@@ -72,19 +72,42 @@ class Select extends Component {
     this.props.history.push("/");
   };
 
-  clickHandler = () => {};
+  handleAddtoCart = () => {
+    const { color, size, number } = this.state;
+    fetch("", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: localStorage.getItem("token"),
+      },
+      body: JSON.stringify({
+        //product_id: id
+        //product_size: size
+        //product_color: color
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("백엔드 콜", res);
+      });
+  };
 
   //필요한 정보를 카트에 넣어주어야 한다.
   // id, 개수, 날짜 정보,
 
   render() {
+    console.log(this.state.orderBox);
+    console.log(this.state.color);
+    console.log(this.state.size);
+    console.log(this.state.number);
+
     const { productdetail } = this.props;
     const { SIZE, COLOR, number } = this.state;
     // console.log(this.props.productdetail[0].id);
 
     // console.log(productdetail);
-    console.log(this.state.COLOR[1].value);
-    console.log(this.props.productdetail[0].price);
+    // console.log(this.state.COLOR[1].value);
+    // console.log(this.props.productdetail[0].price);
 
     return (
       <div>
@@ -127,7 +150,7 @@ class Select extends Component {
         <div className="header-middle-info-orderbox-price">
           총 금액
           <span>
-            {(this.state.orderBox && this.state.orderBox).toLocaleString(2)}
+            {(this.state.orderBox && this.state.orderBox).toLocaleString()}
           </span>
         </div>
 
