@@ -7,9 +7,9 @@ import Slider from "react-slick";
 
 class ProductReview extends Component {
   render() {
-    const { productdetail } = this.props;
+    const { ootd } = this.props.productdetail;
     const settings = {
-      dots: true,
+      dots: false,
       autoplay: true,
       autoplaySpeed: 2000,
       infinite: true,
@@ -18,7 +18,9 @@ class ProductReview extends Component {
       slidesToScroll: 1,
       arrows: true,
     };
-    // console.log(productdetail);
+    // console.log(productdetail.ootd);
+
+    console.log("productdetail", ootd);
     return (
       <article className="article-product-review">
         <div className="article-product-review-title">
@@ -26,17 +28,12 @@ class ProductReview extends Component {
           <span className="product-review-number">285</span>
         </div>
         <div className="article-product-review-totalimgbox">
+          {/* <ProductReviewImgbox productdetail={productdetail} /> */}
           <Slider {...settings}>
-            {productdetail.map((product) => (
-              <ProductReviewImgbox
-                key={product.id}
-                id={product.id}
-                contentImg={product.productImg}
-                authorImg={product.authorImg}
-                author={product.author}
-                comment={product.comment}
-              />
-            ))}
+            {ootd &&
+              ootd.map((product, idx) => (
+                <ProductReviewImgbox key={idx} ootd={product} />
+              ))}
           </Slider>
         </div>
         <div className="article-product-review-buttonbox">

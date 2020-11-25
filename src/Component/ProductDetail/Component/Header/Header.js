@@ -20,21 +20,22 @@ class Header extends Component {
   render() {
     const { productdetail } = this.props;
     const { modalIsOpen, setModalIsOpen } = this.state;
+    // console.log(productdetail);
 
-    console.log(this.state.option1);
+    // console.log(this.state.option1);
     return (
       <header>
         <div className="header-top">
           <div className="header-top-title">
             <p>단독상품</p>
-            <p>{productdetail[1]?.description}</p>
+            <p>{productdetail?.headerTopTitle}</p>
           </div>
         </div>
         <div className="header-middle">
           <div className="header-middle-imgbox">
             <img
               className="header-middle-img"
-              src={productdetail[1]?.productImg}
+              src={productdetail?.headerMiddleImg}
               alt="productImg"
             ></img>
           </div>
@@ -43,14 +44,14 @@ class Header extends Component {
             <div className="header-middle-info-pricebox">
               <div className="header-middle-info-pricebox-price">
                 <span className="discount">
-                  {productdetail[1]?.sale * 100}%
+                  {productdetail?.discount * 100}%
                 </span>
                 <span className="discount-price">
-                  {productdetail[1]?.price?.toLocaleString()}
+                  {productdetail?.discountPrice?.toLocaleString()}
                 </span>
                 <span className="price-unit">원</span>
                 <span className="origin-price">
-                  {productdetail[1]?.price?.toLocaleString()}
+                  {productdetail?.originPrice?.toLocaleString()}
                 </span>
               </div>
               <button
@@ -66,13 +67,15 @@ class Header extends Component {
             </div>
             <div className="header-middle-info-like">
               <span className="like">좋아요</span>
-              <span className="like-number">26,396</span>
+              <span className="like-number">{productdetail?.likeNumber}</span>
               <span className="review">후기</span>
-              <span className="review-number">280</span>
+              <span className="review-number">
+                {productdetail?.reviewNumber}
+              </span>
             </div>
             <div className="header-middle-info-mile">
               <span className="mile">적립 단추</span>
-              <span className="mile-number">599</span>
+              <span className="mile-number">{productdetail?.mile}</span>
             </div>
             <div className="header-middle-info-delivery">
               <span className="delivery">무료배송</span>
@@ -80,24 +83,25 @@ class Header extends Component {
             </div>
             <Select
               productdetail={productdetail}
-              id={productdetail.id}
-              price={productdetail.price}
-              sale={productdetail.sale}
+              // id={productdetail.id}
+              colors={productdetail.colors}
+              sizes={productdetail.sizes}
+              stocks={productdetail.stocks}
             />
           </div>
         </div>
         <div className="header-bottom">
           <img
             className="header-bottom-brand-img"
-            src={productdetail[1]?.productImg}
+            src={productdetail?.headerBottomImg}
             alt="header-bottom-img"
           ></img>
           <div className="header-bottom-brand">
             <p className="header-bottom-brand-title">
-              {productdetail[1]?.productName}
+              {productdetail?.headerBottomBrand}
             </p>
             <p className="header-bottom-brand-number">
-              {productdetail[1]?.follower}
+              {productdetail?.brand_product_count}
             </p>
           </div>
         </div>

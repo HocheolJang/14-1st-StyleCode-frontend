@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "../../../../ProductDetail/ProductDetail.scss";
-import "../../../../../Styles/common.scss";
-import "../../../../../Styles/reset.scss";
 
 class ProductInfo extends Component {
   constructor() {
@@ -14,6 +12,7 @@ class ProductInfo extends Component {
 
   render() {
     const { productdetail } = this.props;
+    console.log(productdetail.articleProductDetailImg);
     return (
       <div>
         <article className="article-product-detail">
@@ -29,7 +28,7 @@ class ProductInfo extends Component {
           <div className="article-product-detail-img-box">
             <img
               className="article-product-detail-img"
-              src="images/testImageInProductdetail.jpeg"
+              src={productdetail?.articleProductDetailImg}
               alt="article-product-detail-img"
             ></img>
           </div>

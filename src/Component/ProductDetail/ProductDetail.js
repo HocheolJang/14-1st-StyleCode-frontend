@@ -16,19 +16,21 @@ class ProductDetail extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/productdetail.json", {
+    fetch("http://10.58.1.162:8000/products/1", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((res) => {
+        // console.log(res);
         this.setState(
-          { productdetail: res.productlist }
+          { productdetail: res.product }
           // console.log(this.state.productdetail)
         );
       });
   }
 
   render() {
+    // console.log(this.state.productdetail);
     return (
       <div className="ProductDetail">
         <nav></nav>

@@ -15,18 +15,18 @@ class Select extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      COLOR: [
-        { id: 0, value: "default", label: "[컬러]를 선택하세요." },
-        { id: 1, value: "블랙", label: "블랙" },
-        { id: 2, value: "옐로우", label: "옐로우" },
-        { id: 3, value: "그레이", label: "그레이" },
-      ],
-      SIZE: [
-        { id: 0, value: "default", label: "[사이즈]를 선택하세요." },
-        { id: 1, value: "Small", label: "Small" },
-        { id: 2, value: "Medium", label: "Medium" },
-        { id: 3, value: "Large", label: "Large" },
-      ],
+      // COLOR: [
+      //   { id: 0, value: "default", label: "[컬러]를 선택하세요." },
+      //   { id: 1, value: "블랙", label: "블랙" },
+      //   { id: 2, value: "옐로우", label: "옐로우" },
+      //   { id: 3, value: "그레이", label: "그레이" },
+      // ],
+      // SIZE: [
+      //   { id: 0, value: "default", label: "[사이즈]를 선택하세요." },
+      //   { id: 1, value: "Small", label: "Small" },
+      //   { id: 2, value: "Medium", label: "Medium" },
+      //   { id: 3, value: "Large", label: "Large" },
+      // ],
       orderBox: [],
       item: [],
       number: 1,
@@ -45,7 +45,7 @@ class Select extends Component {
     this.setState({ size: e.target.value });
     // let orderBox2 = [...orderBox, this.props.productdetail[1].price];
     this.setState({
-      orderBox: /*orderBox2*/ this.props.productdetail[1].price * number,
+      orderBox: /*orderBox2*/ this.props.productdetail?.discountPrice * number,
     });
     this.setState({ number: number });
 
@@ -55,7 +55,7 @@ class Select extends Component {
   handleRemoveChange = (e) => {
     const { orderBox, number } = this.state;
     this.setState({
-      orderBox: this.props.productdetail[1].price * (number - 1),
+      orderBox: this.props.productdetail?.discountPrice * (number - 1),
     });
     this.setState({ number: number - 1 });
   };
@@ -63,7 +63,7 @@ class Select extends Component {
   handlePlusChange = (e) => {
     const { orderBox, number } = this.state;
     this.setState({
-      orderBox: this.props.productdetail[1].price * (number + 1),
+      orderBox: this.props.productdetail?.discountPrice * (number + 1),
     });
     this.setState({ number: number + 1 });
   };
@@ -96,10 +96,10 @@ class Select extends Component {
   // id, 개수, 날짜 정보,
 
   render() {
-    console.log(this.state.orderBox);
-    console.log(this.state.color);
-    console.log(this.state.size);
-    console.log(this.state.number);
+    // console.log(this.state.orderBox);
+    // console.log(this.state.color);
+    // console.log(this.state.size);
+    // console.log(this.state.number);
 
     const { productdetail } = this.props;
     const { SIZE, COLOR, number } = this.state;
@@ -108,38 +108,45 @@ class Select extends Component {
     // console.log(productdetail);
     // console.log(this.state.COLOR[1].value);
     // console.log(this.props.productdetail[0].price);
-
+    console.log("칼라", productdetail.colors);
+    console.log("사이즈", productdetail.sizes);
     return (
       <div>
         <select
           className="header-middle-info-style"
           // value={this.state.value}
           onChange={this.handleColorChange}
-          defaultValue={COLOR[0].label}
+          // defaultValue={productdetail[0]?.colors}
           // options={COLOR}
         >
-          {COLOR.map((color) => (
-            <option
-              key={color.id}
-              value={color.value}
-              label={color.label}
-            ></option>
-          ))}
+          {productdetail.colors &&
+            productdetail.colors.map((color, id) => (
+              <option
+                key={id}
+                // value={color.value}
+                // label="컬러"
+              >
+                {color}
+              </option>
+            ))}
         </select>
         <select
           className="header-middle-info-size"
           // value={this.state.value}
           // onChange={this.handleChange}
-          defaultValue={SIZE[0].label}
+          // defaultValue={SIZE[0].label}
           onChange={this.handleSizeChange}
         >
-          {SIZE.map((size) => (
-            <option
-              key={size.id}
-              value={size.value}
-              label={size.label}
-            ></option>
-          ))}
+          {productdetail.sizes &&
+            productdetail.sizes.map((size, id) => (
+              <option
+                key={id}
+                // value={size.value}
+                // label="사이즈"
+              >
+                {size}
+              </option>
+            ))}
         </select>
         <div className="header-middle-info-orderbox-colorsize">
           옵션
