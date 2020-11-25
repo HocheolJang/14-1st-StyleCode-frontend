@@ -17,12 +17,17 @@
 
 ## 핵심 기능 Key Feature
 
-- 메인화면
-- 회원가입 / 로그인 (토큰)
-- 상품 상세 페이지 / 재고별 수량 표기
-- 장바구니 페이지 / 기능
-- 소셜 기능(#OOTD)
-- 검색 기능(상품명, 브랜드)
+### Store ( + 기능 )
+- 메인화면 
+- 회원가입 페이지 / 로그인 ( 회원가입 데이터 넣기, 로그인 기능 구현 - 쿠키발급)
+- (1차 / 2차) 카테고리 페이지 (Get Data , Sorting기능, pagination기능) 
+- 상품 상세 페이지 (옵션 선택 기능, 장바구니에 data 추가)
+- 장바구니 페이지 (수량조절기능 / 가격 계산 / Post Data)
+- 검색 결과 페이지 (ex.브랜드 검색시 결과 페이지)
+
+### OOTD
+- 메인페이지 (무한스크롤링, 핀터레스트 레이아웃, 좋아요, 댓글 추가기능)
+- 모달창 (좋아요, 댓글, 팔로우)
 
 ## 사용 How To Use
 
@@ -37,16 +42,18 @@
 
 - [스타일쉐어](https://www.styleshare.kr/)
 - [unsplash.com](https://unsplash.com/)
-- [API 사용처](http://google.com)
+- [React slick](https://react-slick.neostack.com/)
+- [Masonry Layout](https://masonry.desandro.com/layout.html)
+- [Icon Finder](https://www.iconfinder.com/)
+
 
 ## Links
 
 - Project homepage : 주소 나오면 주소까지 올리겠습니다
-- Repository: https://github.com/wecode-bootcamp-korea/14-1st-StyleCode-frontend/
-- 관련 프로젝트
-  - 프로젝트 이름 : (예시) https://github.com/ohahohah/readme-template
-  - 프로젝트 이름 : (예시) https://github.com/someones/awesome-project/
+- Repository
+  - [프론트엔드](https://github.com/wecode-bootcamp-korea/14-1st-StyleCode-frontend/)
+  - [백엔드](https://github.com/wecode-bootcamp-korea/14-1st-StyleCode-backend)
 
 ## License
 
-XYZ license를 준수합니다. `LICENSE`에서 자세한 정보를 확인할 수 있습니다.
+**모든 사진은 저작권이 없는 사진을 사용했습니다.**
