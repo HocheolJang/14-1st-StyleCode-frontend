@@ -1,0 +1,34 @@
+.user {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 23px;
+  .container {
+    display: flex;
+    width: 620px;
+    height: 118px;
+    border: 1px solid #dadde0;
+    margin-bottom: 20px;
+    .profileImgBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+      height: 118px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .profileNameBox {
+      display: flex;
+      align-items: center;
+      width: 60%;
+    }
+    .followBtnBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+    }
+  }
+}

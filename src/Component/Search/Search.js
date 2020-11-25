@@ -1,11 +1,54 @@
 import React, { Component } from "react";
 import "./Search.scss";
 import Product from "./Component/Product/Product";
+import User from "./Component/User/User";
 // import Navbar from ""
 // import Footer from ""
 
 class Search extends Component {
+  constructor() {
+    super();
+    this.state = {
+      brandList: [],
+      productList: [],
+      ootdList: [],
+      userList: [],
+      productCount: 0,
+      ootdCount: 0,
+      userCount: 0,
+    };
+  }
+
+  getSearchData = () => {
+    fetch("http://10.58.1.162:8000/search?keyword=%EB%82%98%EC%9D%B4%ED%82%A4")
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res.results);
+        this.setState({
+          brandList: res.results.brands,
+          productList: res.results.products,
+          ootdList: res.results.ootds,
+          usersList: res.results.users,
+          productCount: res.results.product_count,
+          ootdCount: res.results.ootd_count,
+          userCount: res.results.user_count,
+        });
+      });
+  };
+
+  componentDidMount() {
+    this.getSearchData();
+  }
+
   render() {
+    const {
+      productList,
+      productCount,
+      usersList,
+      ootdCount,
+      userCount,
+    } = this.state;
+
     return (
       <div className="search">
         <div>{/* 네브바 컴포넌트 받아서 처리 */}</div>
@@ -54,34 +97,41 @@ class Search extends Component {
               </div>
             </div>
           </div>
+          <span className="subtitle">상품</span>
+          <span className="count">{productCount}</span>
           <div className="product">
-            <span className="subtitle">상품</span>
-            <span className="count">7054</span>
             <div className="productListContainer">
-              <Product />
+              <Product productList={productList} />
             </div>
-            <footer>
-              <buttonContainer>모두보기</buttonContainer>
-            </footer>
+            <div className="buttonContainer">
+              <button className="showAll">모두보기</button>
+            </div>
           </div>
-          <div className="style">
-            <p className="subtitle">스타일</p>
-            <span className="count">스타일갯수(데이터받기)</span>
+          <div className="ootdSection">
+            <span className="subtitle">스타일</span>
+            <span className="count">{ootdCount}</span>
             <div>{/* ootd 컴포넌트 받아서 map으로 처리 */}</div>
-            <buttonContainer>
+            <div className="buttonContainer">
               <button className="showAll">모두보기</button>
-            </buttonContainer>
+            </div>
           </div>
-          <div className="user">
-            <p className="subtitle">사용자</p>
-            <span className="count">사용자수(데이터받기)</span>
-            <div>{/* 데이터 받아서 map으로 처리 */}</div>
-            <buttonContainer>
+          <span className="subtitle">사용자</span>
+          <span className="count">{userCount}</span>
+          <div className="userSection">
+            <div>
+              <User usersList={usersList} />
+            </div>
+            <div className="buttonContainer">
               <button className="showAll">모두보기</button>
-            </buttonContainer>
+            </div>
           </div>
         </div>
-        <div>{/* 메인 푸터 컴포넌트 받아서 처리 */}</div>
+        {/* 메인 푸터 컴포넌트 받아서 처리 */}
+        <div>
+          <span>
+            푸우ㅜㅜㅜㅜㅜㅜㅜ터
+          </span>
+        </div>
       </div>
     );
   }
