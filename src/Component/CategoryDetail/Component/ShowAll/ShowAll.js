@@ -15,7 +15,7 @@ class ShowAll extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.4.75:8000/products?sort=1&second=1", {
+    fetch("http://10.58.4.75:8000/products?sort=0&second=1", {
       method: "GET",
     })
       .then((res) => res.json())
