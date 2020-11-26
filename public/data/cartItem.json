@@ -1,0 +1,40 @@
+{
+  "product": [
+    {
+      "id": 0,
+      "product_image": "images/cart/cart0.jpg",
+      "alt": "상품이미지",
+      "product_title": "[카메라보호]방탄 케이스 #가드 핏 #아이폰12 시리즈 (추가) 만약 이름이 길다면 이렇게 될 것같구여",
+      "color": "무슨색으로 하져",
+      "size": "S",
+      "quantity": 1,
+      "product_price": 4800,
+      "discount_price": 2900,
+      "shipping_fee": 2500
+    },
+    {
+      "id": 1,
+      "product_image": "images/cart/cart1.jpg",
+      "alt": "상품이미지",
+      "product_title": "장바구니 상품 예시 2번이 들어갑니다",
+      "color": "아주 예쁜 색상",
+      "size": "M",
+      "quantity": 5,
+      "product_price": 48400,
+      "discount_price": 42320,
+      "shipping_fee": 0
+    },
+    {
+      "id": 2,
+      "product_image": "images/cart/cart2.jpg",
+      "alt": "상품이미지",
+      "product_title": "호철이네 떡볶이 3번입니다 ",
+      "color": "Red",
+      "size": "L",
+      "quantity": 3,
+      "product_price": 12345,
+      "discount_price": 10000,
+      "shipping_fee": 1900
+    }
+  ]
+}

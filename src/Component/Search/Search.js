@@ -23,7 +23,6 @@ class Search extends Component {
     fetch("http://10.58.6.106:8000/search?keyword=%EB%82%98%EC%9D%B4%ED%82%A4")
       .then((res) => res.json())
       .then((res) => {
-        console.log(res.results);
         this.setState({
           brandList: res.results.brands,
           productList: res.results.products,
@@ -105,14 +104,6 @@ class Search extends Component {
             <div className="productListContainer">
               <Product productList={productList} />
             </div>
-            <div className="buttonContainer">
-              <button className="showAll">모두보기</button>
-            </div>
-          </div>
-          <div className="ootdSection">
-            <span className="subtitle">스타일</span>
-            <span className="count">{ootdCount}</span>
-            <div>{/* ootd 컴포넌트 받아서 map으로 처리 */}</div>
             <div className="buttonContainer">
               <button className="showAll">모두보기</button>
             </div>
