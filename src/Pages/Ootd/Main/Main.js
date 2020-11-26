@@ -1,14 +1,8 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-const-assign */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-useless-constructor */
 import React, { Component } from 'react';
 import NavbarOotd from '../../../Common/Navbar/NavbarOotd/NavbarOotd';
 import CardList from './CardList';
 import Modal from './Modal';
 import InfiniteScroll from 'react-infinite-scroller';
-import Paginaton from './Pagination';
 import './Main.scss';
 
 const API = "http://192.168.219.101:8000";
@@ -82,7 +76,7 @@ class Main extends Component {
   }
 
   render() {
-    const { cards, isModal, modalData, commentData, getData, gutter } = this.state;
+    const { cards, isModal, modalData, commentData, getData } = this.state;
     return (
 
       <div style={{height:"935px",overflow:"auto"}}>

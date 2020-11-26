@@ -13,6 +13,7 @@ import NavbarOotd from "./Common/Navbar/NavbarOotd/NavbarOotd";
 import NavbarStore from "./Common/Navbar/NavbarStore/NavbarStore";
 import Main from "./Pages/Ootd/Main/Main";
 import Modal from "./Pages/Ootd/Main/Modal";
+// import Login from "./Component/Login/Login";
 
 class Routes extends React.Component {
   render() {
@@ -26,12 +27,9 @@ class Routes extends React.Component {
           <Route exact path="/Ootds/Comment" component={Comment} />
           <Route exact path="/NavbarOotd" component={NavbarOotd} />
           <Route exact path="/NavbarStore" component={NavbarStore} />
+          <Route exact path="/NavbarOotd" component={NavbarOotd} />
+          <Route exact path="/NavbarStore" component={NavbarStore} />
           <Route exact path="/Login" component={Login} />
-          <Route exact path="/SignUp" component={SignUp} />
-          <Route exact path="/Cart" component={Cart} />
-          <Route exact path="/ProductDetail" component={ProductDetail} />
-          <Route exact path="/SearchPage" component={SearchPage} />
-          <Route exact path="/Unisex" component={Unisex} />
         </Switch>
       </Router>
     );

@@ -84,6 +84,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -123,8 +124,14 @@ table {
   border-spacing: 0;
 }
 
-html,
-body,
-#id {
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
   height: 100%;
 }
