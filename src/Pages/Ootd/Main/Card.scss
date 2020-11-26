@@ -1,0 +1,218 @@
+.contents {
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+  border: 1px solid #e8ebed;
+  border-radius: 6px;
+  opacity: 1;
+  color: #26282b;
+  font-family: "Helvetica", "Arial", "Apple SD Gothic Neo", "Nanum Gothic",
+    "Malgun Gothic", "DotumChe", "Dotum", sans-serif;
+  line-height: 1.3;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .contentImgContainer {
+    position: relative;
+
+    .contentImg {
+      width: 100%;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .optionContainer {
+      position: absolute;
+      bottom: 1%;
+      display: flex;
+
+      li {
+        width: 55px;
+        padding: 10px;
+      }
+
+      .like {
+        width: 22px;
+        height: 22px;
+        color: red;
+        cursor: pointer;
+      }
+
+      .dislike {
+        width: 22px;
+        height: 22px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .comment {
+        width: 22px;
+        height: 22px;
+        color: white;
+      }
+
+      .share {
+        width: 22px;
+        height: 22px;
+        color: white;
+      }
+
+      .more {
+        width: 22px;
+        height: 22px;
+        color: white;
+      }
+    }
+
+    .someImg {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      bottom: 91%;
+      right: 5%;
+      color: white;
+    }
+  }
+
+  .contentTextWrapper {
+    width: 100%;
+    height: auto;
+
+    .contentText {
+      padding: 10px 10px 12px;
+
+      .productWrapper {
+        position: relative;
+        display: flex;
+
+        .productSale {
+          position: absolute;
+          bottom: 70%;
+          background-color: #ff6699;
+          color: white;
+          font-size: 13px;
+          font-weight: bold;
+          border-radius: 3px 0 3px 0;
+          cursor: pointer;
+        }
+
+        .productImg {
+          width: 56px;
+          height: 56px;
+          cursor: pointer;
+          border: 0px solid #e8ebed;
+          border-radius: 6px;
+        }
+
+        .productInfo {
+          padding-left: 8px;
+          align-items: center;
+          .productName {
+            line-height: 1.3;
+            font-size: 14px;
+            font-weight: bold;
+            color: #26282b;
+            cursor: pointer;
+          }
+
+          .priceWrapper {
+            height: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 25px;
+            .price {
+              color: #4adaaf;
+              padding-right: 4px;
+            }
+
+            .originPrice {
+              color: #9ea4aa;
+            }
+          }
+        }
+      }
+    }
+
+    .authorWrapper {
+      display: inline-flex;
+      font-size: 12px;
+      line-height: 1.3;
+      .authorImgWrapper {
+        padding: 10px 10px 12px;
+        .authorImg {
+          width: 30px;
+          height: 30px;
+          border: 0px solid white;
+          border-radius: 50%;
+        }
+      }
+
+      .authorInfoWrapper {
+        padding: 10px 10px 3px 3px;
+
+        .authorInfo {
+          .author {
+            font-weight: bold;
+            overflow: hidden;
+            cursor: pointer;
+          }
+
+          .uploadDate {
+            margin-block-start: 1.6em;
+            margin-block-end: 1.6em;
+            color: #9ea4aa;
+            padding-left: 5%;
+          }
+        }
+
+        .authorDescription {
+          max-height: 45px;
+          overflow: hidden;
+          margin-top: 3px;
+          color: #9ea4aa;
+        }
+
+        .authorPopularity {
+          height: 15px;
+          color: #9ea4aa;
+          margin-top: 3px;
+        }
+
+        .authorPopularity {
+          padding-right: 8px;
+          font-size: 12px;
+          padding-right: 10px;
+          svg {
+            width: 12px;
+            height: 12px;
+          }
+          .like {
+            color: #9ea4aa;
+            padding-right: 20px;
+          }
+
+          .likeNum {
+            padding-right: 5px;
+          }
+
+          .comment {
+          }
+
+          .commentNum {
+          }
+
+          .share {
+          }
+
+          .shareNum {
+          }
+        }
+      }
+    }
+  }
+}
