@@ -1,0 +1,130 @@
+{
+  "item": [
+    {
+      "id": 0,
+      "src0": "images/trend/trend0.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend1.jpg",
+      "alt1": "trend1",
+      "bullet": "onlyStyleCode",
+      "mainTitle0": "Only StyleCode",
+      "mainTitle1": "스타일코드 단독 상품",
+      "productCnt": 164
+    },
+    {
+      "id": 1,
+      "src0": "images/trend/trend2.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend3.jpg",
+      "alt1": "trend1",
+      "bullet": "untact",
+      "mainTitle0": "절대 놓치지마세요",
+      "mainTitle1": "블프 세일 ! 최대 50% 할인 !",
+      "productCnt": 50
+    },
+    {
+      "id": 2,
+      "src0": "images/trend/trend4.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend5.jpg",
+      "alt1": "trend1",
+      "bullet": "",
+      "mainTitle0": "어디든 잘 어울리는 핸드백 기획전",
+      "mainTitle1": "에코백부터 명품백까지",
+      "productCnt": 372
+    },
+    {
+      "id": 3,
+      "src0": "images/trend/trend6.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend7.jpg",
+      "alt1": "trend1",
+      "bullet": "winter",
+      "mainTitle0": "크리스마스 D-30",
+      "mainTitle1": "미리미리 준비하세요~",
+      "productCnt": 43
+    },
+    {
+      "id": 4,
+      "src0": "images/trend/trend8.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend9.jpg",
+      "alt1": "trend1",
+      "bullet": "winter",
+      "mainTitle0": "부츠의 계절이 돌아왔다",
+      "mainTitle1": "겨울에는 부츠만큼 든든한건 없다",
+      "productCnt": 213
+    },
+    {
+      "id": 5,
+      "src0": "images/trend/trend10.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend11.jpg",
+      "alt1": "trend1",
+      "bullet": "",
+      "mainTitle0": "겨울에도 꾸준히 관리하자",
+      "mainTitle1": "스포츠 의류 40% 할인",
+      "productCnt": 346
+    },
+    {
+      "id": 6,
+      "src0": "images/trend/trend12.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend13.jpg",
+      "alt1": "trend1",
+      "bullet": "onlyStyleCode",
+      "mainTitle0": "얼어 죽어도 코트",
+      "mainTitle1": "BEST 코트 다 모아보기",
+      "productCnt": 4572
+    },
+    {
+      "id": 7,
+      "src0": "images/trend/trend14.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend15.jpg",
+      "alt1": "trend1",
+      "bullet": "untact",
+      "mainTitle0": "Black CodeDay SALE",
+      "mainTitle1": "뷰티 소품 ~83% 할인",
+      "productCnt": 823
+    },
+    {
+      "id": 8,
+      "src0": "images/trend/trend16.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend17.jpg",
+      "alt1": "trend1",
+      "bullet": "",
+      "mainTitle0": "내 남자친구가 제발 ",
+      "mainTitle1": "이렇게만 입어준다면 좋겠다",
+      "productCnt": 823
+    },
+    {
+      "id": 9,
+      "src0": "images/trend/trend18.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend19.jpg",
+      "alt1": "trend1",
+      "bullet": "",
+      "mainTitle0": "나는 노란색이 제일 좋아!",
+      "mainTitle1": "최대 85% 할인",
+      "productCnt": 164
+    },
+    {
+      "id": 10,
+      "src0": "images/trend/trend20.jpg",
+      "alt0": "trend0",
+      "src1": "images/trend/trend21.jpg",
+      "alt1": "trend1",
+      "bullet": "onlyStyleCode",
+      "mainTitle0": "BEST of BEST !",
+      "mainTitle1": "지금 가장 핫한 옷들",
+      "productCnt": 164
+    }
+  ],
+  "event": {
+    "onlyStyleCode": "images/icon/onlystylecode.png",
+    "untact": "images/icon/untact.png",
+    "winter": "images/icon/winter.png"
+  }
+}
