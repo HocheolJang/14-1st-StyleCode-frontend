@@ -4,6 +4,7 @@ import Asidebar from "./Component/Asidebar/Asidebar";
 import Jumbotron from "./Component/Jumbotron/Jumbotron";
 import MdChoice from "./Component/MdChoice/MdChoice";
 import ShowAll from "./Component/ShowAll/ShowAll";
+import CartFooter from "../Cart/Component/Footer/CartFooter";
 import "./CategoryDetail.scss";
 
 class CategoryDetail extends Component {
@@ -19,7 +20,7 @@ class CategoryDetail extends Component {
             <ShowAll />
           </div>
         </div>
-        <span>푸터자리</span>
+        <CartFooter />
       </div>
     );
   }
