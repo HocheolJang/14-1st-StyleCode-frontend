@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Asidebar.scss";
 import { asidebarAPI } from "../../../../config";
 
@@ -21,75 +22,48 @@ class Asidedbar extends Component {
       });
   }
 
-  // showFilterDropdown = (e) => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     showDropdown: true,
-  //   });
-  // };
-
-  showDropdown = (e) => {
-    e.preventDefault();
-    this.setState({ hiddenDropdown: !this.state.hiddenDropdown });
-  };
-
   render() {
-    const { sidebarCategoryList, hiddenDropdown } = this.state;
-    const { showDropdown } = this;
+    const { sidebarCategoryList } = this.state;
+    const {
+      activeSecondCategory,
+      showDropdown,
+      hiddenDropdown,
+      hideDropdown,
+    } = this.props;
+
     return (
       <div className="asideContainer">
         <div className="categoriesList">
           <ul>
             {sidebarCategoryList.map((category, idx) => {
               return (
-                <li
-                  key={idx}
-                  onClick={showDropdown}
-                  id={category.id}
-                  // onMouseOver={filterDropdown}
-                  // onMouseOut={!filterDropdown}
-                >
-                  {category.categoryName}
-
-                  {/* <div className="filter">
-                    {showDropdown ? (
-                      <div className="showFilterDropDown">
-                        <ul className="dropdownContent">
-                          {sidebarCategoryList.map((category, idx) => {
-                            const subCategoriesList = [
-                              ...this.state.sidebarCategoryList,
-                            ];
-                            console.log(subCategoriesList);
-                            return (
-                              <li
-                                key={idx}
-                                onClick={showFilterDropdown}
-                                // onMouseOver={filterDropdown}
-                                // onMouseOut={!filterDropdown}
-                              >
-                                {category.categoryName}
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </div>
-                    ) : null}
-                  </div> */}
-                </li>
+                <Link to="/productDetail">
+                  <li
+                    data-idx={idx}
+                    key={idx}
+                    onMouseOver={showDropdown}
+                    onMouseOut={hideDropdown}
+                    // onClick={() => history.push("/tshirt")}
+                    id={category.id}
+                    className={activeSecondCategory === idx ? "active" : ""}
+                  >
+                    {category.categoryName}
+                  </li>
+                </Link>
               );
             })}
+            {/* {hiddenDropdown ? (
+              <div className={hiddenDropdown ? "activeDropDown" : ""}>
+                <ul>
+                  <li>반팔 티셔츠</li>
+                  <li>긴팔 티셔츠</li>
+                  <li>슬리브리스</li>
+                  <li>피케 티셔츠</li>
+                  <li>터틀넥 티셔츠</li>
+                </ul>
+              </div>
+            ) : null} */}
           </ul>
-          {showDropdown ? (
-            <div className={hiddenDropdown ? "active" : ""}>
-              <ul>
-                <li>반팔 티셔츠</li>
-                <li>긴팔 티셔츠</li>
-                <li>슬리브리스</li>
-                <li>피케 티셔츠</li>
-                <li>터틀넥 티셔츠</li>
-              </ul>
-            </div>
-          ) : null}
         </div>
       </div>
     );

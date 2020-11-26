@@ -17,7 +17,6 @@ class MdChoice extends Component {
     fetch(`${mdChoiceAPI}/0`)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         this.setState({
           mdChoiceList: res.mdchoice_list,
         });

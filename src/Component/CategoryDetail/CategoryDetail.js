@@ -8,12 +8,40 @@ import CartFooter from "../Cart/Component/Footer/CartFooter";
 import "./CategoryDetail.scss";
 
 class CategoryDetail extends Component {
+  constructor() {
+    super();
+    this.state = {
+      activeSecondCategory: 0,
+      hiddenDropdown: false,
+    };
+  }
+
+  showDropdown = (e) => {
+    this.setState({
+      activeSecondCategory: e.target.dataset.idx,
+      hiddenDropdown: true,
+    });
+  };
+  hideDropdown = (e) => {
+    this.setState({
+      // activeSecondCategory: e.target.dataset.idx,
+      hiddenDropdown: false,
+    });
+  };
+
   render() {
+    const { activeSecondCategory, hiddenDropdown } = this.state;
+    const { showDropdown, hideDropdown } = this;
     return (
-      <div className="categoryDetail">
+      <>
         <Navbar />
-        <div className="categoryContainer">
-          <Asidebar />
+        <div className="categoryDetail">
+          <Asidebar
+            activeSecondCategory={activeSecondCategory}
+            showDropdown={showDropdown}
+            hiddenDropdown={hiddenDropdown}
+            hideDropdown={hideDropdown}
+          />
           <div className="mainContainer">
             <CategoryJumbotron />
             <MdChoice />
@@ -21,7 +49,7 @@ class CategoryDetail extends Component {
           </div>
         </div>
         <CartFooter />
-      </div>
+      </>
     );
   }
 }
