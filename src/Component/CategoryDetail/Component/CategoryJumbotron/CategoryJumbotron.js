@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import "./Jumbotron.scss";
+import "./CategoryJumbotron.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { jumbotronAPI } from "../../../../config";
 
-class Jumbotron extends Component {
+class CategoryJumbotron extends Component {
   constructor() {
     super();
     this.state = {
@@ -46,7 +46,7 @@ class Jumbotron extends Component {
     const { jumbotronItem, jumbotronCurrentPage } = this.state;
     return (
       <div>
-        <div className="jumbotron">
+        <div className="categoryJumbotron">
           <Slider ref={this.slider} {...SETTING}>
             {jumbotronItem.map((item, idx) => {
               return (
@@ -112,4 +112,4 @@ const SETTING = {
   pauseOnHover: true,
 };
 
-export default Jumbotron;
+export default CategoryJumbotron;
