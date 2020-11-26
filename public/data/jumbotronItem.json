@@ -1,0 +1,81 @@
+{
+  "item": [
+    {
+      "id": 0,
+      "src": "images/jumbotron/jumbotron1.jpg",
+      "alt": "점보트론이미지",
+      "mainTitleClassName": "white",
+      "mainTitle0": "오.직.스.코",
+      "mainTitle1": "색조장인들",
+      "subTitleClassName": "white",
+      "subTitle0": "키스미 | 캔메이크 | 릴리바이레드",
+      "subTitle1": "색조장인의 브랜드의 깜짝특가 만나보기!"
+    },
+    {
+      "id": 1,
+      "src": "images/jumbotron/jumbotron7.jpg",
+      "alt": "점보트론이미지",
+      "mainTitleClassName": "white",
+      "mainTitle0": "매력이 가득한 도시",
+      "mainTitle1": "딱 한 달만 런던 살고싶다",
+      "subTitleClassName": "white",
+      "subTitle0": "제 버킷리스트중 하나에요",
+      "subTitle1": "언젠가 노트북 하나 들고 런던에 있겠죠?"
+    },
+    {
+      "id": 2,
+      "src": "images/jumbotron/jumbotron2.jpg",
+      "alt": "점보트론이미지",
+      "mainTitleClassName": "",
+      "mainTitle0": "누가 나를 이상하게",
+      "mainTitle1": "생각하면 어때?",
+      "subTitleClassName": "",
+      "subTitle0": "복잡한 세상 편하게 살자~",
+      "subTitle1": "지금은 나를 더 사랑해줄 때니까"
+    },
+    {
+      "id": 3,
+      "src": "images/jumbotron/jumbotron3.jpg",
+      "alt": "점보트론이미지",
+      "mainTitleClassName": "white",
+      "mainTitle0": "이렇게 좋은 날",
+      "mainTitle1": "저랑 같이 떠날래요?",
+      "subTitleClassName": "white",
+      "subTitle0": "지긋지긋한 코로나가 끝났어요",
+      "subTitle1": "참아왔던 여행을 떠나보아요 ~"
+    },
+    {
+      "id": 4,
+      "src": "images/jumbotron/jumbotron5.jpg",
+      "alt": "점보트론이미지",
+      "mainTitleClassName": "white",
+      "mainTitle0": "MD's PICK",
+      "mainTitle1": "뷰티 베스트 리뷰",
+      "subTitleClassName": "white",
+      "subTitle0": "11월 한 달 동안 가장 사랑 받았던",
+      "subTitle1": "3개의 브랜드의 베스트 리뷰 아이템 만나보기"
+    },
+    {
+      "id": 5,
+      "src": "images/jumbotron/jumbotron6.jpg",
+      "alt": "점보트론이미지",
+      "mainTitleClassName": "",
+      "mainTitle0": "저는 가끔 그래요",
+      "mainTitle1": "오늘은 더 잘 입고싶다",
+      "subTitleClassName": "",
+      "subTitle0": "그럴 때 있지 않아요?",
+      "subTitle1": "더 세련되게 입고싶을 때 좋은 옷"
+    },
+    {
+      "id": 6,
+      "src": "images/jumbotron/jumbotron0.jpg",
+      "alt": "점보트론이미지",
+      "mainTitleClassName": "white",
+      "mainTitle0": "신규 브랜드 런칭",
+      "mainTitle1": "할리데이비슨 !",
+      "subTitleClassName": "white",
+      "subTitle0": "이 겨울 우리들의 로망 ~ 오토바이",
+      "subTitle1": "이제는 당신이 탈 차례"
+    }
+  ]
+}
