@@ -143,7 +143,8 @@ class SignUp extends Component {
 
   render() {
     const { year, month, day, id, password } = this.state;
-    console.log(this.state.agree1);
+    // console.log(this.state.agree1);
+    console.log(this.state.agree2);
     return (
       <div className="SignUp">
         <div className="main">
