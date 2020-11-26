@@ -22,7 +22,7 @@ class Card extends Component {
     }
   }
 
-  API = `http://192.168.219.101:8000/ootds/${this.props.id}`;
+  API = `http://10.58.7.150:8000/ootds/${this.props.id}`;
 
    openModal = (e) => {
          fetch(this.API, {

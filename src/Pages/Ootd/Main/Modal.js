@@ -9,15 +9,28 @@ class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      followBtn: false,
       comment: "",
       comments:[],
       description: this.props.modalData?.modalData?.modalData?.description,
       res: [],
-      value: "",
+      isLikeBtn: false,
+      follower: '',
     }
   }
   num = 0;
+
+  handleClickLike = (e) => {
+    e.preventDefault();
+    if(this.state.isLikeBtn === false){
+      this.setState({
+        isLikeBtn: true,
+        follower: this.state.follower + 1,
+    })} else {
+      this.setState({
+        isLikeBtn: false,
+      follower: this.state.follower - 1,
+      })}
+  }
 
   followBtnActive = () => {
     if(this.state.followBtn) {
@@ -42,7 +55,7 @@ class Modal extends Component {
     })
   }
 
-  API = `http://192.168.219.101:8000/ootds/1/comments`;
+  API = `http://10.58.7.150:8000/ootds/1/comments`;
 
   handleKeyPress = (e) => {
     e.preventDefault();
@@ -50,7 +63,6 @@ class Modal extends Component {
       if(!this.state.comment) {
         e.preventDefault();
       } else {
-        this.setState({value: e.target.value})
         this.handleComment();
       }
     }
@@ -60,12 +72,12 @@ class Modal extends Component {
     e.preventDefault();
     fetch(this.API, {
       method: "POST",
-      headers: JSON.stringify({
-        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6Imh5dW5qYWUxMiJ9.JJVjkSxfn0e0mmzbZw5zH2xRkAg30FmIJFQfXm-GS4s"
-      }),
+      headers: {
+        'Authorization' : "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6Imh5dW5qYWUxMiJ9.JJVjkSxfn0e0mmzbZw5zH2xRkAg30FmIJFQfXm-GS4s"
+      },
       body: JSON.stringify({
-        content: this.state.value,
-        user_id: this.props.modalData?.modalData?.modalData?.id,
+        content: this.state.comment,
+        // user_id: this.props.modalData?.modalData?.modalData?.id,
       })
     }).then((res) => res.json())
     .then((res) => 
@@ -111,7 +123,7 @@ class Modal extends Component {
                   <div className="introduction">{modalData?.modalData?.modalData?.introdution}</div>
                 </div>
                 <div className="followBtnBox" >
-                  <svg className={followBtn? "followBtnActive":"followBtn"} onClick={this.followBtnActive} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 14.062V22H4a8 8 0 0 1 9-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm5.793 6.914l3.535-3.535 1.415 1.414-4.95 4.95-3.536-3.536 1.415-1.414 2.12 2.121z"></path></g></svg>
+                  <svg className={followBtn? "followBtnActive":"followBtn"} onClick={this.handleClickLike} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 14.062V22H4a8 8 0 0 1 9-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm5.793 6.914l3.535-3.535 1.415 1.414-4.95 4.95-3.536-3.536 1.415-1.414 2.12 2.121z"></path></g></svg>
                 </div>
               </div>
               <div className="authorDescription">

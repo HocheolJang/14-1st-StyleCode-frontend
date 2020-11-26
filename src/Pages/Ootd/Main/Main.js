@@ -5,7 +5,7 @@ import Modal from './Modal';
 import InfiniteScroll from 'react-infinite-scroller';
 import './Main.scss';
 
-const API = "http://192.168.219.101:8000";
+const API = "http://10.58.7.150:8000";
 const LIMIT = 10;
 class Main extends Component {
   constructor() {
