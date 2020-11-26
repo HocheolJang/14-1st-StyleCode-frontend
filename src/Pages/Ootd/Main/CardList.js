@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Masonry from 'react-masonry-css';
 import Card from "./Card";
-
 import './CardList.scss';
 class CardList extends Component {
   constructor() {

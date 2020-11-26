@@ -17,15 +17,21 @@ class Login extends Component {
   }
 
   handleClick = (e) => {
-    fetch("http://10.58.4.87:8000/user/login", {
+    fetch("http://10.58.6.191:8000/user/login", {
       method: "POST",
       body: JSON.stringify({
         login_id: this.state.id,
         password: this.state.password,
       }),
     })
-      .then((response) => response.json())
-      .then((result) => console.log("결과", result));
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("결과", result.token);
+        if (result.token) {
+          localStorage.setItem("token", result.token);
+          this.props.history.push("/");
+        }
+      });
   };
 
   handleIDChange = (e) => {
@@ -140,7 +146,7 @@ class Login extends Component {
           </div>
           <div className="login-link">
             <p>ID가 없으세요?</p>
-            <a href="www.styleshare.kr">여기서 로그인</a>
+            <a href="www.styleshare.kr">여기서 가입</a>
           </div>
         </div>
         <footer>

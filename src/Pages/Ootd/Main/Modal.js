@@ -99,7 +99,6 @@ class Modal extends Component {
     const { followBtn, comments } = this.state;
     
   return (
-    <>
       <div className="modalWrapper" onClick={closeModal}>
         <div className="innerWrapper" onClick={(e) => e.stopPropagation()}>
           <div className="leftWrapper">
@@ -148,39 +147,38 @@ class Modal extends Component {
 
 
             <div className="commentWrapper">
-              
-            <div className="commentNum"><span>댓글({modalData?.modalData?.modalData?.commentNum})</span></div>
-            {modalData?.modalData?.modalData?.comments.map((comment) => (
-              <div className="commentBox">
-              <div className="imgWrapper"><img className="commentUserImg" width="30px" height="30px" src={modalData?.modalData?.modalData?.comments[0]?.commentAuthorImg} /></div>
-              <div className="commentInfoWrapper">
-                <div className="commentContentWrapper" key={id}>
-                  <span className="commentUser">{comment.commentAuthor}</span>
-                  <span className="commentContent">{comment.comment}</span>
+              <div className="commentNum"><span>댓글({modalData?.modalData?.modalData?.commentNum})</span></div>
+              {modalData?.modalData?.modalData?.comments.map((comment) => (
+                <div className="commentBox">
+                  <div className="imgWrapper"><img className="commentUserImg" width="30px" height="30px" src={modalData?.modalData?.modalData?.comments[0]?.commentAuthorImg} /></div>
+                  <div className="commentInfoWrapper">
+                    <div className="commentContentWrapper" key={id}>
+                      <span className="commentUser">{comment.commentAuthor}</span>
+                      <span className="commentContent">{comment.comment}</span>
+                    </div>
+                    <div className="commentBtnWrapper" key={id}>
+                      <span className="commentDate">{comment.commentCreatedAt}</span>
+                      <span className="commentBtn"> 답글 달기 </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="commentBtnWrapper" key={id}>
-                  <span className="commentDate">{comment.commentCreatedAt}</span>
-                  <span className="commentBtn"> 답글 달기 </span>
-                </div>
-              </div>
-            </div>
-            ))}
+              ))}
 
             {comments.map((commentText) => {
               return (
-            <div className="commentCreateBox" key={commentText.num}>
-                <div className="commentCreateImgWrapper"><img className="commentCreateUserImg" width="30px" height="30px" src={commentText.commentAuthorImg} /> </div>
-              <div className="commentCreateInfoWrapper">
-                <div className="commentCreateContentWrapper" key={commentText.num}>
-                  <span className="commentCreateUser">{commentText.commentAuthor}</span>
-                  <span className="commentCreateContent">{commentText.comment}</span>
+                <div className="commentCreateBox" key={commentText.num}>
+                  <div className="commentCreateImgWrapper"><img className="commentCreateUserImg" width="30px" height="30px" src={commentText.commentAuthorImg} /> </div>
+                  <div className="commentCreateInfoWrapper">
+                    <div className="commentCreateContentWrapper" key={commentText.num}>
+                      <span className="commentCreateUser">{commentText.commentAuthor}</span>
+                      <span className="commentCreateContent">{commentText.comment}</span>
+                    </div>
+                    <div className="commentCreateBtnWrapper" key={commentText.num}>
+                      <span className="commentCreateDate">{commentText.commentCreatedAt}</span>
+                      <span className="commentCreateBtn"> 답글 달기 </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="commentCreateBtnWrapper" key={commentText.num}>
-                  <span className="commentCreateDate">{commentText.commentCreatedAt}</span>
-                  <span className="commentCreateBtn"> 답글 달기 </span>
-                </div>
-              </div>
-            </div>
               );
             })}
               <form className="inputWrapper" onSubmit={this.handleComment}>
@@ -193,7 +191,6 @@ class Modal extends Component {
           </div>
         </div>
       </div>
-    </>
   )}
 }
 export default Modal;

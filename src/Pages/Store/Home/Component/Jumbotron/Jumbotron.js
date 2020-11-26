@@ -19,9 +19,7 @@ class Jumbotron extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/jumbotronItem.json", {
-      method: "GET",
-    })
+    fetch("data/jumbotronItem.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
