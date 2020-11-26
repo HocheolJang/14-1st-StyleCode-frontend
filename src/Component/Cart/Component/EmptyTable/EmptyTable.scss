@@ -1,0 +1,36 @@
+.emptyTable {
+  width: 98%;
+  border: 1px solid #e8ebed;
+  border-collapse: collapse;
+
+  thead {
+    th {
+      height: 30px;
+      align-self: center;
+      vertical-align: middle;
+      background-color: #f7f8f9;
+      border: 1px solid #e8ebed;
+      color: #454c53;
+      font-size: 12px;
+    }
+
+    .orderProduct {
+      width: 500px;
+    }
+
+    .width96 {
+      width: 96px;
+    }
+  }
+
+  tbody {
+    td {
+      border: 1px solid #e8ebed;
+      height: 147px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
