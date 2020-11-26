@@ -4,7 +4,10 @@ import "./ProductDetail.scss";
 import Header from "./Component/Header/Header";
 import ProductReview from "./Component/Article/ProductReview/ProductReview";
 import ProductInfo from "./Component/Article/ProductInfo/ProductInfo";
-
+import NavbarStore from "../../Common/Navbar/NavbarStore/NavbarStore";
+import Footer from "../../Pages/Store/Home/Component/Footer/Footer";
+import "../../Pages/Store/Home/Component/Footer/Footer.scss";
+import "../../Common/Navbar/NavbarStore/NavbarStore.scss";
 class ProductDetail extends Component {
   constructor() {
     super();
@@ -14,7 +17,7 @@ class ProductDetail extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.6.106:8000/products/1", {
+    fetch("http://localhost:3000/data/productdetailsample.json", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -26,7 +29,7 @@ class ProductDetail extends Component {
   render() {
     return (
       <div className="ProductDetail">
-        <nav></nav>
+        <NavbarStore />
         <main>
           <Header productdetail={this.state.productdetail} />
           <section>
@@ -34,6 +37,7 @@ class ProductDetail extends Component {
             <ProductInfo productdetail={this.state.productdetail} />
           </section>
         </main>
+        <Footer />
       </div>
     );
   }

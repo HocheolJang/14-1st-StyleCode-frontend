@@ -121,7 +121,7 @@ class Select extends Component {
         </div>
         <div className="header-middle-info-"></div>
         <div className="header-middle-info-orderbox-price">
-          총 금액
+          총 금액(원)
           <span>
             {(this.state.orderBox && this.state.orderBox).toLocaleString()}
           </span>
@@ -136,7 +136,9 @@ class Select extends Component {
             <div className="header-middle-info-orderbox-new">
               <button
                 className="header-middle-info-orderbox-new-minusbutton"
-                onClick={this.handleRemoveChange}
+                onClick={
+                  this.state.number > 1 ? this.handleRemoveChange : () => false
+                }
               >
                 <span>
                   <BsFillCaretDownFill size="15px" color="gray" />
