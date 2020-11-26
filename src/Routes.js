@@ -6,10 +6,8 @@ import SignUp from "./Component/SignUp/SignUp";
 import CategoryDetail from "./Component/CategoryDetail/CategoryDetail";
 import ProductDetail from "./Component/ProductDetail/ProductDetail";
 import Cart from "./Component/Cart/Cart";
-import Search from "./Component/";
-import Ootd from "./Pages/Ootd/Ootd";
-
-// import Login from "./Component/Login/Login";
+import Search from "./Component/Search/Search";
+import Ootd from "./Pages/Ootd/Main/Main";
 
 class Routes extends React.Component {
   render() {
@@ -17,10 +15,13 @@ class Routes extends React.Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Store} />
-          <Route exact path="/SignUp" component={SignUp} />
-          <Route exact path="/Ootd" component={Ootd} />
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/ProductDetail" component={ProductDetail} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/categories" component={CategoryDetail} />
+          <Route exact path="/product" component={ProductDetail} />
+          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/search" component={Search} />
+          <Route exact path="/ootd" component={Ootd} />
         </Switch>
       </Router>
     );
