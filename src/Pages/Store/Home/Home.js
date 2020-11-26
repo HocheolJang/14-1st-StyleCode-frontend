@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "../../../Component/Navbar/NavbarStore/NavbarStore";
+import Navbar from "../../../Component/Navbar/NavbarStore/NavbarBeforeSignIn";
 import Jumbotron from "./Component/Jumbotron/Jumbotron";
 import PopularProduct from "./Component/PopularProduct/PopularProduct";
 import PopularBrand from "./Component/PopularBrand/PopularBrand";

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import Navbar from "../Navbar/NavbarStore";
+import Navbar from "../Navbar/NavbarStore/NavbarStore";
 import EmptyTable from "./Component//EmptyTable/EmptyTable";
 import ProductTable from "./Component/ProductTable/ProductTable";
 import FillAsidebar from "./Component/Asidebar/FillAsidebar";
