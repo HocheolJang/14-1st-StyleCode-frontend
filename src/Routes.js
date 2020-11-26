@@ -10,6 +10,7 @@ import SearchPage from "./Component/SearchPage/SearchPage";
 import Unisex from "./Pages/Store/Unisex/Unisex";
 import NavbarOotd from "./Common/Navbar/NavbarOotd/NavbarOotd";
 import NavbarStore from "./Common/Navbar/NavbarStore/NavbarStore";
+import CategoryDetail from "./Component/CategoryDetail/CategoryDetail";
 // import Login from "./Component/Login/Login";
 
 class Routes extends React.Component {
@@ -19,10 +20,9 @@ class Routes extends React.Component {
         <Switch>
           <Route exact path="/SignUp" component={SignUp} />
           <Route exact path="/" component={Home} />
-          <Route exact path="/NavbarOotd" component={NavbarOotd} />
-          <Route exact path="/NavbarStore" component={NavbarStore} />
+          <Route exact path="/categories" component={CategoryDetail} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/Ootd" component={Ootd} />
-          {/* <Route exact path="/Ootd/Main" component={Main} /> */}
           <Route exact path="/NavbarOotd" component={NavbarOotd} />
           <Route exact path="/NavbarStore" component={NavbarStore} />
           <Route exact path="/Login" component={Login} />

@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
+
+.ShowAll {
+  font-family: "Helvetica", "Arial", "Apple SD Gothic Neo", "Nanum Gothic",
+    "Malgun Gothic", "DotumChe", "Dotum", "Spoqa Han Sans", "Spoqa Han Sans JP",
+    "Sans-serif";
+  width: 940px;
+  height: auto;
+  margin: 100px auto;
+
+  .header {
+    display: flex;
+    .title {
+      width: 100%;
+      height: 23px;
+      margin-bottom: 20px;
+      span {
+        font-size: 18px;
+        font-weight: 700;
+        color: #26282b;
+      }
+    }
+    .filter {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 23px;
+      border-left: 1px solid #e8ebed;
+      border-right: 1px solid #e8ebed;
+      // padding: 0 15px;
+      &:hover {
+        cursor: pointer;
+      }
+      button {
+        align-items: center;
+        padding: 0 10px;
+        background-color: white;
+        border: none;
+        outline: 0;
+        width: 100px;
+        &:hover {
+          cursor: pointer;
+        }
+        span {
+          font-size: 14px;
+          &:hover {
+            cursor: pointer;
+            color: #4adaaf;
+          }
+        }
+        .descBtn {
+          width: 10px;
+          transform: rotate(-90deg);
+          margin-left: 5px;
+          transition: all ease 0.4s;
+        }
+        .ascBtn {
+          width: 10px;
+          transform: rotate(90deg);
+          transition: all ease 0.4s;
+          margin-left: 5px;
+        }
+      }
+      .fliterDropDown {
+        display: flex;
+        .dropdownContent {
+          list-style: none;
+          list-style-position: outside;
+          position: absolute;
+          top: 30px;
+          left: -40px;
+          width: 160px;
+          height: 175px;
+          z-index: 2;
+          background-color: white;
+          border: 1px solid #e8ebed;
+          margin: 0px;
+          padding: 0px;
+
+          &:hover {
+            cursor: pointer;
+          }
+          li {
+            color: #26282b;
+            font-size: 14px;
+            line-height: 35px;
+            text-align: center;
+            &:hover {
+              background-color: #f7f8f9;
+            }
+          }
+          .descArrow {
+            width: 12px;
+            height: 12px;
+            transform: rotate(90deg);
+          }
+          .ascArrow {
+            width: 12px;
+            height: 12px;
+            transform: rotate(270deg);
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+  }
+  .cardList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    position: relative;
+    .eachCard {
+      width: 220px;
+      height: 345px;
+      // margin-right: 20px;
+
+      .productImgBox {
+        display: flex;
+        justify-content: center;
+        width: 220px;
+        height: 230px;
+        overflow: hidden;
+        .productImg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: transform 0.5s ease;
+          }
+        }
+      }
+      .productDescBox {
+        margin-top: 10px;
+        .brandName {
+          font-size: 14px;
+          color: #9ea4aa;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .productName {
+          width: 200px;
+          height: 36px;
+          -webkit-line-clamp: 2;
+          text-align: left;
+          display: block;
+          white-space: normal;
+
+          span {
+            color: #26282b;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: left;
+          }
+        }
+        .discountPriceBox {
+          margin-top: 10px;
+          .discount {
+            color: #ff6699;
+            font-size: 14px;
+            font-weight: 700;
+          }
+          .productPrice {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ff6699;
+            margin-left: 5px;
+          }
+        }
+        .orignalPriceBox {
+          span {
+            text-decoration: line-through solid rgb(201, 205, 210);
+            color: #c9cdd2;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
