@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./SignUp.scss";
+// import backgroundImg from "../../../public/images/loginbackground.jpg";
 
 class SignUp extends Component {
   constructor() {
@@ -147,6 +148,7 @@ class SignUp extends Component {
     console.log(this.state.agree2);
     return (
       <div className="SignUp">
+        {/* <img src={backgroundImg} /> */}
         <div className="main">
           <section className="leftMain">
             <div className="nav">
