@@ -1,13 +1,12 @@
 /* eslint-disable no-undef */
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ProductDetail from "./Component/ProductDetail/ProductDetail";
-import Select from "react-select";
+import SignUp from "./Component/SignUp/SignUp";
 import Home from "./Pages/Store/Home/Home";
 import Login from "./Component/Login/Login";
-import SignUp from "./Component/SignUp/SignUp";
 import Ootd from "./Pages/Ootd/Ootd";
 import Cart from "./Component/Cart/Cart";
+import ProductDetail from "./Component/ProductDetail/ProductDetail";
 import SearchPage from "./Component/SearchPage/SearchPage";
 import Unisex from "./Pages/Store/Unisex/Unisex";
 import NavbarOotd from "./Common/Navbar/NavbarOotd/NavbarOotd";
@@ -19,7 +18,7 @@ class Routes extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/ProductDetail" component={ProductDetail} />
+          <Route exact path="/SignUp" component={SignUp} />
           <Route exact path="/" component={Home} />
           <Route exact path="/NavbarOotd" component={NavbarOotd} />
           <Route exact path="/NavbarStore" component={NavbarStore} />
@@ -28,6 +27,7 @@ class Routes extends React.Component {
           <Route exact path="/NavbarOotd" component={NavbarOotd} />
           <Route exact path="/NavbarStore" component={NavbarStore} />
           <Route exact path="/Login" component={Login} />
+          <Route exact path="/ProductDetail" component={ProductDetail} />
         </Switch>
       </Router>
     );

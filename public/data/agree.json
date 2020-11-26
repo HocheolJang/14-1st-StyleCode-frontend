@@ -1,0 +1,9 @@
+{
+  "AGREE":[
+ 
+      { "key": 1, "value": "(필수) 이용약관 동의", "isChecked": false },
+      { "key": 2, "value": "(필수) 개인정보 처리방침 동의", "isChecked": false},
+      { "key": 3, "value": "(필수) 만 14세 이상 입니다.", "isChecked": false },
+      { "key": 4, "value": "(선택) 마케팅 정보 수신 동의", "isChecked": false }
+    ]
+  }
