@@ -29,13 +29,13 @@ class Cart extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
-        const cartList = res.product.map((item) => {
+        const cartList = res.product?.map((item) => {
           item["isChecked"] = true;
           return item;
         });
-        this.setState({
-          cartList,
-        });
+        // this.setState({
+        //   cartList,
+        // });
       });
   }
 

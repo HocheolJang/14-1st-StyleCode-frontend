@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import "./Jumbotron.scss";
+import "./StoreMainJumbotron.scss";
 
-class Jumbotron extends Component {
+class StoreMainJumbotron extends Component {
   constructor() {
     super();
     this.state = {
@@ -33,7 +33,7 @@ class Jumbotron extends Component {
 
     return (
       <div>
-        <div className="jumbotron">
+        <div className="storeMainJumbotron">
           <Slider ref={this.slider} {...SETTING}>
             {jumbotronItem.map((item, idx) => {
               return (
@@ -53,13 +53,13 @@ class Jumbotron extends Component {
                     <span className="carouselBar"></span>
                   </div>
                   <img
-                    className="slideBtnLeft"
+                    className="slideBtn left"
                     src="images/icon/prev0.png"
                     alt="prev"
                     onClick={this.previous}
                   />
                   <img
-                    className="slideBtnRight"
+                    className="slideBtn right"
                     src="images/icon/next0.png"
                     alt="next"
                     onClick={this.next}
@@ -86,4 +86,4 @@ const SETTING = {
   pauseOnHover: true,
 };
 
-export default Jumbotron;
+export default StoreMainJumbotron;

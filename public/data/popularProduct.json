@@ -79,18 +79,18 @@
     {
       "id": 0,
       "src": "images/product/all0.jpg",
-      "brandName": "지프",
-      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-      "discount": "25%",
+      "brandName": "소녀냐라",
+      "productName": "홀리 레드 강렬 원피스 / 크리스마스룩 (2Color)",
+      "discount": "10%",
       "productPrice": 59900,
-      "productLike": 26170,
+      "productLike": 53991,
       "productReview": 274
     },
     {
       "id": 1,
       "src": "images/product/all1.jpg",
-      "brandName": "지프",
-      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "brandName": "에스뿌아",
+      "productName": "2020 블랙프라이데이 최대 75% BIG SALE",
       "discount": "25%",
       "productPrice": 59900,
       "productLike": 26170,
@@ -99,22 +99,22 @@
     {
       "id": 2,
       "src": "images/product/all2.jpg",
-      "brandName": "지프",
-      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-      "discount": "25%",
-      "productPrice": 59900,
-      "productLike": 26170,
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
       "productReview": 274
     },
     {
       "id": 3,
       "src": "images/product/all3.jpg",
-      "brandName": "지프",
-      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "brandName": "푸렌들리",
+      "productName": "[블프특가][사은품증정] 소프트 컬러 젤리케이스",
       "discount": "25%",
-      "productPrice": 59900,
-      "productLike": 26170,
-      "productReview": 274
+      "productPrice": 9900,
+      "productLike": 7523,
+      "productReview": 99
     }
   ]
 }

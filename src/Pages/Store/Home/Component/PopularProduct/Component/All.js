@@ -27,11 +27,11 @@ class All extends Component {
                 </div>
                 <div className="likeReviewBox">
                   <span className="productLike">
-                    좋아요
+                    좋아요&nbsp;
                     <span>{product.productLike.toLocaleString("en")}</span>
                   </span>
                   <span className="productReview">
-                    후기
+                    후기&nbsp;
                     <span>{product.productReview.toLocaleString("en")}</span>
                   </span>
                 </div>
