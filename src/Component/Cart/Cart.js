@@ -27,7 +27,6 @@ class Cart extends Component {
           "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
       },
     })
-      // fetch("/data/cartItem.json")
       .then((res) => res.json())
       .then((res) => {
         const cartList = res.product.map((item) => {
@@ -86,7 +85,6 @@ class Cart extends Component {
   };
 
   handleDeleteItemBtn = (item) => {
-    // console.log(item.id);
     const cartList = [...this.state.cartList];
     let idx = cartList.indexOf(item);
     let cartId = cartList[idx].cart_id;
@@ -98,22 +96,16 @@ class Cart extends Component {
       method: "DELETE",
     });
   };
-  // componentDidUpdate(// 이전스테이트값){
-  //   // 조건 this.handleDeleteItemBtn()
-  //   // 새로
-  // }
 
   handleCheckAllBox = () => {
     const { isAllChecked } = this.state;
     this.setState({
       isAllChecked: !isAllChecked,
-      // isChecked: !item.Checked,
     });
     console.log(isAllChecked);
   };
 
   handleCheckBox = (item) => {
-    // console.log(item);
     this.setState({ isChecked: !item.Checked });
   };
 
