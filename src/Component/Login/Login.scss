@@ -94,13 +94,14 @@
         .login-button:hover {
           width: 156px;
           height: 40px;
-          background-color: darkgray;
+          opacity: 0.7;
           border-radius: 0.5rem;
           margin-left: 105px;
           color: white;
           font-size: 14px;
           font-weight: 700;
           border: 0px solid black;
+          cursor: pointer;
         }
       }
       .social-login {
