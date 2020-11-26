@@ -1,0 +1,108 @@
+.search {
+  font-family: -apple-system, "Malgun Gothic", BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  .searchContainer {
+    width: 1280px;
+    margin: 180px auto 100px auto;
+    padding: 0 10px;
+    max-width: 1280px;
+
+    .subtitle {
+      line-height: 28.8px;
+      color: #131518;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 23px;
+    }
+    .count {
+      line-height: 28.8px;
+      color: #131518;
+      font-size: 24px;
+      margin-bottom: 23px;
+      margin-left: 12px;
+    }
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      .showAll {
+        width: 340px;
+        height: 44px;
+        margin: 20px 0;
+        text-align: center;
+        max-width: 340px;
+        border: 1px solid #dadde0;
+        border-radius: 4px;
+        background-color: #ffffff;
+        color: #131518;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+    .fontRed {
+      color: red;
+    }
+
+    header {
+      .relatedContainer {
+        display: flex;
+        width: 100%;
+        margin-bottom: 66px;
+        font-size: 12px;
+
+        span {
+          margin: auto 0;
+          color: #21242a;
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 15.6px;
+        }
+
+        ul li {
+          display: inline;
+          border-left: 1px solid #999;
+          padding: 0 10px;
+          color: #757d86;
+          font-size: 13px;
+          line-height: 20px;
+          cursor: pointer;
+        }
+        ul li:first-child {
+          border-left: none;
+        }
+      }
+    }
+    .brand {
+      .brandContainer {
+        display: flex;
+        margin-bottom: 66px;
+        img {
+          width: 80px;
+          height: 80px;
+        }
+        .brandName {
+          margin: auto 0 auto 15px;
+          line-height: 23.76px;
+          color: #131518;
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+    }
+    .marketingContainer {
+      margin-bottom: 66px;
+      .marketingItem {
+        width: 387px;
+        height: 220px;
+      }
+      .marketingTitle {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 23.76px;
+      }
+    }
+    .style {
+      border: 1px solid red;
+    }
+  }
+}

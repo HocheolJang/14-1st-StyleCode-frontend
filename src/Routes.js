@@ -8,7 +8,6 @@ import ProductDetail from "./Component/ProductDetail/ProductDetail";
 import Cart from "./Component/Cart/Cart";
 import Search from "./Component/Search/Search";
 import Ootd from "./Pages/Ootd/Main/Main";
-
 class Routes extends React.Component {
   render() {
     return (
@@ -27,5 +26,4 @@ class Routes extends React.Component {
     );
   }
 }
-
 export default Routes;
