@@ -2,49 +2,7 @@
   "categories": [
     {
       "id": 0,
-      "categoryName": "전체",
-      "product": [
-        {
-          "id": 0,
-          "src": "images/product/all0.jpg",
-          "brandName": "지프",
-          "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-          "discount": "25%",
-          "productPrice": 59900,
-          "productLike": 26170,
-          "productReview": 274
-        },
-        {
-          "id": 1,
-          "src": "images/product/all1.jpg",
-          "brandName": "지프",
-          "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-          "discount": "25%",
-          "productPrice": 59900,
-          "productLike": 26170,
-          "productReview": 274
-        },
-        {
-          "id": 2,
-          "src": "images/product/all2.jpg",
-          "brandName": "지프",
-          "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-          "discount": "25%",
-          "productPrice": 59900,
-          "productLike": 26170,
-          "productReview": 274
-        },
-        {
-          "id": 3,
-          "src": "images/product/all3.jpg",
-          "brandName": "지프",
-          "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-          "discount": "25%",
-          "productPrice": 59900,
-          "productLike": 26170,
-          "productReview": 274
-        }
-      ]
+      "categoryName": "전체"
     },
     {
       "id": 1,
@@ -109,6 +67,300 @@
     {
       "id": 3,
       "src": "images/product/all3.jpg",
+      "brandName": "푸렌들리",
+      "productName": "[블프특가][사은품증정] 소프트 컬러 젤리케이스",
+      "discount": "25%",
+      "productPrice": 9900,
+      "productLike": 7523,
+      "productReview": 99
+    }
+  ],
+  "unisex": [
+    {
+      "id": 0,
+      "src": "images/product/unisex0.jpg",
+      "brandName": "소녀냐라",
+      "productName": "홀리 레드 강렬 원피스 / 크리스마스룩 (2Color)",
+      "discount": "10%",
+      "productPrice": 59900,
+      "productLike": 53991,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/product/unisex1.jpg",
+      "brandName": "에스뿌아",
+      "productName": "2020 블랙프라이데이 최대 75% BIG SALE",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/product/unisex2.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/product/unisex3.jpg",
+      "brandName": "푸렌들리",
+      "productName": "[블프특가][사은품증정] 소프트 컬러 젤리케이스",
+      "discount": "25%",
+      "productPrice": 9900,
+      "productLike": 7523,
+      "productReview": 99
+    }
+  ],
+  "female": [
+    {
+      "id": 0,
+      "src": "images/product/female0.jpg",
+      "brandName": "소녀냐라",
+      "productName": "홀리 레드 강렬 원피스 / 크리스마스룩 (2Color)",
+      "discount": "10%",
+      "productPrice": 59900,
+      "productLike": 53991,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/product/female1.jpg",
+      "brandName": "에스뿌아",
+      "productName": "2020 블랙프라이데이 최대 75% BIG SALE",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/product/female2.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/product/female3.jpg",
+      "brandName": "푸렌들리",
+      "productName": "[블프특가][사은품증정] 소프트 컬러 젤리케이스",
+      "discount": "25%",
+      "productPrice": 9900,
+      "productLike": 7523,
+      "productReview": 99
+    }
+  ],
+  "beauty": [
+    {
+      "id": 0,
+      "src": "images/product/beauty0.jpg",
+      "brandName": "소녀냐라",
+      "productName": "홀리 레드 강렬 원피스 / 크리스마스룩 (2Color)",
+      "discount": "10%",
+      "productPrice": 59900,
+      "productLike": 53991,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/product/beauty1.jpg",
+      "brandName": "에스뿌아",
+      "productName": "2020 블랙프라이데이 최대 75% BIG SALE",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/product/beauty2.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/product/beauty3.jpg",
+      "brandName": "푸렌들리",
+      "productName": "[블프특가][사은품증정] 소프트 컬러 젤리케이스",
+      "discount": "25%",
+      "productPrice": 9900,
+      "productLike": 7523,
+      "productReview": 99
+    }
+  ],
+  "bagetc": [
+    {
+      "id": 0,
+      "src": "images/product/bag0.jpg",
+      "brandName": "소녀냐라",
+      "productName": "홀리 레드 강렬 원피스 / 크리스마스룩 (2Color)",
+      "discount": "10%",
+      "productPrice": 59900,
+      "productLike": 53991,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/product/bag1.jpg",
+      "brandName": "에스뿌아",
+      "productName": "2020 블랙프라이데이 최대 75% BIG SALE",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/product/bag2.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/product/bag3.jpg",
+      "brandName": "푸렌들리",
+      "productName": "[블프특가][사은품증정] 소프트 컬러 젤리케이스",
+      "discount": "25%",
+      "productPrice": 9900,
+      "productLike": 7523,
+      "productReview": 99
+    }
+  ],
+  "shoes": [
+    {
+      "id": 0,
+      "src": "images/product/shoes0.jpg",
+      "brandName": "소녀냐라",
+      "productName": "홀리 레드 강렬 원피스 / 크리스마스룩 (2Color)",
+      "discount": "10%",
+      "productPrice": 59900,
+      "productLike": 53991,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/product/shoes1.jpg",
+      "brandName": "에스뿌아",
+      "productName": "2020 블랙프라이데이 최대 75% BIG SALE",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/product/shoes2.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/product/shoes3.jpg",
+      "brandName": "푸렌들리",
+      "productName": "[블프특가][사은품증정] 소프트 컬러 젤리케이스",
+      "discount": "25%",
+      "productPrice": 9900,
+      "productLike": 7523,
+      "productReview": 99
+    }
+  ],
+  "life": [
+    {
+      "id": 0,
+      "src": "images/product/life0.jpg",
+      "brandName": "소녀냐라",
+      "productName": "홀리 레드 강렬 원피스 / 크리스마스룩 (2Color)",
+      "discount": "10%",
+      "productPrice": 59900,
+      "productLike": 53991,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/product/life1.jpg",
+      "brandName": "에스뿌아",
+      "productName": "2020 블랙프라이데이 최대 75% BIG SALE",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/product/life2.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/product/life3.jpg",
+      "brandName": "푸렌들리",
+      "productName": "[블프특가][사은품증정] 소프트 컬러 젤리케이스",
+      "discount": "25%",
+      "productPrice": 9900,
+      "productLike": 7523,
+      "productReview": 99
+    }
+  ],
+  "tech": [
+    {
+      "id": 0,
+      "src": "images/product/tech0.jpg",
+      "brandName": "소녀냐라",
+      "productName": "홀리 레드 강렬 원피스 / 크리스마스룩 (2Color)",
+      "discount": "10%",
+      "productPrice": 59900,
+      "productLike": 53991,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/product/tech1.jpg",
+      "brandName": "에스뿌아",
+      "productName": "2020 블랙프라이데이 최대 75% BIG SALE",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/product/tech2.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/product/tech3.jpg",
       "brandName": "푸렌들리",
       "productName": "[블프특가][사은품증정] 소프트 컬러 젤리케이스",
       "discount": "25%",
