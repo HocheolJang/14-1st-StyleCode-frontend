@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./MdChoice.scss";
 import Pagination from "./Pagination";
+import { mdChoiceAPI } from "../../../../config";
 
 class MdChoice extends Component {
   constructor() {
@@ -13,7 +14,7 @@ class MdChoice extends Component {
   }
 
   getAllData = () => {
-    fetch("http://10.58.4.75:8000/products/mdchoice/0")
+    fetch(`${mdChoiceAPI}`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -29,7 +30,7 @@ class MdChoice extends Component {
 
   fetchProduct = (e) => {
     const offset = e.target.dataset.idx;
-    fetch(`http://10.58.4.75:8000/products/mdchoice/${offset}`)
+    fetch(`http://10.58.6.191:8000/products/mdchoice/${offset}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({

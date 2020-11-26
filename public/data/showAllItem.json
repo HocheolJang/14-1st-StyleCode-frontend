@@ -1,0 +1,884 @@
+{
+  "product": [
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 0,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 4,
+      "src": "images/categoryDetail/mdChoice/popularProduct0.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 5,
+      "src": "images/categoryDetail/mdChoice/popularProduct1.jpg",
+      "brandName": "지프",
+      "productName": "이름이 너무길면 어떻게 되는지 봅시다 한번 이렇게 써볼거에요 [SUNKIT] 단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 6,
+      "src": "images/categoryDetail/mdChoice/popularProduct2.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    },
+    {
+      "id": 7,
+      "src": "images/categoryDetail/mdChoice/popularProduct3.jpg",
+      "brandName": "지프",
+      "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
+      "discount": "25%",
+      "productPrice": 59900,
+      "productLike": 26170,
+      "productReview": 274
+    }
+  ]
+}
