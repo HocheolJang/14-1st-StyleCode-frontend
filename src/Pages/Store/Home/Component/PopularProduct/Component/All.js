@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import "./Card.scss";
 
 class All extends Component {
-
-
-  
   render() {
     const { popularProductList } = this.props;
     return (
@@ -25,28 +22,17 @@ class All extends Component {
                 <div className="discountPriceBox">
                   <span className="discount">{product.discount}</span>
                   <span className="productPrice">
-                    {product.productPrice
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                    원
+                    {product.productPrice.toLocaleString("en")}원
                   </span>
                 </div>
                 <div className="likeReviewBox">
                   <span className="productLike">
                     좋아요
-                    <span>
-                      {product.productLike
-                        .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                    </span>
+                    <span>{product.productLike.toLocaleString("en")}</span>
                   </span>
                   <span className="productReview">
                     후기
-                    <span>
-                      {product.productReview
-                        .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                    </span>
+                    <span>{product.productReview.toLocaleString("en")}</span>
                   </span>
                 </div>
               </div>
