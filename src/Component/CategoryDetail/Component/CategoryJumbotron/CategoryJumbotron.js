@@ -75,7 +75,7 @@ class CategoryJumbotron extends Component {
             })}
           </Slider>
           <div className="sliderBox" onClick={this.previous}>
-            <div className="sliderLeft">
+            <div className="sliderBtn">
               <img
                 className="slideBtnLeft"
                 src="images/icon/arrow.png"
@@ -87,7 +87,7 @@ class CategoryJumbotron extends Component {
               <span>of</span>
               <span>{jumbotronItem.length}</span>
             </div>
-            <div className="sliderRight" onClick={this.next}>
+            <div className="sliderBtn" onClick={this.next}>
               <img
                 className="slideBtnRight"
                 src="images/icon/arrow.png"

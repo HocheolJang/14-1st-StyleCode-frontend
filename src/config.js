@@ -1,4 +1,4 @@
-export const mdChoiceAPI = "http://10.58.6.191:8000/products/mdchoice/0";
+export const mdChoiceAPI = "http://10.58.6.191:8000/products/mdchoice";
 export const showAllAPI = "http://10.58.6.191:8000/products?sort=0&second=1";
 export const sortProductAPI = "http://10.58.6.191:8000";
 export const jumbotronAPI =
