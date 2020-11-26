@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./Card.scss";
 
 class All extends Component {
+
+
+  
   render() {
     const { popularProductList } = this.props;
     return (

@@ -19,7 +19,11 @@ const MAPPING_OBJ = {
   6: <Life />,
   7: <Tech />,
 };
-const MAPPING_MENU = ["All, Unisex, Female, Beauty, BagEtc, Shoes, Life, Tech"];
+const MAPPING_MENU = [
+  "전체",
+  "Unisex",
+  "Female, Beauty, BagEtc, Shoes, Life, Tech",
+];
 
 class PopularProduct extends Component {
   constructor() {
@@ -56,6 +60,7 @@ class PopularProduct extends Component {
     this.setState({
       activeTab: idx,
     });
+    console.log(idx);
   };
 
   componentDidMount() {
