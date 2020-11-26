@@ -13,7 +13,7 @@ class MdChoice extends Component {
   }
 
   getAllData = () => {
-    fetch("http://10.58.4.75:8000/products/mdchoice/0", {
+    fetch("http://10.58.6.191:8000/products/mdchoice/0", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -31,7 +31,7 @@ class MdChoice extends Component {
 
   fetchProduct = (e) => {
     const offset = e.target.dataset.idx;
-    fetch(`http://10.58.4.75:8000/products/mdchoice/${offset}`)
+    fetch(`http://10.58.6.191:8000/products/mdchoice/${offset}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({

@@ -15,7 +15,7 @@ class ShowAll extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.4.75:8000/products?sort=0&second=1", {
+    fetch("http://10.58.6.191:8000/products?sort=0&second=1", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -30,7 +30,7 @@ class ShowAll extends Component {
   sortProduct = (e) => {
     const sort = e.target.dataset.idx;
     console.log(e.target.id);
-    fetch(`http://10.58.4.75:8000/products?sort=${sort}&second=1`)
+    fetch(`http://10.58.6.191:8000/products?sort=${sort}&second=1`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
