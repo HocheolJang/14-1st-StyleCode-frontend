@@ -1,3 +1,5 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
 .Login {
   display: flex;
   justify-content: center;
@@ -24,6 +26,8 @@
 
       .section-logo {
         font-size: 5rem;
+        font-weight: 600;
+        font-family: "Spoqa Han Sans";
       }
 
       .section-sign {
