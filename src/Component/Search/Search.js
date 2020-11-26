@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Search.scss";
 import Product from "./Component/Product/Product";
 import User from "./Component/User/User";
-import Navbar from "../../Common/Navbar/NavbarStore/NavbarStore";
+import Navbar from "../Navbar/NavbarStore/NavbarStore";
 import Footer from "../../Pages/Store/Home/Component/Footer/Footer";
 import { searchDataAPI } from "../../config";
 
