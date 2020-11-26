@@ -1,6 +1,29 @@
 import React, { Component } from "react";
 import "./PopularProduct.scss";
-// import Unisex from
+import All from "./Component/All";
+import Unisex from "./Component/Unisex";
+import Female from "./Component/Female";
+import Beauty from "./Component/Beauty";
+import BagEtc from "./Component/BagEtc";
+import Shoes from "./Component/Shoes";
+import Life from "./Component/Life";
+import Tech from "./Component/Tech";
+
+const MAPPING_OBJ = {
+  0: <All />,
+  1: <Unisex />,
+  2: <Female />,
+  3: <Beauty />,
+  4: <BagEtc />,
+  5: <Shoes />,
+  6: <Life />,
+  7: <Tech />,
+};
+const MAPPING_MENU = [
+  "전체",
+  "Unisex",
+  "Female, Beauty, BagEtc, Shoes, Life, Tech",
+];
 
 class PopularProduct extends Component {
   constructor() {
@@ -9,13 +32,12 @@ class PopularProduct extends Component {
       categoriesList: [],
       popularProductList: [],
       currentCategory: 0,
+      activeTab: 0,
     };
   }
 
   getcategoriesList = () => {
-    fetch("http://localhost:3000/data/popularProduct.json", {
-      method: "GET",
-    })
+    fetch("/data/popularProduct.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -23,16 +45,22 @@ class PopularProduct extends Component {
         });
       });
   };
+
   getPopularProductList = () => {
-    fetch("http://localhost:3000/data/popularProduct.json", {
-      method: "GET",
-    })
+    fetch("/data/popularProduct.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
-          popularProductList: res.product,
+          popularProductList: res.all,
         });
       });
+  };
+
+  handleMenuTab = (idx) => {
+    this.setState({
+      activeTab: idx,
+    });
+    console.log(idx);
   };
 
   componentDidMount() {
@@ -41,8 +69,10 @@ class PopularProduct extends Component {
   }
 
   render() {
-    const { categoriesList, popularProductList } = this.state;
-
+    const { categoriesList, popularProductList, activeTab } = this.state;
+    const { handleMenuTab } = this;
+    // console.log(categoriesList[0]?.product);
+    // console.log(popularProductList);
     return (
       <div className="popularProduct">
         <div className="title">
@@ -50,23 +80,38 @@ class PopularProduct extends Component {
         </div>
         <div className="catergories">
           <ul className="categoryList">
-            {categoriesList.map((category) => {
+            {categoriesList.map((menu, idx) => {
               return (
                 <li
-                  className="inactive"
-                  key={category.id}
-                  onClick={this.handleMenuTab}
+                  key={idx}
+                  className={activeTab === idx ? "active" : null}
+                  onClick={() => handleMenuTab(idx)}
                 >
-                  {category.categoryName}
+                  {menu.categoryName}
                 </li>
               );
             })}
+            {/* {MAPPING_MENU.map((menu, idx) => {
+              return (
+                <li
+                  key={idx}
+                  className={activeTab === idx ? "active" : null}
+                  onClick={() => handleMenuTab(idx)}
+                >
+                  {menu}
+                </li>
+              );
+            })} */}
           </ul>
         </div>
-        <div className="cardList">
-          {popularProductList.map((product) => {
+        <div className="cardContainer">
+          {/* <div>{MAPPING_OBJ[activeTab]}</div> */}
+
+          <All popularProductList={popularProductList} />
+
+          {/* {popularProductList.product?.map((product, idx) => {
             return (
-              <div className="card">
+              <div className="card" key={idx}>
                 <div className="productImgBox">
                   <img
                     className="productImg"
@@ -111,7 +156,7 @@ class PopularProduct extends Component {
                 </div>
               </div>
             );
-          })}
+          })} */}
         </div>
         <div className="popularFooter">
           <button>

@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
+
+.cart {
+  margin-top: 158px;
+  font-family: "Helvetica", "Arial", "Spoqa Han Sans JP", "Sans-serif";
+
+  .allContainer {
+    margin: 0 auto;
+    width: 1160px;
+    height: auto;
+    min-height: 900px;
+
+    .headContainer {
+      display: flex;
+      width: 100%;
+      height: 80px;
+      border-bottom: 2px solid #e8ebed;
+      margin-bottom: 30px;
+
+      .title {
+        display: flex;
+        width: 75%;
+        margin-top: 10px;
+
+        h2 {
+          font-size: 40px;
+          font-weight: 700;
+        }
+      }
+
+      .process {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 25%;
+        font-size: 20px;
+        font-weight: 900;
+        span:nth-child(1) {
+          color: #00c1a3;
+        }
+        span:nth-child(2) {
+          color: #c9cdd2;
+        }
+      }
+    }
+
+    .mainContainer {
+      display: flex;
+      height: auto;
+
+      .cartContainer {
+        width: 75%;
+        height: auto;
+
+        .header {
+          display: flex;
+          align-items: center;
+          height: 45px;
+          margin-top: 20px;
+
+          .headerLeft {
+            width: 20%;
+            display: flex;
+            align-items: center;
+
+            input {
+              width: 20px;
+              height: 20px;
+              border: 1px solid #c9cdd2;
+              color: #26282b;
+              margin: 0 15px;
+              cursor: pointer;
+            }
+
+            span {
+              font-size: 16px;
+              color: #26282b;
+              padding-top: 2px;
+              cursor: pointer;
+            }
+          }
+
+          .headerRight {
+            width: 80%;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 32px;
+
+            button {
+              width: 68px;
+              height: 26px;
+              background-color: white;
+              border: 1px solid #00d0b1;
+              border-radius: 3px;
+              color: #00d0b1;
+              cursor: pointer;
+              font-size: 12px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
