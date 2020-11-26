@@ -14,7 +14,7 @@ class ProductDetail extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.1.162:8000/products/1", {
+    fetch("http://10.58.6.106:8000/products/1", {
       method: "GET",
     })
       .then((res) => res.json())

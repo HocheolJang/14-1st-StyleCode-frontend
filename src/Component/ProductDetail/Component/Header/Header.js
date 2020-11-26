@@ -116,6 +116,7 @@ class Header extends Component {
               colors={productdetail.colors}
               sizes={productdetail.sizes}
               stocks={productdetail.stocks}
+              id={productdetail.productId}
             />
           </div>
         </div>

@@ -17,7 +17,7 @@ class ProductReview extends Component {
       arrows: true,
     };
 
-    console.log("productdetail", ootd);
+    // console.log("productdetail", ootd);
     return (
       <article className="article-product-review">
         <div className="article-product-review-title">

@@ -54,16 +54,19 @@ class Select extends Component {
 
   handleAddtoCart = () => {
     const { color, size, number } = this.state;
-    fetch("", {
+    const { id } = this.props;
+    fetch("http://10.58.6.106:8000/carts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"),
+        Authorization:
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
       },
       body: JSON.stringify({
-        //product_id: id (필요한 부분이라, 삭제하지 않았습니다.)
-        //product_size: size (필요한 부분이라, 삭제하지 않았습니다.)
-        //product_color: color (필요한 부분이라, 삭제하지 않았습니다.)
+        product_id: id,
+        size_id: size,
+        color_id: color,
+        quantity: number,
       }),
     })
       .then((res) => res.json())
@@ -73,8 +76,16 @@ class Select extends Component {
   };
 
   render() {
-    const { productdetail } = this.props;
-    const { SIZE, COLOR, number } = this.state;
+    const { productdetail, id, sizes } = this.props;
+    const { size, color, number } = this.state;
+    // console.log(productdetail.productId);
+    // console.log(number);
+    console.log(size);
+    console.log(color);
+    console.log(number);
+    console.log(id);
+    console.log(size);
+
     return (
       <div>
         <select
@@ -82,8 +93,14 @@ class Select extends Component {
           onChange={this.handleColorChange}
         >
           {productdetail.colors &&
-            productdetail.colors.map((color, id) => (
-              <option key={id}>{color}</option>
+            productdetail.colors.map((color) => (
+              <option
+                key={color.colorId}
+                id={color.colorId}
+                label={color.colorName}
+              >
+                {color.colorId}
+              </option>
             ))}
         </select>
         <select
@@ -91,8 +108,10 @@ class Select extends Component {
           onChange={this.handleSizeChange}
         >
           {productdetail.sizes &&
-            productdetail.sizes.map((size, id) => (
-              <option key={id}>{size}</option>
+            productdetail.sizes.map((size) => (
+              <option key={size.sizeId} id={size.sizeId} label={size.sizeName}>
+                {size.sizeId}
+              </option>
             ))}
         </select>
         <div className="header-middle-info-orderbox-colorsize">
@@ -135,7 +154,10 @@ class Select extends Component {
             </div>
           </div>
           <button className="header-middle-info-buy">바로구매</button>
-          <button className="header-middle-info-cart" onClick={this.goToDetail}>
+          <button
+            className="header-middle-info-cart"
+            onClick={this.handleAddtoCart}
+          >
             장바구니담기
           </button>
         </div>
