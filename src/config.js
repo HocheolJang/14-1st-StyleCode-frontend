@@ -5,3 +5,6 @@ export const jumbotronAPI =
   "http://localhost:3000/data/categoryDetailjumbotron.json";
 export const asidebarAPI =
   "http://localhost:3000/data/sidebarCategoryList.json";
+export const birthday = {
+  api: "http://localhost:3000/data/birthday.json",
+};
