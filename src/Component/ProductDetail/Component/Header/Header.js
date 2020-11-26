@@ -48,11 +48,11 @@ class Header extends Component {
                   {productdetail?.discount * 100}%
                 </span>
                 <span className="discount-price">
-                  {productdetail?.discountPrice}
+                  {parseInt(productdetail?.discountPrice).toLocaleString()}
                 </span>
                 <span className="price-unit">원</span>
                 <span className="origin-price">
-                  {productdetail?.originPrice}
+                  {parseInt(productdetail?.originPrice).toLocaleString()}
                 </span>
               </div>
               <button

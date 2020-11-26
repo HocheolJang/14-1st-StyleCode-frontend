@@ -159,6 +159,8 @@ main {
           font-weight: 700;
           background-color: #e8ebed;
           border: 0px solid black;
+          color: black;
+          cursor: pointer;
         }
         .header-middle-info-size {
           margin-bottom: 20px;
@@ -170,6 +172,8 @@ main {
           font-weight: 700;
           background-color: #e8ebed;
           border: 0px solid black;
+          color: black;
+          cursor: pointer;
         }
         .header-middle-info-orderbox-colorsize {
           width: 412px;
@@ -238,6 +242,7 @@ main {
             // border-radius: 20px;
             background-color: white;
             border: 1px solid #e8ebed;
+            padding-top: 10px;
             span {
               size: 10px;
             }
@@ -273,6 +278,7 @@ main {
             justify-content: center;
             border: 1px solid #e8ebed;
             border-bottom: 0px solid #e8ebed;
+            padding-top: 10px;
 
             // margin-right: 10px;
             // border-radius: 20px;

@@ -28,8 +28,6 @@ class Select extends Component {
       orderBox: this.props.productdetail?.discountPrice * number,
     });
     this.setState({ number: number });
-
-    console.log(orderBox);
   };
 
   handleRemoveChange = (e) => {
@@ -82,9 +80,9 @@ class Select extends Component {
     // console.log(number);
     console.log(size);
     console.log(color);
-    console.log(number);
-    console.log(id);
-    console.log(size);
+    // console.log(number);
+    // console.log(id);
+    // console.log(size);
 
     return (
       <div>
@@ -98,8 +96,9 @@ class Select extends Component {
                 key={color.colorId}
                 id={color.colorId}
                 label={color.colorName}
+                value={color.colorId}
               >
-                {color.colorId}
+                {color.colorName}
               </option>
             ))}
         </select>
@@ -109,16 +108,21 @@ class Select extends Component {
         >
           {productdetail.sizes &&
             productdetail.sizes.map((size) => (
-              <option key={size.sizeId} id={size.sizeId} label={size.sizeName}>
-                {size.sizeId}
+              <option
+                key={size.sizeId}
+                id={size.sizeId}
+                label={size.sizeName}
+                value={size.sizeId}
+              >
+                {size.sizeName}
               </option>
             ))}
         </select>
-        <div className="header-middle-info-orderbox-colorsize">
+        {/* <div className="header-middle-info-orderbox-colorsize">
           옵션
           <span>{this.state.color && this.state.color}</span>
           <span>{this.state.size && this.state.size}</span>
-        </div>
+        </div> */}
         <div className="header-middle-info-"></div>
         <div className="header-middle-info-orderbox-price">
           총 금액(원)
