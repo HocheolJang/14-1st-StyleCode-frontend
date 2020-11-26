@@ -1,15 +1,10 @@
 .contents {
-  // position: relative;
   width: 100%;
   height: fit-content;
   margin: 0 auto;
   border: 1px solid #e8ebed;
   border-radius: 6px;
   opacity: 1;
-  // cursor: pointer;
-  color: #26282b;
-  font-family: "Helvetica", "Arial", "Apple SD Gothic Neo", "Nanum Gothic",
-    "Malgun Gothic", "DotumChe", "Dotum", sans-serif;
   line-height: 1.3;
   overflow: hidden;
   transform: translateZ(0);
@@ -39,7 +34,6 @@
 
       li {
         width: 55px;
-        // height: 55px;
         padding: 10px;
       }
 
@@ -89,14 +83,10 @@
 
   .contentTextWrapper {
     width: 100%;
-    // height: 100%;
     height: auto;
 
     .contentText {
       padding: 10px 10px 12px;
-      // height: 100%;
-
-      // height: 87px;
 
       .productWrapper {
         position: relative;
@@ -121,17 +111,10 @@
           border-radius: 6px;
         }
 
-        // .productInfoWrapper {
-        //   // display: flex;
-
-        //   align-items: center;
-
         .productInfo {
-          // height: 56px;
           padding-left: 8px;
           align-items: center;
           .productName {
-            // height: 36px;
             line-height: 1.3;
             font-size: 14px;
             font-weight: bold;
@@ -155,13 +138,11 @@
             }
           }
         }
-        // }
       }
     }
 
     .authorWrapper {
       display: inline-flex;
-      // padding: 3px;
       font-size: 12px;
       line-height: 1.3;
       .authorImgWrapper {
@@ -199,14 +180,7 @@
           color: #9ea4aa;
         }
 
-        // .authorPopularity {
-        //   height: 15px;
-        //   color: #9ea4aa;
-        //   margin-top: 3px;
-        // }
-
         .authorPopularity {
-          // display: inline-flex;
           padding-right: 8px;
           font-size: 12px;
           padding-right: 10px;
@@ -223,10 +197,6 @@
           span {
             margin: 0 3px;
           }
-          // .likes {
-          //   color: #9ea4aa;
-          //   padding-right: 20px;
-          // }
 
           .likeNum {
             padding-right: 5px;
@@ -249,10 +219,11 @@
 
     .commentWrapper {
       width: 198px;
-      height: 50px;
+      height: 42px;
+      overflow: hidden;
       padding: 10px 10px 15px 10px;
       font-size: 16px;
-      line-height: 20.8px;
+      line-height: 25px;
       background-color: #f7f8f9;
       background-position: 0% 0%;
       color: #26282b;
@@ -263,11 +234,11 @@
         text-decoration: none solid rgb(38, 40, 43);
         text-align: center;
         word-spacing: 0px;
-        height: 30px;
+        height: auto;
         width: 180px;
         overflow: hidden;
         font-size: 12px;
-        line-height: 14.4px;
+        line-height: 15.8px;
         text-decoration: none solid rgb(69, 76, 83);
         text-align: left;
         word-spacing: 0px;

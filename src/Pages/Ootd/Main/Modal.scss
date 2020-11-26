@@ -39,7 +39,6 @@ html {
         display: flex;
         width: 960px;
         max-height: 800px;
-        // height: 100%;
         transform: translate(45%, 8%);
         background: #ffffff;
         color: #454c53;
@@ -107,11 +106,6 @@ html {
             .commentData {
               display: flex;
 
-              // .authorInfomationWrapper {
-              //   width: 289px;
-              //   padding-bottom: 15px;
-              //   display: flex;
-
               .commentUserImgWrapper {
                 width: 40px;
                 height: 40px;
@@ -125,7 +119,7 @@ html {
               }
 
               .authorInformation {
-                // height: 33px;
+                height: 33px;
                 display: inline;
                 font-size: 14px;
                 font-weight: 700;
@@ -135,31 +129,39 @@ html {
                 word-spacing: 0px;
                 overflow: hidden;
                 margin-right: 10px;
+                padding-top: 5px;
+              }
 
-                .author {
-                  height: 18px;
-                  margin: 0 4px 0 0;
-                  max-width: 170px;
-                  font-size: 14px;
-                  font-weight: 700;
-                  line-height: 18.2px;
-                  text-decoration: none solid rgb(69, 76, 83);
-                  text-align: left;
-                  white-space: nowrap;
-                  word-spacing: 0px;
-                  cursor: pointer;
-                }
+              .author {
+                margin: 0 4px 0 0;
+                max-width: 170px;
+                padding-top: 5px;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 18.2px;
+                text-decoration: none solid rgb(69, 76, 83);
+                text-align: left;
+                white-space: nowrap;
+                word-spacing: 0px;
+                cursor: pointer;
+              }
 
-                .introduction {
-                  font-size: 12px;
-                  max-width: 190px;
-                  color: #9ea4aa;
-                }
+              .introduction {
+                font-size: 12px;
+                max-width: 190px;
+                color: #9ea4aa;
+                overflow: hidden;
+                font-size: 12px;
+                line-height: 15.6px;
+                text-decoration: none solid rgb(158, 164, 170);
+                text-align: left;
+                white-space: nowrap;
+                word-spacing: 0px;
               }
 
               .followBtnBox {
                 height: 34px;
-                width: 42px;
+                width: 40px;
                 border: 1px solid #1ab380;
                 border-radius: 6px;
                 margin: 3px 0 0 10px;
@@ -182,6 +184,7 @@ html {
             }
 
             .authorDescription {
+              width: 289px;
               font-size: 14px;
               display: inline-flex;
               line-height: 16.9px;
@@ -194,7 +197,6 @@ html {
           .authorPopularity {
             width: 315px;
             display: flex;
-            // height: 34px;
             padding-top: 15px;
             padding-bottom: 15px;
             border-bottom: 1px solid #c9cdd2;
@@ -251,88 +253,182 @@ html {
             overflow: hidden;
             max-height: 533px;
 
-            .commentFixedWrapper {
+            .commentBox {
               display: flex;
-            }
-
-            .commentData {
-              display: flex;
-              // .commentNone {
-              //   display: none;
-              // }
               overflow: hidden;
+            }
+            .imgWrapper {
+              display: flex;
+              width: 30px;
+              height: 30px;
 
-              .commentUserImgWrapper {
-                width: 30px;
-                height: 30px;
+              .commentUserImg {
+                width: 100%;
+                height: 100%;
+                border: 0px solid #ffffff;
                 border-radius: 50%;
-
-                .commentUserImg {
-                  width: 100%;
-                  height: 100%;
-                  cursor: pointer;
-                  transform: none;
-                  transition: all 0s ease 0s;
-                  border-radius: 50%;
-                }
-              }
-
-              .commentUserInfo {
-                display: flex;
-                .commentContentWrapper {
-                  display: flex;
-                  .commentUser {
-                    display: flex;
-                  }
-
-                  .commentContent {
-                    display: flex;
-                  }
-                }
-
-                .commentBtnWrapper {
-                  display: flex;
-                  .commentDate {
-                  }
-
-                  .commentBtn {
-                    cursor: pointer;
-                  }
-                }
+                cursor: pointer;
+                transform: none;
+                transition: all 0s ease 0s;
               }
             }
 
-            .commentNum {
-              // height: 18px;
-              width: 315px;
-              margin: 10px 0 10px 0;
-              font-size: 15px;
-              font-weight: 700;
-              line-height: 18.2px;
-              text-decoration: none solid rgb(114, 120, 127);
-              text-align: left;
-              word-spacing: 0px;
-            }
-
-            .inputWrapper {
-              width: 315px;
-              border-top: 1px solid #c9cdd2;
-              font-size: 22px;
-              line-height: 16px;
+            .commentInfoWrapper {
+              font-size: 16px;
+              line-height: 20.8px;
               text-decoration: none solid rgb(38, 40, 43);
               text-align: left;
               word-spacing: 0px;
+              background-color: #ffffff;
+              background-position: 0% 0%;
               color: #26282b;
-              cursor: default;
+              height: 36px;
+              width: 275px;
+              overflow: hidden;
+              transform: none;
+              transition: all 0s ease 0s;
 
-              input {
-                width: 315px;
-                height: 43px;
-                border: 1px solid #c9cdd2;
-                border-radius: 6px;
-                padding: 10px 10px 10px 10px;
-                margin-top: 10px;
+              .commentContentWrapper {
+                font-size: 12px;
+                line-height: 15px;
+                white-space: pre-wrap;
+                color: #26282b;
+
+                .commentUser {
+                  font-weight: 700;
+                }
+
+                .commentContent {
+                  padding-left: 5px;
+                }
               }
+
+              .commentBtnWrapper {
+                font-size: 12px;
+                line-height: 15.6px;
+                text-decoration: none solid rgb(158, 164, 170);
+                text-align: left;
+                word-spacing: 0px;
+                background-color: #ffffff;
+                background-position: 0% 0%;
+                color: #9ea4aa;
+                height: auto;
+                width: auto;
+
+                .commentDate {
+                }
+
+                .commentBtn {
+                  cursor: pointer;
+                  padding-left: 8px;
+                }
+              }
+            }
+
+            .commentCreateBox {
+              display: flex;
+              overflow: hidden;
+            }
+
+            .commentCreateImgWrapper {
+              display: flex;
+              width: 30px;
+              height: 30px;
+
+              .commentCreateUserImg {
+                width: 100%;
+                height: 100%;
+                border: 0px solid #ffffff;
+                border-radius: 50%;
+                cursor: pointer;
+                transform: none;
+                transition: all 0s ease 0s;
+              }
+            }
+
+            .commentCreateInfoWrapper {
+              font-size: 16px;
+              line-height: 20.8px;
+              text-decoration: none solid rgb(38, 40, 43);
+              text-align: left;
+              word-spacing: 0px;
+              background-color: #ffffff;
+              background-position: 0% 0%;
+              color: #26282b;
+              height: 36px;
+              width: 275px;
+              overflow: hidden;
+              transform: none;
+              transition: all 0s ease 0s;
+
+              .commentCreateContentWrapper {
+                font-size: 12px;
+                line-height: 15px;
+                white-space: pre-wrap;
+                color: #26282b;
+
+                .commentCreateUser {
+                  font-weight: 700;
+                }
+
+                .commentCreateContent {
+                  padding-left: 5px;
+                }
+              }
+
+              .commentCreateBtnWrapper {
+                font-size: 12px;
+                line-height: 15.6px;
+                text-decoration: none solid rgb(158, 164, 170);
+                text-align: left;
+                word-spacing: 0px;
+                background-color: #ffffff;
+                background-position: 0% 0%;
+                color: #9ea4aa;
+                height: auto;
+                width: auto;
+
+                .commentCreateDate {
+                }
+
+                .commentCreateBtn {
+                  cursor: pointer;
+                  padding-left: 8px;
+                }
+              }
+            }
+          }
+
+          .commentNum {
+            width: 315px;
+            margin: 10px 0 10px 0;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 18.2px;
+            text-decoration: none solid rgb(114, 120, 127);
+            text-align: left;
+            word-spacing: 0px;
+          }
+
+          .inputWrapper {
+            width: 315px;
+            border-top: 1px solid #c9cdd2;
+            font-size: 22px;
+            line-height: 16px;
+            text-decoration: none solid rgb(38, 40, 43);
+            text-align: left;
+            word-spacing: 0px;
+            color: #26282b;
+            cursor: default;
+            margin-top: 10px;
+
+            input {
+              width: 315px;
+              height: 43px;
+              border: 1px solid #c9cdd2;
+              border-radius: 6px;
+              padding: 10px 10px 10px 10px;
+              margin-top: 10px;
             }
           }
         }

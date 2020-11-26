@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Masonry from 'react-masonry-css';
 import Card from "./Card";
+
 import './CardList.scss';
 class CardList extends Component {
   constructor() {
@@ -11,33 +13,33 @@ class CardList extends Component {
   }
   
   handleModal = (data) => {
-    // console.log(this.state.isModal);
     this.props.isModal({
       isModal: data,
+      getModalInputComment: this.props.getModalInputComment,
     })
   }
 
   handleModalData = (data) => {
-    // console.log(data);
     this.props.modalData({
       modalData: data,
     })
   }
 
   render() {
-    console.log('ootdList',this.props.cardsData?.ootd_list);
-    // console.log(this.props.cardsData?.ootd_list?.index);
-    // console.log(this.props.cardsData.ootd_list?.price);
-    // console.log(this.state.modalData?.ootdDetail);
+    console.log(this.props.getModalInputComment);
     const { cardsData, handleClickLike, commentData, getData } = this.props;
     return (
       <div className="cardListWrapper">
         <p className="heading">지금의 트렌드</p>
-        <div className="cardList">
-          {cardsData.ootd_list?.map(contents => {
+        <Masonry
+       breakpointCols={5}
+      className="my-masonry-grid"
+      columnClassName="my-masonry-grid_column">
+          {cardsData?.map(contents => {
             return (
                 <Card
                 getData={getData}
+                getModalInputComment={this.props.getModalInputComment}
                 commentData={commentData}
                 isModal={this.handleModal}
                 modalData={this.handleModalData}
@@ -62,10 +64,10 @@ class CardList extends Component {
                 />
           )}
           )}
-        </div>
+                </Masonry>
       </div>
+
     );
   }
 }
-
 export default CardList;

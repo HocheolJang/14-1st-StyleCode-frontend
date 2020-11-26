@@ -7,14 +7,12 @@ import React, { Component } from 'react';
 import NavbarOotd from '../../../Common/Navbar/NavbarOotd/NavbarOotd';
 import CardList from './CardList';
 import Modal from './Modal';
+import InfiniteScroll from 'react-infinite-scroller';
 import Paginaton from './Pagination';
 import './Main.scss';
 
-// const API = "http://10.58.7.150:8000/ootds";
-// const API = "http://localhost:3000/data/data.json";
-
-const LIMIT = 5;
-
+const API = "http://192.168.219.101:8000";
+const LIMIT = 10;
 class Main extends Component {
   constructor() {
     super();
@@ -24,6 +22,8 @@ class Main extends Component {
       getData: "",
       commentData: [],
       modalData: [],
+      offSet: 0,
+      isLoading: false,
     }
   }
   
@@ -40,21 +40,28 @@ class Main extends Component {
     })
   }
   
-  API = `http://10.58.7.150:8000/ootds?limit=${LIMIT}`;
   componentDidMount() {
-    fetch(this.API).then((res) => res.json())
+    window.addEventListener("scroll", this.infiniteScroll);
+    fetch(`${API}/ootds?offset=${this.state.offSet}&limit=${LIMIT}`)
+    .then((res) => res.json())
     .then((res) => 
     this.setState({
-      cards: res,
-      // follower: res[0].follower,
-  }))}
+      cards: res.ootd_list,
+      offSet: this.state.offSet + LIMIT,
+    })
+  )
+  }
 
-  fetchOotd = (e) => {
-    const offset = (this.state.cards?.length) / (e.target.dataset.idx * LIMIT);
-    fetch(`http://10.58.7.150:8000/ootds?limit=${LIMIT}&offset=${offset}`)
+  loadFunc = () => {
+    fetch(`${API}/ootds?offset=${this.state.offSet}&limit=${LIMIT}`)
     .then((res) => res.json())
-    .then((res) => this.setState({ cards : res}))
-  };
+    .then((res) => {
+      this.setState({
+      cards: [...this.state.cards, ...res.ootd_list],
+      offSet: this.state.offSet + LIMIT,
+    });
+    })
+  }
 
   getData = (data) => {
     this.setState({
@@ -62,110 +69,72 @@ class Main extends Component {
     })
   }
 
-  commetData = () => {
+  modalData = () => {
     this.setState({
-      commetData: this.state.getData,
+      commentData: this.state.getData,
     })
   }
 
   handleModalData = (data) => {
-    // console.log(data);
     this.setState({
       modalData: data,
     })
   }
 
   render() {
-    // console.log(this.state.getData);
-    // console.log(this.state.cards?.ootd_list?.contentImg);
-    const { cards, isModal, modalData, commentData, getData } = this.state;
+    const { cards, isModal, modalData, commentData, getData, gutter } = this.state;
     return (
-      <>
-        <NavbarOotd />
-        <div className="mainWrapper">
-          <CardList
-          commentData={commentData}
-          getData={getData}
-          isModal={this.openModal}
-          modalData={this.handleModalData}
-          cardsData={cards}
-          handleClickLike={this.handleClickLike}/>
-        </div>
-        <div>
-            <Paginaton 
-            onClick={this.fetchOotd}
-            dataLength={cards.length}
-            limit={LIMIT}
-            />
-        </div>
-        {/* <section class="sidebar">
-          <ul class="sidebar_sns">
-            <button><svg onClick={this.handleClick} stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5C13 4.44772 12.5523 4 12 4Z" fill="currentColor"></path></svg></button>
-          </ul>
-        </section> */}
 
+      <div style={{height:"935px",overflow:"auto"}}>
+    <InfiniteScroll
+      pageStart={0}
+      loadMore={this.loadFunc}
+      hasMore={true || false}
+      loader={<div className="loader" key={0}><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 11H7V13H2zM17 11H22V13H17zM11 17H13V22H11zM11 2H13V7H11z"></path><path transform="rotate(-45.001 6.697 6.697)" d="M5.697 4.197H7.697V9.197H5.697z"></path><path transform="rotate(134.999 17.303 17.303)" d="M16.303 14.803H18.303V19.803H16.303z"></path><path transform="rotate(45.001 6.697 17.303)" d="M5.697 14.803H7.697V19.803H5.697z"></path><path transform="rotate(-44.992 17.303 6.697)" d="M14.803 5.697H19.803V7.697H14.803z"></path></svg></div>}
+      useWindow={false}
+    >
+      <NavbarOotd />
+      <div className="mainWrapper">
+        <CardList
+        key={cards.id}
+        commentData={commentData}
+        getModalInputComment={getData}
+        isModal={this.openModal}
+        modalData={this.handleModalData}
+        cardsData={cards}
+        handleClickLike={this.handleClickLike}/>
+      </div>
+      <div>
+        <div className="infiniteScrollTarget">
+          <input type="text" alt="target" value="target"></input>
+        </div>
+      </div>
       <div className={isModal ? '' : 'displayNone'}>
         <Modal 
         modalData = {modalData}
         getData = {this.getData}
-        commetData = {this.commetData}
+        commentData = {this.commetData}
         closeModal = {this.closeModal}
         key={cards.id}
         id={cards.id}
-        contentImg={cards.ootd_list?.contentImg}
-        productImg={cards.ootd_list?.productImg}
-        productName={cards.ootd_list?.productName}
-        price={cards.ootd_list?.price}
-        sale={cards.ootd_list?.sale}
-        authorImg={cards.ootd_list?.authorImg}
-        author={cards.ootd_list?.author}
-        date={cards.ootd_list?.date}
-        tagName={cards.ootd_list?.tagName}
-        description={cards.ootd_list?.description}
-        follower={cards.ootd_list?.follower}
-        commentNum={cards.ootd_list?.commentNum}
-        share={cards.ootd_list?.share}
-        comments={cards.ootd_list?.comments}
+        contentImg={cards?.contentImg}
+        productImg={cards?.productImg}
+        productName={cards?.productName}
+        price={cards?.price}
+        sale={cards?.sale}
+        authorImg={cards?.authorImg}
+        author={cards?.author}
+        date={cards?.date}
+        tagName={cards?.tagName}
+        description={cards?.description}
+        follower={cards?.follower}
+        commentNum={cards?.commentNum}
+        share={cards?.share}
+        comments={cards?.comments}
         />
       </div>
-      </>
-    );
-  }
+    </InfiniteScroll>
+</div>
+    )}
 }
 export default Main;
-
-
-  // // handleClick = () => {
-  //   componentDidMount() {
-  //     // console.log("ok");
-  //     fetch(API, {
-  //       method: "GET",
-  //       // body: JSON.stringify({
-  //       //   ootd_id: "1",
-  //       // })
-  //     }).then((res) => res.json()).then((res) => this.setState({
-  //       cards: res,
-  //     // }
-      
-  //   }))}
-  // // }
-
-  // handleClickLike = () => {
-  //   // fetch(this.API, {
-  //   //   method: "POST",
-  //   //   body: JSON.stringify({
-  //   //     ootd_id: "1",
-  //   //     user_id: "1",
-  //   //   }),
-  //   // }).then((response) => {return response.json()}).then((result) => {
-  //   //       console.log("백엔드에서 오는 응답메시지:" + result);
-  //         if(this.state.likeBtn === false){
-  //           this.setState({
-  //           likeBtn: true,
-  //           follower: this.state.follower + 1,
-  //         })} else {
-  //           this.setState({likeBtn: false,
-  //           follower: this.state.follower - 1,
-  //           })}
-  //       // })
-  // }
