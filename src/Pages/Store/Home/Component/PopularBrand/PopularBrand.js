@@ -57,9 +57,9 @@ class PopularBrand extends Component {
           </header>
           <div className="carousel">
             <Slider ref={this.slider} {...SETTING}>
-              {brandList.map((brand) => {
+              {brandList.map((brand, idx) => {
                 return (
-                  <div className="brandItem">
+                  <div className="brandItem" key={idx}>
                     <div className="brandImgBox">
                       <img
                         className="brandItemImg"
