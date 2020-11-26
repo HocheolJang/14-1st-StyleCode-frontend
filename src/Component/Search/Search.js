@@ -4,6 +4,7 @@ import Product from "./Component/Product/Product";
 import User from "./Component/User/User";
 import Navbar from "../../Common/Navbar/NavbarStore/NavbarStore";
 import Footer from "../../Pages/Store/Home/Component/Footer/Footer";
+import { searchDataAPI } from "../../config";
 
 class Search extends Component {
   constructor() {
@@ -20,7 +21,7 @@ class Search extends Component {
   }
 
   getSearchData = () => {
-    fetch("http://10.58.6.106:8000/search?keyword=%EB%82%98%EC%9D%B4%ED%82%A4")
+    fetch(`${searchDataAPI}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -29,7 +30,6 @@ class Search extends Component {
           ootdList: res.results.ootds,
           usersList: res.results.users,
           productCount: res.results.product_count,
-          ootdCount: res.results.ootd_count,
           userCount: res.results.user_count,
         });
       });
@@ -40,13 +40,7 @@ class Search extends Component {
   }
 
   render() {
-    const {
-      productList,
-      productCount,
-      usersList,
-      ootdCount,
-      userCount,
-    } = this.state;
+    const { productList, productCount, usersList, userCount } = this.state;
 
     return (
       <div className="search">

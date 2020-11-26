@@ -30,10 +30,7 @@ class Product extends Component {
                       {parseInt(product?.discount_rate * 100)}%
                     </span>
                     <span className="productPrice">
-                      {(product?.discount_price * 1)
-                        .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                      원
+                      {(product?.discount_price * 1).toLocaleString("en")}원
                     </span>
                   </div>
                 </div>
