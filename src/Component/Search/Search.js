@@ -20,7 +20,7 @@ class Search extends Component {
   }
 
   getSearchData = () => {
-    fetch("http://10.58.1.162:8000/search?keyword=%EB%82%98%EC%9D%B4%ED%82%A4")
+    fetch("http://10.58.6.106:8000/search?keyword=%EB%82%98%EC%9D%B4%ED%82%A4")
       .then((res) => res.json())
       .then((res) => {
         console.log(res.results);
@@ -128,9 +128,7 @@ class Search extends Component {
         </div>
         {/* 메인 푸터 컴포넌트 받아서 처리 */}
         <div>
-          <span>
-            푸우ㅜㅜㅜㅜㅜㅜㅜ터
-          </span>
+          <span>푸우ㅜㅜㅜㅜㅜㅜㅜ터</span>
         </div>
       </div>
     );
