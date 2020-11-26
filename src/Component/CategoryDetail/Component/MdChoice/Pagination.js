@@ -4,7 +4,6 @@ import "./Pagination.scss";
 class Pagination extends Component {
   render() {
     const { fetchProduct, activePage } = this.props;
-    console.log(activePage);
 
     return (
       <div className="Pagination">
