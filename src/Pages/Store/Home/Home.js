@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Navbar from "../../../Component/Navbar/NavbarStore/Navbar";
+import Navbar from "../../../Common/Navbar/NavbarStore/NavbarStore";
 import Jumbotron from "./Component/Jumbotron/Jumbotron";
 import PopularProduct from "./Component/PopularProduct/PopularProduct";
 import PopularBrand from "./Component/PopularBrand/PopularBrand";
@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     return (
       <>
-        {/* <Navbar /> */}
+        <Navbar />
         <Jumbotron />
         <PopularProduct />
         <PopularBrand />
