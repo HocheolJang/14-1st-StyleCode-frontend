@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Asidebar.scss";
+import { asidebarAPI } from "../../../../config";
 
 class Asidedbar extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class Asidedbar extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/sidebarCategoryList.json")
+    fetch(`${asidebarAPI}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({

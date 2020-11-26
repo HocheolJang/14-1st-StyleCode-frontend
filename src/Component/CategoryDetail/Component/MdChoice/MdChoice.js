@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./MdChoice.scss";
 import Pagination from "./Pagination";
-import {MdChoiceAPI} from "../../../../config";
+import { mdChoiceAPI } from "../../../../config";
 
 class MdChoice extends Component {
   constructor() {
@@ -14,7 +14,7 @@ class MdChoice extends Component {
   }
 
   getAllData = () => {
-    fetch( MdChoiceAPI )
+    fetch(`${mdChoiceAPI}`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);

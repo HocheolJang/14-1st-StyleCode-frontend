@@ -1,11 +1,13 @@
 .categoryDetail {
-  display: flex;
-  width: 1180px;
-  margin: 154px auto 0 auto;
-  font-family: Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic,
-    Malgun Gothic, DotumChe, Dotum, sans-serif;
+  .categoryContainer {
+    display: flex;
+    width: 1180px;
+    margin: 154px auto 0 auto;
+    font-family: Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic,
+      Malgun Gothic, DotumChe, Dotum, sans-serif;
 
-  .mainContainer {
-    margin-left: 20px;
+    .mainContainer {
+      margin-left: 20px;
+    }
   }
 }

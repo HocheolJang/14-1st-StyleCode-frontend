@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "./Jumbotron.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { jumbotronAPI } from "../../../../config";
 
 class Jumbotron extends Component {
   constructor() {
@@ -22,7 +23,7 @@ class Jumbotron extends Component {
   };
 
   getJumbotronData = () => {
-    fetch("http://localhost:3000/data/categoryDetailjumbotron.json")
+    fetch(`${jumbotronAPI}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -36,7 +37,6 @@ class Jumbotron extends Component {
   }
 
   handleCurrentPage = (e) => {
-    console.log(e);
     this.setState({
       jumbotronCurrentPage: this.state.jumbotronCurrentPage + 1,
     });

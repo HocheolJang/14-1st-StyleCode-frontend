@@ -9,9 +9,9 @@ import "./CategoryDetail.scss";
 class CategoryDetail extends Component {
   render() {
     return (
-      <>
+      <div className="categoryDetail">
         <Navbar />
-        <div className="categoryDetail">
+        <div className="categoryContainer">
           <Asidebar />
           <div className="mainContainer">
             <Jumbotron />
@@ -20,7 +20,7 @@ class CategoryDetail extends Component {
           </div>
         </div>
         <span>푸터자리</span>
-      </>
+      </div>
     );
   }
 }

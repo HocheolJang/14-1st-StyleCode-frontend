@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./ShowAll.scss";
-
-const API = "http://10.58.6.191:8000";
+import { showAllAPI, sortProductAPI } from "../../../../config";
 
 class ShowAll extends Component {
   constructor() {
@@ -16,7 +15,7 @@ class ShowAll extends Component {
   }
 
   componentDidMount() {
-    fetch(`${API}/products?sort=0&second=1`)
+    fetch(`${showAllAPI}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -29,7 +28,7 @@ class ShowAll extends Component {
   sortProduct = (e) => {
     const sort = e.target.dataset.idx;
     console.log(e.target.id);
-    fetch(`${API}/products?sort=${sort}&second=1`)
+    fetch(`${sortProductAPI}/products?sort=${sort}&second=1`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -40,9 +39,7 @@ class ShowAll extends Component {
       });
   };
 
-  handleMenuTab = (e) => {
-    // console.log(e);
-  };
+  handleMenuTab = (e) => {};
 
   filterDropdown = (e) => {
     e.preventDefault();
@@ -53,9 +50,7 @@ class ShowAll extends Component {
     });
   };
 
-  handleFilter = (e) => {
-    // console.log(e);
-  };
+  handleFilter = (e) => {};
 
   render() {
     const { showAllList, showDropdown, sortMethod } = this.state;
