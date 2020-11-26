@@ -1,0 +1,382 @@
+.SignUp {
+  // background-image: url(./images/loginbackground.jpg);
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  align-items: center;
+  height: 100%;
+
+  .main {
+    display: flex;
+    font-size: 62.5%; //10px = 1rem
+    width: 60rem;
+    height: 52rem;
+    padding: 3rem 2rem 2.4rem 2rem;
+    border: 0.1rem solid black;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+
+    .leftMain {
+      .nav {
+        width: 21.2rem;
+        height: 19.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .nav-my-picture {
+          width: 14rem;
+          height: 14rem;
+        }
+
+        .nav-choice-picture {
+          width: 11rem;
+          height: 3.6;
+          margin-top: 2rem;
+          font-size: 1.4rem;
+          font-weight: 700;
+          background-color: white;
+          color: gray;
+        }
+      }
+    }
+
+    .rightMain {
+      & {
+        margin: 0 0 0 2rem;
+      }
+
+      .rightMain-info {
+        & {
+          margin: 0 0 2rem 0;
+        }
+
+        .facebook-information {
+          width: 100%;
+          height: 3.5rem;
+          margin: 0 0 2rem 0;
+          border-radius: 0.5rem;
+        }
+
+        .id {
+          width: 100%;
+          height: 3.5rem;
+          border: 1px solid black;
+          border-top-right-radius: 0.5rem;
+          border-top-left-radius: 0.5rem;
+          display: flex;
+          padding: 0.4rem;
+
+          div {
+            padding: 0.5rem 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            width: 5rem;
+            margin: 0 0 0 0.3rem;
+
+            p {
+              font-size: 1.1rem;
+              width: 100%;
+              margin: 0 auto;
+            }
+          }
+
+          .id-input {
+            width: 100%;
+            margin-left: 1rem;
+          }
+        }
+
+        .pw {
+          width: 100%;
+          height: 3.5rem;
+          border: 1px solid black;
+          display: flex;
+          padding: 0.4rem;
+
+          div {
+            padding: 0.5rem 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            width: 5rem;
+            margin: 0 0 0 0.3rem;
+
+            p {
+              font-size: 1.1rem;
+              width: 100%;
+              margin: 0 auto;
+            }
+          }
+
+          .pw-input {
+            width: 100%;
+            margin-left: 1rem;
+          }
+        }
+
+        .pwCh {
+          width: 100%;
+          height: 3.5rem;
+          border: 1px solid black;
+          display: flex;
+          padding: 0.4rem;
+
+          div {
+            padding: 0.5rem 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            width: 5rem;
+            margin: 0 0 0 0.3rem;
+
+            p {
+              font-size: 1rem;
+              width: 100%;
+              margin: 0 auto;
+              letter-spacing: 2px;
+            }
+          }
+
+          .pwCh-input {
+            width: 100%;
+            margin-left: 1rem;
+          }
+        }
+
+        .nick-name {
+          width: 100%;
+          height: 3.5rem;
+          border: 1px solid black;
+          display: flex;
+          padding: 0.4rem;
+
+          div {
+            padding: 0.5rem 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            width: 5rem;
+            margin: 0 0 0 0.3rem;
+
+            p {
+              font-size: 1.3rem;
+              width: 100%;
+              margin: 0 auto;
+            }
+          }
+
+          .nick-name-input {
+            width: 100%;
+            margin-left: 1rem;
+          }
+        }
+
+        .email {
+          width: 100%;
+          height: 3.5rem;
+          border: 1px solid black;
+          padding: 0.4rem;
+          display: flex;
+          padding: 0.4rem;
+
+          div {
+            padding: 0.5rem 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            width: 5rem;
+            margin: 0 0 0 0.3rem;
+
+            p {
+              font-size: 1.3rem;
+              width: 100%;
+              margin: 0 auto;
+            }
+          }
+
+          .email-input {
+            width: 100%;
+            margin-left: 1rem;
+          }
+        }
+
+        .radio {
+          width: 100%;
+          height: 3.5rem;
+          border: 1px solid black;
+          display: flex;
+
+          div {
+            padding: 0.5rem 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            width: 5rem;
+            margin: 0 0 0 0.7rem;
+
+            p {
+              font-size: 1.3rem;
+              width: 100%;
+              margin: 0 auto;
+            }
+
+            label {
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+        .birth {
+          width: 100%;
+          height: 3.5rem;
+          border: 1px solid black;
+          border-bottom-left-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem;
+          padding: 0.4rem;
+          display: flex;
+          padding: 0.4rem;
+
+          div {
+            padding: 0.5rem 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            width: 5rem;
+            margin: 0 0 0 0.3rem;
+            p {
+              font-size: 1.3rem;
+              width: 100%;
+              margin: 0 auto;
+            }
+          }
+
+          .year {
+            width: 8.2rem;
+            margin-right: 2rem;
+            font-size: 1.3rem;
+          }
+
+          .month {
+            width: 5rem;
+            margin-right: 2rem;
+            font-size: 1.3rem;
+          }
+
+          .day {
+            width: 5rem;
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .rightMain-agree-form {
+        .agree-form {
+          .agree-form-one {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            input {
+              width: 2rem;
+              height: 2rem;
+              margin-right: 1rem;
+            }
+
+            p {
+              font-size: 1rem;
+              width: 100%;
+              font-weight: 800;
+            }
+          }
+
+          .agree-form-two {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            input {
+              width: 2rem;
+              height: 2rem;
+              margin-right: 1rem;
+            }
+
+            p {
+              font-size: 1rem;
+              width: 100%;
+            }
+          }
+
+          .agree-form-three {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            input {
+              width: 2rem;
+              height: 2rem;
+              margin-right: 1rem;
+            }
+
+            p {
+              font-size: 1rem;
+              width: 100%;
+            }
+          }
+
+          .agree-form-four {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            input {
+              width: 2rem;
+              height: 2rem;
+              margin-right: 1rem;
+            }
+
+            p {
+              font-size: 1rem;
+              width: 100%;
+            }
+          }
+
+          .agree-form-five {
+            display: flex;
+            align-items: center;
+            width: 1005;
+
+            input {
+              width: 2rem;
+              height: 2rem;
+              margin-right: 1rem;
+            }
+
+            p {
+              font-size: 1rem;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .alldone {
+      & {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      & :hover {
+        transform: scale(1.1);
+        padding: 10px;
+        border: 2px solid white;
+      }
+
+      .alldone-button {
+        width: 13rem;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        background-color: #4adaaf;
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 800;
+        border: 1px solid white;
+      }
+    }
+  }
+}
