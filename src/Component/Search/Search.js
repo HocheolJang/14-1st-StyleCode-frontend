@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./Search.scss";
 import Product from "./Component/Product/Product";
 import User from "./Component/User/User";
-// import Navbar from ""
-// import Footer from ""
+import Navbar from "../../Common/Navbar/NavbarStore/NavbarStore";
+import Footer from "../../Pages/Store/Home/Component/Footer/Footer";
 
 class Search extends Component {
   constructor() {
@@ -51,7 +51,9 @@ class Search extends Component {
 
     return (
       <div className="search">
-        <div>{/* 네브바 컴포넌트 받아서 처리 */}</div>
+        <div>
+          <Navbar />
+        </div>
         <div className="searchContainer">
           <header>
             <div className="relatedContainer">
@@ -79,7 +81,7 @@ class Search extends Component {
               <span className="brandName">페이크</span>
             </div>
           </div>
-          <div className="trend">
+          <div className="brandMarketing">
             <p className="subtitle">기획전</p>
             <div className="marketingContainer">
               <div>
@@ -126,10 +128,7 @@ class Search extends Component {
             </div>
           </div>
         </div>
-        {/* 메인 푸터 컴포넌트 받아서 처리 */}
-        <div>
-          <span>푸우ㅜㅜㅜㅜㅜㅜㅜ터</span>
-        </div>
+        <Footer />
       </div>
     );
   }
