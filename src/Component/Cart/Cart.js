@@ -16,6 +16,7 @@ class Cart extends Component {
       cartList: [],
       isChecked: true,
       isAllChecked: true,
+      cartLength: 0
     };
   }
 
@@ -97,6 +98,10 @@ class Cart extends Component {
       method: "DELETE",
     });
   };
+  componentDidUpdate(// 이전스테이트값){
+    // 조건 this.handleDeleteItemBtn()
+    // 새로 
+  }
 
   handleCheckAllBox = () => {
     const { isAllChecked } = this.state;
