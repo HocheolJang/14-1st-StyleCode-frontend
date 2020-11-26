@@ -5,7 +5,7 @@
 
   .card {
     width: 310px;
-    height: 400px;
+    height: 430px;
 
     .productImgBox {
       display: flex;
@@ -28,17 +28,17 @@
     }
     .productDescBox {
       margin-left: 10px;
-      margin-top: 5px;
+      margin-top: 10px;
 
       .brandName {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 700;
       }
       .productName {
         width: 280px;
-        height: 16px;
+        height: 20px;
         margin-top: 10px;
-        font-size: 16px;
+        font-size: 14px;
         text-align: left;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -46,24 +46,28 @@
       }
       .discountPriceBox {
         margin-top: 10px;
+        height: 16px;
 
         .discount {
-          color: red;
-          font-size: 18px;
+          color: #f81542;
+          font-size: 15px;
           font-weight: 700;
         }
 
         .productPrice {
           margin-left: 5px;
-          font-size: 18px;
+          font-size: 15px;
           font-weight: 700;
         }
       }
 
       .likeReviewBox {
         margin-top: 10px;
-        color: grey;
-        font-size: 16px;
+        color: #72787f;
+        font-size: 13px;
+        &:nth-child(odd) {
+          margin-right: 3px;
+        }
         .productLike,
         .productReview {
           margin-right: 10px;

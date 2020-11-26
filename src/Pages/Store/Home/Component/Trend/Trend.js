@@ -91,10 +91,7 @@ class Trend extends Component {
                       <div className="showAll">
                         <Link to="#">
                           <span>
-                            {trend.productCnt
-                              .toString()
-                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                            개 더 보기
+                            {trend.productCnt}.toLocaleString(“en”) 개 더 보기
                           </span>
                         </Link>
                       </div>
