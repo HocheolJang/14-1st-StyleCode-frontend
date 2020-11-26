@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
+
+.jumbotron {
+  width: 1240px;
+  height: 675px;
+  margin: 138px auto 100px auto;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+  outline: none;
+  border: none;
+
+  .item {
+    .jumboImg {
+      width: 1240px;
+      height: 675px;
+      object-fit: fill;
+    }
+    position: relative;
+
+    .adsText {
+      position: absolute;
+      top: 100px;
+      right: 100px;
+      z-index: 2;
+      line-height: normal;
+
+      .mainTitle {
+        margin-bottom: 20px;
+        padding-top: 20px;
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      .subTitle {
+        font-size: 18px;
+      }
+
+      .white {
+        color: #ffffff;
+      }
+    }
+
+    .slideBtnLeft {
+      position: absolute;
+      top: 45%;
+      left: 0px;
+      width: 50px;
+      height: 50px;
+      z-index: 1000;
+      object-fit: cover;
+
+      &:hover {
+        cursor: pointer;
+        color: red;
+      }
+    }
+
+    .slideBtnRight {
+      position: absolute;
+      top: 45%;
+      right: 0px;
+      width: 50px;
+      height: 50px;
+      z-index: 1000;
+      object-fit: cover;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

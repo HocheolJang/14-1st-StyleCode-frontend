@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Footer.scss";
+import "./CartFooter.scss";
 
-class Footer extends Component {
+class CartFooter extends Component {
   render() {
     return (
-      <div className="footer">
+      <div className="cartFooter">
         <div className="footerContainer">
           <div className="top">
             <div className="topLeft">
@@ -68,4 +68,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default CartFooter;

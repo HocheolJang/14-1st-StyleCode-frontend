@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import Navbar from "../../Common/Navbar/NavbarStore/NavbarStore";
 import EmptyTable from "./Component//EmptyTable/EmptyTable";
 import ProductTable from "./Component/ProductTable/ProductTable";
 import FillAsidebar from "./Component/Asidebar/FillAsidebar";
 import EmptyAsidebar from "./Component/Asidebar/EmptyAsidebar";
-import Footer from "./Component/Footer/Footer";
+import CartFooter from "./Component/Footer/CartFooter";
 import "./Cart.scss";
 
 class Cart extends Component {
@@ -124,6 +125,7 @@ class Cart extends Component {
 
     return (
       <>
+        <Navbar />
         <div className="cart">
           <div className="allContainer">
             <div className="headContainer">
@@ -170,7 +172,7 @@ class Cart extends Component {
               )}
             </div>
           </div>
-          <Footer />
+          <CartFooter />
         </div>
       </>
     );
