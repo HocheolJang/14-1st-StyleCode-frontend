@@ -45,6 +45,7 @@ main {
           height: 710px;
           border: 1px solid gray;
           border-radius: 10px;
+          object-fit: cover;
         }
       }
       .header-middle-info {
@@ -157,8 +158,8 @@ main {
           text-indent: 10px;
           font-size: 14px;
           font-weight: 700;
-          background-color: #e8ebed;
-          border: 0px solid black;
+          background-color: white;
+          border: 1px solid #e8ebed;
           color: black;
           cursor: pointer;
         }
@@ -171,8 +172,8 @@ main {
           text-indent: 10px;
           font-size: 14px;
           font-weight: 700;
-          background-color: #e8ebed;
-          border: 0px solid black;
+          background-color: white;
+          border: 1px solid #e8ebed;
           color: black;
           cursor: pointer;
         }
@@ -335,32 +336,36 @@ main {
     .header-bottom {
       display: flex;
       width: 1240px;
-      height: 122px;
+      height: 80px;
       border: 0px solid black;
       margin-top: 20px;
       .header-bottom-brand-img {
         width: 215px;
-        height: 122px;
+        height: 80px;
         border: 1px solid #e8ebed;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+        object-fit: contain;
+        border-right: 0px solid black;
+      }
+      .brandArrow {
+        padding-top: 25px;
+        margin-left: 350px;
       }
       .header-bottom-brand {
         width: 500px;
-        height: 122px;
+        height: 80px;
         border: 1px solid #e8ebed;
         border-left: 0px solid #e8ebed;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
 
         .header-bottom-brand-title {
           font-size: 30px;
           font-weight: 700;
           margin-left: 20px;
-          margin-top: 10px;
+          margin-top: 20px;
         }
         .header-bottom-brand-number {
           font-size: 14px;

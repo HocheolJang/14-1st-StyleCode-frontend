@@ -4,6 +4,7 @@ import "../../../../Styles/common.scss";
 import "../../../../Styles/reset.scss";
 import Select from "./Select/Select";
 import Modal from "react-modal";
+import {FiChevronRight} from "react-icons/fi"
 
 class Header extends Component {
   constructor(props) {
@@ -97,7 +98,7 @@ class Header extends Component {
             </div>
             <div className="header-middle-info-like">
               <span className="like">좋아요</span>
-              <span className="like-number">{productdetail?.likeNumber}</span>
+              <span className="like-number">{parseInt(productdetail?.likeNumber).toLocaleString()}</span>
               <span className="review">후기</span>
               <span className="review-number">
                 {productdetail?.reviewNumber}
@@ -105,7 +106,7 @@ class Header extends Component {
             </div>
             <div className="header-middle-info-mile">
               <span className="mile">적립 단추</span>
-              <span className="mile-number">{productdetail?.mile}</span>
+              <span className="mile-number">{parseInt(productdetail?.mile).toLocaleString()}</span>
             </div>
             <div className="header-middle-info-delivery">
               <span className="delivery">무료배송</span>
@@ -123,17 +124,21 @@ class Header extends Component {
         <div className="header-bottom">
           <img
             className="header-bottom-brand-img"
-            src={productdetail?.headerBottomImg}
+            src=/*{productdetail?.headerBottomImg}*/ "images/search/fake.png"
             alt="header-bottom-img"
           ></img>
           <div className="header-bottom-brand">
+            <div>
             <p className="header-bottom-brand-title">
               {productdetail?.headerBottomBrand}
             </p>
             <p className="header-bottom-brand-number">
               {productdetail?.brand_product_count}
             </p>
+            </div>
+            <div className="brandArrow"><FiChevronRight style={{ fontSize: 30 }} /></div>
           </div>
+        
         </div>
       </header>
     );
