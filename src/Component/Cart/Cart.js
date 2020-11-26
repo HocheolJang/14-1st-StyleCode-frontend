@@ -19,8 +19,13 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    // fetch("http://10.58.1.162:8000/carts/1")
-    fetch("/data/cartItem.json")
+    fetch("http://10.58.6.106:8000/carts", {
+      headers: {
+        Authorization:
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+      },
+    })
+      // fetch("/data/cartItem.json")
       .then((res) => res.json())
       .then((res) => {
         const cartList = res.product.map((item) => {
@@ -39,16 +44,16 @@ class Cart extends Component {
     if (cartList[idx].quantity < 20) {
       cartList[idx].quantity++;
       this.setState({ cartList });
-      // fetch("http://10.58.1.162:8000/carts/1", {
-      //   method: "POST",
-
-      //   body: JSON.stringify({
-      //     user_id: 1,
-      //     quantity: cartList[idx].quantity,
-      //   }),
-      // });
-    } else {
-      alert("최대 주문 수량은 20개입니다");
+      //   fetch(`10.58.6.106:8000/carts/${cart_id}`, {
+      //     method: "POST",
+      //     body: JSON.stringify({
+      //       user_id: 1,
+      //       quantity: cartList[idx].quantity,
+      //     }),
+      //   });
+      // } else {
+      //   alert("최대 주문 수량은 20개입니다");
+      // }
     }
   };
 
@@ -104,6 +109,8 @@ class Cart extends Component {
       handleDeleteItemBtn,
       handleCheckBox,
     } = this;
+
+    console.log(cartList);
 
     return (
       <>
