@@ -17,7 +17,7 @@ class Login extends Component {
   }
 
   handleClick = (e) => {
-    fetch("http://10.58.0.175:8000/users/login", {
+    fetch("http://10.58.6.191:8000/user/login", {
       method: "POST",
       body: JSON.stringify({
         login_id: this.state.id,
@@ -146,7 +146,7 @@ class Login extends Component {
           </div>
           <div className="login-link">
             <p>ID가 없으세요?</p>
-            <a href="www.styleshare.kr">여기서 로그인</a>
+            <a href="www.styleshare.kr">여기서 가입</a>
           </div>
         </div>
         <footer>
