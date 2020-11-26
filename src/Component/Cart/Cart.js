@@ -41,36 +41,43 @@ class Cart extends Component {
   handlePlusBtn = (item) => {
     const cartList = [...this.state.cartList];
     let idx = cartList.indexOf(item);
+    let cartId = cartList[idx].cart_id;
     if (cartList[idx].quantity < 20) {
       cartList[idx].quantity++;
       this.setState({ cartList });
-      //   fetch(`10.58.6.106:8000/carts/${cart_id}`, {
-      //     method: "POST",
-      //     body: JSON.stringify({
-      //       user_id: 1,
-      //       quantity: cartList[idx].quantity,
-      //     }),
-      //   });
-      // } else {
-      //   alert("최대 주문 수량은 20개입니다");
-      // }
+      fetch(`http://10.58.6.106:8000/carts/${cartId}`, {
+        headers: {
+          Authorization:
+            "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          quantity: cartList[idx].quantity,
+        }),
+      });
+    } else {
+      alert("최대 주문 수량은 20개입니다");
     }
   };
 
   handleMinusBtn = (item) => {
     const cartList = [...this.state.cartList];
     let idx = cartList.indexOf(item);
+    let cartId = cartList[idx].cart_id;
+
     if (cartList[idx].quantity > 1) {
       cartList[idx].quantity--;
       this.setState({ cartList });
-      // fetch("http://10.58.1.162:8000/carts/1", {
-      //   method: "POST",
-
-      //   body: JSON.stringify({
-      //     user_id: 1,
-      //     quantity: cartList[idx].quantity,
-      //   }),
-      // });
+      fetch(`http://10.58.6.106:8000/carts/${cartId}`, {
+        headers: {
+          Authorization:
+            "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          quantity: cartList[idx].quantity,
+        }),
+      });
     } else {
       return;
     }
@@ -78,13 +85,16 @@ class Cart extends Component {
 
   handleDeleteItemBtn = (item) => {
     // console.log(item.id);
-    // fetch("http://10.58.1.162:8000/carts/1", {
-    //   method: "DELETE",
-    //   body: JSON.stringify({
-    //     user_id: 1,
-    //     quantity: cartList[idx].quantity,
-    //   }),
-    // });
+    const cartList = [...this.state.cartList];
+    let idx = cartList.indexOf(item);
+    let cartId = cartList[idx].cart_id;
+    fetch(`http://10.58.6.106:8000/carts/${cartId}`, {
+      headers: {
+        Authorization:
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+      },
+      method: "DELETE",
+    });
   };
 
   handleCheckAllBox = () => {

@@ -49,7 +49,7 @@ class ProductTable extends Component {
                         </div>
                         <div className="orderedProductRight">
                           <div className="productDescContainer">
-                            <p>{item.product_title}</p>
+                            <p>{item.product}</p>
                           </div>
                           <div className="productOptionContainer">
                             <span>{item.color}</span>
