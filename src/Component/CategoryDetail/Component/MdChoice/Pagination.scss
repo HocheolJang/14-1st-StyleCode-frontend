@@ -1,0 +1,32 @@
+.Pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 23px;
+  margin-top: 20px;
+  button {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: 1px solid #e8ebed;
+    color: #26282b;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 2px;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover:not(.active) {
+      background-color: #f7f8f9;
+      color: #26282b;
+      border: 1px solid #e8ebed;
+    }
+  }
+  .active {
+    background-color: #4adaaf;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+}
