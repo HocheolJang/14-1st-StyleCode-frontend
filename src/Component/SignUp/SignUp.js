@@ -119,7 +119,11 @@ class SignUp extends Component {
       }),
     })
       .then((res) => res.json())
-      .then((res) => console.log("결과", res));
+      .then((res) => {
+        if (res.message === "success") {
+          this.props.history.push("/Login");
+        }
+      });
   };
 
   handleOnkeyUp = () => {
