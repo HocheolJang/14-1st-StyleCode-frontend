@@ -1,14 +1,17 @@
 .asideContainer {
   width: 220px;
   height: 390px;
+
   .categoriesList {
     width: 220px;
     height: 350px;
     margin-top: 40px;
+
     ul {
       list-style: none;
       padding-left: 0px;
     }
+
     li {
       position: relative;
       font-size: 16px;
@@ -18,14 +21,18 @@
       padding-left: 12px;
       height: 28px;
     }
+
     &:hover {
       cursor: pointer;
     }
+
     .filter {
       width: 100px;
       height: auto;
+
       .fliterDropDown {
         display: flex;
+
         .dropdownContent {
           display: none;
           list-style: none;
@@ -44,6 +51,7 @@
           &:hover {
             cursor: pointer;
           }
+
           li {
             color: #26282b;
             font-size: 14px;
@@ -55,6 +63,7 @@
           }
         }
       }
+
       &.active {
         display: block;
       }

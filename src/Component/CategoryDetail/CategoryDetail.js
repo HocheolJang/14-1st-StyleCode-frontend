@@ -19,7 +19,7 @@ class CategoryDetail extends Component {
             <ShowAll />
           </div>
         </div>
-      <span>푸터자리</span>
+        <span>푸터자리</span>
       </>
     );
   }

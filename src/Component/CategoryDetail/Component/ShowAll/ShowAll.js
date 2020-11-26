@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./ShowAll.scss";
-// import Unisex from
+
+const API = "http://10.58.6.191:8000";
 
 class ShowAll extends Component {
   constructor() {
@@ -15,9 +16,7 @@ class ShowAll extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.6.191:8000/products?sort=0&second=1", {
-      method: "GET",
-    })
+    fetch(`${API}/products?sort=0&second=1`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -30,7 +29,7 @@ class ShowAll extends Component {
   sortProduct = (e) => {
     const sort = e.target.dataset.idx;
     console.log(e.target.id);
-    fetch(`http://10.58.6.191:8000/products?sort=${sort}&second=1`)
+    fetch(`${API}/products?sort=${sort}&second=1`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -73,22 +72,14 @@ class ShowAll extends Component {
             <button onClick={filterDropdown}>
               <span>{sortMethod}</span>
               <span>
-                {!showDropdown ? (
-                  <img
-                    src="images/icon/filterArrow.png"
-                    className="descBtn"
-                    alt="상품정렬버튼"
-                  />
-                ) : (
-                  <img
-                    src="images/icon/filterArrow.png"
-                    className="ascBtn"
-                    alt="상품정렬버튼"
-                  />
-                )}
+                <img
+                  src="images/icon/filterArrow.png"
+                  className={!showDropdown ? "descBtn" : "ascBtn"}
+                  alt="상품정렬버튼"
+                />
               </span>
             </button>
-            {showDropdown ? (
+            {showDropdown && (
               <div className="fliterDropDown">
                 <ul className="dropdownContent">
                   <li data-idx="0" onClick={sortProduct} id="최신순">
@@ -120,7 +111,7 @@ class ShowAll extends Component {
                   </li>
                 </ul>
               </div>
-            ) : null}
+            )}
           </div>
         </div>
         <div className="cardList">

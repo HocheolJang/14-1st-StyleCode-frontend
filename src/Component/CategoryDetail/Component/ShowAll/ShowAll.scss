@@ -151,10 +151,6 @@
         .productName {
           width: 200px;
           height: 36px;
-          margin-top: 5px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          // word-wrap: break-word;
           -webkit-line-clamp: 2;
           text-align: left;
           display: block;

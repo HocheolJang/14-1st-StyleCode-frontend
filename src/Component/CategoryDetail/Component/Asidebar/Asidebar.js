@@ -11,9 +11,7 @@ class Asidedbar extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/sidebarCategoryList.json", {
-      method: "GET",
-    })
+    fetch("http://localhost:3000/data/sidebarCategoryList.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -37,8 +35,6 @@ class Asidedbar extends Component {
   render() {
     const { sidebarCategoryList, hiddenDropdown } = this.state;
     const { showDropdown } = this;
-
-    // console.log(sidebarCategoryList[1]?.subCategories[1].name);
     return (
       <div className="asideContainer">
         <div className="categoriesList">

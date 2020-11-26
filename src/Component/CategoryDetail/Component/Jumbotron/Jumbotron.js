@@ -22,9 +22,7 @@ class Jumbotron extends Component {
   };
 
   getJumbotronData = () => {
-    fetch("http://localhost:3000/data/categoryDetailjumbotron.json", {
-      method: "GET",
-    })
+    fetch("http://localhost:3000/data/categoryDetailjumbotron.json")
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -46,11 +44,6 @@ class Jumbotron extends Component {
 
   render() {
     const { jumbotronItem, jumbotronCurrentPage } = this.state;
-    // if (jumbotronItem.length) {
-    //   console.log(jumbotronItem[0].alt);
-    // }
-    console.log(jumbotronItem.alt);
-
     return (
       <div>
         <div className="jumbotron">
