@@ -133,9 +133,10 @@
         }
         .kakao-signin {
           width: 240px;
-          height: 37px;
+          height: 33px;
           border: 0px solid white;
           border-radius: 0.5rem;
+          object-fit: contain;
         }
       }
     }
