@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
-import Comment from './Comment';
 import '../../../Styles/common.scss';
 import '../../../Styles/reset.scss';
 import './Modal.scss';
@@ -61,6 +60,9 @@ class Modal extends Component {
     e.preventDefault();
     fetch(this.API, {
       method: "POST",
+      headers: JSON.stringify({
+        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6Imh5dW5qYWUxMiJ9.JJVjkSxfn0e0mmzbZw5zH2xRkAg30FmIJFQfXm-GS4s"
+      }),
       body: JSON.stringify({
         content: this.state.value,
         user_id: this.props.modalData?.modalData?.modalData?.id,
