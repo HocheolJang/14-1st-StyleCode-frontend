@@ -5,7 +5,7 @@ import Modal from './Modal';
 import InfiniteScroll from 'react-infinite-scroller';
 import './Main.scss';
 
-const API = "http://10.58.7.150:8000";
+const API = "http://192.168.219.101:8000";
 const LIMIT = 10;
 class Main extends Component {
   constructor() {
@@ -84,7 +84,7 @@ class Main extends Component {
       pageStart={0}
       loadMore={this.loadFunc}
       hasMore={true || false}
-      loader={<div className="loader" key={0}><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 11H7V13H2zM17 11H22V13H17zM11 17H13V22H11zM11 2H13V7H11z"></path><path transform="rotate(-45.001 6.697 6.697)" d="M5.697 4.197H7.697V9.197H5.697z"></path><path transform="rotate(134.999 17.303 17.303)" d="M16.303 14.803H18.303V19.803H16.303z"></path><path transform="rotate(45.001 6.697 17.303)" d="M5.697 14.803H7.697V19.803H5.697z"></path><path transform="rotate(-44.992 17.303 6.697)" d="M14.803 5.697H19.803V7.697H14.803z"></path></svg></div>}
+      loader={<div className="loader" key={0} />}
       useWindow={false}
     >
       <NavbarOotd />

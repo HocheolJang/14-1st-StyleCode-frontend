@@ -22,7 +22,7 @@ class Card extends Component {
     }
   }
 
-  API = `http://10.58.7.150:8000/ootds/${this.props.id}`;
+  API = `http://192.168.219.101:8000/ootds/${this.props.id}`;
 
    openModal = (e) => {
          fetch(this.API, {
@@ -65,14 +65,14 @@ class Card extends Component {
       })}
   }
 
-  commentList = this.props.comments?.map((comment, idx) => {
-    return (
-      <comments key={idx}
-          commentAuthor={comment.commentAuthor}
-          commentAuthorImg = {comment.commentAuthorImg}
-          comment={comment.comment} />
-    )
-  })
+  // commentList = this.props.comments?.map((comment, idx) => {
+  //   return (
+  //     <comments key={idx}
+  //         commentAuthor={comment.commentAuthor}
+  //         commentAuthorImg = {comment.commentAuthorImg}
+  //         comment={comment.comment} />
+  //   )
+  // })
 
   handleClickLike = (e) => {
     e.preventDefault();
@@ -88,6 +88,7 @@ class Card extends Component {
   }
 
   render() {
+    // console.log(this.props?.comments);
     const { isLikeBtn, isDisplayNone, getModalInputComment } = this.state;
     const { id, contentImg, productImg, productName, price, sale, authorImg, author,
             date, tagsName, description, follower, commentNum, share,
@@ -146,18 +147,22 @@ class Card extends Component {
                 </div>           
               </div>
             </div>
-           <>
-            <div className="commentWrapper">
+          <>
+            {this.props.comments?.map((comment) => {
+              return (
+                <div className="commentWrapper" key={this.props.id}>
               <div className="innerWrapper">
-                <img className="commentUserImg" src={this.commentList[0]?.props?.commentAuthorImg} />
+                <img className="commentUserImg" src={comment?.commentAuthorImg} />
                 <div className="commentUserInfo">
-                  <span className="commentUser">{this.commentList[0]?.props?.commentAuthor} </span>
-                  <span key={this.props.id}> {this.commentList[0]?.props?.comment} </span>
+                  <span className="commentUser">{comment?.commentAuthor} </span>
+                  <span> {comment?.comment} </span>
                 </div>
               </div>
             </div>
-
-            <div className="commentWrapper">
+              )
+            })}
+            
+            {/* <div className="commentWrapper">
               <div className="innerWrapper">
                 <img className="commentUserImg" src={(this.commentList[1])?.props?.commentAuthorImg} />
                 <div className="commentUserInfo">
@@ -165,7 +170,7 @@ class Card extends Component {
                   <span> {this.commentList[1]?.props?.comment} </span>
                 </div>
               </div>
-            </div>
+            </div> */}
            </>
           </div>
         </div>

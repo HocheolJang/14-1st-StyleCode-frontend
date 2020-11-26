@@ -205,15 +205,33 @@ html {
               @extend %borderBox;
               border-top-left-radius: 6px;
               border-bottom-left-radius: 6px;
+              color: white;
+              background-color: lightcoral;
+            }
+            .dislikeBox {
+              @extend %borderBox;
+              border-top-left-radius: 6px;
+              border-bottom-left-radius: 6px;
+            }
 
-              .like {
-                width: 83%;
-                height: 83%;
-                padding-top: 6px;
-              }
+            .like {
+              width: 83%;
+              height: 83%;
+              padding-top: 6px;
             }
 
             .likeNumBox {
+              @extend %borderBox;
+              border-top-right-radius: 6px;
+              border-bottom-right-radius: 6px;
+              font-size: 18px;
+              font-weight: 700;
+              padding-top: 5px;
+              color: white;
+              background-color: lightcoral;
+            }
+
+            .dislikeNumBox {
               @extend %borderBox;
               border-top-right-radius: 6px;
               border-bottom-right-radius: 6px;
@@ -271,6 +289,9 @@ html {
                 transform: none;
                 transition: all 0s ease 0s;
               }
+              .commentBtn {
+                margin-bottom: 10px;
+              }
             }
 
             .commentInfoWrapper {
@@ -282,7 +303,7 @@ html {
               background-color: #ffffff;
               background-position: 0% 0%;
               color: #26282b;
-              height: 36px;
+              height: auto;
               width: 275px;
               overflow: hidden;
               transform: none;

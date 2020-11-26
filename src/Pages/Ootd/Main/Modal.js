@@ -14,7 +14,7 @@ class Modal extends Component {
       description: this.props.modalData?.modalData?.modalData?.description,
       res: [],
       isLikeBtn: false,
-      follower: '',
+      follower: this.props.modalData?.modalData?.modalData?.follower,
     }
   }
   num = 0;
@@ -55,7 +55,7 @@ class Modal extends Component {
     })
   }
 
-  API = `http://10.58.7.150:8000/ootds/1/comments`;
+  API = `http://192.168.219.101:8000/ootds/${this.props.modalData?.modalData?.modalData?.id}/comments`;
 
   handleKeyPress = (e) => {
     e.preventDefault();
@@ -94,9 +94,9 @@ class Modal extends Component {
   }
 
   render() {
-    console.log(this.props.modalData?.modalData?.modalData?.id);
-    const { closeModal, id, follower, handleClickLike, modalData } = this.props;
-    const { followBtn, comments } = this.state;
+    console.log("id값", this.props.modalData?.modalData?.modalData?.id);
+    const { closeModal, id, modalData } = this.props;
+    const { followBtn, comments, isLikeBtn } = this.state;
     
   return (
       <div className="modalWrapper" onClick={closeModal}>
@@ -122,7 +122,7 @@ class Modal extends Component {
                   <div className="introduction">{modalData?.modalData?.modalData?.introdution}</div>
                 </div>
                 <div className="followBtnBox" >
-                  <svg className={followBtn? "followBtnActive":"followBtn"} onClick={this.handleClickLike} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 14.062V22H4a8 8 0 0 1 9-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm5.793 6.914l3.535-3.535 1.415 1.414-4.95 4.95-3.536-3.536 1.415-1.414 2.12 2.121z"></path></g></svg>
+                  <svg className={followBtn? "followBtnActive":"followBtn"} onClick={this.followBtnActive} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 14.062V22H4a8 8 0 0 1 9-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm5.793 6.914l3.535-3.535 1.415 1.414-4.95 4.95-3.536-3.536 1.415-1.414 2.12 2.121z"></path></g></svg>
                 </div>
               </div>
               <div className="authorDescription">
@@ -131,11 +131,11 @@ class Modal extends Component {
             </div>
 
             <div className="authorPopularity">
-              <div className="likeBox">
-                <svg className="like" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" clip-rule="evenodd"></path></svg>
+              <div className={isLikeBtn? "likeBox":"dislikeBox"}>
+                <svg className="like" onClick={this.handleClickLike} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" clip-rule="evenodd"></path></svg>
               </div>
-              <div className="likeNumBox">
-                <span classNum="likeNum">{modalData?.modalData?.modalData?.follower}</span>
+              <div className={isLikeBtn? "likeNumBox":"dislikeNumBox"}>
+                <span classNum="likeNum">{this.state.follower}</span>
               </div>
               <div className="shareBox">
                 <svg className="share" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
@@ -149,14 +149,14 @@ class Modal extends Component {
             <div className="commentWrapper">
               <div className="commentNum"><span>댓글({modalData?.modalData?.modalData?.commentNum})</span></div>
               {modalData?.modalData?.modalData?.comments.map((comment) => (
-                <div className="commentBox">
+                <div className="commentBox" key={id}>
                   <div className="imgWrapper"><img className="commentUserImg" width="30px" height="30px" src={modalData?.modalData?.modalData?.comments[0]?.commentAuthorImg} /></div>
                   <div className="commentInfoWrapper">
-                    <div className="commentContentWrapper" key={id}>
+                    <div className="commentContentWrapper">
                       <span className="commentUser">{comment.commentAuthor}</span>
                       <span className="commentContent">{comment.comment}</span>
                     </div>
-                    <div className="commentBtnWrapper" key={id}>
+                    <div className="commentBtnWrapper">
                       <span className="commentDate">{comment.commentCreatedAt}</span>
                       <span className="commentBtn"> 답글 달기 </span>
                     </div>
@@ -166,14 +166,14 @@ class Modal extends Component {
 
             {comments.map((commentText) => {
               return (
-                <div className="commentCreateBox" key={commentText.num}>
+                <div className="commentCreateBox" key={commentText.id}>
                   <div className="commentCreateImgWrapper"><img className="commentCreateUserImg" width="30px" height="30px" src={commentText.commentAuthorImg} /> </div>
                   <div className="commentCreateInfoWrapper">
-                    <div className="commentCreateContentWrapper" key={commentText.num}>
+                    <div className="commentCreateContentWrapper">
                       <span className="commentCreateUser">{commentText.commentAuthor}</span>
                       <span className="commentCreateContent">{commentText.comment}</span>
                     </div>
-                    <div className="commentCreateBtnWrapper" key={commentText.num}>
+                    <div className="commentCreateBtnWrapper">
                       <span className="commentCreateDate">{commentText.commentCreatedAt}</span>
                       <span className="commentCreateBtn"> 답글 달기 </span>
                     </div>
