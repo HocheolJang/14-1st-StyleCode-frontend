@@ -56,9 +56,10 @@
 
         .facebook-information {
           width: 368px;
-          height: 44px;
+          height: 40px;
           margin: 0 0 20px 0;
           border-radius: 0.5rem;
+          object-fit: contain;
         }
 
         .id {
