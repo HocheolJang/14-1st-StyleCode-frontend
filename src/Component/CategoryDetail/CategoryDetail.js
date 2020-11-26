@@ -16,18 +16,18 @@ class CategoryDetail extends Component {
     };
   }
 
-  showDropdown = (e) => {
-    this.setState({
-      activeSecondCategory: e.target.dataset.idx,
-      hiddenDropdown: true,
-    });
-  };
-  hideDropdown = (e) => {
-    this.setState({
-      // activeSecondCategory: e.target.dataset.idx,
-      hiddenDropdown: false,
-    });
-  };
+  // showDropdown = (e) => {
+  //   this.setState({
+  //     activeSecondCategory: e.target.dataset.idx,
+  //     hiddenDropdown: true,
+  //   });
+  // };
+  // hideDropdown = (e) => {
+  //   this.setState({
+  //     activeSecondCategory: e.target.dataset.idx,
+  //     hiddenDropdown: false,
+  //   });
+  // };
 
   render() {
     const { activeSecondCategory, hiddenDropdown } = this.state;

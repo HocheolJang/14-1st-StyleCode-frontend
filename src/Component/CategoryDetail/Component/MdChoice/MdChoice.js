@@ -39,8 +39,6 @@ class MdChoice extends Component {
       });
   };
 
-  handleMenuTab = (e) => {};
-
   render() {
     const { mdChoiceList, activePage } = this.state;
     const { fetchProduct } = this;
