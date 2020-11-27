@@ -48,6 +48,7 @@
       .login-information {
         width: 280px;
         height: 224px;
+        margin-left: 10px;
 
         .id {
           width: 260px;
@@ -90,11 +91,23 @@
           font-weight: 700;
           border: 0px solid black;
         }
+        .login-button:hover {
+          width: 156px;
+          height: 40px;
+          opacity: 0.7;
+          border-radius: 0.5rem;
+          margin-left: 105px;
+          color: white;
+          font-size: 14px;
+          font-weight: 700;
+          border: 0px solid black;
+          cursor: pointer;
+        }
       }
       .social-login {
         width: 278px;
         height: 200px;
-        padding-left: 25px;
+        padding-left: 20px;
 
         .facebook-signin {
           width: 240px;
@@ -120,9 +133,10 @@
         }
         .kakao-signin {
           width: 240px;
-          height: 37px;
+          height: 33px;
           border: 0px solid white;
           border-radius: 0.5rem;
+          object-fit: contain;
         }
       }
     }

@@ -2,49 +2,7 @@
   "categories": [
     {
       "id": 0,
-      "categoryName": "전체",
-      "product": [
-        {
-          "id": 0,
-          "src": "images/product/all0.jpg",
-          "brandName": "지프",
-          "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-          "discount": "25%",
-          "productPrice": 59900,
-          "productLike": 26170,
-          "productReview": 274
-        },
-        {
-          "id": 1,
-          "src": "images/product/all1.jpg",
-          "brandName": "지프",
-          "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-          "discount": "25%",
-          "productPrice": 59900,
-          "productLike": 26170,
-          "productReview": 274
-        },
-        {
-          "id": 2,
-          "src": "images/product/all2.jpg",
-          "brandName": "지프",
-          "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-          "discount": "25%",
-          "productPrice": 59900,
-          "productLike": 26170,
-          "productReview": 274
-        },
-        {
-          "id": 3,
-          "src": "images/product/all3.jpg",
-          "brandName": "지프",
-          "productName": "[SUN KIT][단독상품]Polar Freece Zip-Up (2 COLOR)",
-          "discount": "25%",
-          "productPrice": 59900,
-          "productLike": 26170,
-          "productReview": 274
-        }
-      ]
+      "categoryName": "전체"
     },
     {
       "id": 1,
@@ -115,6 +73,300 @@
       "productPrice": 9900,
       "productLike": 7523,
       "productReview": 99
+    }
+  ],
+  "unisex": [
+    {
+      "id": 0,
+      "src": "images/product/unisex0.jpg",
+      "brandName": "참피온",
+      "productName": "참피온 맨투맨 후드티 S100 800모음",
+      "discount": "10%",
+      "productPrice": 23900,
+      "productLike": 521,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/product/unisex1.jpg",
+      "brandName": "언스풀레쉬",
+      "productName": "Logo T-shirt AG2FD0922(6 COLOR)",
+      "discount": "40%",
+      "productPrice": 19900,
+      "productLike": 122,
+      "productReview": 34
+    },
+    {
+      "id": 2,
+      "src": "images/product/unisex2.jpg",
+      "brandName": "기퓨티박스",
+      "productName": "[원데이특가]무료배송 쿠퍼 일자 통 데님 팬츠",
+      "discount": "12%",
+      "productPrice": 14900,
+      "productLike": 1232,
+      "productReview": 485
+    },
+    {
+      "id": 3,
+      "src": "images/product/unisex3.jpg",
+      "brandName": "푸렌들리",
+      "productName": "[블프특가] 개성이 강한 반팔티 [2Color](~11/29까지)",
+      "discount": "25%",
+      "productPrice": 9900,
+      "productLike": 7523,
+      "productReview": 992
+    }
+  ],
+  "female": [
+    {
+      "id": 0,
+      "src": "images/product/female0.jpg",
+      "brandName": "소녀소녀한",
+      "productName": "하얗고 펄럭이는 원피스 소녀감성충만합니다!",
+      "discount": "10%",
+      "productPrice": 32800,
+      "productLike": 2314,
+      "productReview": 582
+    },
+    {
+      "id": 1,
+      "src": "images/product/female1.jpg",
+      "brandName": "소녀냐라",
+      "productName": "홀리 레드 강렬 원피스 / 크리스마스룩 (2Color)",
+      "discount": "10%",
+      "productPrice": 59900,
+      "productLike": 53991,
+      "productReview": 274
+    },
+    {
+      "id": 2,
+      "src": "images/product/female2.jpg",
+      "brandName": "작심삼일",
+      "productName": "[위코드특가] 칼핏 체크 자켓 (3 COLOR) ",
+      "discount": "23%",
+      "productPrice": 59200,
+      "productLike": 9242,
+      "productReview": 1234
+    },
+    {
+      "id": 3,
+      "src": "images/product/female3.jpg",
+      "brandName": "시원하게따",
+      "productName": "[1+1] 시원한 티셔츠 (BLACK/WHITE)",
+      "discount": "50%",
+      "productPrice": 9900,
+      "productLike": 2133,
+      "productReview": 212
+    }
+  ],
+  "beauty": [
+    {
+      "id": 0,
+      "src": "images/product/beauty0.jpg",
+      "brandName": "스킨7848",
+      "productName": "[블프특가]스킨1004 누에고치 모공팩 + 거품망증정(샘플3종샤쉐 증정)(~11/29까지)",
+      "discount": "31%",
+      "productPrice": 6900,
+      "productLike": 9991,
+      "productReview": 124
+    },
+    {
+      "id": 1,
+      "src": "images/product/beauty1.jpg",
+      "brandName": "쮸레쮸 ",
+      "productName": "[1+1]수분크림 100ml + 토너 500ml",
+      "discount": "67%",
+      "productPrice": 9900,
+      "productLike": 270,
+      "productReview": 24
+    },
+    {
+      "id": 2,
+      "src": "images/product/beauty2.jpg",
+      "brandName": "쀼뺘",
+      "productName": "[블프특가][1+1]삐아 라스트 벨벳 립 틴트5",
+      "discount": "40%",
+      "productPrice": 10900,
+      "productLike": 8542,
+      "productReview": 235
+    },
+    {
+      "id": 3,
+      "src": "images/product/beauty3.jpg",
+      "brandName": "뽀요",
+      "productName": "[블프특가] 라스트 벨벳 립 틴트5",
+      "discount": "39%",
+      "productPrice": 15900,
+      "productLike": 7023,
+      "productReview": 929
+    }
+  ],
+  "bagetc": [
+    {
+      "id": 0,
+      "src": "images/product/bag0.jpg",
+      "brandName": "에류메슈",
+      "productName": "여성스럽고 우아한 느낌이 강한 백",
+      "discount": "10%",
+      "productPrice": 529900,
+      "productLike": 31,
+      "productReview": 24
+    },
+    {
+      "id": 1,
+      "src": "images/product/bag1.jpg",
+      "brandName": "어디부랜듀",
+      "productName": "이정도 정렬적인 가방은 있어야쥐",
+      "discount": "10%",
+      "productPrice": 109900,
+      "productLike": 70,
+      "productReview": 4
+    },
+    {
+      "id": 2,
+      "src": "images/product/bag2.jpg",
+      "brandName": "호철이네가방",
+      "productName": "[2차 예약배송 11/27 출고] BACKPACK (BLACK/Ivory)",
+      "discount": "20%",
+      "productPrice": 55800,
+      "productLike": 812,
+      "productReview": 124
+    },
+    {
+      "id": 3,
+      "src": "images/product/bag3.jpg",
+      "brandName": "퍼퓸쓔~",
+      "productName": "BEST 명품 향수 모음전 최대 74% 할인+컵립밤 증정!(~11/29까지)",
+      "discount": "77%",
+      "productPrice": 6900,
+      "productLike": 7523,
+      "productReview": 929
+    }
+  ],
+  "shoes": [
+    {
+      "id": 0,
+      "src": "images/product/shoes0.jpg",
+      "brandName": "페이크",
+      "productName": "페이크 에어 조던인가아닌데",
+      "discount": "10%",
+      "productPrice": 99000,
+      "productLike": 2891,
+      "productReview": 2474
+    },
+    {
+      "id": 1,
+      "src": "images/product/shoes1.jpg",
+      "brandName": "페이크",
+      "productName": "코르테죠 스니커즈 900415-102",
+      "discount": "64%",
+      "productPrice": 81900,
+      "productLike": 26570,
+      "productReview": 2312
+    },
+    {
+      "id": 2,
+      "src": "images/product/shoes2.jpg",
+      "brandName": "덕터머틴",
+      "productName": "[덕터머틴] 제이듄 10홀 아일렛 워커슈즈",
+      "discount": "33%",
+      "productPrice": 189000,
+      "productLike": 82,
+      "productReview": 24
+    },
+    {
+      "id": 3,
+      "src": "images/product/shoes3.jpg",
+      "brandName": "페이크",
+      "productName": "[페이크][사은품증정] 러닝화 (RED/BLUE)",
+      "discount": "25%",
+      "productPrice": 139000,
+      "productLike": 123,
+      "productReview": 30
+    }
+  ],
+  "life": [
+    {
+      "id": 0,
+      "src": "images/product/life0.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 2",
+      "discount": "37%",
+      "productPrice": 11900,
+      "productLike": 8442,
+      "productReview": 274
+    },
+    {
+      "id": 1,
+      "src": "images/product/life1.jpg",
+      "brandName": "디쥬니",
+      "productName": "피규어인데 눈이 하나 있오",
+      "discount": "48%",
+      "productPrice": 23200,
+      "productLike": 2230,
+      "productReview": 344
+    },
+    {
+      "id": 2,
+      "src": "images/product/life2.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
+      "productReview": 274
+    },
+    {
+      "id": 3,
+      "src": "images/product/life3.jpg",
+      "brandName": "작심삼일",
+      "productName": "[다이어리]Plan C 스터디플래너 버전 3",
+      "discount": "37%",
+      "productPrice": 13400,
+      "productLike": 8442,
+      "productReview": 274
+    }
+  ],
+  "tech": [
+    {
+      "id": 0,
+      "src": "images/product/tech0.jpg",
+      "brandName": "안푸렌둘리",
+      "productName": "[블프특가] 아이폰 컬러 젤리케이스",
+      "discount": "25%",
+      "productPrice": 9900,
+      "productLike": 723,
+      "productReview": 99
+    },
+    {
+      "id": 1,
+      "src": "images/product/tech1.jpg",
+      "brandName": "독토드레",
+      "productName": "음질빵빵 헤드셋 최대 75% BIG SALE",
+      "discount": "75%",
+      "productPrice": 242200,
+      "productLike": 82,
+      "productReview": 21
+    },
+    {
+      "id": 2,
+      "src": "images/product/tech2.jpg",
+      "brandName": "수피노",
+      "productName": "[아뿔] 사과 시계 스트랩",
+      "discount": "37%",
+      "productPrice": 34400,
+      "productLike": 232,
+      "productReview": 124
+    },
+    {
+      "id": 3,
+      "src": "images/product/tech3.jpg",
+      "brandName": "쏘리",
+      "productName": "[사은품증정] 쏘리4 프로 패드(하위호환)",
+      "discount": "28%",
+      "productPrice": 58200,
+      "productLike": 7323,
+      "productReview": 929
     }
   ]
 }

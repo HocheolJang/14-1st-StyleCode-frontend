@@ -2,8 +2,29 @@ import React, { Component } from "react";
 import "./Card.scss";
 
 class All extends Component {
+  constructor() {
+    super();
+    this.state = {
+      categoriesList: [],
+      popularProductList: [],
+      currentCategory: 0,
+      activeTab: 0,
+    };
+  }
+
+  componentDidMount() {
+    fetch("/data/popularProduct.json")
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          popularProductList: res.all,
+        });
+      });
+  }
+
   render() {
-    const { popularProductList } = this.props;
+    const { popularProductList } = this.state;
+
     return (
       <div className="cardList">
         {popularProductList.map((product, idx) => {

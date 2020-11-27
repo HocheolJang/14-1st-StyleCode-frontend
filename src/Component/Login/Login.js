@@ -48,9 +48,7 @@ class Login extends Component {
     const { id, password } = this.state;
     const checkId = id.includes("");
     const checkPw = password.length >= 6;
-    if (checkId && checkPw) {
-      alert("로그인성공");
-    }
+
     if (!checkId) {
       alert("ID는 @를 포함해야 합니다.");
     }
@@ -146,7 +144,7 @@ class Login extends Component {
           </div>
           <div className="login-link">
             <p>ID가 없으세요?</p>
-            <a href="www.styleshare.kr">여기서 가입</a>
+            <Link to="/SignUp">여기서 가입</Link>
           </div>
         </div>
         <footer>
