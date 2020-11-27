@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./MdChoice.scss";
 import Pagination from "./Pagination";
 import { mdChoiceAPI } from "../../../../config";
@@ -48,45 +49,55 @@ class MdChoice extends Component {
         <div className="title">
           <p>MD's 추천</p>
         </div>
-        <div className="cardList">
-          {mdChoiceList.map((product, idx) => {
-            return (
-              <div className="rankingCardList" key={idx}>
-                <div className="eachCard">
-                  <div className="productImgBox">
-                    <img
-                      className="productImg"
-                      alt="제품사진"
-                      src={product.main_image_url}
-                    ></img>
+        <Link to="/ProductDetail">
+          <div className="cardList">
+            {mdChoiceList.map((product, idx) => {
+              return (
+                <div className="rankingCardList" key={idx}>
+                  <div className="eachCard">
+                    <div className="productImgBox">
+                      <img
+                        className="productImg"
+                        alt="제품사진"
+                        src={product.main_image_url}
+                      ></img>
+                    </div>
+                    <div className="productDescBox">
+                      <div>
+                        <span className="brandName">{product.brand}</span>
+                      </div>
+                      <div className="productName">
+                        <span>{product.title}</span>
+                      </div>
+                      <div className="discountPriceBox">
+                        <span className="discount">
+                          [{parseInt(product.discount_rate * 100)}%]
+                        </span>
+                        <span className="productPrice">
+                          {(product.discount_price * 1)
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                          원
+                        </span>
+                      </div>
+                      <div className="orignalPriceBox">
+                        <span>
+                          {(product.price * 1)
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                          원
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="productDescBox">
-                    <div>
-                      <span className="brandName">{product.brand}</span>
-                    </div>
-                    <div className="productName">
-                      <span>{product.title}</span>
-                    </div>
-                    <div className="discountPriceBox">
-                      <span className="discount">
-                        [{parseInt(product.discount_rate * 100)}%]
-                      </span>
-                      <span className="productPrice">
-                        {product.discount_price * 1}.toLocaleString(“en”) 원
-                      </span>
-                    </div>
-                    <div className="orignalPriceBox">
-                      <span>{product.price * 1}.toLocaleString(“en”) 원</span>
-                    </div>
+                  <div className="ranking">
+                    <span>{product.id} </span>
                   </div>
                 </div>
-                <div className="ranking">
-                  <span>{product.id} </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </Link>
         <Pagination fetchProduct={fetchProduct} activePage={activePage} />
       </div>
     );

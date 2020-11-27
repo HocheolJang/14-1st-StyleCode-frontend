@@ -36,16 +36,20 @@ class CategoryDetail extends Component {
       <>
         <Navbar />
         <div className="categoryDetail">
-          <Asidebar
-            activeSecondCategory={activeSecondCategory}
-            showDropdown={showDropdown}
-            hiddenDropdown={hiddenDropdown}
-            hideDropdown={hideDropdown}
-          />
           <div className="mainContainer">
-            <CategoryJumbotron />
-            <MdChoice />
-            <ShowAll />
+            <div className="asidebar">
+              <Asidebar
+                activeSecondCategory={activeSecondCategory}
+                showDropdown={showDropdown}
+                hiddenDropdown={hiddenDropdown}
+                hideDropdown={hideDropdown}
+              />
+            </div>
+            <div className="contentContainer">
+              <CategoryJumbotron />
+              <MdChoice />
+              <ShowAll />
+            </div>
           </div>
         </div>
         <CartFooter />

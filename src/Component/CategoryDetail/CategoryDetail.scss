@@ -3,8 +3,14 @@
   font-family: Helvetica, Arial, Apple SD Gothic Neo, Nanum Gothic,
     Malgun Gothic, DotumChe, Dotum, sans-serif;
   .mainContainer {
-    width: 1180px;
-    margin-left: 20px;
+    display: flex;
+    width: 1210px;
+    // margin-left: 20px;
     margin: 130px auto 0 auto;
+    .asidebar {
+    }
+    .contentContainer {
+      width: 100%;
+    }
   }
 }
