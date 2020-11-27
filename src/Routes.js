@@ -7,6 +7,8 @@ import CategoryDetail from "./Component/CategoryDetail/CategoryDetail";
 import ProductDetail from "./Component/ProductDetail/ProductDetail";
 import Cart from "./Component/Cart/Cart";
 import Search from "./Component/Search/Search";
+// import Ootd from "../src/Pages/Ootd/Main/";
+
 class Routes extends React.Component {
   render() {
     return (
