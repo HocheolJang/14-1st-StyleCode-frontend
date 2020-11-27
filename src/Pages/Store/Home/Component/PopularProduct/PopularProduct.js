@@ -21,58 +21,32 @@ const MAPPING_OBJ = {
 };
 const MAPPING_MENU = [
   "전체",
-  "Unisex",
-  "Female, Beauty, BagEtc, Shoes, Life, Tech",
+  "유니섹스",
+  "여성",
+  "뷰티",
+  "가방잡화",
+  "슈즈",
+  "라이프",
+  "테크",
 ];
 
 class PopularProduct extends Component {
   constructor() {
     super();
     this.state = {
-      categoriesList: [],
-      popularProductList: [],
-      currentCategory: 0,
       activeTab: 0,
     };
   }
-
-  getcategoriesList = () => {
-    fetch("/data/popularProduct.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({
-          categoriesList: res.categories,
-        });
-      });
-  };
-
-  getPopularProductList = () => {
-    fetch("/data/popularProduct.json")
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({
-          popularProductList: res.all,
-        });
-      });
-  };
 
   handleMenuTab = (idx) => {
     this.setState({
       activeTab: idx,
     });
-    console.log(idx);
   };
 
-  componentDidMount() {
-    this.getcategoriesList();
-    this.getPopularProductList();
-  }
-
   render() {
-    const { categoriesList, popularProductList, activeTab } = this.state;
+    const { activeTab } = this.state;
     const { handleMenuTab } = this;
-    // console.log(categoriesList[0]?.product);
-    // console.log(popularProductList);
     return (
       <div className="popularProduct">
         <div className="title">
@@ -80,18 +54,7 @@ class PopularProduct extends Component {
         </div>
         <div className="catergories">
           <ul className="categoryList">
-            {categoriesList.map((menu, idx) => {
-              return (
-                <li
-                  key={idx}
-                  className={activeTab === idx ? "active" : null}
-                  onClick={() => handleMenuTab(idx)}
-                >
-                  {menu.categoryName}
-                </li>
-              );
-            })}
-            {/* {MAPPING_MENU.map((menu, idx) => {
+            {MAPPING_MENU.map((menu, idx) => {
               return (
                 <li
                   key={idx}
@@ -101,63 +64,10 @@ class PopularProduct extends Component {
                   {menu}
                 </li>
               );
-            })} */}
+            })}
           </ul>
         </div>
-        <div className="cardContainer">
-          {/* <div>{MAPPING_OBJ[activeTab]}</div> */}
-
-          <All popularProductList={popularProductList} />
-
-          {/* {popularProductList.product?.map((product, idx) => {
-            return (
-              <div className="card" key={idx}>
-                <div className="productImgBox">
-                  <img
-                    className="productImg"
-                    alt="제품사진"
-                    src={product.src}
-                  />
-                </div>
-                <div className="productDescBox">
-                  <div>
-                    <span className="brandName">{product.brandName}</span>
-                  </div>
-                  <div className="productName">
-                    <span>{product.productName}</span>
-                  </div>
-                  <div className="discountPriceBox">
-                    <span className="discount">{product.discount}</span>
-                    <span className="productPrice">
-                      {product.productPrice
-                        .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                      원
-                    </span>
-                  </div>
-                  <div className="likeReviewBox">
-                    <span className="productLike">
-                      좋아요
-                      <span>
-                        {product.productLike
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                      </span>
-                    </span>
-                    <span className="productReview">
-                      후기
-                      <span>
-                        {product.productReview
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            );
-          })} */}
-        </div>
+        <div className="cardContainer">{MAPPING_OBJ[activeTab]}</div>
         <div className="popularFooter">
           <button>
             <span>전체 더 보기 {">"}</span>
