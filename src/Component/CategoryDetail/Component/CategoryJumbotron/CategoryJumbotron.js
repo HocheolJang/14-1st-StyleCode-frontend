@@ -83,7 +83,7 @@ class CategoryJumbotron extends Component {
               />
             </div>
             <div className="paging">
-              <span>{jumbotronCurrentPage}</span>
+              <span>1</span>
               <span>of</span>
               <span>{jumbotronItem.length}</span>
             </div>
