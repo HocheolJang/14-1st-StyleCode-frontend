@@ -55,7 +55,7 @@ class Select extends Component {
   handleAddtoCart = () => {
     const { color, size, number } = this.state;
     const { id } = this.props;
-    fetch("http://10.58.6.106:8000/carts", {
+    fetch("http://10.58.0.54:8000/carts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

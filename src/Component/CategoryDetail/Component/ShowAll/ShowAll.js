@@ -54,7 +54,6 @@ class ShowAll extends Component {
   render() {
     const { showAllList, showDropdown, sortMethod } = this.state;
     const { filterDropdown, sortProduct } = this;
-    // console.log(sortMethod);
 
     return (
       <div className="ShowAll">
@@ -131,11 +130,19 @@ class ShowAll extends Component {
                       [{parseInt(product?.discount_rate * 100)}%]
                     </span>
                     <span className="productPrice">
-                      {product?.discount_price * 1}.toLocaleString(“en”) 원
+                      {(product?.discount_price * 1)
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                      원
                     </span>
                   </div>
                   <div className="orignalPriceBox">
-                    <span>{product?.price * 1}.toLocaleString(“en”) 원</span>
+                    <span>
+                      {(product?.price * 1)
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                      원
+                    </span>
                   </div>
                 </div>
               </div>
