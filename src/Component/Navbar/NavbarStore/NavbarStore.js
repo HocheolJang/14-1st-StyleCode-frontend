@@ -15,7 +15,25 @@ class NavbarStore extends Component {
       isUnisexBorder: false,
       isHomeBorder: true,
       cartList: [],
+      inputValue: '',
     }
+  }
+
+  handleKeyPress = (e) => {
+    e.preventDefault();
+    if(e.key === "Enter") {
+      if(!this.state.inputValue) {
+        e.preventDefault();
+      } else {
+        if(this.state.inputValue==="나이키") {this.props.history.push('/search')}
+      }
+    }
+  }
+
+  search = (e) => {
+    this.setState({
+      inputValue: e.target.value,
+    })
   }
 
   handleClickOotd = (e) => {
@@ -106,6 +124,8 @@ class NavbarStore extends Component {
             name="keyword"
             type="search"
             placeholder="스타일과 상품을 검색해보세요"
+            onChange={this.search}
+            onKeyPress={this.handleKeyPress}
              />
           </form>
 
