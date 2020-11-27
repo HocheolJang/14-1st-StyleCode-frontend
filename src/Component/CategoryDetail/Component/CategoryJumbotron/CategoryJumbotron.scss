@@ -1,35 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 @import url("https://spoqa.github.io/spoqa-han-sans/ko-KR/");
 
-.jumbotron {
+.categoryJumbotron {
   width: 940px;
   height: 530px;
   margin-top: 30px;
   font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
   position: relative;
+
   .item {
     position: relative;
+
     .jumboImg {
       position: relative;
       width: 940px;
       height: 530px;
       object-fit: fill;
     }
+
     .adsText {
       position: absolute;
       top: 100px;
       right: 100px;
       z-index: 2;
       line-height: normal;
+
       .mainTitle {
         font-size: 40px;
         font-weight: 700;
         margin-bottom: 20px;
         padding-top: 20px;
       }
+
       .subTitle {
         font-size: 18px;
       }
+
       .white {
         color: #ffffff;
       }
@@ -44,7 +50,8 @@
     width: 160px;
     height: 60px;
     background-color: #26282b;
-    .sliderLeft {
+
+    .sliderBtn {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -53,37 +60,30 @@
       &:hover {
         cursor: pointer;
       }
-      .slideBtnLeft {
-        object-fit: cover;
-        width: 20px;
-        transform: rotate(180deg);
-      }
     }
+    .slideBtnLeft {
+      object-fit: cover;
+      width: 20px;
+      transform: rotate(180deg);
+    }
+
+    .slideBtnRight {
+      object-fit: cover;
+      z-index: 2;
+      width: 20px;
+      right: 0px;
+    }
+
     .paging {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 56px;
       vertical-align: middle;
+
       span {
         color: white;
         margin: 0 auto;
-      }
-    }
-    .sliderRight {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 52px;
-      height: 60px;
-      &:hover {
-        cursor: pointer;
-      }
-      .slideBtnRight {
-        object-fit: cover;
-        z-index: 2;
-        width: 20px;
-        right: 0px;
       }
     }
   }

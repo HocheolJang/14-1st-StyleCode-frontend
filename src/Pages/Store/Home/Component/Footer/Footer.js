@@ -13,7 +13,7 @@ class Footer extends Component {
                 <span>고객센터</span>
               </div>
               <div className="middle">
-                <span>1833-8879</span>
+                <span>1833-7848</span>
               </div>
               <div className="bottom">
                 <p>평일 10:00 ~ 19:00 (점심시간: 12:00 ~ 14:00)</p>

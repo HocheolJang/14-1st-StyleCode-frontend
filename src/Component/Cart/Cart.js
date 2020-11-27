@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-
 import Navbar from "../../Common/Navbar/NavbarStore/NavbarStore";
 import EmptyTable from "./Component//EmptyTable/EmptyTable";
 import ProductTable from "./Component/ProductTable/ProductTable";
@@ -8,6 +6,7 @@ import FillAsidebar from "./Component/Asidebar/FillAsidebar";
 import EmptyAsidebar from "./Component/Asidebar/EmptyAsidebar";
 import CartFooter from "./Component/Footer/CartFooter";
 import "./Cart.scss";
+import { getCartAPI } from "../../config";
 
 class Cart extends Component {
   constructor() {
@@ -21,7 +20,7 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.6.106:8000/carts", {
+    fetch(`${getCartAPI}`, {
       headers: {
         Authorization:
           "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
@@ -29,13 +28,13 @@ class Cart extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
-        const cartList = res.product.map((item) => {
+        const cartList = res.product?.map((item) => {
           item["isChecked"] = true;
           return item;
         });
-        this.setState({
-          cartList,
-        });
+        // this.setState({
+        //   cartList,
+        // });
       });
   }
 
@@ -46,7 +45,7 @@ class Cart extends Component {
     if (cartList[idx].quantity < 20) {
       cartList[idx].quantity++;
       this.setState({ cartList });
-      fetch(`http://10.58.6.106:8000/carts/${cartId}`, {
+      fetch(`${getCartAPI}/${cartId}`, {
         headers: {
           Authorization:
             "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
@@ -69,7 +68,7 @@ class Cart extends Component {
     if (cartList[idx].quantity > 1) {
       cartList[idx].quantity--;
       this.setState({ cartList });
-      fetch(`http://10.58.6.106:8000/carts/${cartId}`, {
+      fetch(`${getCartAPI}/${cartId}`, {
         headers: {
           Authorization:
             "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
@@ -88,7 +87,7 @@ class Cart extends Component {
     const cartList = [...this.state.cartList];
     let idx = cartList.indexOf(item);
     let cartId = cartList[idx].cart_id;
-    fetch(`http://10.58.6.106:8000/carts/${cartId}`, {
+    fetch(`${getCartAPI}/${cartId}`, {
       headers: {
         Authorization:
           "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
@@ -117,8 +116,6 @@ class Cart extends Component {
       handleDeleteItemBtn,
       handleCheckBox,
     } = this;
-
-    console.log(cartList);
 
     return (
       <>
