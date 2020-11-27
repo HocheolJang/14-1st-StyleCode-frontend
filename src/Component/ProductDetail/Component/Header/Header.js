@@ -66,7 +66,7 @@ class Header extends Component {
                 isOpen={this.state.setIsOpen}
                 style={{
                   overlay: {
-                    position: "fixed",
+                    // position: "fixed",
                     top: 0,
                     left: 0,
                     right: 0,
@@ -75,24 +75,30 @@ class Header extends Component {
                   },
                   content: {
                     position: "absolute",
-                    top: "200px",
-                    left: "500px",
-                    right: "500px",
-                    bottom: "200px",
+                    top: "25%",
+                    left: "50%",
+                    right: "auto",
+                    bottom: "auto",
+                    width: "300px",
+                    height:"90px",
                     border: "1px solid #ccc",
                     background: "#fff",
                     overflow: "auto",
                     WebkitOverflowScrolling: "touch",
                     borderRadius: "4px",
                     outline: "none",
-                    padding: "20px",
+                    backgroundImage: "url(images/coupon.png)",
+                    backgroundSize: "contain"
+                    
                   },
                 }}
               >
-                <h2>쿠폰 다운받기</h2>
-                <p>아우터 스타일쇼 10%쿠폰</p>
-                <div>
-                  <button onClick={this.cloesModal}>close</button>
+               
+
+                <div className="modal" onClick={this.cloesModal}>
+                  <button onClick={this.cloesModal} 
+                  style={{width:"250px", height:"45px", opacity: 0
+                }}></button>
                 </div>
               </Modal>
             </div>
