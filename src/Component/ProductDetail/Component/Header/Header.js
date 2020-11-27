@@ -4,6 +4,7 @@ import "../../../../Styles/common.scss";
 import "../../../../Styles/reset.scss";
 import Select from "./Select/Select";
 import Modal from "react-modal";
+import {FiChevronRight} from "react-icons/fi"
 
 class Header extends Component {
   constructor(props) {
@@ -48,11 +49,11 @@ class Header extends Component {
                   {productdetail?.discount * 100}%
                 </span>
                 <span className="discount-price">
-                  {productdetail?.discountPrice?.toLocaleString()}
+                  {parseInt(productdetail?.discountPrice).toLocaleString()}
                 </span>
                 <span className="price-unit">원</span>
                 <span className="origin-price">
-                  {productdetail?.originPrice?.toLocaleString()}
+                  {parseInt(productdetail?.originPrice).toLocaleString()}
                 </span>
               </div>
               <button
@@ -65,7 +66,7 @@ class Header extends Component {
                 isOpen={this.state.setIsOpen}
                 style={{
                   overlay: {
-                    position: "fixed",
+                    // position: "fixed",
                     top: 0,
                     left: 0,
                     right: 0,
@@ -74,30 +75,36 @@ class Header extends Component {
                   },
                   content: {
                     position: "absolute",
-                    top: "200px",
-                    left: "700px",
-                    right: "700px",
-                    bottom: "200px",
+                    top: "25%",
+                    left: "50%",
+                    right: "auto",
+                    bottom: "auto",
+                    width: "300px",
+                    height:"90px",
                     border: "1px solid #ccc",
                     background: "#fff",
                     overflow: "auto",
                     WebkitOverflowScrolling: "touch",
                     borderRadius: "4px",
                     outline: "none",
-                    padding: "20px",
+                    backgroundImage: "url(images/coupon.png)",
+                    backgroundSize: "contain"
+                    
                   },
                 }}
               >
-                <h2>쿠폰 다운받기</h2>
-                <p>아우터 스타일쇼 10%쿠폰</p>
-                <div>
-                  <button onClick={this.cloesModal}>close</button>
+               
+
+                <div className="modal" onClick={this.cloesModal}>
+                  <button onClick={this.cloesModal} 
+                  style={{width:"250px", height:"45px", opacity: 0
+                }}></button>
                 </div>
               </Modal>
             </div>
             <div className="header-middle-info-like">
               <span className="like">좋아요</span>
-              <span className="like-number">{productdetail?.likeNumber}</span>
+              <span className="like-number">{parseInt(productdetail?.likeNumber).toLocaleString()}</span>
               <span className="review">후기</span>
               <span className="review-number">
                 {productdetail?.reviewNumber}
@@ -105,7 +112,7 @@ class Header extends Component {
             </div>
             <div className="header-middle-info-mile">
               <span className="mile">적립 단추</span>
-              <span className="mile-number">{productdetail?.mile}</span>
+              <span className="mile-number">{parseInt(productdetail?.mile).toLocaleString()}</span>
             </div>
             <div className="header-middle-info-delivery">
               <span className="delivery">무료배송</span>
@@ -123,17 +130,21 @@ class Header extends Component {
         <div className="header-bottom">
           <img
             className="header-bottom-brand-img"
-            src={productdetail?.headerBottomImg}
+            src=/*{productdetail?.headerBottomImg}*/ "images/search/fake.png"
             alt="header-bottom-img"
           ></img>
           <div className="header-bottom-brand">
+            <div>
             <p className="header-bottom-brand-title">
               {productdetail?.headerBottomBrand}
             </p>
             <p className="header-bottom-brand-number">
               {productdetail?.brand_product_count}
             </p>
+            </div>
+            <div className="brandArrow"><FiChevronRight style={{ fontSize: 30 }} /></div>
           </div>
+        
         </div>
       </header>
     );
