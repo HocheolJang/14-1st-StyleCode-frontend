@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Navbar from "../../Common/Navbar/NavbarStore/NavbarStore";
 import Asidebar from "./Component/Asidebar/Asidebar";
-import Jumbotron from "./Component/Jumbotron/Jumbotron";
+import CategoryJumbotron from "./Component/CategoryJumbotron/CategoryJumbotron";
 import MdChoice from "./Component/MdChoice/MdChoice";
 import ShowAll from "./Component/ShowAll/ShowAll";
+import CartFooter from "../Cart/Component/Footer/CartFooter";
 import "./CategoryDetail.scss";
 
 class CategoryDetail extends Component {
@@ -14,12 +15,12 @@ class CategoryDetail extends Component {
         <div className="categoryContainer">
           <Asidebar />
           <div className="mainContainer">
-            <Jumbotron />
+            <CategoryJumbotron />
             <MdChoice />
             <ShowAll />
           </div>
         </div>
-        <span>푸터자리</span>
+        <CartFooter />
       </div>
     );
   }

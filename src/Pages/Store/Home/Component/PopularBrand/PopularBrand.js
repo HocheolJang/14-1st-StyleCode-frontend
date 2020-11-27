@@ -71,11 +71,7 @@ class PopularBrand extends Component {
                       <div className="brandItemDesc">
                         <span className="brandName">{brand.brandName}</span>
                         <span className="brandProductCnt">
-                          (
-                          {brand.brandProductCnt
-                            .toString()
-                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                          )
+                          ({brand.brandProductCnt.toLocaleString("en")})
                         </span>
                       </div>
                     </div>
@@ -101,29 +97,6 @@ const SETTING = {
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 2.5,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-  ],
 };
 
 export default PopularBrand;
