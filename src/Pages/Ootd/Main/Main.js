@@ -5,7 +5,7 @@ import Modal from './Modal';
 import InfiniteScroll from 'react-infinite-scroller';
 import './Main.scss';
 
-const API = "http://192.168.219.101:8000";
+const API = "http://10.58.0.54:8000";
 const LIMIT = 10;
 class Main extends Component {
   constructor() {
@@ -46,16 +46,16 @@ class Main extends Component {
   )
   }
 
-  loadFunc = () => {
-    fetch(`${API}/ootds?offset=${this.state.offSet}&limit=${LIMIT}`)
-    .then((res) => res.json())
-    .then((res) => {
-      this.setState({
-      cards: [...this.state.cards, ...res.ootd_list],
-      offSet: this.state.offSet + LIMIT,
-    });
-    })
-  }
+  // loadFunc = () => {
+  //   fetch(`${API}/ootds?offset=${this.state.offSet}&limit=${LIMIT}`)
+  //   .then((res) => res.json())
+  //   .then((res) => {
+  //     this.setState({
+  //     cards: [...this.state.cards, ...res.ootd_list],
+  //     offSet: this.state.offSet + LIMIT,
+  //   });
+  //   })
+  // }
 
   getData = (data) => {
     this.setState({
@@ -76,10 +76,11 @@ class Main extends Component {
   }
 
   render() {
+    console.log(this.state.offSet);
     const { cards, isModal, modalData, commentData, getData } = this.state;
     return (
 
-      <div style={{height:"935px",overflow:"auto"}}>
+      <div style={{height:"935px", overflow:"auto"}}>
     <InfiniteScroll
       pageStart={0}
       loadMore={this.loadFunc}

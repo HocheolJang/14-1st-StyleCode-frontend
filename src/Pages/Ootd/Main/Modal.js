@@ -55,7 +55,7 @@ class Modal extends Component {
     })
   }
 
-  API = `http://192.168.219.101:8000/ootds/${this.props.modalData?.modalData?.modalData?.id}/comments`;
+  API = `http://10.58.0.54:8000/ootds/${this.props.modalData?.modalData?.modalData?.id}/comments`;
 
   handleKeyPress = (e) => {
     e.preventDefault();
@@ -148,8 +148,8 @@ class Modal extends Component {
 
             <div className="commentWrapper">
               <div className="commentNum"><span>댓글({modalData?.modalData?.modalData?.commentNum})</span></div>
-              {modalData?.modalData?.modalData?.comments.map((comment) => (
-                <div className="commentBox" key={id}>
+              {modalData?.modalData?.modalData?.comments.map((comment, idx) => (
+                <div className="commentBox" key={idx*1300}>
                   <div className="imgWrapper"><img className="commentUserImg" width="30px" height="30px" src={modalData?.modalData?.modalData?.comments[0]?.commentAuthorImg} /></div>
                   <div className="commentInfoWrapper">
                     <div className="commentContentWrapper">

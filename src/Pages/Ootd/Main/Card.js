@@ -22,7 +22,7 @@ class Card extends Component {
     }
   }
 
-  API = `http://192.168.219.101:8000/ootds/${this.props.id}`;
+  API = `http://10.58.0.54:8000/ootds/${this.props.id}`;
 
    openModal = (e) => {
          fetch(this.API, {
@@ -148,9 +148,9 @@ class Card extends Component {
               </div>
             </div>
           <>
-            {this.props.comments?.map((comment) => {
+            {this.props.comments?.map((comment, idx) => {
               return (
-                <div className="commentWrapper" key={this.props.id}>
+                <div className="commentWrapper" key={idx}>
               <div className="innerWrapper">
                 <img className="commentUserImg" src={comment?.commentAuthorImg} />
                 <div className="commentUserInfo">
