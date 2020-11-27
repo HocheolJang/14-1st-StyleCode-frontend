@@ -53,13 +53,13 @@ class Select extends Component {
   handleAddtoCart = () => {
     const { color, size, number } = this.state;
     const { id } = this.props;
-    fetch("http://10.58.6.106:8000/carts", {
+    fetch("http://10.58.0.54:8000/carts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         /*localStorage.getItem("token")*/
         Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6InVqazUwNTkifQ.lL0jXOml7fXzy1Xp464Cubisn_ikEfdhG6RWLL3LLZs",
       },
       body: JSON.stringify({
         product_id: id,
