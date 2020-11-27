@@ -58,8 +58,7 @@ class Select extends Component {
       headers: {
         "Content-Type": "application/json",
         /*localStorage.getItem("token")*/
-        Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6InVqazUwNTkifQ.lL0jXOml7fXzy1Xp464Cubisn_ikEfdhG6RWLL3LLZs",
+        Authorization: localStorage.getItem("token"),
       },
       body: JSON.stringify({
         product_id: id,
