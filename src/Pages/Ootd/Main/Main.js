@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavbarOotd from '../../../Common/Navbar/NavbarOotd/NavbarOotd';
+import NavbarOotd from '../../../Component/Navbar/NavbarOotd/NavbarOotd';
 import CardList from './CardList';
 import './Main.scss';
 
