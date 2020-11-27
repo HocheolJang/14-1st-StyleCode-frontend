@@ -21,8 +21,8 @@ class ProductReviewImgbox extends Component {
             alt=""
           ></img>
           <div className="article-product-review-img-id">
-            <div>
-              <span>{ootd.author}</span>
+            <div className="article-product-review-img-id-author">
+              <span style={{ fontWeight: 700 }}>{ootd.author}</span>
             </div>
             <div className="article-product-review-img-like">
               <span>{ootd.description}</span>

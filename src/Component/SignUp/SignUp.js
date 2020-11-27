@@ -107,7 +107,7 @@ class SignUp extends Component {
   };
 
   handleClick = () => {
-    fetch("http://10.58.0.175:8000/users/signup", {
+    fetch("http://10.58.6.191:8000/user/signup", {
       method: "POST",
       body: JSON.stringify({
         login_id: this.state.id,
@@ -119,7 +119,11 @@ class SignUp extends Component {
       }),
     })
       .then((res) => res.json())
-      .then((res) => console.log("결과", res));
+      .then((res) => {
+        if (res.message === "success") {
+          this.props.history.push("/Login");
+        }
+      });
   };
 
   handleOnkeyUp = () => {
@@ -147,8 +151,10 @@ class SignUp extends Component {
     // console.log(this.state.agree1);
     console.log(this.state.agree2);
     return (
-      <div className="SignUp">
-        {/* <img src={backgroundImg} /> */}
+      <div
+        className="SignUp"
+        style={{ backgroundImage: "URL(images/loginbackground.jpg)" }}
+      >
         <div className="main">
           <section className="leftMain">
             <div className="nav">
@@ -161,7 +167,7 @@ class SignUp extends Component {
                 }
                 alt="mainlogo"
               />
-              <button className="nav-choice-picture">사진선택</button>
+              <button className="nav-choice-picture">사진 선택</button>
             </div>
           </section>
           <section className="rightMain">
@@ -181,7 +187,7 @@ class SignUp extends Component {
                 </div>
                 <input
                   className="id-input"
-                  placeholder="ID"
+                  placeholder="아이디"
                   value={this.state.id}
                   name="id"
                   onChange={this.handleIdChange}
@@ -194,7 +200,7 @@ class SignUp extends Component {
                 </div>
                 <input
                   className="pw-input"
-                  placeholder="PASSWORD"
+                  placeholder="비밀번호"
                   value={this.state.password}
                   name="password"
                   onChange={this.handlePwChange}
@@ -207,7 +213,7 @@ class SignUp extends Component {
                 </div>
                 <input
                   className="pwCh-input"
-                  placeholder="PASSWORD"
+                  placeholder="비밀번호를 확인해주세요"
                   value={this.state.passwordCh}
                   name="password"
                   onChange={this.handlePwChChange}

@@ -28,8 +28,6 @@ class Select extends Component {
       orderBox: this.props.productdetail?.discountPrice * number,
     });
     this.setState({ number: number });
-
-    console.log(orderBox);
   };
 
   handleRemoveChange = (e) => {
@@ -55,12 +53,13 @@ class Select extends Component {
   handleAddtoCart = () => {
     const { color, size, number } = this.state;
     const { id } = this.props;
-    fetch("http://10.58.6.106:8000/carts", {
+    fetch("http://10.58.0.54:8000/carts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        /*localStorage.getItem("token")*/
         Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6InVqazUwNTkifQ.lL0jXOml7fXzy1Xp464Cubisn_ikEfdhG6RWLL3LLZs",
       },
       body: JSON.stringify({
         product_id: id,
@@ -82,9 +81,9 @@ class Select extends Component {
     // console.log(number);
     console.log(size);
     console.log(color);
-    console.log(number);
-    console.log(id);
-    console.log(size);
+    // console.log(number);
+    // console.log(id);
+    // console.log(size);
 
     return (
       <div>
@@ -98,8 +97,9 @@ class Select extends Component {
                 key={color.colorId}
                 id={color.colorId}
                 label={color.colorName}
+                value={color.colorId}
               >
-                {color.colorId}
+                {color.colorName}
               </option>
             ))}
         </select>
@@ -109,19 +109,24 @@ class Select extends Component {
         >
           {productdetail.sizes &&
             productdetail.sizes.map((size) => (
-              <option key={size.sizeId} id={size.sizeId} label={size.sizeName}>
-                {size.sizeId}
+              <option
+                key={size.sizeId}
+                id={size.sizeId}
+                label={size.sizeName}
+                value={size.sizeId}
+              >
+                {size.sizeName}
               </option>
             ))}
         </select>
-        <div className="header-middle-info-orderbox-colorsize">
+        {/* <div className="header-middle-info-orderbox-colorsize">
           옵션
           <span>{this.state.color && this.state.color}</span>
           <span>{this.state.size && this.state.size}</span>
-        </div>
+        </div> */}
         <div className="header-middle-info-"></div>
         <div className="header-middle-info-orderbox-price">
-          총 금액
+          총 금액(원)
           <span>
             {(this.state.orderBox && this.state.orderBox).toLocaleString()}
           </span>
@@ -136,7 +141,9 @@ class Select extends Component {
             <div className="header-middle-info-orderbox-new">
               <button
                 className="header-middle-info-orderbox-new-minusbutton"
-                onClick={this.handleRemoveChange}
+                onClick={
+                  this.state.number > 1 ? this.handleRemoveChange : () => false
+                }
               >
                 <span>
                   <BsFillCaretDownFill size="15px" color="gray" />
