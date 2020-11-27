@@ -49,7 +49,7 @@ class MdChoice extends Component {
         <div className="title">
           <p>MD's 추천</p>
         </div>
-        <Link to="/ProductDetail">
+        <Link to="/product">
           <div className="cardList">
             {mdChoiceList.map((product, idx) => {
               return (
