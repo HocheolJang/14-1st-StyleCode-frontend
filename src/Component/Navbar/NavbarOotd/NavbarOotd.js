@@ -1,14 +1,17 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
-import './NavbarStore.scss'
+import './NavbarOotd.scss';
+import { withRouter } from 'react-router-dom';
 
-class NavbarStore extends Component {
+class NavbarOotd extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOotdBorder: false,
+      isOotdBorder: true,
       isStoreBorder: false,
+      isListOotdBorder: true,
     }
   }
   handleClickOotd = (e) => {
@@ -16,6 +19,7 @@ class NavbarStore extends Component {
         isOotdBorder: true,
         isStoreBorder: false,
       })
+      this.props.history.push('/ootd');
   }
 
   handleClickStore = (e) => {
@@ -23,17 +27,19 @@ class NavbarStore extends Component {
         isOotdBorder: false,
         isStoreBorder: true,
       })
+      this.props.history.push('/');
+
   }
 
   render() {
-    const { isOotdBorder, isStoreBorder } = this.state;
+    const { isOotdBorder, isStoreBorder, isListOotdBorder } = this.state;
     return (
       <>
       <div className="navBarWrapper">
         <nav className="topNavBar">
           <div className="leftNavBar">
             <a className="navLogo" href="/">
-              <img src='/images/navLogo.png'/>
+              <img src='/images/navLogo.png' />
             </a>
             <div className="leftMenuWrapper">
               <ul className="leftMenuList">
@@ -66,6 +72,7 @@ class NavbarStore extends Component {
                 </li>
                 <li>
                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14 5H2v9a1 1 0 001 1h10a1 1 0 001-1V5zM1 4v10a2 2 0 002 2h10a2 2 0 002-2V4H1z" clip-rule="evenodd"></path><path d="M8 1.5A2.5 2.5 0 005.5 4h-1a3.5 3.5 0 117 0h-1A2.5 2.5 0 008 1.5z"></path></svg>
+                  <span className="cartListLength">1</span>
                 </li>  
                 <li>
                     <img src="https://usercontents-c.styleshare.io/images/40280091/30x30" />
@@ -77,23 +84,19 @@ class NavbarStore extends Component {
         </nav>
         <nav className="bottomNavBar">
           <ul className="categories">
-            <li className="Hot">홈</li>
-            <li className="OOTD">브랜드</li>
-            <li className="Beauty">랭킹</li>
-            <li className="New">유니섹스</li>
-            <li className="QnA">여성</li>
-            <li className="Following">뷰티</li>
-            <li className="Following">가방잡화</li>
-            <li className="Following">슈즈</li>
-            <li className="Following">라이프</li>
-            <li className="Following">테크</li>
-
+            <li>Hot</li>
+            <li className={isListOotdBorder ? "isListOotdBorder":""}>OOTD</li>
+            <li>Beauty</li>
+            <li>New</li>
+            <li>QnA</li>
+            <li>Following</li>
           </ul>
         </nav>
       </div>
     </>
+
     );
   }
 }
 
-export default NavbarStore;
+export default withRouter(NavbarOotd);

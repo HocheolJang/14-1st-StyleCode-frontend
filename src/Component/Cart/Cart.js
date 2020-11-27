@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "../../Common/Navbar/NavbarStore/NavbarStore";
+import Navbar from "../../Component/Navbar/NavbarStore/NavbarStore";
 import EmptyTable from "./Component//EmptyTable/EmptyTable";
 import ProductTable from "./Component/ProductTable/ProductTable";
 import FillAsidebar from "./Component/Asidebar/FillAsidebar";

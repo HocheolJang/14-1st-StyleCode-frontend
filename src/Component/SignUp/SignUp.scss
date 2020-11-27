@@ -9,73 +9,78 @@
   .main {
     display: flex;
     font-size: 62.5%; //10px = 1rem
-    width: 60rem;
-    height: 52rem;
-    padding: 3rem 2rem 2.4rem 2rem;
-    border: 0.1rem solid black;
+    width: 640px;
+    height: 600px;
+    padding: 30px 20px 24px 20px;
+    border: 0px solid black;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 1rem;
+    border-radius: 10px;
 
     .leftMain {
       .nav {
-        width: 21.2rem;
-        height: 19.5rem;
+        width: 212px;
+        height: 195px;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .nav-my-picture {
-          width: 14rem;
-          height: 14rem;
+          width: 140px;
+          height: 140px;
         }
 
         .nav-choice-picture {
-          width: 11rem;
-          height: 3.6;
-          margin-top: 2rem;
-          font-size: 1.4rem;
+          width: 110px;
+          height: 36px;
+          margin-top: 20px;
+          font-size: 14px;
           font-weight: 700;
           background-color: white;
           color: gray;
+          border: 1px solid #c9cdd2;
+          border-radius: 5px;
+          cursor: pointer;
         }
       }
     }
 
     .rightMain {
       & {
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 20px;
       }
 
       .rightMain-info {
         & {
-          margin: 0 0 2rem 0;
+          margin: 0 0 20px 0;
         }
 
         .facebook-information {
-          width: 100%;
-          height: 3.5rem;
-          margin: 0 0 2rem 0;
+          width: 368px;
+          height: 44px;
+          margin: 0 0 20px 0;
           border-radius: 0.5rem;
         }
 
         .id {
-          width: 100%;
-          height: 3.5rem;
-          border: 1px solid black;
+          width: 368px;
+          height: 40px;
+          border: 1px solid #c9cdd2;
+          border-bottom-color: white;
           border-top-right-radius: 0.5rem;
           border-top-left-radius: 0.5rem;
           display: flex;
-          padding: 0.4rem;
+          padding: 4px;
+          background-color: white;
 
           div {
-            padding: 0.5rem 0 0.5rem 0;
+            padding: 5px 0 5px 0;
             display: flex;
             align-items: center;
-            width: 5rem;
-            margin: 0 0 0 0.3rem;
+            width: 95px;
+            margin: 0 0 0 3px;
 
             p {
-              font-size: 1.1rem;
+              font-size: 13px;
               width: 100%;
               margin: 0 auto;
             }
@@ -83,26 +88,31 @@
 
           .id-input {
             width: 100%;
-            margin-left: 1rem;
+            margin-left: 10px;
+            font-size: 12px;
+            text-indent: 5px;
+            border: 0px solid black;
           }
         }
 
         .pw {
-          width: 100%;
-          height: 3.5rem;
-          border: 1px solid black;
+          width: 368px;
+          height: 40px;
+          border: 1px solid #c9cdd2;
           display: flex;
-          padding: 0.4rem;
+          padding: 4px;
+          border-bottom-color: white;
+          background-color: white;
 
           div {
-            padding: 0.5rem 0 0.5rem 0;
+            // padding: 5px 0 5px 0;
             display: flex;
             align-items: center;
-            width: 5rem;
-            margin: 0 0 0 0.3rem;
+            width: 95px;
+            margin: 0 0 0 3px;
 
             p {
-              font-size: 1.1rem;
+              font-size: 13px;
               width: 100%;
               margin: 0 auto;
             }
@@ -110,54 +120,64 @@
 
           .pw-input {
             width: 100%;
-            margin-left: 1rem;
+            margin-left: 10px;
+            text-indent: 5px;
+            border: 0px solid black;
+            font-size: 12px;
+            text-indent: 5px;
           }
         }
 
         .pwCh {
-          width: 100%;
-          height: 3.5rem;
-          border: 1px solid black;
+          width: 368px;
+          height: 40px;
+          border: 1px solid #c9cdd2;
           display: flex;
-          padding: 0.4rem;
+          padding: 4px;
+          border-bottom-color: white;
+          background-color: white;
 
           div {
-            padding: 0.5rem 0 0.5rem 0;
+            padding: 5px 0 5px 0;
             display: flex;
             align-items: center;
-            width: 5rem;
-            margin: 0 0 0 0.3rem;
+            width: 95px;
+            margin: 0 0 0 3px;
 
             p {
-              font-size: 1rem;
+              font-size: 13px;
               width: 100%;
               margin: 0 auto;
-              letter-spacing: 2px;
             }
           }
 
           .pwCh-input {
             width: 100%;
-            margin-left: 1rem;
+            margin-left: 10px;
+            text-indent: 5px;
+            border: 0px solid black;
+            font-size: 12px;
           }
         }
 
         .nick-name {
-          width: 100%;
-          height: 3.5rem;
-          border: 1px solid black;
+          width: 368px;
+          height: 40px;
+          border: 1px solid #c9cdd2;
           display: flex;
-          padding: 0.4rem;
+          padding: 4px;
+          border-bottom-color: white;
+          background-color: white;
 
           div {
-            padding: 0.5rem 0 0.5rem 0;
+            padding: 5px 0 5px 0;
             display: flex;
             align-items: center;
-            width: 5rem;
-            margin: 0 0 0 0.3rem;
+            width: 95px;
+            margin: 0 0 0 3px;
 
             p {
-              font-size: 1.3rem;
+              font-size: 13px;
               width: 100%;
               margin: 0 auto;
             }
@@ -165,27 +185,32 @@
 
           .nick-name-input {
             width: 100%;
-            margin-left: 1rem;
+            margin-left: 10px;
+            text-indent: 5px;
+            border: 0px solid black;
+            font-size: 12px;
           }
         }
 
         .email {
-          width: 100%;
-          height: 3.5rem;
-          border: 1px solid black;
-          padding: 0.4rem;
+          width: 368px;
+          height: 40px;
+          border: 1px solid #c9cdd2;
+          padding: 4px;
           display: flex;
-          padding: 0.4rem;
+          padding: 4px;
+          border-bottom-color: white;
+          background-color: white;
 
           div {
-            padding: 0.5rem 0 0.5rem 0;
+            padding: 5px 0 5px 0;
             display: flex;
             align-items: center;
-            width: 5rem;
-            margin: 0 0 0 0.3rem;
+            width: 95px;
+            margin: 0 0 0 3px;
 
             p {
-              font-size: 1.3rem;
+              font-size: 13px;
               width: 100%;
               margin: 0 auto;
             }
@@ -193,73 +218,90 @@
 
           .email-input {
             width: 100%;
-            margin-left: 1rem;
+            margin-left: 10px;
+            text-indent: 5px;
+            border: 0px solid black;
+            font-size: 12px;
           }
         }
 
         .radio {
-          width: 100%;
-          height: 3.5rem;
-          border: 1px solid black;
+          width: 368px;
+          height: 40px;
+          border: 1px solid #c9cdd2;
           display: flex;
+          border-bottom-color: white;
+          background-color: white;
 
           div {
-            padding: 0.5rem 0 0.5rem 0;
+            padding: 10px 0 5px 0;
             display: flex;
-            align-items: center;
-            width: 5rem;
-            margin: 0 0 0 0.7rem;
+            align-items: flex-start;
+            width: 78px;
+            margin: 0 0 0 7px;
 
             p {
-              font-size: 1.3rem;
+              font-size: 13px;
               width: 100%;
               margin: 0 auto;
             }
 
             label {
-              font-size: 1.3rem;
+              font-size: 13px;
+              text-align: center;
+            }
+            input {
+              margin-right: 8px;
+              height: 13px;
+              width: 13px;
             }
           }
         }
 
         .birth {
-          width: 100%;
-          height: 3.5rem;
-          border: 1px solid black;
+          width: 368px;
+          height: 40px;
+          border: 1px solid #c9cdd2;
           border-bottom-left-radius: 0.5rem;
           border-bottom-right-radius: 0.5rem;
-          padding: 0.4rem;
+          padding: 4px;
           display: flex;
-          padding: 0.4rem;
+          background-color: white;
 
           div {
-            padding: 0.5rem 0 0.5rem 0;
+            padding: 5px 0 5px 0;
             display: flex;
             align-items: center;
-            width: 5rem;
-            margin: 0 0 0 0.3rem;
+            width: 85px;
+            margin: 0 0 0 3px;
             p {
-              font-size: 1.3rem;
+              font-size: 13px;
               width: 100%;
               margin: 0 auto;
             }
           }
 
           .year {
-            width: 8.2rem;
-            margin-right: 2rem;
-            font-size: 1.3rem;
+            width: 82px;
+            height: 25px;
+            margin-right: 20px;
+            margin-top: 2px;
+            font-size: 13px;
           }
 
           .month {
-            width: 5rem;
-            margin-right: 2rem;
-            font-size: 1.3rem;
+            width: 50px;
+            height: 25px;
+            margin-right: 20px;
+            margin-top: 2px;
+            font-size: 13px;
           }
 
           .day {
-            width: 5rem;
-            font-size: 1.3rem;
+            width: 50px;
+            height: 25px;
+            font-size: 13px;
+            margin-top: 2px;
           }
         }
       }
@@ -270,15 +312,16 @@
             display: flex;
             align-items: center;
             width: 100%;
+            margin-bottom: 10px;
 
             input {
-              width: 2rem;
-              height: 2rem;
-              margin-right: 1rem;
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
             }
 
             p {
-              font-size: 1rem;
+              font-size: 14px;
               width: 100%;
               font-weight: 800;
             }
@@ -288,15 +331,16 @@
             display: flex;
             align-items: center;
             width: 100%;
+            margin-bottom: 10px;
 
             input {
-              width: 2rem;
-              height: 2rem;
-              margin-right: 1rem;
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
             }
 
             p {
-              font-size: 1rem;
+              font-size: 14px;
               width: 100%;
             }
           }
@@ -305,15 +349,16 @@
             display: flex;
             align-items: center;
             width: 100%;
+            margin-bottom: 10px;
 
             input {
-              width: 2rem;
-              height: 2rem;
-              margin-right: 1rem;
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
             }
 
             p {
-              font-size: 1rem;
+              font-size: 14px;
               width: 100%;
             }
           }
@@ -322,15 +367,16 @@
             display: flex;
             align-items: center;
             width: 100%;
+            margin-bottom: 10px;
 
             input {
-              width: 2rem;
-              height: 2rem;
-              margin-right: 1rem;
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
             }
 
             p {
-              font-size: 1rem;
+              font-size: 14px;
               width: 100%;
             }
           }
@@ -338,16 +384,17 @@
           .agree-form-five {
             display: flex;
             align-items: center;
-            width: 1005;
+            width: 100%;
+            margin-bottom: 10px;
 
             input {
-              width: 2rem;
-              height: 2rem;
-              margin-right: 1rem;
+              width: 20px;
+              height: 20px;
+              margin-right: 10px;
             }
 
             p {
-              font-size: 1rem;
+              font-size: 14px;
               width: 100%;
             }
           }
@@ -364,18 +411,19 @@
       & :hover {
         transform: scale(1.1);
         padding: 10px;
-        border: 2px solid white;
+        border: 0px solid white;
+        cursor: pointer;
       }
 
       .alldone-button {
-        width: 13rem;
-        height: 3.5rem;
+        width: 130px;
+        height: 35px;
         border-radius: 0.5rem;
         background-color: #4adaaf;
         color: white;
-        font-size: 1.4rem;
+        font-size: 14px;
         font-weight: 800;
-        border: 1px solid white;
+        border: 0px solid white;
       }
     }
   }
