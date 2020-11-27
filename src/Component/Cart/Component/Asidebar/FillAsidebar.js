@@ -58,25 +58,25 @@ class FillAsidebar extends Component {
           <div className="totalPrice">
             <span>총 상품금액</span>
 
-            <span>{sumOrderPrice()}.toLocaleString(“en”) 원</span>
+            <span>{parseInt(sumOrderPrice()).toLocaleString("en")}원</span>
           </div>
           <div className="deliveryFee">
             <span>총 배송비</span>
             <span>
               (+)&nbsp;
-              {sumDeliveryPrice()}.toLocaleString(“en”) 원
+              {parseInt(sumDeliveryPrice()).toLocaleString("en")} 원
             </span>
           </div>
           <div className="discountPrice">
             <span>할인금액</span>
             <span>
               (-)&nbsp;
-              {sumDiscountPrice()}.toLocaleString(“en”) 원
+              {parseInt(sumDiscountPrice()).toLocaleString("en")} 원
             </span>
           </div>
           <div className="totalPayPrice">
             <span>총 결제금액</span>
-            <span>{sumTotalPrice()}.toLocaleString(“en”) 원</span>
+            <span>{parseInt(sumTotalPrice()).toLocaleString("en")}원</span>
           </div>
         </div>
         <button className="orderBtn">
