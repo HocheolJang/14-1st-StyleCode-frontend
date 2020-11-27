@@ -22,8 +22,7 @@ class Cart extends Component {
   componentDidMount() {
     fetch(`${getCartAPI}`, {
       headers: {
-        Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+        Authorization: localStorage.getItem("token"),
       },
     })
       .then((res) => res.json())
@@ -32,9 +31,9 @@ class Cart extends Component {
           item["isChecked"] = true;
           return item;
         });
-        // this.setState({
-        //   cartList,
-        // });
+        this.setState({
+          cartList,
+        });
       });
   }
 
@@ -47,8 +46,7 @@ class Cart extends Component {
       this.setState({ cartList });
       fetch(`${getCartAPI}/${cartId}`, {
         headers: {
-          Authorization:
-            "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+          Authorization: localStorage.getItem("token"),
         },
         method: "POST",
         body: JSON.stringify({
@@ -70,8 +68,7 @@ class Cart extends Component {
       this.setState({ cartList });
       fetch(`${getCartAPI}/${cartId}`, {
         headers: {
-          Authorization:
-            "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+          Authorization: localStorage.getItem("token"),
         },
         method: "POST",
         body: JSON.stringify({
@@ -89,8 +86,7 @@ class Cart extends Component {
     let cartId = cartList[idx].cart_id;
     fetch(`${getCartAPI}/${cartId}`, {
       headers: {
-        Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+        Authorization: localStorage.getItem("token"),
       },
       method: "DELETE",
     });

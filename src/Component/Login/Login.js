@@ -17,7 +17,7 @@ class Login extends Component {
   }
 
   handleClick = (e) => {
-    fetch("http://10.58.6.191:8000/user/login", {
+    fetch("http://10.58.0.54:8000/user/login", {
       method: "POST",
       body: JSON.stringify({
         login_id: this.state.id,

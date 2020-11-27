@@ -65,19 +65,23 @@ class ProductTable extends Component {
                   </td>
                   <td>
                     <p className="originPrice">
-                      {item.product_price * item.quantity}.toLocaleString(“en”)
+                      {parseInt(
+                        item.product_price * item.quantity
+                      ).toLocaleString("en")}
                       원
                     </p>
                   </td>
                   <td>
                     <p className="settlePrice">
-                      {item.discount_price * item.quantity}.toLocaleString(“en”)
+                      {parseInt(
+                        item.discount_price * item.quantity
+                      ).toLocaleString("en")}
                       원
                     </p>
                   </td>
                   <td>
                     <p className="shippingPrice">
-                      {item.shipping_fee}.toLocaleString(“en”) 원
+                      {parseInt(item.shipping_fee).toLocaleString("en")} 원
                     </p>
                   </td>
                   <td className="controlOrderBtnBox">
@@ -94,16 +98,19 @@ class ProductTable extends Component {
                   <td colSpan="6" className="amountTextBox">
                     <span>상품 </span>
                     <span className="bold">
-                      {item.discount_price * item.quantity}.toLocaleString(“en”)
+                      {parseInt(
+                        item.discount_price * item.quantity
+                      ).toLocaleString("en")}
                     </span>
                     <span>원 + 배송 </span>
                     <span className="bold">
-                      {item.shipping_fee}.toLocaleString(“en”)
+                      {parseInt(item.shipping_fee).toLocaleString("en")}
                     </span>
                     <span>원 = </span>
                     <span className="bold">
-                      {item.discount_price * item.quantity + item.shipping_fee}
-                      .toLocaleString(“en”)
+                      {parseInt(
+                        item.discount_price * item.quantity + item.shipping_fee
+                      ).toLocaleString("en")}
                     </span>
                     <span className="marginRight15">원</span>
                   </td>
