@@ -12,7 +12,6 @@ class Search extends Component {
     this.state = {
       brandList: [],
       productList: [],
-      ootdList: [],
       userList: [],
       productCount: 0,
       ootdCount: 0,
@@ -27,7 +26,6 @@ class Search extends Component {
         this.setState({
           brandList: res.results.brands,
           productList: res.results.products,
-          ootdList: res.results.ootds,
           usersList: res.results.users,
           productCount: res.results.product_count,
           userCount: res.results.user_count,
