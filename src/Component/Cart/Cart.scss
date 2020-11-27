@@ -47,11 +47,12 @@
 
     .mainContainer {
       display: flex;
-      height: auto;
+      // height: auto;
+      margin: 0 auto;
 
       .cartContainer {
         width: 75%;
-        height: auto;
+        // height: auto;
 
         .header {
           display: flex;
