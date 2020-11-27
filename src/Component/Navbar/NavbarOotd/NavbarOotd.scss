@@ -20,7 +20,7 @@ $storeBorderColor: #f0f1f4;
 .navBarWrapper {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   transition-property: box-shadow;
   transition-duration: 0.25s;
@@ -205,6 +205,26 @@ $storeBorderColor: #f0f1f4;
               border: 0px solid black;
               border-radius: 50%;
             }
+
+            .cartListLength {
+              position: absolute;
+              right: 65px;
+              width: 18px;
+              height: 18px;
+              padding: 3px 5px;
+              color: white;
+              background-color: #ff3f65;
+              border: 0px solid #fff9fa;
+              border-radius: 50%;
+              font-size: 10px;
+              font-weight: 700;
+              letter-spacing: -0.4px;
+              line-height: 13.1px;
+              text-decoration: none solid rgb(255, 255, 255);
+              text-align: center;
+              white-space: nowrap;
+              word-spacing: 0px;
+            }
           }
         }
       }
@@ -212,8 +232,8 @@ $storeBorderColor: #f0f1f4;
 
     .searchBar {
       margin: 0 auto;
-      transform: translateX(-20%);
-      width: 40%;
+      transform: translateX(-26%);
+      width: 30%;
       height: 40px;
       z-index: 102;
       font-size: 16px;
@@ -275,6 +295,10 @@ $storeBorderColor: #f0f1f4;
       &:hover {
         transform: scale(1.05);
       }
+    }
+
+    .isListOotdBorder {
+      border-bottom: 1px solid black;
     }
   }
 }
