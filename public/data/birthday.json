@@ -1,6 +1,6 @@
 {
 "year":[
-    { "key": 1, "value": "1976" },
+    { "key": 1, "value": "-" },
     { "key": 2, "value": "1977" },
     { "key": 3, "value": "1978" },
     { "key": 4, "value": "1979" },
@@ -33,7 +33,7 @@
     { "key": 31, "value": "2006" }
   ],  
 "month": [
-    { "key": 1, "value": "1" },
+    { "key": 1, "value": "-" },
     { "key": 2, "value": "2" },
     { "key": 3, "value": "3" },
     { "key": 4, "value": "4" },
@@ -47,7 +47,7 @@
     { "key": 12, "value": "12" }
   ],
 "day": [
-  { "key": 1, "value": "1" },
+  { "key": 1, "value": "-" },
     { "key": 2, "value": "2" },
     { "key": 3, "value": "3" },
     { "key": 4, "value": "4" },
