@@ -14,7 +14,7 @@ class MdChoice extends Component {
   }
 
   getAllData = () => {
-    fetch(`${mdChoiceAPI}`)
+    fetch(`${mdChoiceAPI}/0`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -30,7 +30,7 @@ class MdChoice extends Component {
 
   fetchProduct = (e) => {
     const offset = e.target.dataset.idx;
-    fetch(`http://10.58.6.191:8000/products/mdchoice/${offset}`)
+    fetch(`${mdChoiceAPI}/${offset}`)
       .then((res) => res.json())
       .then((res) => {
         this.setState({
@@ -75,19 +75,11 @@ class MdChoice extends Component {
                         [{parseInt(product.discount_rate * 100)}%]
                       </span>
                       <span className="productPrice">
-                        {(product.discount_price * 1)
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                        원
+                        {product.discount_price * 1}.toLocaleString(“en”) 원
                       </span>
                     </div>
                     <div className="orignalPriceBox">
-                      <span>
-                        {(product.price * 1)
-                          .toString()
-                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                        원
-                      </span>
+                      <span>{product.price * 1}.toLocaleString(“en”) 원</span>
                     </div>
                   </div>
                 </div>
