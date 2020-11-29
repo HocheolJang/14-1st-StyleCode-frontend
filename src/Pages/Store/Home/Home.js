@@ -8,7 +8,6 @@ import Footer from "./Component/Footer/Footer";
 import "./Home.scss";
 
 class Home extends Component {
-
   render() {
     return (
       <>
