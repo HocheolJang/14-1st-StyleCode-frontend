@@ -113,7 +113,6 @@ class NavbarStore extends Component {
       isHomeBorder,
       cartList,
     } = this.state;
-    console.log(cartList);
     return (
       <>
         <div className="navBarWrapper">

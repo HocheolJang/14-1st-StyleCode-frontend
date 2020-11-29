@@ -7,7 +7,8 @@ import CategoryDetail from "./Component/CategoryDetail/CategoryDetail";
 import ProductDetail from "./Component/ProductDetail/ProductDetail";
 import Cart from "./Component/Cart/Cart";
 import Search from "./Component/Search/Search";
-import Ootd from "./Pages/Ootd/Main/Main";
+// import Ootd from "../src/Pages/Ootd/Main/";
+
 class Routes extends React.Component {
   render() {
     return (
@@ -20,7 +21,6 @@ class Routes extends React.Component {
           <Route exact path="/product" component={ProductDetail} />
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/search" component={Search} />
-          <Route exact path="/ootd" component={Ootd} />
         </Switch>
       </Router>
     );
