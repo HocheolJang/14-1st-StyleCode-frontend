@@ -14,14 +14,6 @@
   }
 }
 
-body {
-  opacity: 1;
-  line-height: 1.3;
-  overflow: hidden;
-  transform: translateZ(0);
-  transition: transform 0.25s ease-out;
-}
-
 .mainWrapper {
   position: relative;
   margin: 0 auto;

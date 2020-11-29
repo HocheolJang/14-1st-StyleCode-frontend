@@ -18,6 +18,20 @@ class NavbarStore extends Component {
     };
   }
 
+  componentDidMount() {
+    fetch("http://10.58.0.54:8000/carts", {
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          cartList: res.item,
+        });
+      });
+  }
+
   handleKeyPress = (e) => {
     e.preventDefault();
     if (e.key === "Enter") {
@@ -92,7 +106,6 @@ class NavbarStore extends Component {
   };
 
   render() {
-    console.log(this.state.isUnisexBorder);
     const {
       isOotdBorder,
       isStoreBorder,
@@ -100,6 +113,7 @@ class NavbarStore extends Component {
       isHomeBorder,
       cartList,
     } = this.state;
+    console.log(cartList);
     return (
       <>
         <div className="navBarWrapper">
@@ -179,8 +193,7 @@ class NavbarStore extends Component {
                       ></path>
                       <path d="M8 1.5A2.5 2.5 0 005.5 4h-1a3.5 3.5 0 117 0h-1A2.5 2.5 0 008 1.5z"></path>
                     </svg>
-                    <span className="cartListLength">1</span>
-                    {/* this.state.cartList.length */}
+                    {/* <span className="cartListLength">{cartList.length}</span> */}
                   </li>
                   <li>
                     <Link to="./login">

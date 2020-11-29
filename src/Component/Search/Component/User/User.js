@@ -18,9 +18,9 @@ class User extends Component {
                 <p className="nickname">{user?.user_nickname}</p>
                 <p className="desc">{user?.description}</p>
               </div>
-              <div className="followBtnBox">
-                <button>팔로우</button>
-              </div>
+              {/* <div className="userFollowButtonBox">
+                <button className="followButton">팔로우</button>
+              </div> */}
             </div>
           );
         })}

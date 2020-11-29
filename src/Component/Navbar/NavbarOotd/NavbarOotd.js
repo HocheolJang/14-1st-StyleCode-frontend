@@ -61,6 +61,7 @@ class NavbarOotd extends Component {
             name="keyword"
             type="search"
             placeholder="스타일과 상품을 검색해보세요"
+            
              />
           </form>
 

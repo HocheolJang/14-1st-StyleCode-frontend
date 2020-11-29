@@ -97,7 +97,7 @@ class Header extends Component {
 
                 <div className="modal" onClick={this.cloesModal}>
                   <button onClick={this.cloesModal} 
-                  style={{width:"250px", height:"45px", opacity: 0
+                  style={{width:"270px", height:"45px", opacity: 0, cursor:"pointer" 
                 }}></button>
                 </div>
               </Modal>

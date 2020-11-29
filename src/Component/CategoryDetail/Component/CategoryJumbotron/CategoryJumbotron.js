@@ -43,7 +43,7 @@ class CategoryJumbotron extends Component {
   };
 
   render() {
-    const { jumbotronItem, jumbotronCurrentPage } = this.state;
+    const { jumbotronItem } = this.state;
     return (
       <div>
         <div className="categoryJumbotron">
