@@ -57,7 +57,6 @@ class Select extends Component {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        /*localStorage.getItem("token")*/
         Authorization: localStorage.getItem("token"),
       },
       body: JSON.stringify({

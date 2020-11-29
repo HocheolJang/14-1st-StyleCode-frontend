@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from "react";
 import "./NavbarStore.scss";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 class NavbarStore extends Component {
   constructor(props) {
@@ -16,6 +16,20 @@ class NavbarStore extends Component {
       cartList: [],
       inputValue: "",
     };
+  }
+
+  componentDidMount() {
+    fetch("http://10.58.0.54:8000/carts", {
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          cartList: res.item,
+        });
+      });
   }
 
   handleKeyPress = (e) => {
@@ -75,8 +89,7 @@ class NavbarStore extends Component {
   goToCart = () => {
     fetch("http://10.58.6.106:8000/carts", {
       headers: {
-        Authorization:
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IndlY29kZSJ9.AH-mLzn_mMLOSE7Kk1p4jM_2CHwXkED1qGJk7H7c1QA",
+        Authorization: localStorage.getItem("token"),
       },
     })
       .then((res) => res.json())
@@ -93,7 +106,6 @@ class NavbarStore extends Component {
   };
 
   render() {
-    console.log(this.state.isUnisexBorder);
     const {
       isOotdBorder,
       isStoreBorder,
@@ -107,7 +119,7 @@ class NavbarStore extends Component {
           <nav className="topNavBar">
             <div className="leftNavBar">
               <a className="navLogo" href="/">
-                <img src="/images/navLogo.png" style={{ width: "50px" }} />
+                <img src="/images/navLogo.png" />
               </a>
               <div className="leftMenuWrapper">
                 <ul className="leftMenuList">
@@ -180,11 +192,12 @@ class NavbarStore extends Component {
                       ></path>
                       <path d="M8 1.5A2.5 2.5 0 005.5 4h-1a3.5 3.5 0 117 0h-1A2.5 2.5 0 008 1.5z"></path>
                     </svg>
-                    <span className="cartListLength">1</span>
-                    {/* this.state.cartList.length */}
+                    {/* <span className="cartListLength">{cartList.length}</span> */}
                   </li>
                   <li>
-                    <img src="https://usercontents-c.styleshare.io/images/40280091/30x30" />
+                    <Link to="./login">
+                      <img src="https://usercontents-c.styleshare.io/images/40280091/30x30" />
+                    </Link>
                   </li>
                 </ul>
               </div>

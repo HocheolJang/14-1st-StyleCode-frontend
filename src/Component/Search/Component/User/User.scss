@@ -40,12 +40,12 @@
         overflow: hidden;
       }
     }
-    .followBtnBox {
+    .userFollowButtonBox {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 20%;
-      button {
+      .followButton {
         background-color: #ffffff;
         border: none;
         font-size: 16px;

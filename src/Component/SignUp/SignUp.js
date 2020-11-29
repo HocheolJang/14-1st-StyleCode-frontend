@@ -120,7 +120,7 @@ class SignUp extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
-        if (res.message === "success") {
+        if (res.message === "SUCCESS") {
           this.props.history.push("/Login");
         }
       });

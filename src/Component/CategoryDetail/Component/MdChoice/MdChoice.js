@@ -35,7 +35,7 @@ class MdChoice extends Component {
       .then((res) => {
         this.setState({
           mdChoiceList: res.mdchoice_list,
-          activePage: e.target.dataset.idx,
+          activePage: Number(e.target.dataset.idx),
         });
       });
   };

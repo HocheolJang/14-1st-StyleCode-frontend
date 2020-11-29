@@ -7,6 +7,10 @@
     width: 310px;
     height: 430px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     .productImgBox {
       display: flex;
       justify-content: center;
