@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Header from "./Component/Header/Header";
 import ProductReview from "./Component/Article/ProductReview/ProductReview";
 import ProductInfo from "./Component/Article/ProductInfo/ProductInfo";
@@ -16,9 +15,7 @@ class ProductDetail extends Component {
   }
 
   componentDidMount() {
-    fetch("http://10.58.0.54:8000/products/1", {
-      method: "GET",
-    })
+    fetch("http://10.58.0.54:8000/products/1")
       .then((res) => res.json())
       .then((res) => {
         this.setState({ productdetail: res.product });
