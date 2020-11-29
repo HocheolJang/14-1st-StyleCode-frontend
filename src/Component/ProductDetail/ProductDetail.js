@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
-import "./ProductDetail.scss";
 import Header from "./Component/Header/Header";
 import ProductReview from "./Component/Article/ProductReview/ProductReview";
 import ProductInfo from "./Component/Article/ProductInfo/ProductInfo";
-import NavbarStore from "../../Common/Navbar/NavbarStore/NavbarStore";
+import NavbarStore from "../Navbar/NavbarStore/NavbarStore";
 import Footer from "../../Pages/Store/Home/Component/Footer/Footer";
-import "../../Pages/Store/Home/Component/Footer/Footer.scss";
-import "../../Common/Navbar/NavbarStore/NavbarStore.scss";
+import "./ProductDetail.scss";
+
 class ProductDetail extends Component {
   constructor() {
     super();
